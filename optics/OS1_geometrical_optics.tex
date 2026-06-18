@@ -1,0 +1,41 @@
+\section{几何光学}
+
+\subsection{光纤}
+
+\begin{proset}
+    由透明材料制成的正方体\(abcd\)的截面如图所示。一束单色光从\(ab\)边上的\(O\)点以入射角\(\theta =\) \,\qty{45}{\degree}射入正方体，恰好在\(ad\)边上发生全反射，最后从\(cd\)边的中点射出正方体。已知正方体的边长为\(2l\)，光在真空中的传播速度为\(c\)，不考虑多次反射。求：
+    \begin{enumerate}[(1)]
+        \item 该透明材料的折射率\(n\)；
+        \item 单色光在正方体中传播时间。
+    \end{enumerate}
+    \begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+        \draw (0,0) rectangle (2,2);
+        \coordinate (o) at(0,{3-sqrt(2)});
+        \coordinate (p) at({2-sqrt(2)},2);
+        \draw[postaction={decorate},purple] ($(o)+(45:-1)$)--(o)node[below right]{\(O\)};
+        \draw[dashed,cyan] ($(o)+(-.8,0)$)--++(1.6,0);
+        \node[above] at(0,2){\(a\)};
+        \node[left] at(0,0){\(b\)};
+        \node[right] at(2,0){\(c\)};
+        \node[right] at(2,2){\(d\)};
+    \end{tikzpicture}
+\end{proset}
+
+\begin{answer}
+    （1）\(n = \frac{\sqrt{6}}{2} \)（2）\(t = \frac{3l}{v}\)
+
+    \begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+        \draw (0,0) rectangle (2,2);
+        \coordinate (o) at(0,{3-sqrt(2)});
+        \coordinate (p) at({2-sqrt(2)},2);
+        \draw[postaction={decorate},purple] ($(o)+(45:-1)$)--(o)node[below right,black]{\(O\)};
+        \draw[postaction={decorate},purple] (o)--(p);
+        \draw[postaction={decorate},purple] (p)--(2,1);
+        \draw[dashed,cyan] ($(o)+(-.8,0)$)--++(1.6,0) ($(p)+(0,-.5)$)--++(0,1);
+        \draw[dashed] (p)--(2,3)--(2,2);
+        \node[above] at(0,2){\(a\)};
+        \node[left] at(0,0){\(b\)};
+        \node[right] at(2,0){\(c\)};
+        \node[right] at(2,2){\(d\)};
+    \end{tikzpicture}
+\end{answer}

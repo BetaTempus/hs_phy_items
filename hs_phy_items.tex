@@ -1,0 +1,89 @@
+%!TEX program = xelatex
+\documentclass[cn,blue,11pt,normal]{elegantnote}
+
+\title{高中物理题集}
+
+\author{时胜举}
+\institute{图灵教育}
+
+\version{2.50}
+\date{\jintian}
+
+%%=============================================
+%%================= 文档设置 ===================
+
+%%================= 宏包调用 ===================
+\usepackage{tikz}
+\usepackage[version=4]{mhchem} % 化学公式
+\usepackage{array,tabularx}
+\usepackage{tabularray}
+\usepackage{makecell,multirow,diagbox}
+\usepackage{pifont}
+\usepackage{xfrac} % 分数格式：斜分数\sfrac
+\usepackage{multicol} % 分栏
+
+%-------------- 自定义宏包 ---------------------
+\usepackage{sapientiabook-choices}
+\usepackage{sapientiabook-question}
+%\usepackage{sapientiabook-answer}
+\usepackage[show-answer]{sapientiabook-answer} % show-answer 显示答案
+
+%%=============== 新建命令 =====================
+\newcommand{\lkf}[1]{\noindent\text{\kaishu\color{cyan}（#1）}}
+\newcommand{\jintian}{\number\year 年 \number\month 月 \number\day 日} % 中文年月日
+\newcommand{\rmnum}[1]{\romannumeral #1} % 小写罗马数字
+\newcommand{\Rmnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}} % 大写罗马数字
+\newcommand{\lunl}[1]{\underline{\hbox to #1{}}}%%  可输入长度的下划线
+\newcommand{\lminiindent}[1]{\makebox[-1em]{#1\qquad}} % 缩进
+
+\NewDocumentCommand\nceeID{o+mm}
+	{%
+		\IfNoValueTF{#3}%
+		{\noindent\text{\kaishu\color{cyan}（#2，#3）}}%
+		{\noindent\text{\kaishu\color{cyan}（#2，#3，#1分）}}%
+	}
+%%================ 全局设置 ====================
+%-------------- 双线页眉的设置 ------------------
+\makeatletter %双线页眉
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi %
+\color{sakura}\hrule\@height 1.0pt \@width\headwidth\vskip1pt %上面线为1pt粗
+\color{sakura}\hrule\@height 0.5pt\@width\headwidth%下面0.5pt粗
+\vskip-2\headrulewidth\vskip-1pt} %两条线的距离1pt
+\vspace{6mm}} %双线与下面正文之间的垂直间距
+\makeatother
+%----------------------------------------------
+\pagestyle{fancy-note}
+
+%%=============================================
+
+\begin{document}
+\markboth{高中物理\(\cdot\)题集}{festina lente}
+
+%%-------------- 力学 -----------------------
+	\input{mechanics/section_01}	%% 物理史、北京
+	\input{mechanics/section_02}	%% 运动学
+	\input{mechanics/section_03}	%% 相互作用
+	\input{mechanics/section_04}	%% 动力学
+	\input{mechanics/section_05}	%% 传送带与板块
+	\input{mechanics/section_06}	%% 曲线
+	\input{mechanics/section_07}	%% 引力
+	\input{mechanics/section_08}	%% 功能
+	\input{mechanics/section_09}	%% 动量
+	\input{mechanics/section_10}	%% 振动与波
+
+%%------------------- 电磁学 ---------------
+	\input{electromagnetism/section_01}		%%电场
+	\input{electromagnetism/section_02}		%%磁场
+	\input{electromagnetism/section_03}		%%电磁场复合
+	\input{electromagnetism/section_04}		%%电磁感应
+
+%%---------------- 热学&光学&近物 -------------
+	\input{thermology_optics_modern_physics/section_01}		%%热学
+	\input{thermology_optics_modern_physics/section_02}		%%光学
+	\input{thermology_optics_modern_physics/section_03}		%%原子物理
+	
+%%-------------- 实验  ----------------------
+	\input{experiment/section_01}
+	\input{experiment/section_02}
+	\input{experiment/section_03}
+\end{document}

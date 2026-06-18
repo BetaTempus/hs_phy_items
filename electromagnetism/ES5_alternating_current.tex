@@ -1,0 +1,79 @@
+\section{交变电流}
+
+\begin{proset}
+    如图甲、乙所示，在\( - d \le x\le d \)、\( - d\le y\le d\)区域中的阴影部分，存在垂直\(xOy\)平面向里的匀强磁场，边长均为\(2d\)正方形线框与磁场边界重合。两线框都绕\(y\)轴以相同的角速度匀速转运，则甲、乙线框中产生的感应电动势最大值之比为\paren[]
+
+    \begin{tikzpicture}[font=\scriptsize,>=latex]
+        \begin{scope}
+            \draw[fill=gray!50,draw=white] (-1.2,1.2) rectangle(-.6,-1.2) (.6,1.2)  rectangle(1.2,-1.2);
+            \foreach \x in{-.9,.9}
+                \foreach \y in{-.8,-.4,.4,.8}
+                    \node[blue] at(\x,\y){\( \times \)};
+            \draw[dashed] (-.6,1.2)--(-.6,-1.2)node[below]{\( -\frac{d}{2}\)} (.6,1.2)--(.6,-1.2)node[below]{\(\frac{d}{2}\)};
+            \draw[thick] (-1.2,1.2) rectangle(1.2,-1.2);\draw[blue,->] (-1.6,0)--(1.6,0)node[right]{\(x\)};
+            \draw[blue,->] (0,-1.8)--(0,2)node[left]{\(y\)};
+            \draw[orange,->] (-.12,1.5) arc(130:430:.2 and .1);
+            \node[blue] at(-.2,-.2){\(O\)};
+            \node[below] at(0,-2){甲};
+        \end{scope}
+        \begin{scope}[xshift=4cm]
+            \draw[fill=gray!50,draw=white](0,1.2)  rectangle(1.2,-1.2);
+            \foreach \x in{.3,.9}
+                \foreach \y in{-.8,-.4,.4,.8}
+                    \node[blue] at(\x,\y){\( \times \)};
+            \draw[thick] (-1.2,1.2) rectangle(1.2,-1.2);\draw[blue,->] (-1.6,0)--(1.6,0)node[right]{\(x\)};
+            \draw[blue,->] (0,-1.8)--(0,2)node[left]{\(y\)};
+            \draw[orange,->] (-.12,1.5) arc(130:430:.2 and .1);
+            \node[blue] at(-.2,-.2){\(O\)};
+            \node[below] at(0,-2){乙};
+        \end{scope}
+    \end{tikzpicture}
+    \begin{choices}
+        \item \(1:1\)
+        \item \(\sqrt{3}:2\)
+        \item \(\sqrt{3}:1\)
+        \item \(2:1\)
+    \end{choices}
+\end{proset}
+\begin{answer}
+    C\quad 提示：
+\end{answer}
+
+\subsection{电感}
+
+\begin{proset}
+    （多选）
+    某同学利用电压传感器来研究电感线圈工作时的特点。图1中三个灯泡完全相同，不考虑温度对灯泡电阻的影响。在闭合开关\(S\)的同时开始采集数据，当电路达到稳定状态后断开开关。图2是由传感器得到的电压\(u\)随时间\(t\)变化的图像。电感线圈自感系数较大，不计线圈的电阻及电源内阻。下列说法正确的是\paren[]
+
+    \begin{tikzpicture}[decoration={bumps,segment length=3mm,amplitude=1mm}]
+        \draw[blue] (0,0) rectangle(3,2) (0,1)--(3,1) (0,2)--(0,3)--(2,3)--(2,2);
+        \draw[fill=white] (.5,0) circle(.15)node{\( \times \)}node[above right,font=\scriptsize]{\(D_1\)};\draw[fill=white] (1.5,1) circle(.15)node{\( \times \)}node[above right,font=\scriptsize]{\(D_2\)};\draw[fill=white] (2.5,2) circle(.15)node{\( \times \)}node[above right,font=\scriptsize]{\(D_3\)};
+        \draw[fill=white,draw=white] (1.45,.-.2)coordinate(battery) rectangle ($(battery)+(.1,.4)$);
+        \draw[blue] ($(battery)+(0,.4)$)--++(0,-.4) ($(battery)+(.1,.3)$)node[font=\scriptsize,black,above]{\(E\)}--++(0,-.2);
+        \draw[fill=white,draw=white] (2,-.2)coordinate(switch) rectangle ($(switch)+(.45,.2)$);
+        \draw[blue] ($(switch)+(0,.2)$) circle(.05) ($(switch)+(0,.25)$)--++(5:.5)node[above left,font=\scriptsize,black]{\(S\)};
+        \draw[fill=white] (.5,2.7) rectangle(1.5,3.3)node[midway,font=\scriptsize]{传感器};
+        \draw[fill=white,draw=white] (.5,1.7) rectangle(1.5,2.3);
+        \draw[decorate,blue] (.5,2)--node[below,black,font=\scriptsize]{\(L\)}(1.52,2);
+        \draw[blue] (.5,2.2)--(1.45,2.2);
+        \node[font=\scriptsize] at(1.5,-.5){图1};
+    \end{tikzpicture}
+    \begin{tikzpicture}[font=\scriptsize,>=latex]
+        \draw[->,blue] (0,0)node[left]{\(O\)}--(4,0)node[below]{\(t\)};
+        \draw[->,blue] (0,-2.1)--(0,1.5)node[right]{\(u\)};
+        \draw[purple] (0,1)node[left,blue]{\(u_1\)}..controls(.2,.4)and(.5,.1)..(1.2,0);
+        \draw[purple] (2,-1.8)..controls(2.2,-.6)and(3,-.1)..(3.5,0);
+        \draw[dashed] (0,1)--(2,1)--(2,-1.8)--(0,-1.8)node[left,blue]{\( -u_2\)} (1.2,1)--(1.2,-1.8);
+        \node[font=\scriptsize] at(2,-2.4){图2};
+    \end{tikzpicture}
+
+    \begin{choices}
+        \item 开关\(S\)闭合瞬间，灯\(D_1\)、\(D_2\)的瞬时功率相等
+        \item 开关\(S\)断开瞬间，灯\(D_2\)闪亮一下再熄灭
+        \item 根据题意中信息可推出\(u_1\)与\(u_2\)的比值为\(2:3\)
+        \item 根据题意中信息可推出\(u_1\)与\(u_2\)的比值为\(3:4\)
+    \end{choices}
+\end{proset}
+\begin{answer}
+    AD\qquad 提示：闭合开关时，电感线圈中的电流从零开逐渐增大直至稳定，\(u_1 = \frac{E}{2}\)；断开开关时，电感线圈中的电流逐渐减小至零，\(u_2 = I_3\cdot 2R = \frac{1}{2} \frac{E}{R + \frac{R}{2}}\cdot 2R = \frac{2}{3}E\)。
+\end{answer}

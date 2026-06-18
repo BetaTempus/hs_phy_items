@@ -1,0 +1,67 @@
+\section{磁场}
+
+\begin{proset}
+    如图所示，两根电阻不计的光滑水平导轨\(A_1B_1\)、\(A_2B_2\)平行放置，间距\(L =\) \,\qty{1}{m}，处于竖直向下\(B =\) \,\qty{0.4}{T}的匀强磁场中，导轨左侧接一电容\(C =\) \,\qty{0.1}{F}的超级电容器，初始时刻电容带一定电量，电性如图所示。质量\(m_1 =\) \,\qty{0.2}{kg}、电阻不计的金属棒\(ab\)垂直架在导轨上，闭合开关\(S\)后，\(ab\)棒由静止开始向右运动，且离开\(B_1B_2\)时已以\(v_1 =\) \,\qty{1.6}{m/s}匀速，下方光滑绝缘导轨\(C_1MD_1\)、\(C_2ND_2\)间距也为\(L\)，正对\(A_1B_1\)、\(A_2B_2\)放置，其中\(C_1M\)、\(C_2N\)为半径\(r =\) \,\qty{1.25}{m}、圆心角\(\theta =\) \,\qty{37}{\degree}的圆弧，与水平轨道\(MD_1\)、\(ND_2\)相切于\(M\)、\(N\)点，其中\(NO\)、\(MP\)两边长度\(d =\) \,\qty{0.5}{m}，以\(O\)为坐标原点，沿导轨向右建立坐标系，\(OP\)右侧\(0 < x < 0.5\) \,\qty{}{m}处存在磁感应强度大小为\(B_x = \sqrt{3x}\)(\,\qty{}{T})的磁场，磁场方向竖直向下，质量\(m_2 =\) \,\qty{0.4}{kg}电阻\(R =\) \,\qty{1}{\ohm}的“U”型金属框静止于水平导轨\(NOPM\)处，导体棒\(ab\)自\(B_1B_2\)抛出后恰好能从\(C_1C_2\)处沿切线进入圆弧轨道，并在\(MN\)处与金属框发生完全非弹性碰撞，碰后组成导电良好的闭合线框一起向右运动。重力加速度\(g\)取\,\qty{10}{m/s^2}。请解决下列问题：
+    \begin{enumerate}[(1)]
+        \item 求初始时刻电容器带电量\(Q_0\)；
+        \item 若闭合线框进入磁场\(B_x\)区域时，立刻给线框施加一个水平向右的外力\(F\)，使线框匀速穿过磁场\(B_x\)区域，求此过程中线框产生的焦耳热；
+        \item 闭合线框进入磁场\(B_x\)区域后只受安培力作用而减速，试讨论线框能否穿过\(B_x\)区域，若能，求出离开磁场\(B_x\)时的速度；若不能，求出线框停止时右边框的位置\(x\)坐标。（已知：\(\sum 3x\cdot\Delta x = \frac{0 + 3x}{2}x\)；结果可用根式表示）
+    \end{enumerate}
+    \begin{tikzpicture}[font=\scriptsize]
+        \draw[thick] (0,0)--++(70:.4) (70:.6)--++(70:.4) ($(70:.4)+(-.2,0)$)node[blue,left]{\( -\)}--++(.4,0) ($(70:.6)+(-.2,0)$)node[red,left]{\( +\)}--++(.4,0);
+        \draw[thick] (0,0)node[below left]{\(A_2\)}--++(2.5,0)coordinate(b1)node[below left]{\(B_2\)} ($(b1)+(1.5,-1)$)node[below left]{\(C_2\)} arc(-127:-90:1.5)node[below]{\(N\)}coordinate(n)--++(2.5,0)node[below]{\(D_2\)}coordinate(d2);
+        \draw[dashed] (b1) parabola bend (b1) ($(b1)+(1.5,-1)$);
+        \draw[thick] (70:1)node[above left]{\(A_1\)}--++(2.5,0)coordinate(b2) ($(b2)+(1.5,-1)$)node[above]{\(C_1\)} arc(-127:-90:1.5)node[above right]{\(M\)}--++(2.5,0)node[above]{\(D_1\)};
+        \draw[dashed] (b2) parabola bend (b2) ($(b2)+(1.5,-1)$)--++(53:1.5)--++(0,-1.5)--++(70:-1) ($(b1)+(1.5,-1)$)--++(70:1);
+        \draw[red,very thick] ($(1.2,0)+(70:-.2)$)node[below]{\(b\)}--++(70:1.4)node[above]{\(a\)} (n)--++(.7,0)coordinate(o)node[below,black]{\(O\)}--++(70:1)node[above,black]{\(P\)}--++(-.7,0);
+        \draw[dashed] ($(o)+(.7,0)$)--++(70:1);
+        \draw[fill=white,draw=white] (.2,-.1) rectangle(.6,.1);
+        \draw[thick] (.2,0) circle(.05) (.2,.05)--++(5:.5);
+        \draw[-latex,blue] (2,1.8)node[right]{\(B\)}--++(0,-1.3);
+        \draw[-latex,blue] (6.2,0)node[right]{\(B_x\)}--++(0,-.9);
+        \draw[-latex,thick] (d2)--++(.3,0)node[right]{\(x\)};
+        \node[above] at ($(o)+(-.35,0)$){\(d\)};
+        \node[above] at ($(o)+(.35,0)$){\(d\)};
+    \end{tikzpicture}
+\end{proset}
+\begin{answer}
+    （1）\(Q_0 =\) \,\qty{0.864}{C}（2）\,\qty{0.75}{J}（3）\(\frac{5 + \sqrt{15}}{10}\) \,\qty{}{m}
+
+    （1）由动量定理可得：\(B \overline{I}L\cdot t = m_1v_1 - 0\)、\(\overline{I}t = q = Q_0 - Q^{\prime}\)
+
+    稳定时回路中无电流，电容与导体棒电压相等：\(\frac{Q^{\prime}}{C} = BLv_1\)
+
+    解得：\(Q_0 =\) \,\qty{0.864}{C}
+
+    （2）\(ab\)棒恰好相切进入圆弧：\(v_C = \frac{v_1}{\cos \theta} =\) \,\qty{2}{m/s}
+
+    \(ab\)到水平位置时速度为\(v_N\)，由动能定理可得：\(mgr(1 - \cos\theta) = \frac{1}{2}m_1v_N^2 - \frac{1}{2}m_1v_C^2\)
+
+    解得：\(v_N =\) \,\qty{3}{m/s}
+
+    \(ab\)棒与金属框发生完全非弹性碰撞后速度为\(v_0\)，可得：\(m_1v_{N} = (m_1 + m_2)v_0\)
+
+    解得：\(v_0 =\) \,\qty{1}{m/s}
+
+    金属框\(OP\)边在\(B_x\) 中时，外力\(F\)与安培力相等：\(F = B_xIL = \frac{B_x^2L^2}{R}v_0 = 3x\)
+
+    焦耳热等于变力\(F\)做功：\(Q = 2\cdot \frac{1}{2} 3d^2 =\) \,\qty{0.75}{J}
+
+    （3）金属框\(OP\)边在\(B_x\) 中时，对金属框应用动量定理：
+    
+    \(  (m_1 + m_2)\Delta v =- B_xIL\cdot \Delta t =- \frac{B_x^2L^2}{R}\cdot v\Delta t = - \frac{B_x^2L^2}{R}\cdot\Delta x\)
+
+    \[
+        \int_{v_0}^{v} (m_1 + m_2) \mathrm{d} v = - \int_{0}^{x} 3x \mathrm{d} x
+    \]
+    \[
+        v = v_0 - \frac{5}{2}x^2 = 1 - \frac{5}{2}x^2
+    \]
+    
+    \(OP\)边出磁场时速度：\(v^{\prime} = 1 - \frac{5}{2}0.5^2 = \frac{3}{8}\) \,\qty{}{m/s}
+
+    \(0 = \frac{3}{8} - \frac{5}{2}x^{\prime 2}\)
+
+    解得：\(x^{\prime} = \frac{\sqrt{15}}{10}\) \,\qty{}{m}
+    故坐标为\(\frac{5 + \sqrt{15}}{10}\) \,\qty{}{m}
+\end{answer}

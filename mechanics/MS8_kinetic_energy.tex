@@ -1,0 +1,35 @@
+\section{功能关系}
+
+\subsection{变力做功}
+
+\begin{proset}
+    如图甲所示，水平地面上静止停放有\(A\)、\(B\)两个靠在一起的箱子，两箱子质量均为\,\qty{1}{kg}，\(A\)与地面间的动摩擦因数为\(\mu = 0.1\)，\(B\)与地面间的摩擦可忽略不计，两箱子在外力\(F\)的作用下向右前进，\(F\)的大小随位移\(x\)的变化关系图像如图乙所示，\,\qty{6}{m}之后撤去外力\(F\)，水平地面足够长，\(g\)取\,\qty{10}{m/s^2}。求：
+    \begin{enumerate}[(1)]
+        \item 当\(t =\) \,\qty{2}{s}时，\(A\)、\(B\)两个箱子的位移大小；
+        \item 当\(x =\) \,\qty{5}{m}时，\(A\)与\(B\)之间的弹力的大小；
+        \item 箱子\(A\)停止运动时，\(A\)与\(B\)之间的距离。
+    \end{enumerate}
+    \begin{tikzpicture}[font=\scriptsize,>=latex]
+        \draw[fill=orange!40] (0,0)rectangle(.4,.4)node[pos=.5]{\(A\)};
+        \draw[fill=yellow!40] (.4,0)rectangle(.8,.4) node[pos=.5]{\(B\)};
+        \draw[->,red,] (-0.7,.2)--++(.7,0)node[above left]{\(F\)};
+        \foreach \x in{-.8,-.6,...,3}
+            \draw[gray] (\x,-.2)--++(.2,.2);
+        \draw[thick] (-.8,0)--(3.2,0);
+        \node at(1.2,-.6){图甲};
+    \end{tikzpicture}
+    \begin{tikzpicture}[font=\scriptsize,>=latex]
+        \draw[->,blue] (0,0)node[below left]{\(0\)}--(3.8,0)node[below]{\(x\)/\,\qty{}{m}};
+        \draw[->,blue] (0,0)--(0,3.6)node[right]{\(F\)/\,\qty{}{N}};
+        \foreach \x/\number in{.8/2,1.6/4,2.4/6,3.2/8}
+            \draw (\x,0)node[below,blue]{\number}--++(0,.1);
+        \foreach \y/\number in{.8/1,1.6/2,2.4/3,3.2/4}
+            \draw (0,\y)node[left,blue]{\number}--++(.1,0);
+        \draw[dashed,gray] (.8,2.4)--(.8,0) (0,.8)--(2.4,.8) (2.4,.8)--(2.4,0);
+        \draw[purple] (0,2.4)--(.8,2.4)--(2.4,.8);
+        \node at(1.9,-.6){图乙};
+    \end{tikzpicture}
+\end{proset}
+\begin{answer}
+    （1）\qty{2}{m}（2）\qty{0.25}{N}（3）\qty{4}{m}\qquad 此题关键是分析出外力\(F\)减小至滑动摩擦力\(f =\mu mg =\)  \qty{1}{N}之前，\(A\) 与\(B\)不分开。
+\end{answer}
