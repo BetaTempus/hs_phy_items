@@ -23,10 +23,10 @@
 \usepackage{multicol} % 分栏
 
 %-------------- 自定义宏包 ---------------------
-\usepackage{sapientiabook-choices}
-\usepackage{sapientiabook-question}
+\usepackage{vbchoices}
+\usepackage{vbquestion}
 %\usepackage{sapientiabook-answer}
-\usepackage[show-answer]{sapientiabook-answer} % show-answer 显示答案
+\usepackage[show-answer]{vbbool} % show-answer 显示答案
 
 %%=============== 新建命令 =====================
 \newcommand{\lkf}[1]{\noindent\text{\kaishu\color{cyan}（#1）}}
@@ -59,31 +59,49 @@
 \begin{document}
 \markboth{高中物理\(\cdot\)题集}{festina lente}
 
-%%-------------- 力学 -----------------------
-	\input{mechanics/section_01}	%% 物理史、北京
-	\input{mechanics/section_02}	%% 运动学
-	\input{mechanics/section_03}	%% 相互作用
-	\input{mechanics/section_04}	%% 动力学
-	\input{mechanics/section_05}	%% 传送带与板块
-	\input{mechanics/section_06}	%% 曲线
-	\input{mechanics/section_07}	%% 引力
-	\input{mechanics/section_08}	%% 功能
-	\input{mechanics/section_09}	%% 动量
-	\input{mechanics/section_10}	%% 振动与波
+\section{凡例}
+\input{format}
 
-%%------------------- 电磁学 ---------------
-	\input{electromagnetism/section_01}		%%电场
-	\input{electromagnetism/section_02}		%%磁场
-	\input{electromagnetism/section_03}		%%电磁场复合
-	\input{electromagnetism/section_04}		%%电磁感应
+%\input{mechanics/MS6_curvilinear_motion.tex}
+\section{摩擦力}
+\subsection{滑动摩擦力}
+\subsubsection{相对运动时的摩擦力}
 
-%%---------------- 热学&光学&近物 -------------
-	\input{thermology_optics_modern_physics/section_01}		%%热学
-	\input{thermology_optics_modern_physics/section_02}		%%光学
-	\input{thermology_optics_modern_physics/section_03}		%%原子物理
-	
-%%-------------- 实验  ----------------------
-	\input{experiment/section_01}
-	\input{experiment/section_02}
-	\input{experiment/section_03}
+\begin{proset}
+	\input{exam/M/I/E-MI-SI-L4-2624-001}
+\end{proset}
+
+
+\section{动力学}
+\subsection{连接体问题}
+\subsubsection{动滑轮}
+
+\begin{proset}
+	\input{exam/M/D/E-MD-MU-L3-2624-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/D/E-MD-MU-L3-2624-002}
+\end{proset}
+
+
+\section{曲线运动}
+\section{小船过河}
+
+\begin{proset}
+	\input{exam/M/C/E-MC-SI-L2-2624-001}
+\end{proset}
+
+\subsection{平抛运动}
+
+\begin{proset}
+	\input{exam/M/C/E-MC-MU-L4-2624-002}
+\end{proset}
+
+\section{几何光学}
+\subsection{光纤}
+
+\begin{proset}
+	\input{exam/O/E-O-CA-L3-2624-001}
+\end{proset}
+
 \end{document}
