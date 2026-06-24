@@ -1,0 +1,27 @@
+\icode{E-MD-MU-L3-2624-001}
+（多选）
+如图所示，离地足够高的轻质动滑轮下方悬挂质量为\(3m\)的重物\(P\)，轻质定滑轮下方悬挂质量为\(m\)的重物\(Q\)，悬挂滑轮的轻质细线竖直。开始时，\(P\)、\(Q\)均处于静止状态，不计摩擦阻力和空气阻力，重力加速度大小为\(g\)。释放后\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+    \draw[fill=gray!40] (0,0) circle(.3) (.6,1.5) circle(.3);
+    \draw (0,0) circle(.25) (0,0) circle(.1) (.6,1.5) circle(.25) (.6,1.5) circle(.1);
+    \draw[purple] (-.3,2)--(-.3,0) (.3,0)--(.3,1.5) (.9,1.5)--(.9,-1)coordinate(q) (0,0)--(0,-1)coordinate(p);
+    \fill (0,0) circle(.05) (.6,1.5) circle(.05);
+    \draw[fill=orange!40] ($(p)+(-.15,0)$) rectangle ($(p)+(.15,-.3)$)node[midway]{\(P\)} ($(q)+(-.15,0)$) rectangle ($(q)+(.15,-.3)$)node[midway]{\(Q\)};
+    \foreach \x in{-.8,-.6,...,1.2}
+        \draw[gray] (\x,2.2)--++(.2,-.2);
+    \draw[thick] (-.8,2)--(1.4,2) (.6,1.5)--(.6,2);
+\end{tikzpicture}
+\begin{choices}
+    \item \(Q\)受到细线拉力大小为\(mg\)
+    \item \(Q\)受到细线拉力大小为\(\frac{9mg}{7}\)
+    \item 当\(P\)位移大小为\(h\)时，\(Q\)的速度大小为\(\frac{\sqrt{2gh}}{2} \) 
+    \item 当\(P\)位移大小为\(h\)时，\(Q\)的速度大小为\(\frac{2\sqrt{14gh}}{7} \)
+\end{choices}
+\begin{answer}
+    BD\quad 提示：\(Q\)上升高度是\(P\)下降高度的2倍，\(Q\)的加速度和速度均是 \(P\)的2倍
+
+    \(3mg - 2T = 3m\cdot a\)\quad \(T - mg = m\cdot 2a\)联立可得：\(T = \frac{9mg}{7}\)
+
+    \(3mg\cdot h - mg\cdot 2h = \frac{1}{2} 3mv^2 + \frac{1}{2} m (2v)^2\)可得：\(v = \frac{\sqrt{14gh}}{7} \)
+\end{answer}

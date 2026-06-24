@@ -1,0 +1,58 @@
+%% 通过设置一个布尔值来控制答案显示与否
+%	 代码来源：https://ljguo1020.github.io/2022/11/11/LaTeX-show-answer/
+
+\ProvidesClass{vbbool}[2026/06/24 virtusbook v0.0.1 class]
+
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage{expl3}
+\RequirePackage{xcolor}
+
+
+\ExplSyntaxOn
+
+%%	定义两个变量
+\tl_clear_new:N \__answer_tl % 用于保存答案
+\bool_new:N \__answer_bool % bool变量，用于控制答案显示与否
+
+%\bool_set_true:N \__answer_bool % 将 \__answer_bool 设置为真，则显示答案，如果注释掉，则不显示
+%\iffalse
+\keys_define:nn{answer}
+  {
+    show-answer.code:n = {\bool_set_true:N \__answer_bool}
+  } % 使用 l3keys 包提供的键值设置，定义了一个 show-answer 键，他的内容是将 bool 变量设置为逻辑真
+
+\ProcessKeysOptions{answer} % 如果加了show-answer可选项，则显示答案，反之则不显示
+%\fi
+
+%%	声明答案环境
+
+\NewDocumentEnvironment{answer}{+b}
+  {
+    \tl_set:Nn \__answer_tl
+    {
+      \noindent\textbf{\textcolor{cyan}{答案：}}
+      {\fangsong #1}
+    }
+  } % 这是将答案的内容写进 \__answer_tl 这个变量里面
+  {
+    \par 
+    \bool_if:NT\__answer_bool{\tl_use:N   \__answer_tl}
+  } % \bool_if:NT 函数用于判断 \__answer_bool 这个 bool 变量的真假，如果为真则执行
+
+
+\bool_new:N \g_item_code_bool
+\bool_gset_true:N \g_item_code_bool
+% 若要隐藏内容，改为 \bool_gset_false:N \g_item_code_bool
+
+% 2. 定义一个用户级命令来封装条件判断
+\NewDocumentCommand { \icode } { O{teal}+m } {
+    % \bool_if:NTF 是 LaTeX3 的条件函数
+    % T = True, F = False, 分别对应显示和隐藏
+    \bool_if:NTF \g_item_code_bool {
+        \textcolor{#1}{\texttt{#2}}  % 显示内容
+    } {
+        % 隐藏内容：此处留空，也可添加占位或提示
+    }
+}
+\ExplSyntaxOff
+\endinput
