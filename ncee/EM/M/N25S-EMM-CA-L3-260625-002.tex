@@ -1,0 +1,34 @@
+\icode{N25S-EMM-CA-L3-260625-002}
+\nceeID{2025陕山青宁}{14}
+电子比荷是描述电子性质的重要物理量。在标准理想二极管中利用磁控法可测得比荷，一般其电极结构为圆筒面与中心轴线构成的圆柱体系统，结构简化如图（\(a\)）所示，圆筒足够长。在\(O\)点有一电子源，向空间中各个方向发射速度大小为\(v_0\)的电子，某时刻起筒内加大小可调节且方向沿中心轴向下的匀强磁场，筒的横截面及轴截面示意图如图（\(b\)）所示，当磁感应强度大小调至\(B_0\)时，恰好没有电子落到筒壁上，不计电子间相互作用及其重力的影响。求：（\(R\)、\(B_0\) 、\(v_0\)均为已知量）
+\begin{enumerate}[(1)]
+	\item 电子的比荷\(\frac{e}{m}\)；
+	\item 当磁感应强度大小调至\(\frac{1}{2}B_0\)时，筒壁上落有电子的区域面积\(S\)。
+\end{enumerate}
+\begin{tikzpicture}
+	\draw (0,0) ellipse(.6 and .3);
+	\draw (.6,-2) arc(0:-180:.6 and .3) (-.6,-2)--(-.6,0) (.6,-2)--(.6,0);
+	\draw[dashed] (.6,-2) arc(0:180:.6 and .3) (0,.5)--(0,-2.5);
+	\fill (0,0) circle(.05) (0,-1)node[right]{\scriptsize \(O\)} circle(.05) (0,-2) circle(.05);
+	\draw[-stealth] (0,0)--node[above]{\scriptsize \(R\)}(.6,0);
+
+	\draw (2,-1) circle(.6);
+	\foreach \theta in{0,45,...,315}
+		\draw[->,red] (2,-1)--++(\theta:.3);
+	\foreach \c in{(1.8,-.7),(2.2,-.7),(2.2,-1.3),(1.8,-1.3),(1.6,-1),(2.4,-1)}
+		\draw[teal] \c node{\scriptsize\(\times\)};
+	\draw (3.4,0) rectangle(4.6,-2);
+	\foreach \theta in{0,45,...,315}
+		\draw[->,red] (4,-1)--++(\theta:.3);
+	\foreach \x in {3.6,4,4.4}
+		\draw[teal,-stealth] (\x,-.1)--++(0,-.3);
+	\node at(4.4,-.4)[below,teal]{\scriptsize \(B_0\)};
+	\node at(4,-1.3)[below,red]{\scriptsize \(v_0\)};
+	\node at(2,-2.2){\scriptsize 横截面};
+	\node at(4,-2.2){\scriptsize 轴截面};
+	\node at(0,-2.9){\footnotesize 图（\(a\)）};
+	\node at(3.1,-2.9){\footnotesize 图（\(b\)）};
+\end{tikzpicture}
+\begin{answer}
+	（1）\(\frac{2v_0}{B_0R}\)（2）\(2\sqrt{3}\pi^2R^2\)
+\end{answer}

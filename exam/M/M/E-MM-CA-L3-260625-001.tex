@@ -1,0 +1,17 @@
+\icode{E-MM-CA-L3-260625-001}
+如图，质量为\(m\)的物块从离地面高度为\(h\)处由静止释放，同时一颗质量为\(m\)的子弹在与物块等高处沿水平方向射入物块并留在物块中，物块落地点离\(P\)点的水平距离也为\(h\)，不计物块大小，子弹打物块的时间可以忽略不计，重力加速度为\(g\)。
+\begin{enumerate}[(1)]
+    \item 子弹打物块过程中子弹和物块系统损失的动能为多少？
+    \item 仅改变子弹水平射出的高度，先释放物块再射出子弹，子弹恰好沿水平方向击中物块并留在物块中，结果物块落地点离\(P\)点的水平距离为\(\frac{1}{2}h\)，则调整后子弹射出的高度为多少？
+\end{enumerate}
+\begin{tikzpicture}[font=\scriptsize]
+    \draw[dashed,cyan] (0,3)coordinate(p) parabola bend(0,3) (3,0) (0,3)--(0,0);
+    \draw[fill=orange!40] ($(p)+(-.1,-.1)$) rectangle ++(.2,.2)node[above left] {\(P\)};
+    \draw[fill=brown!60] (-.3,3)--++(-.2,.05)--++(0,-.1)--cycle;
+    \foreach \x in{-.6,-.4,...,3.4}
+        \draw[gray] (\x,-.2)--++(.2,.2);
+    \draw[thick] (-.6,0)--(3.4,0);
+\end{tikzpicture}
+\begin{answer}
+    （1）\(\Delta E_k = \frac{1}{2}mgh\)（2）\(\frac{1 + \sqrt{13}}{8}h\)\qquad 注意第（2）问中水平竖直两个方向上动量守恒
+\end{answer}

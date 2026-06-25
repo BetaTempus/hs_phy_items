@@ -38,7 +38,7 @@
 
 \NewDocumentCommand\nceeID{o+mm}
 	{%
-		\IfNoValueTF{#3}%
+		\IfNoValueTF{#1}%
 		{\noindent\text{\kaishu\color{cyan}（#2，#3）}}%
 		{\noindent\text{\kaishu\color{cyan}（#2，#3，#1分）}}%
 	}
@@ -59,28 +59,57 @@
 \begin{document}
 \markboth{高中物理\(\cdot\)题集}{festina lente}
 
-\section{凡例}
+\section*{凡例}
 \input{format}
 
-%\input{mechanics/MS6_curvilinear_motion.tex}
+%\input{dates/date_0423}
+\section{运动学}
+\begin{proset}
+	\input{exam/M/K/E-MK-MU-L3-260625-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/K/E-MK-SI-L2-260625-001}
+\end{proset}
+
+\subsection{比例问题}
+\begin{proset}
+	\input{exam/M/K/E-MK-MU-L3-260625-003}
+\end{proset}
+
+\subsection{图像问题}
+
+\begin{proset}
+	\input{exam/M/K/E-MK-SI-L3-260625-001}
+\end{proset}
+
+\subsection{追及相遇}
+\begin{proset}
+	\input{exam/M/K/E-MK-MU-L3-260625-001}
+\end{proset}
+
 \section{摩擦力}
 \subsection{滑动摩擦力}
 \subsubsection{相对运动时的摩擦力}
 
 \begin{proset}
-	\input{exam/M/I/E-MI-SI-L4-2624-001}
+	\input{exam/M/I/E-MI-SI-L4-260624-001}
 \end{proset}
 
 
 \section{动力学}
+\subsection{量纲分析}
+\begin{proset}
+	\input{exam/M/D/E-MD-SI-L2-260625-001}
+\end{proset}
+
 \subsection{连接体问题}
 \subsubsection{动滑轮}
 
 \begin{proset}
-	\input{exam/M/D/E-MD-MU-L3-2624-001}
+	\input{exam/M/D/E-MD-MU-L3-260624-001}
 \end{proset}
 \begin{proset}
-	\input{exam/M/D/E-MD-MU-L3-2624-002}
+	\input{exam/M/D/E-MD-MU-L3-260624-002}
 \end{proset}
 
 
@@ -88,20 +117,291 @@
 \section{小船过河}
 
 \begin{proset}
-	\input{exam/M/C/E-MC-SI-L2-2624-001}
+	\input{exam/M/C/E-MC-SI-L2-260624-001}
 \end{proset}
 
 \subsection{平抛运动}
 
 \begin{proset}
-	\input{exam/M/C/E-MC-MU-L4-2624-002}
+	\input{exam/M/C/E-MCH-MU-L4-260624-002}
 \end{proset}
 
+
+\section{圆周运动}
+
+\subsection{竖直圆周运动}
+
+\begin{proset}
+	\input{exam/M/C/E-MCC-SI-L2-260625-001}
+\end{proset}
+
+
+\section{万有引力}
+\subsection{引力势能}
+
+\begin{proset}
+	\input{exam/M/G/E-MG-CA-L3-260625-001}
+\end{proset}
+
+
+\section{功能关系}
+\subsection{变力做功}
+
+\begin{proset}
+	\input{exam/M/E/E-ME-CA-L3-260625-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N17SU-ME-CA-L3-260625-001}
+\end{proset}
+
+\subsection{关联速度}
+\begin{proset}
+	\input{exam/M/E/E-ME-MU-L3-260625-001}
+\end{proset}
+
+
+\section{动量}
+\subsection{动量守恒定律}
+
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L3-260625-001}
+\end{proset}
+
+\subsection{类碰撞模型}
+
+\begin{proset}
+	\input{exam/M/M/E-MM-MU-L3-260625-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/M/N24W-MM-CA-L3-260625-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/M/N-MM-CA-L3-260625-001}
+\end{proset}
+
+\subsection{非对心碰撞}
+
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-260625-003}
+\end{proset}
+
+\subsection{连续碰撞}
+
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L3-260625-005}
+\end{proset}
+
+\subsection{相对速度}
+
+\begin{proset}
+	\input{exam/M/M/E-MM-MU-L4-260625-004}
+\end{proset}
+
+\subsection{人船模型}
+
+\begin{proset}
+	\input{ncee/M/M/N22II-MM-CA-L4-260625-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/M/N25S-MM-CA-L4-260625-002}
+\end{proset}
+
+\section{机械振动}
+\begin{proset}
+	\input{exam/M/V/E-MV-CA-L1-260625-001}
+\end{proset}
+
+\begin{proset}
+	\input{exam/M/V/E-MV-SI-L3-260625-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/V/E-MV-MU-L3-260625-002}
+\end{proset}
+
+\section{机械波}
+
+\begin{proset}
+	\input{exam/M/V/E-MV-SI-L3-260625-003}
+\end{proset}
+
+\subsection{特殊点}
+
+\begin{proset}
+	\input{exam/M/V/E-MV-SI-L2-260625-001}
+\end{proset}
+
+\subsection{干涉}
+\begin{proset}
+	\input{exam/M/V/E-MV-SI-L3-260625-004}
+\end{proset}
+
+\section{电场}
+\subsection{电场强度方向}
+
+\begin{proset}
+	\input{exam/EM/E/E-EME-SI-L3-260625-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/E/N25E-EME-MU-L4-260625-002}
+\end{proset}
+
+\subsection{电势能}
+
+\begin{proset}
+	\input{exam/EM/E/E-EME-MU-L4-260625-002}
+\end{proset}
+
+\section{磁场}
+\subsection{磁场叠加原理}
+\begin{proset}
+	\input{exam/EM/M/E-EMM-SI-L2-260625-001}
+\end{proset}
+
+\subsection{带电粒子在电磁场中运动}
+
+\begin{proset}
+	\input{exam/EM/M/E-EMM-CA-L4-260625-001}
+\end{proset}
+\subsubsection{螺旋线}
+\begin{proset}
+	\input{ncee/EM/M/N25S-EMM-CA-L3-260625-002}
+\end{proset}
+
+\section{电磁感应}
+
+\begin{proset}
+	\input{exam/EM/I/E-EMI-CA-L4-260625-001}
+\end{proset}
+
+\section{交变电流}
+
+\begin{proset}
+	\input{exam/EM/A/E-EMA-SI-L2-260625-001}
+\end{proset}
+
+\subsection{电感}
+
+\begin{proset}
+	\input{exam/EM/A/E-EMA-MU-L3-260625-002}
+\end{proset}
+
+\section{热学}
+
+\subsection{分子动理论}
+\begin{proset}
+	\input{exam/T/E-T-SI-L1-260625-002}
+\end{proset}
+\begin{proset}
+	\input{exam/T/E-T-CA-L2-260625-002}
+\end{proset}
+
+\subsection{热力学三定律}
+\begin{proset}
+	\input{exam/T/E-T-SI-L1-260625-001}
+\end{proset}
+
+\subsection{变质量题型}
+\begin{proset}
+	\input{exam/T/E-T-CA-L3-260625-001}
+\end{proset}
+\begin{proset}
+	\input{exam/T/E-T-CA-L2-260625-001}
+\end{proset}
+
+
+\subsection{图像}
+\begin{proset}
+	\input{exam/T/E-T-MU-L2-260625-001}
+\end{proset}
 \section{几何光学}
+
+\begin{proset}
+	\input{ncee/O/N16III-O-CA-L3-260625-001}
+\end{proset}
 \subsection{光纤}
 
 \begin{proset}
-	\input{exam/O/E-O-CA-L3-2624-001}
+	\input{exam/O/E-O-CA-L3-260624-001}
+\end{proset}
+
+
+\section{现代物理}
+\begin{proset}
+	\input{exam/MP/E-MP-SI-L1-260625-001}
+\end{proset}
+
+\subsection{德布罗意波}
+\begin{proset}
+	\input{exam/MP/E-MP-SI-L3-260625-001}
+\end{proset}
+
+\subsection{能级}
+\begin{proset}
+	\input{exam/MP/E-MP-CA-L2-260625-001}
+\end{proset}
+
+
+\section{原子物理}
+\subsection{衰变}
+
+\begin{proset}
+	\input{exam/A/E-A-SI-L2-260625-001}
+\end{proset}
+\begin{proset}
+	\input{exam/A/E-A-SI-L2-260625-002}
+\end{proset}
+
+\section{力学实验}
+
+\begin{proset}
+	\input{ncee/EX/M/N-EXM-FI-L3-260625-001}
+\end{proset}
+\begin{proset}
+	\input{exam/EX/M/E-EXM-FI-L2-260625-001}
+\end{proset}
+
+\begin{proset}
+	\input{ncee/EX/M/N18I-EXM-FI-L2-260625-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/EX/M/N14II-EXM-FI-L4-260625-001}
+\end{proset}
+
+\subsection{验证牛二}
+\begin{proset}
+	\input{exam/EX/M/E-EXM-FI-L3-260625-001}
+\end{proset}
+
+\subsection{机械能守恒}
+
+\begin{proset}
+	\input{exam/EX/M/E-EXM-FI-L2-260625-002}
+\end{proset}
+
+\subsection{验证动量守恒}
+\begin{proset}
+	\input{exam/EX/M/E-EXM-FI-L1-260625-001}
+\end{proset}
+
+\section{电学实验}
+\subsection{测电阻}
+\begin{proset}
+	\input{ncee/EX/E/N-EXE-FI-L2-260625-001}
+\end{proset}
+
+\subsection{欧姆表}
+
+\begin{proset}
+	\input{exam/EX/E/E-EXE-FI-L3-260625-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/EX/E/N22X-EXE-FI-L3-260625-001}
+\end{proset}
+
+
+\section{其他实验}
+\begin{proset}
+	\input{exam/EX/O/E-EXT-FI-L1-260625-001}
 \end{proset}
 
 \end{document}

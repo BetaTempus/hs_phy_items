@@ -1,0 +1,35 @@
+\icode{E-EMA-MU-L3-260625-002}
+（多选）
+某同学利用电压传感器来研究电感线圈工作时的特点。图1中三个灯泡完全相同，不考虑温度对灯泡电阻的影响。在闭合开关\(S\)的同时开始采集数据，当电路达到稳定状态后断开开关。图2是由传感器得到的电压\(u\)随时间\(t\)变化的图像。电感线圈自感系数较大，不计线圈的电阻及电源内阻。下列说法正确的是\paren[]
+
+\begin{tikzpicture}[decoration={bumps,segment length=3mm,amplitude=1mm}]
+    \draw[blue] (0,0) rectangle(3,2) (0,1)--(3,1) (0,2)--(0,3)--(2,3)--(2,2);
+    \draw[fill=white] (.5,0) circle(.15)node{\( \times \)}node[above right,font=\scriptsize]{\(D_1\)};\draw[fill=white] (1.5,1) circle(.15)node{\( \times \)}node[above right,font=\scriptsize]{\(D_2\)};\draw[fill=white] (2.5,2) circle(.15)node{\( \times \)}node[above right,font=\scriptsize]{\(D_3\)};
+    \draw[fill=white,draw=white] (1.45,.-.2)coordinate(battery) rectangle ($(battery)+(.1,.4)$);
+    \draw[blue] ($(battery)+(0,.4)$)--++(0,-.4) ($(battery)+(.1,.3)$)node[font=\scriptsize,black,above]{\(E\)}--++(0,-.2);
+    \draw[fill=white,draw=white] (2,-.2)coordinate(switch) rectangle ($(switch)+(.45,.2)$);
+    \draw[blue] ($(switch)+(0,.2)$) circle(.05) ($(switch)+(0,.25)$)--++(5:.5)node[above left,font=\scriptsize,black]{\(S\)};
+    \draw[fill=white] (.5,2.7) rectangle(1.5,3.3)node[midway,font=\scriptsize]{传感器};
+    \draw[fill=white,draw=white] (.5,1.7) rectangle(1.5,2.3);
+    \draw[decorate,blue] (.5,2)--node[below,black,font=\scriptsize]{\(L\)}(1.52,2);
+    \draw[blue] (.5,2.2)--(1.45,2.2);
+    \node[font=\scriptsize] at(1.5,-.5){图1};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\scriptsize,>=latex]
+    \draw[->,blue] (0,0)node[left]{\(O\)}--(4,0)node[below]{\(t\)};
+    \draw[->,blue] (0,-2.1)--(0,1.5)node[right]{\(u\)};
+    \draw[purple] (0,1)node[left,blue]{\(u_1\)}..controls(.2,.4)and(.5,.1)..(1.2,0);
+    \draw[purple] (2,-1.8)..controls(2.2,-.6)and(3,-.1)..(3.5,0);
+    \draw[dashed] (0,1)--(2,1)--(2,-1.8)--(0,-1.8)node[left,blue]{\( -u_2\)} (1.2,1)--(1.2,-1.8);
+    \node[font=\scriptsize] at(2,-2.4){图2};
+\end{tikzpicture}
+
+\begin{choices}
+    \item 开关\(S\)闭合瞬间，灯\(D_1\)、\(D_2\)的瞬时功率相等
+    \item 开关\(S\)断开瞬间，灯\(D_2\)闪亮一下再熄灭
+    \item 根据题意中信息可推出\(u_1\)与\(u_2\)的比值为\(2:3\)
+    \item 根据题意中信息可推出\(u_1\)与\(u_2\)的比值为\(3:4\)
+\end{choices}
+\begin{answer}
+    AD\qquad 提示：闭合开关时，电感线圈中的电流从零开逐渐增大直至稳定，\(u_1 = \frac{E}{2}\)；断开开关时，电感线圈中的电流逐渐减小至零，\(u_2 = I_3\cdot 2R = \frac{1}{2} \frac{E}{R + \frac{R}{2}}\cdot 2R = \frac{2}{3}E\)。
+\end{answer}

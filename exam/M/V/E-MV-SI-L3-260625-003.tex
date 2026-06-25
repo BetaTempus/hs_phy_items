@@ -1,0 +1,21 @@
+\icode{E-MV-SI-L3-260625-003}
+某仪器发射两列脉冲横波，在同一均匀介质中相向传播，波速\(v\)的大小均为\,\qty{2}{m/s}。\(t = 0\)时刻的波形图如图所示，此后波在传播的过程中，下列描述正确的是\paren[]
+
+\begin{tikzpicture}[font=\scriptsize,>=latex]
+    \draw[->,blue] (-4.5,0)--(2.5,0)node[below]{\(x\)/\,\qty{}{m}};
+    \draw[->,blue] (0,-.5)--(0,1.8)node[right]{\(y\)/ \,\qty{}{cm}};
+    \foreach \x/\n in{-4/-8,-3/-6,-2/-4,-1/-2,1/2,2/4}
+        \draw[blue] (\x,.1)--++(0,-.1)node[below]{\(\n\)};
+    \draw[purple,domain=-4:-2,smooth] plot(\x,{1.2*sin(pi*\x/2 r)});
+    \draw[purple,domain=1:2,smooth] plot(\x,{-.6*sin(pi*\x r)});
+    \draw[dashed] (-3,0)--(-3,1.2)--(0,1.2)node[blue,right]{4} (1.5,0)--(1.5,.6)--(0,.6)node[blue,left]{2};
+\end{tikzpicture}
+\begin{choices}
+    \item 在\(x =\) \,\qty{0}{m}处两列波相遇
+    \item \(t =\) \,\qty{3}{s}两列波开始相遇
+    \item \(t =\) \,\qty{2}{s}时\(x =\) \,\qty{-3}{m}质点的速度与加速度方向相反
+    \item \(t =\) \,\qty{2.25}{s}时某个质点的位移能达到\,\qty{6}{cm}
+\end{choices}
+\begin{answer}
+    D\quad 提示：两列波波峰相遇时振动加强\(t = \frac{3 -( - 6)} {4} =\) \,\qty{2.25}{s}
+\end{answer}

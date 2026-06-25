@@ -1,0 +1,18 @@
+\icode{E-MV-SI-L2-260625-001}
+一平面简谐横波以速度\(v =\) \,\qty{2}{m/s}沿\(x\)轴正方向传播，\(t = 0\)时刻的波形图如图所示。介质中平衡位置在坐标原点的质点\(A\) 在\(t = 0\) 时刻的位移\(y = \sqrt{2}\)\qty{}{cm}，则\paren[]
+
+\begin{tikzpicture}[>=latex]
+    \draw[->,font=\scriptsize,blue] (-.5,0)--(4,0)node[below]{\(x\)/\,\qty{}{cm}};
+	\draw[->,font=\scriptsize,blue] (0,-1.3)--(0,1.5)node[right]{\(y\)/\,\qty{}{m}};
+	\draw[domain=0:pi,smooth,purple] plot(\x,{sin((2*\x +pi/4) r)});
+    \node at(0,.6)[left,font=\scriptsize,blue]{\(\sqrt{2}\)};
+    \draw[dashed] (0,1)node[left,font=\scriptsize,blue]{\(2\)}--(0.5,1);
+    \node at (1,0)[below,font=\scriptsize,blue]{\(1.5\)};
+    \node at(-.2,-.2)[font=\scriptsize,blue]{\(0\)};
+\end{tikzpicture}
+\begin{choices}
+    \item 该波波长为\,\qty{4}{m}
+    \item 该波频率为\,\qty{0.5}{Hz}
+    \item \(t =\) \,\qty{2}{s}时刻，质点\(A\)向上运动
+    \item \(t =\) \,\qty{2}{s}时刻，质点\(A\)向下运动
+\end{choices}
