@@ -1,0 +1,22 @@
+\icode{E-MK-SI-L2-260928-004}
+一物块静止在光滑水平面上，\(t = 0\)时刻起在外力作用下做直线运动，通过加速度传感器得到加速度\(a\)随时间\(t\)变化关系如图所示，下列说法正确的是\paren[C]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)--(5,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,-1)--(0,2)node[right]{\(a\)/(\qty{}{m\cdot s^{-2}})};
+	\draw[dashed,cyan] (0,1.2)--(.7,1.2)--(.7,0) (1.4,1.2)--(1.4,-.6) (4.2,-.6)--(4.2,0);
+	\draw[purple] (0,0)--(.7,1.2)--(1.4,1.2) (1.4,-.6)--(4.2,-.6);
+	\foreach \x/\n in {.7/1,1.4/2,2.1/3,2.8/4,3.5/5,4.2/6}
+		\draw[blue] (\x,.1)--(\x,0)node[below]{\(\n\)};
+	\foreach \y/\n in {-.6/-1,0/0,.6/1,1.2/2}
+		\draw[blue] (.1,\y)--(0,\y)node[left]{\(\n\)};
+\end{tikzpicture}
+\begin{choices}
+	\item\(t =\)\qty{1}{s}时物块速度为\qty{2}{m/s}
+	\item\(t =\)\qty{4}{s}时物块开始反向运动
+	\item\(t =\)\qty{4}{s}时和\(t =\)\qty{6}{s}时物块的位置相同
+	\item\(0\sim\)\qty{6}{s}内物块速度变化量大小为\qty{2}{m/s}
+\end{choices}
+\begin{answer}
+	C\qquad 提示：画出对应的\(v - t\)图像
+\end{answer}

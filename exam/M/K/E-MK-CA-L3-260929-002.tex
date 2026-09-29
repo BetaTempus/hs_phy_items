@@ -1,0 +1,29 @@
+\icode{E-MK-CA-L3-260929-002}
+根据道路交通安全法的相关规定，机动车遇到行人正在通过人行横道时应当停车让行。如图所示，当行人以 \(v_1 =\) \,\qty{1}{m/s}的速度从 \(A\) 点开始匀速穿过斑马线时，甲车已经在右侧车道停止线前等待，位于左侧车道的乙车以 \(v_2 =\) \,\qty{20}{m/s}的初速度做匀减速直线运动，加速度大小为 \(a_1\)（未知），当行人运动到 \(B\) 点时乙车恰好停在停止线的位置，此时甲车以加速度 \(a_2 =\) \,\qty{2}{m/s}做匀加速直线运动，当行人运动到 \(C\) 点时乙车以加速度 \(a_1\) 做匀加速直线运动。已知每条车道宽度均为 \(L =\) \,\qty{5}{m}，求：
+\begin{enumerate}
+	\item 乙车做匀减速直线运动位移的大小；
+	\item 乙车追上甲车前，两车之间沿车道方向的最远距离。
+\end{enumerate}
+
+\begin{tikzpicture}[scale=.9,font=\scriptsize]
+	\draw[dashed,cyan,thick] (0,.2)--(3.3,.2) (1.65,1)--(1.65,-4.5);
+	\foreach \x in {.2,.6,...,3.4}
+		\draw[fill=gray!30] (\x,0) rectangle({\x+.1},.4);
+	\draw[thick] (0,1)--(0,-4.5) (3.3,1)--(3.3,-4.5);
+	\draw[fill=yellow!60] (0,-.2) rectangle(3.3,-.3);
+	\fill (0,.2)node[left]{\(C\)} circle(.04);
+	\fill (3.3,.2)node[right]{\(A\)} circle(.04);
+	\fill (1.65,.2)node[above]{\(B\)} circle(.04);
+	\draw[fill=orange!60] (2.275,-.3) rectangle(2.675,-.9);
+	\draw[fill=orange!40] (0.625,-3) rectangle(1.025,-3.6);
+	\foreach \x in {0.825,2.475}
+		\draw[-stealth,thick] (\x,-2.5)--(\x,-1.5);
+	\foreach \x in {0,1.65}
+		\draw[stealth-stealth,thin] (\x,-3.9)--node[below]{\(L\)}({\x+1.65},-3.9);
+	\draw[gray] (3.3,-.25)--++(-30:1)node[right]{停止线};
+	\node at(2.475,-.6){甲};
+	\node at(0.825,-3.3){乙};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

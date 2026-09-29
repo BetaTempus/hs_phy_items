@@ -1,0 +1,26 @@
+\icode{N26Y-EMA-SI-L3-260627-001}
+\nceeID[4]{2026河南}{4}
+为确定一变压器副线圈 \(cd\) 的匝数，某同学在变压器铁芯上缠绕 10 匝线圈 \(ef\)，如图所示。原线圈 \(ab\) 接入一正弦交流电源，\(c, d\) 两端电压为\,\qty{10}{V}；若将 \(d, e\) 两端连接，\(ab\) 接入的电源不变，\(c, f\) 两端电压为\,\qty{11}{V}，变压器视为理想变压器，则副线圈 \(cd\) 的匝数为\paren[]
+
+\begin{circuitikz}[scale=0.8]
+    \draw (0,0) rectangle (4,3);
+    \draw[thick] (1,0.5) -- (3,0.5);
+    \draw[thick] (1,2.5) -- (3,2.5);
+    \draw (1, 1.5) to[out=30, in=150] (1.2, 1.5) to[out=30, in=150] (1.4, 1.5) to[out=30, in=150] (1.6, 1.5);
+    \draw[thick] (0.8, 0.5) -- (1, 0.5);
+    \draw[thick] (0.8, 1.5) -- (1, 1.5) node[above left] {\(a\)};
+    \draw[thick] (0.8, 2.5) -- (1, 2.5) node[below left] {\(b\)};
+    \node[left] at (0.8, 1.5) {原线圈};
+    \draw (3, 0.5) to[out=150, in=30] (2.8, 0.5) to[out=150, in=30] (2.6, 0.5) to[out=150, in=30] (2.4, 0.5);
+    \draw[thick] (3.2, 0.5) -- (4, 0.5) node[right] {\(f\)};
+    \draw[thick] (3.2, 1.0) -- (3.8, 1.0) node[right] {\(e\)};
+    \draw[thick] (3.2, 1.5) -- (3.8, 1.5) node[right] {\(d\)};
+    \draw[thick] (3.2, 2.5) -- (3.8, 2.5) node[right] {\(c\)};
+    \node[right] at (3.5, 1.0) {副线圈};
+\end{circuitikz}
+\begin{choices}
+    \item 200
+    \item 190
+    \item 110
+    \item 100
+\end{choices}

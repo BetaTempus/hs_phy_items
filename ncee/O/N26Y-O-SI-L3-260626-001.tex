@@ -1,0 +1,41 @@
+\icode{N26Y-O-SI-L3-260626-001}
+\nceeID[4]{2026河南}{3}
+如图，一棱镜的横截面视为半径 \(R\) 的半圆与等腰三角形的组合，半圆直径与三角形底边重合，等腰三角形的顶角为 \(120^{\circ}\)。在横截面所在平面内，一束光从 \(P\) 点垂直于三角形底边入射，从 \(Q\) 点射出。已知 \(P\)、\(Q\) 到三角形底边距离均为 \(\frac{R}{2}\)，出射光线与入射光线平行，则棱镜的折射率为\paren[]
+
+\begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize,scale=.9]
+    \draw[thick] (-2,0) arc (180:0:2);
+    \coordinate (P) at (150:2);
+    \coordinate (Q) at (30:2);
+    \coordinate (C) at (0,-{2/sqrt(3)});
+    \draw (-2,0)--(C)--(2,0);
+    \draw[postaction={decorate},magenta] ({-sqrt(3)},2.5)--node[left]{\(P\)}(P);
+    \draw[postaction={decorate},magenta] (Q)--node[right]{\(Q\)}({sqrt(3)},2.5);
+    \draw[dashed,cyan] (-2,0)--(2,0);
+    \draw[gray] ($(C)+(30:.2)$) arc(30:150:.2);
+    \node at (0,-.7){\,\qty{120}{\degree}};
+\end{tikzpicture}
+\begin{choices}
+    \item \(\sqrt{2}\)
+    \item \(\frac{3}{2}\)
+    \item \(\sqrt{3}\)
+    \item 2
+\end{choices}
+\begin{answer}
+    C\quad 提示：光路具有对称性
+
+    \begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize,scale=.9]
+    \draw[thick] (-2,0) arc (180:0:2);
+    \coordinate (P) at (150:2);
+    \coordinate (Q) at (30:2);
+    \coordinate (p) at ({1-sqrt(3)},{1-sqrt(3)});
+    \coordinate (q) at ({sqrt(3)-1},{1-sqrt(3)});
+    \coordinate (C) at (0,-{2/sqrt(3)});
+    \draw (-2,0)--(C)--(2,0);
+    \draw[postaction={decorate},magenta] ({-sqrt(3)},2.5)--node[left]{\(P\)}(P);
+    \draw[postaction={decorate},magenta] (Q)--node[right]{\(Q\)}({sqrt(3)},2.5);
+    \draw[postaction={decorate},purple] (P)--(p);
+    \draw[postaction={decorate},purple] (p)--(q);
+    \draw[postaction={decorate},purple] (q)--(Q);
+    \draw[dashed,cyan] (-2,0)--(2,0) (0,0)--(30:2.5) (0,0)--(150:2.5) (P)--++(0,-1) (Q)--++(0,-1) ($(p)+(60:-.7)$)--++(60:2);
+    \end{tikzpicture}
+\end{answer}

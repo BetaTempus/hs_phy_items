@@ -1,0 +1,20 @@
+\icode{E-MK-CA-L3-260929-003}
+分拣机器人在智能系统的调度下，能够自主规划路线，确保高效、准确的分拣作业。某次分拣过程示意图如图所示，机器人从\(A\)点由静止出发先沿直线\(AB\)运动到\(B\)点，此时机器人在\(B\)点的速率为零，再沿直线\(BC\)运动到\(C\)点停下，再将货物从托盘卸到分拣口。已知机器人最大运行速率 \(v_m =\) \,\qty{3}{m/s}，机器人在加速或减速运动的过程中加速度大小均为 \(a =\) \,\qty{2.5}{m/s^2}，\(A\)、\(B\)间的距离 \(x_1 =\) \,\qty{6}{m}，\(B\)、\(C\)间的距离 \(x_2 =\) \,\qty{2.5}{m}。若机器人在最短时间内到达分拣口，求：
+\begin{enumerate}
+	\item 机器人从\(A\)点运动到\(B\)点的过程中，由静止加速到最大运行速率 \(v_m\) 时发生的位移以及所需的时间；
+	\item 机器人从\(A\)点运动到\(B\)点的时间；
+	\item 机器人从\(B\)点运动到\(C\)点的平均速度大小。
+\end{enumerate}
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[dashed,gray] (0,0)coordinate(A)--(0,-3)coordinate(B)--(1.25,-3)coordinate(C);
+	\foreach \x in {A,B}
+		\fill (\x)node[left]{\(\x\)} circle(.05);
+	\fill (C)node[below]{\(C\)} circle(.05);
+	\draw (-.6,.6) rectangle(4,-3.6) (2.4,-3.1) rectangle(3.4,-2.5);
+	\draw[fill=red!20] (0,0) rectangle(1,.4) (1.25,-3) rectangle(2.25,-2.6);
+	\node at(.5,.2){机器人};
+	\node at(1.75,-2.8){机器人};
+	\node at(3.3,.2){分拣平台};
+	\node at(2.9,-2.8){分拣口};
+\end{tikzpicture}

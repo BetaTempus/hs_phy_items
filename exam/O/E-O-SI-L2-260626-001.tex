@@ -1,0 +1,52 @@
+\icode{E-O-SI-L2-260626-001}
+如图所示，折射率\(n = \sqrt{2}\)的半圆形玻璃砖置于光屏\(MN\)的上方，其平面\(AB\)到\(MN\)的距离为\(h =\) \,\qty{10}{cm}。一束单色光沿图示方向射向圆心\(O\)，经玻璃砖后射到光屏上的\(O^\prime\)点。现使玻璃砖绕圆心\(O\)点顺时针转动，光屏上的光点的移动方向和光点离\(O^\prime\)点最远距离为\paren[]
+
+\begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize,scale=.9]
+    \draw (-2,0)node[below]{\(A\)} arc(180:0:2)node[below]{\(B\)}--(-2,0); 
+    \foreach \x in{-2,-1.8,...,1.8}
+        \draw[gray] (\x,-2.2)--++(.2,.2);
+    \draw (-2,-2)node[above]{\(M\)}--(2,-2)node[above]{\(N\)};    
+    \draw[postaction={decorate},purple] (0,2.4)--(0,0);
+    \draw[postaction={decorate},purple] (0,0)--(0,-2);
+    \draw[<->] (-1,0)--node[left]{\(h\)}(-1,-2);
+      \node at(-.2,.2){\(O\)};
+      \node at(-.2,-1.8){\(O^\prime\)};
+      \draw[rotate=60,->,blue] (2.2,0) arc(0:-30:2.2);
+\end{tikzpicture}
+\begin{choices}
+    \item 向左移动\,\qty{10}{cm}
+    \item 向右移动\,\qty{10}{cm}
+    \item 向右移动\,\qty{20}{cm}
+    \item 向左移动\,\qty{20}{cm}
+\end{choices}
+\begin{answer}
+    B
+
+    \begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize,scale=.9]
+        \draw (150:2)node[below]{\(A\)} arc(150:-30:2)node[right]{\(B\)}--(150:2);
+        \foreach \x in{-2,-1.8,...,1.8}
+            \draw[gray] (\x,-2.2)--++(.2,.2);
+        \draw (-2,-2)node[above]{\(M\)}--(2,-2)node[above]{\(N\)};    
+        \draw[postaction={decorate},purple] (0,2.4)--(0,0);
+        \draw[postaction={decorate},purple] (0,0)--({2*tan(15)},-2);
+        \draw[dashed,cyan] (60:-1)--++(60:2) (0,0)--(0,-2);
+        \node at(-.3,-.1){\(O\)};
+        \node at(-.2,-1.8){\(O^\prime\)};
+        \draw[rotate=60,-latex,blue] (2.2,0) arc(0:-30:2.2);
+    \end{tikzpicture}
+    \vspace*{2em}
+    \begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize,scale=.9]
+        \draw (135:2)node[below]{\(A\)} arc(135:-45:2)node[right]{\(B\)}--(135:2);
+        \foreach \x in{-2,-1.8,...,1.8}
+            \draw[gray] (\x,-2.2)--++(.2,.2);
+        \draw (-2.2,-2)node[left]{\(M\)}--(2.2,-2)node[right]{\(N\)};    
+        \draw[postaction={decorate},purple] (0,2.4)--(0,0);
+        \draw[postaction={decorate},purple] (0,0)--(2.4,0);
+        \draw[postaction={decorate},purple,dashed] (0,0)--(2,-2);
+        \draw[dashed,cyan] (45:-1)--++(45:2) (0,0)--(0,-2);
+        \node at(-.3,-.1){\(O\)};
+        \node at(-.2,-1.8){\(O^\prime\)};
+        \draw[rotate=60,-latex,blue] (2.2,0) arc(0:-30:2.2);
+    \end{tikzpicture}
+\end{answer}
+    

@@ -53,5 +53,22 @@
         % 隐藏内容：此处留空，也可添加占位或提示
     }
 }
+
+\bool_new:N \g_ncee_id_bool
+\bool_gset_true:N \g_ncee_id_bool
+% 若要隐藏内容，改为 \bool_gset_false:N \g_item_code_bool
+
+% 2. 定义一个用户级命令来封装条件判断
+\NewDocumentCommand { \nceeID } { o+mm } {
+    % \bool_if:NTF 是 LaTeX3 的条件函数
+    % T = True, F = False, 分别对应显示和隐藏
+    \bool_if:NTF \g_ncee_id_bool {
+        \IfNoValueTF{#1}%
+		{\noindent\text{\kaishu\color{cyan}（#2，#3）}}%
+		{\noindent\text{\kaishu\color{cyan}（#2，#3，#1分）}}%  % 显示内容
+    } {
+        % 隐藏内容：此处留空，也可添加占位或提示
+    }
+}
 \ExplSyntaxOff
 \endinput

@@ -1,15 +1,15 @@
 \icode{E-MK-MU-L3-260625-001}
 甲乙两车在一平直道路上同向运动，其\(v - t\)图像如图所示，图中\(\triangle PQR\)和\(\triangle MNR\)的面积分别为\(s_1\)和\(s_2\)（\(s_1 > s_2\)）。初始时，甲车在乙车前方\(s_0\)处。则\paren[AD]
 
-\begin{tikzpicture}[>=latex,scale=.9,font=\scriptsize]
+\begin{tikzpicture}[>=stealth,scale=.9,font=\scriptsize]
     \draw[->,blue] (0,0)--(0,3.3)node[left]{\(v\)};
     \draw[->,blue] (0,0)--(4.5,0)node[below]{\(t\)};
-    \path[draw,name path=l1,purple] (0,2.5)node[left]{\(P\)}--(2.5,0)node[below]{\(M\)};
-    \path[draw,name path=l2,teal] (0,1.5)node[left]{\(Q\)}--(3.6,0)node[below]{\(N\)};
+    \path[draw,name path=l1,purple] (0,2.5)node[left,blue]{\(P\)}--(2.5,0)node[below,blue]{\(M\)};
+    \path[draw,name path=l2,teal] (0,1.5)node[left,blue]{\(Q\)}--(3.6,0)node[below,blue]{\(N\)};
     \path [name intersections={of=l1 and l2}];
     \node at(intersection-1)[above]{\(R\)};
     \node at(-.2,-.2)[blue]{\(O\)};
-    \node at(1,2.2){乙};
+    \node at(1,2.1){乙};
     \node at(.8,.8){甲};
 \end{tikzpicture}
 \begin{choices}
@@ -22,6 +22,3 @@
     AD
 \end{answer}
 
-\begin{proset}
-    \input{exam/M/K/E-MK-CA-L4-260625-001}
-\end{proset}

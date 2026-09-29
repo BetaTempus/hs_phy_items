@@ -1,0 +1,39 @@
+\icode{E-MD-MU-L3-260627-001}
+如图所示，倾角为\(\theta\)的足够长传送带以恒定的速率\(v_0\)沿逆时针方向运行。\(t = 0\)时，将质量\(m =\) \,\qty{1}{kg}的小物块（可视为质点）轻放在传送带上，物块速度随时间变化的图象如图所示，设沿传送带向下为正方向，取重力加速度\(g =\) \,\qty{10}{m/s^2}，则下列说法正确的是\paren[AC]
+
+\begin{tikzpicture}[>=latex,font=\scriptsize]
+		\begin{scope}[rotate=37]
+			\coordinate (o) at(0,0);
+			\coordinate (length) at(3,0);
+			\coordinate (square) at(2.7,.3);
+			\draw[gray] (0,0) circle(.28) (length) circle(.28);
+			\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$);
+			\draw[blue] ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+			\fill (o) circle(.07) (length) circle(.07);
+			\draw[->] (2,.2)--node[below,rotate=37]{\(v_0\)}(1.2,.2);
+		\end{scope}
+		\draw[dashed,gray] (0,-.3)--(2,-.3);
+		\draw[gray] ({.3*tan(18.5)+.4},-.3) arc(0:37:.4);
+		\node at(.7,-.15){\(\theta\)};
+\end{tikzpicture}
+\vspace*{2em}
+\begin{tikzpicture}[>=latex,scale=.8,font=\scriptsize]
+    \draw[help lines,color=gray!70,very thin,step=.5] (0,0) grid(3,3);
+    \draw[->,blue] (0,0)--(3.5,0)node[below]{\(t\)/\,\qty{}{s}};
+    \draw[->,blue] (0,0)--(0,3.7)node[right]{\(v\)/\,\qty{}{m\cdot s^{-1}}};
+    \draw[purple] (0,0)--(1,2.5)--(2,3);
+    \foreach \y/\n in{1/4,2/8,3/12}
+        \node at(0,\y)[left,blue]{\(\n\)};
+    \foreach \x/\n in{1/1,2/2}
+        \node at(\x,0)[below,blue]{\(\n\)};
+    \node at(-.2,-.2)[blue]{\(O\)};
+\end{tikzpicture}
+\begin{choices}
+    \item \(1\sim 2\) \,\qty{}{s}内，物块的加速度为\,\qty{2}{m/s^2}
+    \item 小物块受到的摩擦力的方向始终沿传送带向下
+    \item 传送带的倾角\(\theta =\) \,\qty{37}{\degree}
+    \item 小物块与传送带之间的动摩擦因数\(\mu = 0.4\)
+\end{choices}
+\begin{answer}
+    AC
+\end{answer}

@@ -537,10 +537,11 @@
 \newcommand*{\eitemiii}{%
   \tikz\draw[baseline,fill=ecolor,draw=none] circle (2pt);}
 
-\setlist[enumerate,1]{label=\color{ecolor}\arabic*.}
+\setlist[enumerate,1]{(\arabic*)}
 \setlist[enumerate,2]{label=\color{ecolor}(\alph*).}
-\setlist[enumerate,3]{label=\color{ecolor}\Roman*.}
-\setlist[enumerate,4]{label=\color{ecolor}\Alph*.}
+\setlist[enumerate,3]{label=\color{ecolor}\arabic*.}
+\setlist[enumerate,4]{label=\color{ecolor}\Roman*.}
+\setlist[enumerate,5]{label=\color{ecolor}\Alph*.}
 \setlist[itemize,1]{label={\eitemi}}
 \setlist[itemize,2]{label={\eitemii}}
 \setlist[itemize,3]{label={\eitemiii}}

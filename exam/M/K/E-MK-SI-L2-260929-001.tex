@@ -1,0 +1,24 @@
+\icode{E-MK-SI-L2-260929-001}
+甲、乙两物体受水平力的作用，在光滑水平面上沿一条直线运动，其\(v-t\)图像如图所示，关于两物体的受力情况和运动情况，下列说法正确的是\paren[D]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{\(0\)}--(3.8,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,0)--(0,3)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+	\foreach \x/\n in {.8/2,1.6/4,2.4/6,3.2/8}
+		\draw[blue] (\x,.1)--(\x,0)node[below]{\(\n\)};
+	\foreach \y/\n in {.6/1,1.2/2,1.8/3,2.4/4}
+		\draw[blue] (.1,\y)--(0,\y)node[left]{\(\n\)};
+	\draw[purple] (0,2.4)--(3.2,0) (0,.6)--(1.6,1.2)--++($1.2*($(1.6,1.2)-(0,0.6)$)$);
+	\draw[dashed,cyan] (0,1.2)--(1.6,1.2)--(1.6,0);
+	\node at(.8,1.8)[above]{甲};
+	\node at(2.7,1.8)[above]{乙};
+\end{tikzpicture}
+\begin{choices}
+	\item 甲、乙两物体运动方向相反
+	\item 若甲、乙两物体所受外力之比\(F_{\text{甲}}:F_{\text{乙}}=2:3\)，则质量之比\(m_{\text{甲}}:m_{\text{乙}}= 3:4\)
+	\item 若\(t = 0\)时甲、乙在同一点，则\(t =\) \,\qty{4}{s}时二者相遇
+	\item 若\(t =\) \,\qty{4}{s}时甲、乙相遇，则\(t =\) \,\qty{8}{s}时两物体间距离与\(t = 0\)时相等
+\end{choices}
+\begin{answer}
+	D\quad 提示：
+\end{answer}

@@ -1,0 +1,27 @@
+\icode{N15L-MK-SI-L3-260929-001}
+\nceeID[6]{2015山东}{14}
+ 距地面高 \qty{5}{m} 的水平直轨道上 \(A\)、\(B\) 两点相距 \qty{2}{m}，在 \(B\) 点用细线悬挂一小球，离地高度为 \(h\)，如图。小车始终以 \qty{4}{m/s} 的速度沿轨道匀速运动，经过 \(A\) 点时将随车携带的小球由轨道高度自由卸下，小车运动至 \(B\) 点时细线被轧断，最后两球同时落地。不计空气阻力，取重力加速度的大小 \(g = \qty{10}{m/s^2}\)。可求得 \(h\) 等于\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+    \draw[thick] (0,1)--++(4,0) (0,3)--++(4,0);
+    \draw[thick, fill=black] (0.15, 3.1) circle (0.1) (.45, 3.1) circle (0.1);
+    \draw[thick, fill=gray!30] (0, 3.15) rectangle (.6, 3.5);
+    \draw[->] (0,3.7)--(.6,3.7); 
+    \coordinate (A) at (2.2, 3);
+    \coordinate (B) at (3.4, 3);
+    \node[above left] at (A) {\(A\)};
+    \node[above right] at (B) {\(B\)};
+    \draw[thick, fill=gray!50] ($(A)+(0,-.1)$) circle (0.1); 
+    \draw[purple] (B)--(3.4, 2.5);
+    \draw[dashed,cyan] (3.1,2.4)--++(.7,0);
+    \draw[fill=gray!50] (3.4, 2.5) circle (0.1);
+    \draw[<->] (3.6, 1) -- (3.6, 2.4) node[midway, right] {\(h\)};
+\end{tikzpicture}
+\begin{choices}
+    \item \qty{1.25}{m}
+    \item \qty{2.25}{m}
+    \item \qty{3.75}{m}
+    \item \qty{4.75}{m}
+\end{choices}
+
+

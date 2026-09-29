@@ -1,0 +1,21 @@
+\icode{N26Y-EME-SI-L2-260626-001}
+\nceeID[4]{2026河南}{2}
+在 \(x\) 坐标轴上放置电荷量为 \(Q_{M}\) 和 \(Q_{N}\) 的两点电荷，其坐标分别为 \(x_{M} = -a\)，\(x_{N} = a\)。电荷量为 \(q(q > 0)\) 的试探电荷沿 \(x\) 轴移动，所受静电力 \(F\) 随 \(x\) 变化的图像如图所示。取 \(x\) 轴的正向为 \(F\) 的正方向，则\paren[]
+    
+\begin{tikzpicture}[>=latex,font=\scriptsize]
+    \draw[->,blue] (-2,0) -- (2,0) node[below] {\(x\)};
+    \draw[->,blue] (0,-1.2) -- (0,2.2) node[right] {\(F\)};
+    \node[below left,blue] at (0,0) {\(O\)};
+    \draw[dashed] (-1,1.91) -- (-1, 0)node[below,blue]{\(-\frac{a}{2}\)};
+    \draw[dashed] (1,-.58) -- (1, 0)node[above,blue]{\(\frac{a}{2}\)};
+    \draw[thick,magenta] plot[domain=-1:1,smooth] (\x, {2/(\x+2)^2 - .8/(\x-2)^2});
+\end{tikzpicture}
+\begin{choices}
+        \item \(Q_{M} > 0,|Q_{M}| > |Q_{N}|\)
+        \item \(Q_{M} > 0,|Q_{M}|< |Q_{N}|\)
+        \item \(Q_{M}< 0,|Q_{M}| > |Q_{N}|\)
+        \item \(Q_{M}< 0,|Q_{M}|< |Q_{N}|\)
+\end{choices}
+\begin{answer}
+    A\quad 提示：\(F = kq[\frac{Q_M}{(x + a)^2} - \frac{Q_N}{(x - a)^2}]\)，当\(x = 0\)时\(F > 0\)，故\(Q_M > Q_N\)。本题基础模型为等量同种电荷电场线、等势线分布。
+\end{answer}
