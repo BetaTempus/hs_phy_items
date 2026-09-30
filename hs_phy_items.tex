@@ -30,7 +30,7 @@
 \usepackage[show-answer]{vbbool} % show-answer 显示答案
 
 %%=============== 新建命令 =====================
-\newcommand{\lkf}[1]{\noindent\text{\kaishu\color{cyan}（#1）}}
+\newcommand{\lkf}[1]{\noindent\text{\kaishu\color{cyan}#1}}
 \newcommand{\jintian}{\number\year 年 \number\month 月 \number\day 日} % 中文年月日
 \newcommand{\rmnum}[1]{\romannumeral #1} % 小写罗马数字
 \newcommand{\Rmnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}} % 大写罗马数字
@@ -64,7 +64,12 @@
 \input{format}
 \section*{图例}
 \input{image/legend}
-%\input{section_02.tex}
+
+\newpage
+\section{物理核心}
+\begin{proset}
+	\input{ncee/CO/N13J-CO-CA-L4-260930-001}
+\end{proset}
 
 \newpage
 \section{运动学}
@@ -243,6 +248,9 @@
 \section{动力学}
 \subsection{物理学史}
 \begin{proset}
+	\input{original/M/D/O-MD-FI-L1-260930-001}
+\end{proset}
+\begin{proset}
 	\input{exam/M/K/E-MK-SI-L1-260627-001}
 \end{proset}
 \subsection{量纲分析}
@@ -316,7 +324,13 @@
 
 \newpage
 \section{万有引力}
-
+\subsection{物理史}
+\begin{proset}
+	\input{original/M/G/O-MG-FI-L1-260930-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N16-MG-SI-L1-260930-001}
+\end{proset}
 \subsection{重力}
 \begin{proset}
 	\input{ncee/M/G/N26Y-MG-SI-L2-260626-001}
@@ -426,6 +440,10 @@
 
 \newpage
 \section{电场}
+\subsection{物理史}
+\begin{proset}
+	\input{original/EM/E/O-EME-FI-L1-260930-001}
+\end{proset}
 \subsection{电场强度方向}
 
 \begin{proset}
@@ -551,6 +569,10 @@
 
 \newpage
 \section{现代物理}
+\subsection{物理史}
+\begin{proset}
+	\input{original/MP/O-MP-FI-L1-260930-001}
+\end{proset}
 \begin{proset}
 	\input{exam/MP/E-MP-SI-L1-260625-001}
 \end{proset}
@@ -570,10 +592,20 @@
 
 \newpage
 \section{原子物理}
+\input{original/A/O-A-SU-260929-001}
+\subsection{物理史}
+\begin{proset}
+	\input{original/A/O-A-FI-L1-260930-001}
+\end{proset}
 \subsection{衰变}
+\subsubsection{射线}
+\begin{proset}
+	\input{ncee/A/N23G-A-SI-L2-260929-001}
+\end{proset}
 \begin{proset}
 	\input{ncee/A/N23Z-A-SI-L1-260627-001}
 \end{proset}
+\subsubsection{衰变方程}
 \begin{proset}
 	\input{ncee/A/N22X-A-SI-L1-260627-002}
 \end{proset}
@@ -584,21 +616,86 @@
 	\input{ncee/A/N24L-A-SI-L2-260627-002}
 \end{proset}
 
+\subsubsection{衰变次数}
+\begin{proset}
+	\input{ncee/A/N24-A-SI-L2-260929-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N13H-A-SI-L2-260929-003}
+\end{proset}
 \begin{proset}
 	\input{exam/A/E-A-SI-L2-260625-001}
+\end{proset}
+
+\subsubsection{半衰期}
+\begin{proset}
+	\input{ncee/A/N21Y-A-SI-L2-260929-004}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N22L-A-SI-L2-260929-005}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N22-A-SI-L3-260929-001}
+\end{proset}
+
+\subsection{重核裂变}
+\begin{proset}
+	\input{ncee/A/N23M-A-FI-L2-260929-001}
+\end{proset}
+
+
+\subsection{轻核聚变}
+\begin{proset}
+	\input{ncee/A/N23X-A-SI-L2-260929-007}
+\end{proset}
+
+\subsection{人工核反应}
+\begin{proset}
+	\input{ncee/A/N22L-A-SI-L2-260930-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N24G-A-SI-L2-260930-004}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N24S-A-SI-L2-260930-005}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N24E-A-SI-L2-260930-006}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N23-A-SI-L2-260930-007}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N22E-A-SI-L2-260930-008}
 \end{proset}
 \begin{proset}
 	\input{exam/A/E-A-SI-L2-260625-002}
 \end{proset}
-
 \begin{proset}
 	\input{exam/A/E-A-SI-L2-260627-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N21M-A-FI-L2-260930-001}
 \end{proset}
 
 \subsection{质能方程}
 \begin{proset}
 	\input{exam/A/E-A-MU-L2-260626-001}
 \end{proset}
+\begin{proset}
+	\input{ncee/A/N23-A-SI-L2-260930-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N22M-A-SI-L2-260930-003}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N17-A-SI-L2-260930-009}
+\end{proset}
+\begin{proset}
+	\input{ncee/A/N15Q-A-CA-L3-260930-001}
+\end{proset}
+
+\newpage
 \section{力学实验}
 
 \begin{proset}
@@ -631,6 +728,8 @@
 	\input{exam/EX/M/E-EXM-FI-L1-260625-001}
 \end{proset}
 
+
+\newpage
 \section{电学实验}
 \subsection{测电阻}
 \begin{proset}
