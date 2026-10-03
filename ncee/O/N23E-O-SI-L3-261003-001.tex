@@ -1,0 +1,32 @@
+\icode{N23E-O-SI-L3-261003-001}
+\nceeID[4]{2023湖北}{6}
+如图所示，楔形玻璃的横截面\(POQ\)的顶角为\qty{30}{\degree}，\(OP\)边上的点光源\(S\)到顶点\(O\)的距离为\(d\)，垂直于\(OP\)边的光线\(SN\)	在\(OQ\)边的折射角为\qty{45}{\degree}。不考虑多次反射，\(OQ\)边上有光射出部分的长度为\paren[]
+	
+\begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (0,0)--(30:2)node[right]{\(Q\)} (0,0)--(-150:2)node[left]{\(O\)} (-150:2)--(1.732,-1)node[right]{\(P\)};
+	\draw[postaction={decorate},purple] (0,0)--(75:1.5);
+	\draw[postaction={decorate},purple] (0,-1)node[below]{\(S\)}--(0,0);
+	\draw[dashed] (0,0)--(120:1) (0,0)--(-60:1);
+	\fill (0,-1) circle(.06);
+	\draw (0,.3) arc(90:120:.3) (0,.3) arc(90:75:.3);
+	\draw[xshift=-1.732cm,yshift=-1cm] (.3,0) arc(0:30:.3);
+	\node at(-.9,-.8){\qty{30}{\degree}};
+	\node at(0,.9){\qty{45}{\degree}};
+	\node at(.3,-.1){\(N\)};
+\end{tikzpicture}
+\begin{choices}
+	\item \(\frac{1}{2}d\)
+	\item \(\frac{\sqrt{2}}{2} \)
+	\item \(d\)
+	\item \(\sqrt{2}d\)
+\end{choices}
+\begin{answer}
+	C\qquad 提示：\(OQ\)边上全反射光路图如图所示
+
+\begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (0,0)--(30:2)node[right]{\(Q\)} (0,0)--(-150:2)node[left]{\(O\)} (-150:2)--(1.732,-1)node[right]{\(P\)};
+	\draw[postaction={decorate},purple] (0,-1)--++(165:{sqrt(6)/2})coordinate(c1);
+	\draw[postaction={decorate},purple] (0,-1)--++(75:{sqrt(6)/2})coordinate(c2);
+	\draw[dashed,cyan] (0,-1)--++(120:1.5) ($(c1)+(120:.5)$)--++(-60:1) ($(c2)+(120:.5)$)--++(-60:1);
+\end{tikzpicture}
+\end{answer}

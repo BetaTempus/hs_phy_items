@@ -1,0 +1,40 @@
+\icode{N22J-O-CA-L3-261003-003}
+\nceeID[8]{2022河北}{16(1)}
+如图，一个半径为\(R\)的玻璃球，\(O\)点为球心。球面内侧单色点光源\(S\)发出的一束光从\(A\)点射出，出射光线\(AB\)与球直径\(SC\)平行，\(\theta =\) \,\qty{30}{\degree}。光在真空中的传播速度为\(c\)。求：
+\begin{enumerate}
+	\item 玻璃的折射率；
+	\item 从\(S\)发出的光线经多次全反射回到\(S\)点的最短时间。
+\end{enumerate}
+
+\begin{tikzpicture}[scale=.8,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (2,0) circle(2);
+	\draw[postaction={decorate},purple] (0,0)--(30:{2*sqrt(3)});
+	\draw[postaction={decorate},purple] (30:{2*sqrt(3)})node[above,black]{\(A\)}--(5,{sqrt(3)})node[right,black]{\(B\)};
+	\draw[dashed] (0,0)node[left]{\(S\)}--(4,0)node[right]{\(C\)};
+	\draw (.4,0) arc(0:30:.4);
+	\fill (2,0)node[below]{\(O\)} circle(.06);
+	\node at(.6,.15){\(\theta\)};
+\end{tikzpicture}
+\begin{answer}
+    （1）\(\sqrt{3}\)（2）\(\frac{4 \sqrt{6}R}{c}\)\qquad 提示：发生全反射回到\(S\)点正四边形及以上的图形，最短时间为正四边形的时间
+
+    \begin{tikzpicture}[scale=.8,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (2,0) circle(2);
+	\draw[postaction={decorate},purple] (0,0)--(30:{2*sqrt(3)});
+	\draw[postaction={decorate},purple] (30:{2*sqrt(3)})node[above,black]{\(A\)}--(5,{sqrt(3)})node[right,black]{\(B\)};
+	\draw[dashed] (0,0)node[left]{\(S\)}--(4,0)node[right]{\(C\)};
+	\draw (.4,0) arc(0:30:.4);
+    \draw[dashed,cyan] (2,0)--++(60:3);
+	\fill (2,0)node[below]{\(O\)} circle(.06);
+	\node at(.6,.15){\(\theta\)};
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=.8,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (2,0) circle(2);
+	\draw[postaction={decorate},purple] (0,0)--(2,2);
+    \draw[postaction={decorate},purple] (2,2)--(4,0);
+    \draw[postaction={decorate},purple] (4,0)--(2,-2);
+    \draw[postaction={decorate},purple] (2,-2)--(0,0);
+	\draw[dashed] (0,0)node[left]{\(S\)}--(4,0)node[right]{\(C\)};
+	\fill (2,0)node[below]{\(O\)} circle(.06);
+    \end{tikzpicture}
+\end{answer}

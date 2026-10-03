@@ -496,6 +496,7 @@
 	decorations.markings,
 	decorations.pathmorphing,
   decorations.text,
+  decorations.pathreplacing,
 	patterns
 }
 \tikzset{

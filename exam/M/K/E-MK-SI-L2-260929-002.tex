@@ -10,10 +10,11 @@
 	B\qquad 提示：作出足球和运动员的\(v - t\)图像
 
 	\begin{tikzpicture}[scale=.8,>=stealth,font=\scriptsize]
-		\draw[->,blue] (0,0)node[below left]{\(O\)}--(0,3.3)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+		\draw[->,blue] (0,0)node[below left]{0}--(0,3.3)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
 		\draw[->,blue] (0,0)--(5,0)node[below]{\(t\)/\qty{}{s}};
         \draw[dashed,cyan] (1.4,1.8)--(1.4,0) (2.8,1.8)--(2.8,0);
-		\draw[purple] (0,2.7)--(4.2,0) (0,1.8)--(4.2,1.8);
+		\draw[purple] (0,1.8)--(4.2,1.8);
+		\draw[teal] (0,2.7)--(4.2,0);
 		\foreach \c/\an/\n in{(0,2.7)/left/9,(0,1.8)/left/6,(4.2,0)/below/6,(2.8,0)/below/4,(1.4,0)/below/2}
 			\node[blue] at \c[\an]{\(\n\)};
 	\end{tikzpicture}

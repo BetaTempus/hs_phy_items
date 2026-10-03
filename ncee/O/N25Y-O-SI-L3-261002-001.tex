@@ -1,0 +1,30 @@
+\icode{N25Y-O-SI-L3-261002-001}
+\nceeID[4]{2025河南}{2}
+折射率为\(\sqrt{2}\)的玻璃圆柱水平放置，平行于其横截面的一束光线从顶点入射，光线与竖直方向的夹角为\qty{45}{\degree}，如图所示。该光线从圆柱内射出时，与竖直方向的夹角为（不考虑光线在圆柱内的反射）\paren[B]
+
+\begin{tikzpicture}[decoration={markings,mark=at position 0.6 with {\arrow{>}}}]
+	\draw (0,0) circle(1.2);
+	\draw[dashed,cyan] (-1.5,0)--(1.5,0) (0,-1.5)--(0,2);
+	\draw[postaction={decorate},purple] ($(0,1.2)+(135:1)$)--(0,1.2);
+	\draw[gray] ($(0,1.2)+(135:.3)$) arc(135:90:.3);
+	\node at(-.2,1.8){\tiny\qty{45}{\degree}};
+\end{tikzpicture}
+\begin{choices}
+	\item \qty{0}{}
+	\item \qty{15}{\degree}
+	\item \qty{30}{\degree}
+	\item \qty{45}{\degree}
+\end{choices}
+\begin{answer}
+	B\qquad 提示：补全光路图如下所示
+
+	\begin{tikzpicture}[decoration={markings,mark=at position 0.6 with {\arrow{>}}}]
+		\draw (0,0) circle(1.2);
+		\draw[dashed,cyan] (-1.5,0)--(1.5,0) (0,-2.4)--(0,2) (0,0)--++(-30:2) (-30:1.2)--++(60:1) (-30:1.2)--++(-120:{1.2*sqrt(3)});
+		\draw[postaction={decorate},purple] ($(0,1.2)+(135:1)$)--(0,1.2);
+		\draw[postaction={decorate},purple] (0,1.2)--(-30:1.2);
+		\draw[postaction={decorate},purple] (-30:1.2)--++(-75:1);
+		\draw[gray] ($(0,1.2)+(135:.3)$) arc(135:90:.3);
+		\node at(-.2,1.8){\tiny \,\qty{45}{\degree}};
+	\end{tikzpicture}
+\end{answer}

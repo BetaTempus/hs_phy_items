@@ -1,0 +1,41 @@
+\icode{N21J-O-CA-L3-261003-002}
+\nceeID[8]{2021河北}{16(2)}
+将两块半径均为\(R\)，完全相同的透明半圆柱体\(A\)、\(B\)正对放置，圆心上下错开一定距离，如图所示。用一束单色光沿半径照射半圆柱体\(A\)，设圆心处入射角为\(\theta\)。当\(\theta =\) \,\qty{60}{^\circ}时，\(A\)右侧恰好无光线射出；当\(\theta =\) \,\qty{30}{^\circ}时，有光线沿\(B\)的半径射出，射出位置与\(A\)的圆心相比下移\(h\)。不考虑多次反射。求:
+\begin{enumerate}
+	\item 半圆柱体对该单色光的折射率；
+	\item 两个半圆柱体之间的距离。
+\end{enumerate}
+
+\begin{tikzpicture}[scale=.8,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (0,2) arc(90:270:2);
+	\draw (0,2)--(0,-2);
+	\draw (1.5,0.2) arc(90:-90:2);
+	\draw (1.5,0.2)--(1.5,-3.8);
+	\draw[dashed] (-1.2,0)node[left]{\(A\)}--(0,0);
+	\draw[dashed] (2.7,-1.8)node[right]{\(B\)}--(1.5,-1.8);
+	\draw[postaction={decorate},purple] (150:3)--(0,0);
+	\draw (-.5,0) arc(180:150:.5);
+	\node at(-.8,.2){\(\theta\)};
+	\draw[dashed] (1.5,.2)--(1.5,2);
+	\draw[<->] (0,1.5)--node[above]{\(d\)}(1.5,1.5);
+\end{tikzpicture}
+\begin{answer}
+    （1）\(n = \frac{2 \sqrt{3}}{3}\)（2）\(d = \sqrt{2}(h - \frac{R}{2})\)\qquad 提示：补全光路图如下图所示
+
+    \begin{tikzpicture}[scale=.8,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (0,2) arc(90:270:2);
+	\draw (0,2)--(0,-2);
+	\draw (1.5,0.2) arc(90:-90:2);
+	\draw (1.5,0.2)--(1.5,-3.8);
+	\draw[dashed,cyan] (-1.2,0)node[left]{\(A\)}--(1,0);
+	\draw[dashed,cyan] (2.7,-1.8)node[right]{\(B\)}--(0,-1.8);
+	\draw[postaction={decorate},purple] (150:3)--(0,0);
+    \draw[postaction={decorate},purple] (0,0)--(1.5,-1.8);
+    \draw[postaction={decorate},purple] (1.5,-1.8)--++(-30:3);
+	\draw (-.5,0) arc(180:150:.5) (2,-1.8) arc(0:-30:.5);
+	\node at(-.8,.2){\(\theta\)};
+    \draw[dashed,cyan] ($(1.5,-1.8)+(-30:2)$)--(0,-2.8) (0,-2)--(0,-3.5);
+	\draw[dashed] (1.5,.2)--(1.5,2);
+	\draw[<->] (0,1.5)--node[above]{\(d\)}(1.5,1.5);
+    \end{tikzpicture}
+\end{answer}

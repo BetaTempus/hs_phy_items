@@ -1,0 +1,16 @@
+\icode{N22-O-CA-L3-261003-001}
+\nceeID[10]{2022全国乙}{34(2)}
+一细束单色光在三棱镜\(ABC\)的侧面\(AC\)上以大角度由\(D\)点入射(入射面在棱镜的横截面内)，入射角为\(i\)，经折射后射至\(AB\)边的\(E\)点，如图所示。逐渐减小\(i\)，\(E\)点向\(B\)点移动，当\(\sin i = \frac{1}{6}\)时，恰好没有光线从\(AB\)边射出棱镜，且\(DE=DA\)。求棱镜的折射率。
+
+\begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (0,0)node[left]{\(B\)}--(3,0)node[right]{\(C\)}--(3,2)node[above]{\(A\)}--(0,0);
+	\draw[postaction={decorate},purple] (3,1)--(2,{4/3})node[above,black]{\(E\)};
+	\draw[postaction={decorate},purple] (4,.5)--(3,1);
+	\draw[dashed] (2,1)--(4,1);
+	\node at(3.2,1.2){\(D\)};
+	\node at(3.45,.9){\(i\)};
+	\draw[xshift=3cm,yshift=1cm] (0.3,0) arc(0:-30:.3);
+\end{tikzpicture}
+\begin{answer}
+	\(n = 1.5\)\qquad 
+\end{answer}

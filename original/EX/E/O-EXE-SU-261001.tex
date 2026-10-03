@@ -1,0 +1,72 @@
+\icode{O-EXE-SU-261001}
+欧姆表内部结构如图甲所示：干电池（电源电动势为\(E\)，内阻为\(r\)），灵敏电流计\circled{G} （满偏电流为\(I_g\)，内阻为\(R_g\)）、定值电阻\(R_0\)、滑动变阻器\(R\)。
+
+	\begin{figure}[htbp]
+		\centering
+		\begin{tikzpicture}
+			\begin{scope}
+			\draw[dashed,orange] (-.5,-1.25) rectangle(3.8,2.7);
+			\draw[thick] (.2,.6)--(-.2,.6) (.1,.4)--(-.1,.4);
+			\draw[blue] (0,.6)--(0,2)--(3,2)--(3,-1)--(2.5,-1)--(2.5,-1.5) (0,.4)--(0,-1)--(.5,-1)--(.5,-1.5);
+			\draw[->,blue] (3,-.5)--(3.5,-.5)--(3.5,.2)--(3.1,.2);
+			\draw[red,very thick] (.5,-1.5)--(.5,-2.5)node[left]{\footnotesize 红};
+			\draw[very thick] (2.5,-1.5)--(2.5,-2.5)node[right]{\footnotesize 黑};
+			\filldraw[fill=white] (1.5,2)node{\(G\)} circle(.3) (2.9,1.5) rectangle(3.1,.9) (2.9,.5) rectangle(3.1,-.1) (2.5,-1.5) circle(.05) (.5,-1.5) circle(.05);
+			\fill (3,-.5) circle(.05);
+			\node at(.2,.5)[right]{\(E,r\)};
+			\node at(2.9,1.2)[left]{\(R_0\)};
+			\node at(2.9,.2)[left]{\(R\)};
+			\node at(1.5,1.7)[below]{\(R_g\)};
+			\node at(1.5,-2.8)[below]{图甲};
+			\end{scope}
+			\begin{scope}[xshift=5cm]
+				\draw[dashed,orange] (-.5,-1.25) rectangle(3.8,2.7);
+				\draw[thick] (.2,.6)--(-.2,.6) (.1,.4)--(-.1,.4);
+				\draw[blue] (0,.6)--(0,2)--(3,2)--(3,-1)--(2.5,-1)--(2.5,-1.5) (0,.4)--(0,-1)--(.5,-1)--(.5,-1.5);
+				\draw[->,blue] (3,-.5)--(3.5,-.5)--(3.5,.2)--(3.1,.2);
+				\draw[red,very thick] (.5,-1.5)--(.5,-2.5)node[left]{\footnotesize 红};
+				\draw[very thick] (2.5,-1.5)--(2.5,-2.5)node[right]{\footnotesize 黑};
+				\filldraw[fill=white] (1.5,2)node{\(G\)} circle(.3) (2.9,1.5) rectangle(3.1,.9) (2.9,.5) rectangle(3.1,-.1) (2.5,-1.5) circle(.05) (.5,-1.5) circle(.05);
+				\fill (3,-.5) circle(.05);
+				\node at(.2,.5)[right]{\(E,r\)};
+				\node at(2.9,1.2)[left]{\(R_0\)};
+				\node at(2.9,.2)[left]{\(R\)};
+				\node at(1.5,1.7)[below]{\(R_g\)};\node at(1.5,-2.8)[below]{图乙};
+				\draw[blue] (.5,-2.5)--(2.5,-2.5);
+				\node[red] at(1,2)[above]{\footnotesize\(I_g\)};
+				\end{scope}
+				\begin{scope}[xshift=10cm]
+					\draw[dashed,orange] (-.5,-1.25) rectangle(3.8,2.7);
+					\draw[thick] (.2,.6)--(-.2,.6) (.1,.4)--(-.1,.4);
+					\draw[blue] (0,.6)--(0,2)--(3,2)--(3,-1)--(2.5,-1)--(2.5,-1.5) (0,.4)--(0,-1)--(.5,-1)--(.5,-1.5);
+					\draw[->,blue] (3,-.5)--(3.5,-.5)--(3.5,.2)--(3.1,.2);
+					\draw[red,very thick] (.5,-1.5)--(.5,-2.5)node[left]{\footnotesize 红};
+					\draw[very thick] (2.5,-1.5)--(2.5,-2.5)node[right]{\footnotesize 黑};
+					\filldraw[fill=white] (1.5,2)node{\(G\)} circle(.3) (2.9,1.5) rectangle(3.1,.9) (2.9,.5) rectangle(3.1,-.1) (2.5,-1.5) circle(.05) (.5,-1.5) circle(.05);
+					\fill (3,-.5) circle(.05);
+					\node at(.2,.5)[right]{\(E,r\)};
+					\node at(2.9,1.2)[left]{\(R_0\)};
+					\node at(2.9,.2)[left]{\(R\)};
+					\node at(1.5,1.7)[below]{\(R_g\)};
+					\node at(1.5,-2.8)[below]{图丙};
+					\draw[blue] (.5,-2.5)--(2.5,-2.5);
+					\filldraw[fill=white] (1.2,-2.4) rectangle(1.8,-2.6);
+					\node at(1.5,-2.4)[above]{\(R_x\)};
+					\node[red] at(1,2)[above]{\footnotesize\(I_x\)};
+				\end{scope}
+		\end{tikzpicture}
+	\end{figure}
+
+	欧姆表测量电阻的原理是闭合电路欧姆定律，如图乙所示，短接红黑表笔，调节滑动变阻器\(R\)，灵敏电流计\circled{G}的指针满偏，则有
+	\[
+		I_g = \frac{E}{r + R_g + R_0 + R}\Longrightarrow r + R_g + R_0 + R = \frac{E}{I_g}
+	\]
+	我们令\(R_\text{内} = r + R_g + R_0 + R\)，式中\(R_\text{内}\) 为欧姆表的内阻。保持滑动变阻器\(R\)的阻值不变，将待测电阻\(R_x\)接入红黑表笔之间，如图丙所示，灵敏电流计示数为\(I_x\)，则有
+	\[
+		\begin{aligned}
+			I_x&= \frac{E}{r + R_g + R_0 + R + R_x} = \frac{E}{R_\text{内}+R_x}\\
+			R_x&=\frac{E}{I_x} - R_\text{内} = \frac{I_gR_\text{内}}{I_x} -R_\text{内}\\
+			&= (\frac{I_g}{I_x} - 1)R_\text{内}
+		\end{aligned}
+	\]
+	公式\(R_x = (\sfrac{I_g}{I_x} - 1)R_\text{内}\)即是欧姆表测量电阻原理，每一个未知电阻\(R_x\)对应一个电流\(I_x\)，而电流\(I_x\)在灵敏电流计\circled{G}的刻度盘上对应一个偏转角度。特别当\(I_x = \sfrac{I_g}{2}\)时，指针半偏，\(R_x = R_\text{内}\)。

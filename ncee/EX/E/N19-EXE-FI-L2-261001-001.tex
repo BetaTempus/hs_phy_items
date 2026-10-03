@@ -1,0 +1,99 @@
+\icode{N19-EXE-FI-L2-261001-001}
+\nceeID[10]{2019新课标\Rmnum{3}}{23}
+某同学欲将内阻为\qty{98.5}{\Omega}、量程为\qty{100}{\mu A}的电流表改装成欧姆表并进行刻度和校准，要求改装后欧姆表的\qty{15}{k\Omega}刻度正好对应电流表表盘的\qty{50}{\mu A}刻度。可选用的器材还有：定值电阻\(R_0\)（阻值\qty{14}{k\Omega}），滑动变阻器\(R_1\)（最大阻值\qty{1500}{\Omega}），滑动变阻器\(R_2\)（最大阻值\qty{500}{\Omega}），电阻箱（\(0\sim 99999.9\)\qty{}{\Omega}），干电池（\(E =\) \,\qty{1.5}{V}，\(r =\) \,\qty{1.5}{\Omega}），红、黑表笔和导线若干。
+
+		(1)欧姆表设计
+		
+		将图(\(a\))中的实物连线组成欧姆表。欧姆表改装好后，滑动变阻器\(R\)接入电路的电阻应为\lunl{4em}\,\qty{}{\Omega}：滑动变阻器选\lunl{4em}（填“\(R_1\)”或“\(R_2\)”）。
+
+		(2)刻度欧姆表表盘
+
+		通过计算，对整个表盘进行电阻刻度，如图(\(b\))所示。表盘上\(a\)、\(b\)处的电流刻度分别为25和75，则\(a\)、\(b\)处的电阻刻度分别为\lunl{4em}、\lunl{4em}。
+
+		\begin{figure}[htbp]
+			\centering
+			\begin{tikzpicture}[font=\scriptsize]
+				\draw (40:4) arc(40:140:4);
+				\draw (40:3.85) arc(40:140:3.85);
+				\foreach \x in {40,42,...,140}
+					\draw (\x:4)--(\x:4.15);
+				\foreach \x/\n in {40/100,50/90,60/80,70/70,80/60,90/50,100/40,110/30,120/20,130/10,140/0}
+					\draw[decoration={text along path,text={\n},text align={center},raise=0.1cm},decorate] ({\x+3}:4.3) arc ({\x+3}:{\x-3}:4.3);
+				\foreach \x in {40,50,...,140}
+					\draw[red] (\x:4)--(\x:4.3);
+				\foreach \x in {40,65,90,115,140}
+					\draw[red] (\x:3.85)--(\x:3.7);
+				\foreach \x/\n in {40/0,65/b,90/15,115/a}
+					\draw[decoration={text along path,text={\n},text align={center},raise=-0.1cm},decorate] ({\x+3}:3.5) arc ({\x+3}:{\x-3}:3.5);
+				\node at(4,2.6){\small\(\mu A\)};
+				\node at(140:3.7)[below]{\small\(\infty\)};
+				\node at(3.2,2.2){\small \(k\Omega\)};
+				\node at(0,2){\footnotesize 图(\(b\))};
+			\end{tikzpicture}
+		\end{figure}
+		(3)校准
+
+		红、黑表笔短接，调节滑动变阻器，使欧姆表指针指向\lunl{4em}\,\qty{}{k\Omega}处；将红、黑表笔与电阻箱连接，记录多组电阻箱接入电路的电阻值及欧姆表上对应的测量值，完成校准数据测量。若校准某刻度时，电阻箱旋钮位置如图(\(c\))所示，则电阻箱接入的阻值为\lunl{4em}\,\qty{}{\Omega}。
+		
+		\begin{figure}[htbp]
+			\centering
+			\begin{tikzpicture}
+				\draw[rounded corners=10] (-1.2,-4.3) rectangle(5.1,1.2);
+				\fill[gray!70!black] (4.7,-1.05) circle(.2) (4.7,-2.05) circle(.2);
+				\node at(2,-4.3)[below]{\footnotesize 图(\(c\))};
+				\begin{scope}[scale=.8]
+				\draw (0,0) circle(1);
+				\fill[gray!70!black] (0,0) circle(.4) (0,-1)--(-.2,-1.35)--(.2,-1.35)--(0,-1);
+				\node at(0,-1.35)[below]{\footnotesize \( \times\:10\:\mathrm{k}\)};
+				\foreach \x in {18,54,...,342}
+					\draw (\x:1)--(\x:.85);
+				\foreach \x/\y/\n in {18/-72/0,54/-36/9,90/0/8,126/36/7,162/72/6,198/108/5,234/144/4,270/180/3,306/216/2,342/252/1}
+					\node at(\x:.6){\scriptsize\rotatebox{\y}{\n}};
+				\end{scope}
+				\begin{scope}[scale=.8,xshift=2.2cm]
+				\draw (0,0) circle(1);
+				\fill[gray!70!black] (0,0) circle(.4) (0,-1)--(-.2,-1.35)--(.2,-1.35)--(0,-1);
+				\node at(0,-1.35)[below]{\footnotesize \( \times\:1\:\mathrm{k}\)};
+				\foreach \x in {18,54,...,342}
+					\draw (\x:1)--(\x:.85);
+				\foreach \x/\y/\n in {18/-72/2,54/-36/1,90/0/0,126/36/9,162/72/8,198/108/7,234/144/6,270/180/5,306/216/4,342/252/3}
+					\node at(\x:.6){\scriptsize\rotatebox{\y}{\n}};
+				\end{scope}
+				\begin{scope}[scale=.8,xshift=4.4cm]
+				\draw (0,0) circle(1);
+				\fill[gray!70!black] (0,0) circle(.4) (0,-1)--(-.2,-1.35)--(.2,-1.35)--(0,-1);
+				\node at(0,-1.35)[below]{\footnotesize \( \times\:100\)};
+				\foreach \x in {18,54,...,342}
+					\draw (\x:1)--(\x:.85);
+				\foreach \x/\y/\n in {18/-72/7,54/-36/6,90/0/5,126/36/4,162/72/3,198/108/2,234/144/1,270/180/0,306/216/9,342/252/8}
+					\node at(\x:.6){\scriptsize\rotatebox{\y}{\n}};
+				\end{scope}
+				\begin{scope}[scale=.8,yshift=-3.2cm]
+				\draw (0,0) circle(1);
+				\fill[gray!70!black] (0,0) circle(.4) (0,-1)--(-.2,-1.35)--(.2,-1.35)--(0,-1);
+				\node at(0,-1.35)[below]{\footnotesize \( \times\:10\)};
+				\foreach \x in {18,54,...,342}
+					\draw (\x:1)--(\x:.85);
+				\foreach \x/\y/\n in {18/-72/7,54/-36/6,90/0/5,126/36/4,162/72/3,198/108/2,234/144/1,270/180/0,306/216/9,342/252/8}
+					\node at(\x:.6){\scriptsize\rotatebox{\y}{\n}};
+				\end{scope}
+				\begin{scope}[scale=.8,xshift=2.2cm,yshift=-3.2cm]
+					\draw (0,0) circle(1);
+					\fill[gray!70!black] (0,0) circle(.4) (0,-1)--(-.2,-1.35)--(.2,-1.35)--(0,-1);
+					\node at(0,-1.35)[below]{\footnotesize \( \times\:1\)};
+					\foreach \x in {18,54,...,342}
+						\draw (\x:1)--(\x:.85);
+					\foreach \x/\y/\n in {18/-72/7,54/-36/6,90/0/5,126/36/4,162/72/3,198/108/2,234/144/1,270/180/0,306/216/9,342/252/8}
+						\node at(\x:.6){\scriptsize\rotatebox{\y}{\n}};
+				\end{scope}
+				\begin{scope}[scale=.8,xshift=4.4cm,yshift=-3.2cm]
+					\draw (0,0) circle(1);
+					\fill[gray!70!black] (0,0) circle(.4) (0,-1)--(-.2,-1.35)--(.2,-1.35)--(0,-1);
+					\node at(0,-1.35)[below]{\footnotesize \( \times\:0.1\) };
+					\foreach \x in {18,54,...,342}
+						\draw (\x:1)--(\x:.85);
+					\foreach \x/\y/\n in {18/-72/7,54/-36/6,90/0/5,126/36/4,162/72/3,198/108/2,234/144/1,270/180/0,306/216/9,342/252/8}
+						\node at(\x:.6){\scriptsize\rotatebox{\y}{\n}};
+					\end{scope}
+			\end{tikzpicture}
+		\end{figure}

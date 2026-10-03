@@ -1,0 +1,24 @@
+\icode{N24L-O-CA-L3-261002-002}
+\nceeID[8]{2024山东}{15}
+某光学组件横截面如图所示，半圆形玻璃砖圆心为\(O\)点，半径为\(R\)；直角三棱镜\(FG\)边的延长线过\(O\)点，\(EG\)边平行于\(AB\)边且长度等于\(R\)，\(\angle FEG =\) \,\qty{30}{\degree}。横截面所在平面内，单色光线以\(\theta\)角入射到\(EF\)边发生折射，折射光线垂直\(EG\)边射出。已知玻璃砖和三棱镜对该单色光的折射率均为1.5。
+\begin{enumerate}
+	\item 求\(\sin\theta\)；
+    \item 以\(\theta\)角入射的单色光线，若第一次到达半圆弧\(AMB\)可以发生全反射，求光线在\(EF\)上入射点\(D\)（图中未标出）到\(E\)点距离的范围。
+\end{enumerate}
+
+\begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\fill (0,0)node[below]{\(O\)} circle(0.05);
+	\draw (-2,0)node[left]{\(A\)} arc(-180:0:2)--cycle;
+	\draw (-2,.5)node[left]{\(E\)}coordinate(e)--++(30:{4/sqrt(3)})node[right]{\(F\)}|-cycle;
+	\coordinate (p) at ($(e)+(30:{2/sqrt(3)})$);
+	\draw[dashed] ($(p)+(120:.5)$)--($(p)+(-60:.5)$) (0,0)--(0,.5)node[right]{\(G\)};
+	\draw[postaction={decorate},purple] ($(p)+(71.4:.8)$)--(p);
+	\draw[postaction={decorate},purple] (p)--(-120:2);
+	\draw ($(p)+(120:.3)$) arc(120:71.4:.3);
+	\node at ($(p)+(0,.5)$){\(\theta\)};
+	\node at(2,0)[right]{\(B\)};
+	\node at(0,-2)[below]{\(M\)};
+\end{tikzpicture}
+\begin{answer}
+	（1）0.75（2）\(0 < x \leq \frac{2 \sqrt{3}}{9}R\)
+\end{answer}

@@ -1,0 +1,28 @@
+\icode{NZ-O-SI-L2-261002-002}
+如图所示，用折射率为\(n\)的玻璃制成顶角\(\beta\)很小的棱镜，称为光楔。一束平行光垂直光楔左侧射入，不考虑多次反射，光线从光楔右侧出射时与入射时相比\paren[]
+
+\begin{tikzpicture}[decoration={markings,mark=at position 0.6 with {\arrow{>}}}]
+	\draw (-90:{3*cos(20)})--(0,0)--(-70:3);
+	\draw (0,-.4) arc(-90:-70:.4);
+	\node at(.12,-.8){\scriptsize \(\beta\)};
+	\draw[postaction={decorate},purple] (-1,{-1.5*cos(20)})--(0,{-1.5*cos(20)});
+\end{tikzpicture}
+\begin{choices}
+	\item 向上偏折了\((n - 1)\beta\)
+	\item 向下偏折了\((n - 1)\beta\)
+	\item 向上偏折了\((1 - \frac{1}{n})\beta\)
+	\item 向下偏折了\((1 - \frac{1}{n})\beta\)
+\end{choices}
+\begin{answer}
+	B\qquad 提示：当\(\theta \to 0\)时，有\(\sin\theta\approx\theta\)的近似计算
+
+	\begin{tikzpicture}[decoration={markings,mark=at position 0.6 with {\arrow{>}}}]
+		\draw (-70:1.5)--(110:1.5)|-(110:1.5|--70:1.5);
+		\draw[postaction={decorate},purple] (-1.5,0)--(0,0);
+		\draw[postaction={decorate},purple] (0,0)--(-140:1.5);
+		\draw[dashed,cyan] (20:1.5)--(-160:1.5);
+		\draw[dashed,gray] (0,0)--(1.5,0);
+		\draw[postaction={decorate},purple] (0,0)--(-15:1.5);
+		\draw[blue] (20:.4) arc(20:-15:.4) (180:.3) arc(180:200:.3);
+	\end{tikzpicture}
+\end{answer}

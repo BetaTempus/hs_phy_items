@@ -1,0 +1,34 @@
+\icode{E-O-SI-L3-261003-001}
+真空中半径为\(R\)的半圆柱体玻璃砖的截面图如图所示，平行于半圆柱体底面固定放置一块平面镜。一束单色光从玻璃砖底面上的\(P\)点垂直射入玻璃砖，从玻璃砖侧面上的\(Q\)点射出，经平面镜反射后从玻璃砖侧面再次进入玻璃砖，从\(M\)点(图中未画出)垂直玻璃砖底面射出。已知\(O\)、\(P\)间的距离为\(\frac{R}{2}\)，玻璃砖的折射率\(n = \sqrt{2}\)，则平面镜与玻璃砖底面间的距离为\paren[D]
+	
+\begin{tikzpicture}[scale=.6,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (0,0) arc(180:0:2)--cycle;
+	\fill (2,0)node[below right]{\(O\)} circle(.05);
+	\draw[postaction={decorate},purple] (1,-1)--(1,0);
+	\draw[postaction={decorate},purple] (1,0)node[below left,black]{\(P\)}--(1,{sqrt(3)})node[above left,black]{\(Q\)}coordinate(q);
+	\foreach \x in {0,.2,...,3.8}
+		\draw[gray] (\x,5.464)--++(.2,.2);
+	\draw[thick] (0,5.464)--++(4,0); 
+\end{tikzpicture}
+\begin{choices}
+	\item \(\sqrt{2}R\)
+	\item \(\sqrt{3}R\)
+	\item \((\sqrt{2} + 1)R\)
+	\item \((\sqrt{3} + 1)R\)
+\end{choices}
+\begin{answer}
+    D\qquad 提示：光路图轴对称
+
+    \begin{tikzpicture}[scale=.6,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (0,0) arc(180:0:2)--cycle;
+	\fill (2,0)node[below right]{\(O\)} circle(.05);
+	\draw[postaction={decorate},purple] (1,-1)--(1,{sqrt(3)})coordinate(q);
+    \draw[postaction={decorate},purple] (q)--(2,5.464);
+    \draw[postaction={decorate},purple] (2,5.464)--($(2,0)+(60:2)$);
+    \draw[postaction={decorate},purple] ($(2,0)+(60:2)$)--(3,-1);
+    \draw[dashed,cyan] (2,0)--(2,5.464) (2,0)--++(120:3);
+	\foreach \x in {0,.2,...,3.8}
+		\draw[gray] (\x,5.464)--++(.2,.2);
+	\draw[thick] (0,5.464)--++(4,0); 
+    \end{tikzpicture}
+\end{answer}

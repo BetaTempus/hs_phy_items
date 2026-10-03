@@ -1,0 +1,23 @@
+\icode{N18Q-O-CA-L3-261003-004}
+\nceeID[8]{2018海南}{18}
+如图，由透明介质构成的半球壳的内外表面半径分别为\(R\)和\(\sqrt{2}R\)。一横截面半径为\(R\)的平行光束入射到半球壳内表面，入射方向与半球壳的对称轴平行，所有的入射光线都能从半球壳的外表面射出。已知透明介质的折射率为\(n =\sqrt{2}\)。求半球壳外表面上有光线射出区域的圆形边界的半径。不考虑多次反射
+
+\begin{tikzpicture}[scale=1,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (1,0) arc(0:-180:1)--({-sqrt(2)},0) arc(-180:0:{sqrt(2)})--(1,0);
+	\draw[postaction={decorate},purple] (0,0)node[left,black]{\(O\)}--(0,-1);
+	\foreach \x in{-1,0,1}
+	\draw[postaction={decorate},purple] (\x,1)--(\x,0);
+	\draw[dashed,cyan] (0,0)--(-50:{sqrt(2)}) (0,0)--node[left,black]{\( R\)}(-140:1);
+	\node at(.6,-.3){\(\sqrt{2}R\)};
+	\node at(1.2,-.3){\(n\)};
+\end{tikzpicture}
+\begin{answer}
+    \(\frac{\sqrt{3} + 1}{2}R\)
+
+    \begin{tikzpicture}[scale=1.5,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw[thin] (1,0) arc(0:-180:1)--({-sqrt(2)},0) arc(-180:0:{sqrt(2)})--(1,0);
+    \draw[dashed,cyan] (0,0)node[left,black]{\(O\)}--(1,0) (0,0)--(-15:{sqrt(2)})coordinate(c)--++({-sqrt(3)/2-1/2},0) (0,0)--(0,{-sqrt(2)});
+	\draw[postaction={decorate},purple] (1,.6)--(1,0);
+	\draw[postaction={decorate},purple] (1,0)--(c);
+    \end{tikzpicture}
+\end{answer}

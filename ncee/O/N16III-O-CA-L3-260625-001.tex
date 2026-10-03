@@ -2,12 +2,27 @@
 \nceeID{2016新课标\Rmnum{3}}{16}
 如图，玻璃球冠的折射率为\(\sqrt{3}\)，其底面镀银，底面半径是球半径的\(\frac{\sqrt{3}}{2}\)倍，在过球心\(O\)且垂直底面的平面（纸面）内，有一与底面垂直的光线射到玻璃冠上的\(M\)点，该光线的延长线恰好过底面边缘上的\(A\)点，求该光线从球面射出的方向相对于其初始入射方向的偏角。
 
-\begin{tikzpicture}[scale=.8,decoration={markings,mark=at position 0.5 with {\arrow{>}}}]
+\begin{tikzpicture}[scale=.8,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
 	\draw (-30:2) arc(-30:210:2);
 	\draw[dashed] (30:2)--(-30:2);
-	\fill (0,0)node[above]{\scriptsize\(O\)} circle(.05);
+	\fill (0,0)node[above]{\(O\)} circle(.05);
 	\foreach \x in {-1.73,-1.53,...,1.53}
 		\draw[gray] (\x,-1.2)--++(.2,.2);
-	\draw[thick] (210:2)node[below]{\scriptsize\(B\)}--(-30:2)node[below]{\scriptsize\(A\)};
-	\draw[postaction={decorate},purple] ({2*cos(30)},3)--(30:2)node[right]{\scriptsize\(M\)};
+	\draw[thick] (210:2)node[below]{\(B\)}--(-30:2)node[below]{\(A\)};
+	\draw[postaction={decorate},purple] ({2*cos(30)},3)--(30:2)node[right,black]{\(M\)};
 \end{tikzpicture}
+\begin{answer}
+	\qty{150}{\degree}\qquad 提示：补全光路图如下图所示
+
+	\begin{tikzpicture}[scale=.8,decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+	\draw (-30:2) arc(-30:210:2);
+	\draw[dashed] (30:2)--(-30:2)--(0,0)--(30:3);
+	\fill (0,0)node[below left]{\(O\)} circle(.05);
+	\foreach \x in {-1.73,-1.53,...,1.53}
+		\draw[gray] (\x,-1.2)--++(.2,.2);
+	\draw[thick] (210:2)node[below]{\(B\)}--(-30:2)node[below]{\(A\)};
+	\draw[postaction={decorate},purple] ({2*cos(30)},3)--(30:2)node[right,black]{\(M\)};
+	\draw[postaction={decorate},purple] (30:2)--({sqrt(3)/3},-1)coordinate(c);
+	\draw[postaction={decorate},purple] (c)--++(120:{2/sqrt(3)+2});
+	\end{tikzpicture}
+\end{answer}
