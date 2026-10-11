@@ -1,0 +1,31 @@
+\icode{N16Q-EMI-SI-L3-261004-001}
+\nceeID{2016海南}{unkown}
+如图，一圆形金属环与两固定的平行长直导线在同一竖直平面内，环的圆心与两导线的距离相等，环的直径小于两导线的间距。两导线中通有大小相等、方向向下的恒定电流，以下说法正确的是\paren[]
+
+\begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+    \draw (0,0) circle (.5);
+    \draw[postaction={decorate},thick] (-1.2,1.2)--++(0,-2.4);
+    \draw[postaction={decorate},thick] (1.2,1.2)--++(0,-2.4);
+\end{tikzpicture}
+\begin{choices}
+	\item 金属环向上运动时，则环上的感应电流方向为顺时针方向
+	\item 金属环向下运动时，则环上的感应电流方向为顺时针方向
+	\item 金属环向左侧直导线靠近时，则环上的感应电流方向为逆时针方向
+	\item 金属环向右侧直导线靠近时，则环上的感应电流方向为逆时针方向
+\end{choices}
+\begin{answer}
+    D\qquad 提示：
+
+    \begin{tikzpicture}[decoration={markings,mark=at position 0.5 with {\arrow{>}}},font=\scriptsize]
+        \draw[dashed,cyan] (0,1.2)--++(0,-2.4);
+        \foreach \x in {-.8,-.4}
+            \foreach \y in {-1,-.6,...,1}
+                \node at(\x,\y)[teal]{\( \cdot \)};
+        \foreach \x in {.8,.4}
+            \foreach \y in {-1,-.6,...,1}
+                \node at(\x,\y)[teal]{\(\times\)};
+	    \draw (0,0) circle (.5);
+	    \draw[postaction={decorate},thick] (-1.2,1.2)--++(0,-2.4);
+	    \draw[postaction={decorate},thick] (1.2,1.2)--++(0,-2.4);
+    \end{tikzpicture}
+\end{answer}

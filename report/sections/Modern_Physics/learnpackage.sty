@@ -1,0 +1,102 @@
+\ProvidesPackage{learnpackage}
+\usepackage{ctex}
+\usepackage[left=3cm,right=2cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{titlesec} 
+
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+
+\usepackage{pifont}%% 花里胡哨的符号
+\usepackage{siunitx}%% 单位
+\usepackage{float} 
+\usepackage{pgfplots}
+
+%%------------------tikz设定----------------
+\RequirePackage{tikz}
+\usetikzlibrary{
+	arrows.meta,
+	chains,
+	matrix,
+	positioning,
+	mindmap,
+	shadows,
+	backgrounds
+	}
+\tikzset{
+	>=latex,%% 箭头样式
+	box/.style={
+		rectangle,%% 矩形节点
+		rounded corners =5pt,%% 圆角
+		minimum width=50pt,%% 最小宽度
+		minimum height=20pt,%% 最小高度
+		inner sep=5pt,%% 文字和边框的距离
+		draw= %% 边框颜色
+	},
+	box 2/.style={
+		rectangle,%% 矩形节点
+		rounded corners =0,%% 圆角
+		minimum width=50pt,%% 最小宽度
+		minimum height=10pt,%% 最小高度
+		inner sep=4pt,%% 文字和边框的距离
+		draw=cyan, %% 边框颜色
+		font=\scriptsize\kaishu},
+	box 3/.style={
+		circle,%% 矩形节点
+		minimum width=8pt,%% 最小宽度
+		minimum height=8pt,%% 最小高度
+		inner sep=4pt,%% 文字和边框的距离
+		draw=cyan}, %% 边框颜色
+	arrow/.style={
+		arrows={-Triangle[angle=30:2.5pt 3]},
+		line width=1pt,
+		color=teal!60},
+	every on chain/.style={ 
+		join=by arrow
+	}}
+
+\newcommand{\tikzmark}[3][]{\tikz[remember picture, baseline]\node [anchor=base,#1](#2) {#3};}
+
+%%-------------------中文下划线-------------------------
+\RequirePackage{CJKfntef}
+\newcommand{\lud}[1]{\CJKunderdot{#1}}
+%--------------------Main Font-------------------------
+%\RequirePackage{newtxtext}
+%\setCJKmainfont{Fandol}[BoldFont=songti, ItalicFont=kaishu]
+%\setCJKmainfont{SimSun}
+\RequirePackage{fontspec}
+
+%Make sure you have the compiler "XeLaTeX" activated on your settings for your LaTeX document in order to see the font 
+
+
+%------------------Color Set--------------------------
+\RequirePackage{xcolor}
+\definecolor{LightBlue}{RGB}{66, 163, 251}
+\definecolor{DarkBlue}{RGB}{36, 100, 176}
+\definecolor{LightGray}{gray}{.94}
+\definecolor{DarkGray}{gray}{.172}
+\definecolor{Orange}{RGB}{229, 133, 3}
+\definecolor{MediumBlue}{RGB}{38, 119, 193}
+\definecolor{golden}{RGB}{252,210,23}
+
+%------------------Section Default Setting-------------
+\titleformat*{\section}{\color{DarkBlue}\normalfont\bfseries\LARGE}
+\titleformat*{\subsection}{\color{LightBlue}\normalfont\bfseries\large}
+\titleformat*{\subsubsection}{\color{MediumBlue}\normalfont\bfseries\normalsize}
+
+%-------------------Section Numbers Removal------------
+\setcounter{secnumdepth}{0}
+
+
+%-------------------------Header & Footer------------------------
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{
+\begin{tikzpicture}[remember picture,overlay] \node[anchor=north west, yshift=1.5mm, xshift=-1.5mm] at (current page.north west) {\includegraphics[height=25mm]{figures/header_corner.png}};
+\end{tikzpicture}
+}
+\fancyfoot[C]{
+\begin{tikzpicture}[remember picture,overlay] \node[anchor=south east, yshift=-6.5mm, xshift=1.5mm] at (current page.south east) {\includegraphics[height=29mm]{figures/banner.png}};
+\end{tikzpicture}
+\textcolor{LightGray}{\thepage}
+}

@@ -1,0 +1,23 @@
+\icode{E-EMM-CA-L3-261004-003}
+如图所示，在平面直角坐标系\(xOy\)的第一象限内，曲线\(Ob\)与\(x\)轴之间存在沿\(y\)轴正方向的匀强电场，在虚线\(bc\)的上方存在垂直纸面向里、磁感应强度大小为\(B\)的匀强磁场。将质量为\(m\)、带电荷量为\( + q\)（\(q > 0\)）的粒子从线段\(Oa\)上任意一点(不包括\(O\)点)由静止释放，粒子经电场加速、磁场偏转后均能通过坐标原点\(O\)。已知\(a\)、\(b\)、\(c\) 三点的坐标分别为\((2L,0)\)、\((2L,L)\)、\((0,L)\)，不计粒子受到的重力，求：
+\begin{enumerate}
+	\item 匀强电场的电场强度大小\(E\)；
+	\item 粒子从释放到经过\(O\)点的最短时间\(t\)；
+	\item 匀强电场的边界方程。
+\end{enumerate}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (-.6,0)--(5,0)node[right]{\(x\)};
+	\draw[->,blue] (0,-.6)--(0,4.5)node[left]{\(y\)};
+	\draw[purple] (0,0) parabola bend (0,0)(4,2);
+	\draw[dashed] (4,2)node[right,black]{\(b\)}--(0,2)node[left,black]{\(c\)};
+	\foreach \x in {4,3.5,...,1}
+		\draw[->,very thin,cyan] (\x,0)--++(0,{\x*\x/8});
+	\foreach \x in {.4,1,...,4.5}
+		\foreach \y in {2.4,3,...,4}
+		\node at(\x,\y)[teal]{\( \times \)};
+	\node at(0,0)[below left,blue]{\(O\)};
+	\node at(4,0)[below]{\(a\)};
+\end{tikzpicture}
+\begin{answer}
+	（1）\(\frac{qB^2L}{2m}\)（2）\(\frac{(\pi + 3)m}{qB}\)（3）\(y = \frac{x^2}{4L}(0 <x\leq 2L)\)
+\end{answer}

@@ -1,0 +1,19 @@
+\icode{E-EMI-CA-L3-261004-001}
+如图所示，两根等高光滑的半圆形圆弧轨道，半径为\(r\)，间距为\(L\)，轨道竖直固定且电阻不计。在轨道左端连一阻值为\(R_1\)的电阻，整个装置处在竖点向上的匀强磁场中，磁感应强度大小为\(B\)，现有一根长度稍大于\(L\)、质量为\(m\)、接入电路电阻为\(R_1\)的金属棒，从轨道的左端\(ab\)处开始(记为\(t = 0\)时刻)，在变力\(F\)的作用下以初速度\(v_0\)沿圆弧轨道做匀速圆周运动至\(cd\)处，直径\(ad\)、\(bc\)水平，整个过程中金属棒与导轨接触良好，求此过程中：
+\begin{enumerate}
+	\item 流过金属棒的电流随运动时间变化的关系式；
+	\item 通过电阻\(R_1\)的电荷量\(q\)；
+	\item 作用力\(F\)做的功\(W_F\)。
+\end{enumerate}
+\begin{tikzpicture}[font=\scriptsize]
+	\draw (0,0)--(40:.15) (40:.65)--(40:.8) (40:.15)--++(-.1,0)--++(40:.5)--++(.2,0)--++(40:-.5)--cycle;
+	\draw (0,0)--++(1,0) arc(-180:0:1.5)node[below right,red]{\(c\)}--++(1,0);
+	\draw (40:.8)--++(1,0)coordinate(s) arc(-180:0:1.5)node[above,red]{\(d\)}--++(1,0);
+	\draw[very thick,purple] ($(1,0)+(40:-.2)$)node[below left]{\(b\)}--++(40:1.2)node[above right]{\(a\)}; 
+	\draw[dashed] (1,0)--++(3,0) (s)--++(3,0) (2.5,0)node[below left]{\(O_1\)}--++(40:.8)node[above right]{\(O\)};
+    \foreach \x in {1.35,1.9,...,4.3}
+        \draw[->,gray] (\x,-1.8)--++(0,3.2);
+\end{tikzpicture}
+\begin{answer}
+    （1）\(i = \frac{BLv_0}{R_1 + R_2}\sin \frac{v_0}{r}t\)（2）\(q = \frac{2BLr}{R_1 + R_2}\)（3）\(W_F = \frac{\pi rB^2L^2v_0}{2(R_1 + R_2)}\)
+\end{answer}

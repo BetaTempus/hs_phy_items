@@ -1,0 +1,36 @@
+\icode[magenta]{O-EMC-CA-L4-261009-001}
+简化电路：电路如下图所示，画出简化后的电路图
+
+\begin{tikzpicture}[font=\scriptsize]
+  \draw[blue] (-.5,0)--(9.7,0) (0,0)--(0,1.6)--(8,1.6)--(8,0) (4,0)--(4,.8)--(8,.8) (2,0)--(2,-.8)--(9.2,-.8)--(9.2,0) (6,0)--(6,-.8);
+  \foreach \x/\c in {1/R1,3/R2,5/R3,7/R4}
+    {\draw[fill=white] ($(\x,0)+(-.35,-.15)$) rectangle ($(\x,0)+(.35,.15)$);
+    \node at (\x,-.15)[below]{\c};}
+  \coordinate (k4) at(4,1.6);
+  \draw[fill=white,draw=white] ($(k4)+(-.4,-.1)$) rectangle ($(k4)+(.4,.1)$);
+  \draw[fill=white] ($(k4)+(-.4,0)$) circle(.05) ($(k4)+(.4,0)$) circle(.05) ($(k4)+(-.4,.05)$)--++(8:.9);
+  \node at (k4)[below]{\(K_4\)};
+  \coordinate (k2) at(6,.8);
+  \draw[fill=white,draw=white] ($(k2)+(-.4,-.1)$) rectangle ($(k2)+(.4,.1)$);
+  \draw[fill=white] ($(k2)+(-.4,0)$) circle(.05) ($(k2)+(.4,0)$) circle(.05) ($(k2)+(-.4,.05)$)--++(8:.9);
+  \node at (k2)[below]{\(K_2\)};
+  \coordinate (k3) at(4,-.8);
+  \draw[fill=white,draw=white] ($(k3)+(-.4,-.1)$) rectangle ($(k3)+(.4,.1)$);
+  \draw[fill=white] ($(k3)+(-.4,0)$) circle(.05) ($(k3)+(.4,0)$) circle(.05) ($(k3)+(-.4,.05)$)--++(8:.9);
+  \node at (k3)[below]{\(K_3\)};
+  \coordinate (k1) at(7.8,-.8);
+  \draw[fill=white,draw=white] ($(k1)+(-.4,-.1)$) rectangle ($(k1)+(.4,.1)$);
+  \draw[fill=white] ($(k1)+(-.4,0)$) circle(.05) ($(k1)+(.4,0)$) circle(.05) ($(k1)+(-.4,.05)$)--++(8:.9);
+  \node at (k1)[below]{\(K_1\)};
+  \coordinate (k5) at(8.6,0);
+  \draw[fill=white,draw=white] ($(k5)+(-.4,-.1)$) rectangle ($(k5)+(.4,.1)$);
+  \draw[fill=white] ($(k5)+(-.4,0)$) circle(.05) ($(k5)+(.4,0)$) circle(.05) ($(k5)+(-.4,.05)$)--++(8:.9);
+  \node at (k5)[below]{\(K_5\)};
+  \draw[fill=white] (-.5,0) circle(.05) (9.7,0) circle(.05);
+\end{tikzpicture}
+\begin{itemize}
+  \item \(K_1\)、\(K_5\)闭合，\(K_2\)、\(K_3\)、\(K_4\)断开
+  \item \(K_2\)、\(K_3\)、\(K_5\)闭合，\(K_1\)、\(K_4\)断开 
+  \item \(K_1\)、\(K_3\)、\(K_4\)闭合，\(K_2\)、\(K_5\)断开
+  \item \(K_1\)、\(K_2\)、\(K_3\)、\(K_4\)闭合，\(K_5\)断开
+\end{itemize}

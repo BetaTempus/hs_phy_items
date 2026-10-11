@@ -1,0 +1,22 @@
+\icode{N25Y-EMA-SI-L3-261004-001}
+\nceeID[4]{2025广东}{2}
+如图所示，某光伏电站输出功率\qty{1000}{\kW}、电压\qty{400}{V}的交流电，经理想变压器升压至\qty{10}{\kV}后，通过输电线输送到变电站，输电线的等效电阻\(R\)为\qty{5}{\Omega}。下列说法正确的是\paren[]
+
+\begin{tikzpicture}[decoration={bumps,segment length=4mm,amplitude=1.2mm},font=\scriptsize]
+	\draw[blue] (0,0)--(2,0)--(2,.4) (2,1.5)--(2,2)--(0,2) (2.4,1.6)--(2.4,2)--(4.4,2) (4.4,0)--(2.4,0)--(2.4,.4);
+	\draw (0,-.1) rectangle(-.5,2.1) node[pos=.5]{\rotatebox{-90}{光伏电站}} (4.4,-.1) rectangle(4.9,2.1) node[pos=.5]{\rotatebox{90}{变电站}};
+	\draw[fill=white] (3,-.1) rectangle(3.8,.1)node[pos=.5,above]{\(R\)};
+	\draw[gray] (3,2)--(3.3,2.2)node[right]{输电线};
+	\draw[gray] (2.2,1.8)--(2.1,2.2)node[left]{变压器};
+	\draw[decorate,blue] (2,1.5)--(2,.3);
+	\draw[decorate,blue] (2.4,.4)--(2.4,1.6);
+\end{tikzpicture}
+\begin{choices}
+	\item 变压器原、副线圈匝数比为\(1:100\)
+	\item 输电线上由\(R\)造成的电压损失为\qty{500}{V}
+	\item 变压器原线圈中的电流为\qty{100}{A}
+	\item 变压器原、副线圈中电流的频率不同
+\end{choices}
+\begin{answer}
+	B\qquad 提示：
+\end{answer}

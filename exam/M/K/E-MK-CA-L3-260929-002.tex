@@ -26,4 +26,13 @@
 \end{tikzpicture}
 \begin{answer}
    （1）\qty{50}{m}（2）\qty{50}{m}
+
+	\begin{tikzpicture}[>=stealth,font=\scriptsize]
+		\filldraw[pattern=north west lines,draw=white,pattern color=red!30] (0,0)--(2.8,2.4)--(1.4,0)--cycle;
+		\draw[->,blue] (0,0)node[below left]{0}--(4,0)node[below]{\(t\)/\qty{}{s}};
+		\draw[->,blue] (0,0)--(0,3.3)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+		\draw[dashed,cyan] (0,2.4)node[left,blue]{20}--(2.8,2.4)--(2.8,0)node[below,blue]{10} (0,1.2)node[left,blue]{10}--(1.4,1.2)--(1.4,0)node[below,blue]{5};
+		\draw[purple] (0,0)--(2.8,2.4)--++($.2*($(2.8,2.4)-(0,0)$)$);
+		\draw[teal] (1.4,0)--(2.8,2.4)--++($.2*($(2.8,2.4)-(1.4,0)$)$);
+	\end{tikzpicture}
 \end{answer}

@@ -1,0 +1,21 @@
+\icode{E-MV-MU-L2-261011-002}
+一列沿\(x\)轴正方向传播的简谐横波在\(t=0\)时刻的波形如图所示，质点\(P\)的\(x\)坐标为\qty{3}{m}。已知任意振动质点连续2次经过平衡位置的时间间隔为\qty{0.4}{s}。下列说法正确的是\paren[]
+	
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,-1.5)--(0,1.5)node[right]{\qty{}{}\(y\)};
+	\draw[->,blue] (0,0)node[left]{\(O\)}--(7,0)node[below]{\(x\)/\qty{}{m}};
+	\draw[domain=0:6.5,smooth,magenta] plot(\x,{sin(pi*\x/2 r)});
+	\foreach \x in {1,2,...,6}
+		\draw[blue] (\x,.1)--(\x,0)node[below]{\(\x\)};
+	\fill (3,-1)node[below]{\(P\)} circle(.05);
+\end{tikzpicture}
+\begin{choices}
+	\item 波速为\qty{4}{m/s}
+	\item 波的频率为\qty{1.25}{Hz}
+	\item \(x\)坐标为\qty{15}{m}的质点在\(t =\) \,\qty{0.6}{s}时恰好位于波谷
+	\item \(x\)坐标为\qty{22}{m}的质点在\(t =\) \,\qty{0.2}{s}时恰好位于波峰
+	\item 当质点\(P\)位于波峰时，\(x\)坐标为\qty{17}{m}的质点恰好位于波谷
+\end{choices}
+\begin{answer}
+    BDE
+\end{answer}

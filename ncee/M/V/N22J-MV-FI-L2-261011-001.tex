@@ -1,0 +1,15 @@
+\icode{N22J-MV-FI-L2-261011-001}
+\nceeID[4]{2022河北}{16(1)}
+一列简谐横波沿\(x\)轴正方向传播。波速为\qty{10}{m/s}。在传播方向上有\(P\)、\(Q\)两质点，坐标分别为\(x_P=\) \,\qty{1}{m}，\(x_Q =\) \,\qty{6}{m}波传播到\(P\)点开始计时，该点的振动图像如图所示，则简谐波的波长为\lunl{4em}\qty{}{m}，经过\lunl{4em}\qty{}{s}，\(Q\)点第一次到达正向最大位移处。
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (-.5,0)--(5,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,-1.2)--(0,1.5)node[right]{\(y\)/\qty{}{cm}};
+	\draw[domain=0:3,smooth,magenta] plot(\x,{sin(pi*\x/2 r)});
+	\draw (2,.1)--(2,0)node[below,blue]{0.1};
+	\draw (4,.1)--(4,0)node[below,blue]{0.2};
+	\node at(-.2,-.2){\(O\)};
+\end{tikzpicture}
+\begin{answer}
+    \qty{2}{m}\quad \qty{0.65}{s}
+\end{answer}

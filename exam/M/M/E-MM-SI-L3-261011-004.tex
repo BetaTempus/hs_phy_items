@@ -1,0 +1,27 @@
+\icode{E-MM-SI-L3-261011-004}
+如图，带等量异种电荷\(q\)的甲、乙两滑块，置于绝缘的水平桌面上，静止时相距为\(d\)。现在加一水平向右的匀强电场\(E\)，甲、乙两滑块开始运动，并发生碰撞结合在一起。已知甲的质量大于乙的质量，两者与桌面之间的动摩擦	因数相等，两滑块之间的相互作用不能忽略。下列说法正确的是\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[<->] (0,.25)--node[fill=white]{\(d\)}(2,.25);
+	\foreach \x in {-1,-.8,...,2.8}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw (-1,0)--(3,0);
+	\foreach \y in {-.5,.1,.7,1.3}
+		\draw[-latex,blue] (-1,\y)--(3,\y);
+	\node at(-.25,.5)[above]{甲};
+	\node at(2.25,.5)[above]{乙};
+	\node at(3,.7)[above]{\(E\)};
+    \draw[fill=red!20] (0,0) rectangle(-.5,.5);
+    \draw[fill=blue!20] (2,0) rectangle(2.5,.5);
+    \node at(-.25,.25)[red]{\(+ q\)};
+	\node at(2.25,.25)[blue]{\(- q\)};
+\end{tikzpicture}
+\begin{choices}
+	\item 甲、乙两滑块接近过程中任一时刻甲的速度比乙大
+	\item 甲、乙两滑块相互接近过程中动量守恒
+	\item 甲、乙发生碰撞结合在一起向左运动
+	\item 从开始运动到碰撞的过程中，匀强电场和两电荷组成的系统的电势能减小量等于\(qEd\)	
+\end{choices}
+\begin{answer}
+    C\qquad 提示：将甲乙看成一个系统，合外力向左，所以碰撞结合在一起向左运动
+\end{answer}

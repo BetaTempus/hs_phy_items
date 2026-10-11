@@ -1,8 +1,9 @@
 \icode{O-MM-SU-261001}
+
 \lkf{物理模型：}一个质量为\(m_1\)的球\(A\)以\(v_0\)的速度正心碰撞静止的球\(B\)，如图所示。
 	\begin{figure}[htbp]
 		\centering
-		\begin{tikzpicture}
+		\begin{tikzpicture}[>=stealth,font=\scriptsize]
 			\draw[gray] (0,0)--(5,0);
 			\foreach \x in {0,.2,...,4.8}
 				\draw[gray] (\x,-.2)--++(.2,.2);
@@ -46,11 +47,11 @@
 	
 	\begin{minipage}[c]{.45\textwidth}
 		\centering
-		\begin{tikzpicture}
+		\begin{tikzpicture}[>=stealth,font=\scriptsize]
 			\draw[blue,->] (-2,0)--(4,0)node[below]{\(v_1\)};
 			\draw[blue,->] (0,-1)--(0,4)node[right]{\(\Delta E_{k\text{损}}\)};
 			\node[blue] at(.2,.2){\(O\)};
-			\draw[orange] (-1,0) parabola bend(1,3) (3,0);
+			\draw[magenta] (-1,0) parabola bend(1,3) (3,0);
 			\node at(3,0) [below]{\(v_0\)};
 			\node at(-1,0) [below]{\(\frac{(m_1 - m_2)v_0}{m_1 + m_2}\)};
 			\draw[dashed] (0,3)--(1,3)--(1,0)node[below]{\(\frac{m_1v_0}{m_1 + m_2}\)};
@@ -59,11 +60,11 @@
 	\end{minipage}
 	\begin{minipage}[c]{.49\textwidth}
 		\centering
-		\begin{tikzpicture}
+		\begin{tikzpicture}[>=stealth,font=\scriptsize]
 			\draw[blue,->] (-1,0)--(5,0)node[below]{\(v_2\)};
 			\draw[blue,->] (0,-1)--(0,4)node[right]{\(\Delta E_{k\text{损}}\)};
 			\node[blue] at(-.2,-.2){\(O\)};
-			\draw[teal] (0,0) parabola bend(2,3) (4,0);
+			\draw[magenta] (0,0) parabola bend(2,3) (4,0);
 			\node at(4,0) [below]{\(\frac{2m_1v_0}{m_1 + m_2}\)};
 			\draw[dashed] (0,3)--(2,3)--(2,0)node[below]{\(\frac{m_1v_0}{m_1 + m_2}\)};
 			\node at(0,3)[left]{\(\frac{1}{2}\frac{m_1m_2}{m_1 + m_2}v_0^2\)};

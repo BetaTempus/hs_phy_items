@@ -1,0 +1,21 @@
+\icode[magenta]{N21S-MP-CA-L4-261004-001}
+\nceeID{2021江苏}{13}
+我国中微子探测实验利用光电管把光信号转换为电信号。如图所示，\(A\)和\(K\)分别是光电管的阳极和阴极，加在\(A\)、\(K\)之间的电压为\(U\)。现用发光功率为\(P\)的激光器发出频率为\(\nu\)的光全部照射在\(K\)上，回路中形成电流。已知阴极\(K\)材料的逸出功为\(W_0\)，普朗克常量为\(h\)，电子电荷量为\(e\)。
+\begin{enumerate}
+	\item 求光电子到达\(A\)时的最大动能\(E_{\mathrm{km}}\)。
+	\item 若每入射\(N\)个光子会产生\(1\)个光电子，假设所有的光电子都能到达\(A\)，求回路的电流。
+\end{enumerate}
+\begin{tikzpicture}[font=\scriptsize]
+	\draw (0,0) circle(1.5);
+	\draw[very thick] (1.4,0) arc(0:50:1.4) (1.4,0) arc(0:-50:1.4);
+	\draw[blue] (0,0)--(0,-3)--(.5,-3) (.5,-2.8)--(.5,-3.2) (.6,-2.9)--(.6,-3.1) (.6,-3)--(3,-3)--(3,0)--(1.4,0);
+	\draw[fill=white] (3,-1.5)node{\(G\)} circle(.4);
+	\fill (0,0)node[left]{\(A\)} circle(.05);
+	\draw[->,purple] (-1,2)node[left,black]{\kaishu 激光束}--(1.3,0);
+	\node at(.8,.8){\(K\)};
+	\node at(.55,-2.5){\(U\)};
+	\node at(.7,-.5){\kaishu 真空};
+\end{tikzpicture}
+\begin{answer}
+    （1）\(E_{\mathrm{km}} = h\nu - W_0 + eU\)（2）\(I = \frac{Pe}{Nh\nu}\) \qquad 揭示：本题中最大动能的含义不是最大初动能
+\end{answer}

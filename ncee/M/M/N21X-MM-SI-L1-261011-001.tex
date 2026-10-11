@@ -1,0 +1,33 @@
+\icode{N21X-MM-SI-L1-261011-001}
+\nceeID[4]{2021湖南}{2}
+物体的运动状态可用位置\(x\) 和动量\(p\)描述，称为相，对应\(p-x\)图像中的一个点。物体运动状态的变化可用\(p-x\)图像中的一条曲线来描述，称为相轨迹。假如一质点沿\(x\)轴正方向做初速度为零的匀加速直线运动，则对应的相轨迹可能是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[scale=.8]
+		\draw[->,blue] (-2,0)--(2,0)node[below]{\(x\)};
+		\draw[->,blue] (0,-2)node[below,black]{\(A\)}--(0,2)node[right]{\(p\)};
+		\node at(-.2,-.2)[blue]{\(O\)};
+		\draw[magenta] (-1.5,1.8) parabola bend(0,0)(1.5,1.8);
+	\end{scope}
+	\begin{scope}[scale=.8,xshift=4.5cm]
+		\draw[->,blue] (-2,0)--(2,0)node[below]{\(x\)};
+		\draw[->,blue] (0,-2)node[below,black]{\(B\)}--(0,2)node[right]{\(p\)};
+		\node at(-.2,-.2)[blue]{\(O\)};
+		\draw[magenta] (0,0) parabola bend(0,0)(1.5,1.8);
+	\end{scope}
+	\begin{scope}[scale=.8,xshift=9cm]
+		\draw[->,blue] (-2,0)--(2,0)node[below]{\(x\)};
+		\draw[->,blue] (0,-2)node[below,black]{\(C\)}--(0,2)node[right]{\(p\)};
+		\node at(-.2,-.2)[blue]{\(O\)};
+		\draw[rotate=-90,magenta] (-1.5,1.8) parabola bend(0,0)(1.5,1.8);
+	\end{scope}
+	\begin{scope}[scale=.8,xshift=13.5cm]
+		\draw[->,blue] (-2,0)--(2,0)node[below]{\(x\)};
+		\draw[->,blue] (0,-2)node[below,black]{\(D\)}--(0,2)node[right]{\(p\)};
+		\node at(-.2,-.2)[blue]{\(O\)};
+		\draw[rotate=-90,magenta] (-1.5,1.8) parabola bend(0,0)(0,0);
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+	D\qquad 提示：\(p = m \sqrt{2ax}\)
+\end{answer}

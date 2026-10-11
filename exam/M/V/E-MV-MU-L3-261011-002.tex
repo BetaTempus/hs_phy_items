@@ -1,0 +1,76 @@
+\icode{E-MV-MU-L3-261011-002}
+（多选）
+一列简谐横波在\(x\)轴上传播，在\(x\)轴上相距\qty{7}{m}的\(a\)、\(b\)两质点的振动图像如图甲所示，则图乙中可能是该波图像的是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,-1.5)--(0,1.5)node[right]{ \(y\)/\qty{}{cm}};
+	\draw[->,blue] (0,0)node[left]{ \(O\)}--(6,0)node[below]{ \(t\)/\qty{}{s}};
+    \draw[dashed,cyan] (0,1)node[left,blue]{ \(25\)}--(3,1) (0,-1)node[left,blue]{ \( - 25\)}--(1,-1);
+	\draw[domain=0:5,smooth,magenta] plot(\x,{-sin(pi*\x/2 r)});
+	\foreach \x in {1,...,5}
+		\draw[blue] (\x,.1)--(\x,0);
+	\node at(2,0)[below,blue]{ \(\frac{T}{2}\)};
+	\node at(4,0)[below,blue]{ \(T\)};
+	\node at(3,-1.5){ 图甲};
+	\begin{scope}[xshift=7.5cm]
+		\draw[->,blue] (0,-1.5)--(0,1.5)node[right]{ \(y\)/\qty{}{cm}};
+		\draw[->,blue] (0,0)node[left]{ \(O\)}--(6,0)node[below]{ \(t\)/\qty{}{s}};
+        \draw[dashed,cyan] (0,1)node[left,blue]{ \(25\)}--(4,1) (0,-1)node[left,blue]{ \( - 25\)}--(2,-1);
+		\draw[domain=0:5,smooth,magenta] plot(\x,{cos(pi*\x/2 r)});
+		\foreach \x in {1,...,5}
+			\draw[blue] (\x,.1)--(\x,0);
+		\node at(2,0)[below,blue]{ \(\frac{T}{2}\)};
+		\node at(4,0)[below,blue]{ \(T\)};
+		\node at(3,-1.5){ 图乙};
+	\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}
+		\draw[->,blue] (0,-1.5)--(0,1.5)node[right]{ \(y\)/\qty{}{cm}};
+		\draw[->,blue] (0,0)node[left]{ \(O\)}--(5,0)node[below]{ \(x\)/\qty{}{m}};
+        \draw[dashed,cyan] (0,1)node[left,blue]{ \(25\)}--(1,1) (0,-1)node[left,blue]{ \( - 25\)}--(3,-1);
+		\draw[domain=0:4,smooth,magenta] plot(\x,{sin(pi*\x/2 r)});
+		\foreach \x in {1,...,4}
+			\draw[blue] (\x,.1)--(\x,0);
+		\foreach \x/\n in{2/2,4/4}
+			\node at(\x,0)[below,blue]{ \(\n\)};
+		\node at(2.5,-1.5){\footnotesize \(A\)};
+	\end{scope}
+	\begin{scope}[xshift=7cm]
+		\draw[->,blue] (0,-1.5)--(0,1.5)node[right]{ \(y\)/\qty{}{cm}};
+		\draw[->,blue] (0,0)node[left]{ \(O\)}--(5,0)node[below]{ \(x\)/\qty{}{m}};
+        \draw[dashed,cyan] (0,1)node[left,blue]{ \(25\)}--(4,1) (0,-1)node[left,blue]{ \( - 25\)}--(2,-1);
+		\draw[domain=0:4,smooth,magenta] plot(\x,{cos(pi*\x/2 r)});
+		\foreach \x in {1,...,4}
+			\draw[blue] (\x,.1)--(\x,0);
+		\foreach \x/\n in{2/14,4/28}
+			\node at(\x,0)[below,blue]{ \(\n\)};
+		\node at(2.5,-1.5){\footnotesize \(B\)};
+	\end{scope}
+	\begin{scope}[yshift=-4cm]
+		\draw[->,blue] (0,-1.5)--(0,1.5)node[right]{ \(y\)/\qty{}{cm}};
+        \draw[dashed,cyan] (0,1)node[left,blue]{ \(25\)}--(2,1) (0,-1)node[left,blue]{ \( - 25\)}--(4,-1);
+		\draw[->,blue] (0,0)node[left]{ \(O\)}--(5,0)node[below]{ \(x\)/\qty{}{m}};
+		\draw[domain=0:4,smooth,magenta] plot(\x,{-cos(pi*\x/2 r)});
+		\foreach \x in {1,...,4}
+			\draw[blue] (\x,.1)--(\x,0);
+		\foreach \x/\n in{2/10.5,4/21}
+			\node at(\x,0)[below,blue]{ \(\n\)};
+		\node at(2.5,-1.5){\footnotesize \(C\)};
+	\end{scope}
+	\begin{scope}[xshift=7cm,yshift=-4cm]
+		\draw[->,blue] (0,-1.5)--(0,1.5)node[right]{ \(y\)/\qty{}{cm}};
+		\draw[->,blue] (0,0)node[left]{ \(O\)}--(5,0)node[below]{ \(x\)/\qty{}{m}};
+        \draw[dashed,cyan] (0,1)node[left,blue]{ \(25\)}--(3,1) (0,-1)node[left,blue]{ \( - 25\)}--(1,-1);
+		\draw[domain=0:4,smooth,magenta] plot(\x,{-sin(pi*\x/2 r)});
+		\foreach \x in {1,...,4}
+			\draw[blue] (\x,.1)--(\x,0);
+		\foreach \x/\n in{2/7,4/14}
+			\node at(\x,0)[below,blue]{ \(\n\)};
+		\node at(2.5,-1.5){\footnotesize \(D\)};
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+    AB\qquad 提示：波可以向左向右传播
+\end{answer}

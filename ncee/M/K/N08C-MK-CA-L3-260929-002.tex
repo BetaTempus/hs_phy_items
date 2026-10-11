@@ -1,3 +1,14 @@
 \icode{N08C-MK-CA-L3-260929-002}
 \nceeID{2008四川}{13}
-\(A\)、\(B\) 两辆汽车在笔直的公路上同向行驶。当 \(B\) 车在 \(A\) 车前\qty{84}{m}处时，\(B\)车速度为\qty{4}{m/s}，且正以\qty{2}{m/s^2}的加速度做匀加速运动；经过一段时间后，\(B\)车加速度突然变为零。\(A\)车一直以\,\qty{20}{m/s}的速度做匀速运动。经过\qty{12}{s}后两车相遇。问\(B\) 车加速行驶的时间是多少？
+\(A\)、\(B\) 两辆汽车在笔直的公路上同向行驶。当 \(B\) 车在 \(A\) 车前\qty{84}{m}处时，\(B\)车速度为\qty{4}{m/s}，且正以\qty{2}{m/s^2}的加速度做匀加速运动；经过一段时间后，\(B\)车加速度突然变为零。\(A\)车一直以\qty{20}{m/s}的速度做匀速运动。经过\qty{12}{s}后两车相遇。问\(B\) 车加速行驶的时间是多少？
+\begin{answer}
+    \qty{6}{s}\qquad 提示：运动图像如图所示
+
+    \begin{tikzpicture}[>=stealth,font=\scriptsize]
+        \draw[->,blue] (0,0)node[below left]{0}--(0,3.5)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+        \draw[->,blue] (0,0)--(4.2,0)node[below]{\(t\)/\qty{}{s}};
+        \draw[dashed,cyan] (0,2.4)node[blue,left]{16}--(1.8,2.4)--(1.8,0)node[below,blue]{6} (3.6,3)--(3.6,0)node[below,blue]{12};
+        \draw[purple] (0,.6)node[blue,left]{4}--(1.8,2.4)--(3.6,2.4);
+        \draw[teal] (0,3)node[left,blue]{20}--(3.6,3);
+    \end{tikzpicture}
+\end{answer}

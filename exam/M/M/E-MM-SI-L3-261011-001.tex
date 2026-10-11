@@ -1,0 +1,20 @@
+\icode{E-MM-SI-L3-261011-001}
+气体在流动时会出现分层流动的现象即层流（laminar flow），不同流层的气体流速不同。相邻两流层间有粘滞力，产生粘滞力的原因可以用简单模型解释：如图，某气体流动时分成\(A\)、\(B\)两流层，两层的交界面为平面，\(A\)层流速为\(v_A\)，\(B\)层流速为\(v_B\)，\(v_A > v_B\)，由于气体分子做无规则热运动，因此\(A\)层的分子会进入\(B\)层，\(B\)层的分子也会进入\(A\)层，稳定后，单位时间内从\(A\)层进入\(B\)层的分子数等于从\(B\)层进入\(A\)层的分子数，若气体分子的质量为\(m\)，单位时间、单位面积上由\(A\)层进入\(B\)层的分子数为\(n\)，则\(B\)层对\(A\)层气体单位面积粘滞阻力为\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \y in {0,1.2,2.4}
+		\draw[dashed,cyan] (-.5,\y)--(3.5,\y);
+	\draw[-latex] (1.5,.6)--(2.5,.6)node[right]{\(v_A\)};
+	\draw[-latex] (1.5,1.8)--(2.5,1.8)node[right]{\(v_B\)};
+	\node at(-.3,.6)[right]{流层\(A\)};
+	\node at(-.3,1.8)[right]{流层\(B\)};
+\end{tikzpicture}
+\begin{choices}
+	\item 大小：\(nm(v_A - v_B)\)方向：与气体流动方向相同
+	\item 大小：\(nm(v_A - v_B)\)方向：与气体流动方向相反
+	\item 大小：\(2nm(v_A - v_B)\)方向：与气体流动方向相同
+	\item 大小：\(2nm(v_A - v_B)\)方向：与气体流动方向相反
+\end{choices}
+\begin{answer}
+    B\qquad 提示：\(F\Delta t = nm\Delta t\cdot(v_A -v_B)\)
+\end{answer}

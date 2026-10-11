@@ -1,0 +1,24 @@
+\icode{N23J-MP-SI-L2-261004-001}
+\nceeID[4]{2023河北}{1}
+2022年8月30日，国家航天局正式发布了“羲和号”太阳探测卫星国际上首次在轨获取的太阳\(\mathrm{H}_{\alpha}\)谱线精细结构。\(\mathrm{H}_{\alpha}\)是氢原子巴耳末系中波长最长的谱线，其对应的能级跃迁过程为\paren[D]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\foreach \y/\n/\e in {0/1/-13.6,2/2/-3.4,2.8/3/-1.51,3.2/4/-0.85,3.5/5/-0.54}
+		\draw (0,\y)node[left]{\n}--(3,\y)node[right]{\e};
+	\foreach \x/\y in {.5/2.8,1.17/3.2,1.83/3.5}
+			\draw[->,cyan] (\x,\y)--(\x,2);
+	\draw[->,dashed,cyan] (2.5,4)--(2.5,2);
+	\draw[dotted] (0,4)node[left]{\(\infty\)}--(3,4)node[right]{ 0};
+	\node at(-.2,4.2)[above]{\(n\)};
+	\node at(3.5,4.2)[above]{\(E\)/\qty{}{eV}};
+	\node at(1.5,4)[above]{ 巴尔末系};
+\end{tikzpicture}
+\begin{choices}
+		\item 从\(\infty\)跃迁到\(n = 2\)
+		\item 从\(n = 5\)跃迁到\(n = 2\)
+		\item 从\(n = 4\)跃迁到\(n = 2\)
+		\item 从\(n = 3\)跃迁到\(n = 2\)
+\end{choices}
+\begin{answer}
+	D\qquad 提示：波长最长，光子的能量最小
+\end{answer}

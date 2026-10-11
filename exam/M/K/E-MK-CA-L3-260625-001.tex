@@ -1,0 +1,29 @@
+\icode{E-MK-CA-L3-260625-001}
+无人驾驶汽车已完成国内首次城市、环路及高速道路混合路况下的全自动驾驶。
+  
+（1）无人驾驶汽车车头装有一个激光雷达，就像车辆的“鼻子”，随时“嗅”着前方\qty{80}{m}范围内车辆和行人的“气息”。若无人驾驶汽车在某路段刹车时的加速度为\qty{2.5}{m/s^2}，为不撞上前方静止的障碍物，汽车在该路段匀速行驶时的最大速度是多少？
+
+（2）若有人驾驶的汽车以\qty{30}{m/s}的速度一直匀速行驶，无人驾驶的汽车以\qty{20}{m/s}的速度行驶。某一时刻有人驾驶的汽车在无人驾驶汽车的正后方\qty{8}{m}处，由于距离较近，前方无人驾驶汽车立即以\qty{5}{m/s^2}的加速度做匀加速运动，试通过计算判断两车能否避免相撞？
+
+（3）无人驾驶的汽车正在以\qty{30}{m/s}的速度在平直公路上行驶。某一时刻无人驾驶汽车监测到前方有一辆有人驾驶的汽车突然变道到同一车道，此时有人驾驶的汽车行驶速度为\qty{20}{m/s}。由于距离较近，后方无人驾驶汽车立即以\qty{2.5}{m/s^2}的加速度一直做匀减速运动。减速\qty{2}{s}后，前方有人驾驶的汽车司机发现了后车，立即以\qty{2.5}{m/s^2}的加速度做匀加速运动（不计司机的反应时间）。若两车最近时相距\qty{0.5}{m}，求无人驾驶汽车刚开始匀减速运动时与正前方有人驾驶的汽车两车之间的距离。
+
+\begin{answer}
+    （1）\qty{20}{m/s}（2）两车不能避免相撞（3）\qty{18}{m}\qquad 提示：下图是第（2）、（3）两问的\(v - t\)图像
+
+    \begin{tikzpicture}[>=stealth,font=\scriptsize]
+        \filldraw[pattern=north west lines,draw=white,pattern color=red!30] (0,2)--(2,3)--(0,3)--cycle;
+        \draw[->,blue] (0,0)node[below left]{0}--(4,0)node[below]{\(t\)/\qty{}{s}};
+        \draw[->,blue] (0,0)--(0,3.5)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+        \draw[dashed,cyan] (2,3)--(2,0)node[blue,below]{2};
+        \draw[teal] (0,3)node[blue,left]{30}--++(3,0);
+        \draw[purple] (0,2)node[blue,left]{20}--(2,3)--++($.2*($(2,3)-(0,2)$)$);
+    \end{tikzpicture}
+    \begin{tikzpicture}[>=stealth,font=\scriptsize]
+        \filldraw[pattern=north west lines,draw=white,pattern color=red!30] (0,3)--(3,2.25)--(2,2)--(0,2)--cycle;
+        \draw[->,blue] (0,0)node[below left]{0}--(4,0)node[below]{\(t\)/\qty{}{s}};
+        \draw[->,blue] (0,0)--(0,3.5)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+        \draw[dashed,cyan] (0,2.5)node[blue,left]{25}--(2,2.5)--(2,0)node[blue,below]{2} (0,2.25)--(3,2.25)--(3,0)node[blue,below]{3};
+        \draw[purple] (0,3)node[blue,left]{30}--(3,2.25)--++($.5*($(3,2.25)-(2,2.5)$)$);
+        \draw[teal] (0,2)node[blue,left]{20}--(2,2)--(3,2.25)--++($.5*($(3,2.25)-(2,2)$)$);
+    \end{tikzpicture}
+\end{answer}

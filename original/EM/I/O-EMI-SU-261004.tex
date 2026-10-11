@@ -1,0 +1,26 @@
+\icode{O-EMI-SU-261004}
+
+\noindent{内容:}{\kaishu 感应电流具有这样的方向，即感应电流的磁场总要阻碍引起感应电流的磁通量的变化。}
+
+\begin{tikzpicture}
+	\node[box 3] (1) at(0,0) {\(\Phi_{\text{原}}\) 变化};
+	\node[box 3] (2) at(-60:3) {\(I_{\text{感}}\)};
+	\node[box 3] (3) at(-120:3) {\(B_{\text{感}}\)};
+	\draw[->,blue,thick] (1)--node[above,rotate=-60]{\kaishu 引起}(2);
+	\draw[->,blue,thick] (2)--node[below]{\kaishu 产生}(3);
+	\draw[->,red,thick] (3)--node[above,rotate=60]{\kaishu 阻碍}(1);
+	\begin{scope}[xshift=5cm]
+		\node[box 3] (1) at(0,0) {\(\Phi_{\text{原}}\) 变化};
+		\node[box 3] (2) at(-60:3) {\(I_{\text{感}}\)};
+		\node[box 3] (3) at(-120:3) {\(B_{\text{感}}\)};
+		\draw[->,blue,thick] (3)--node[below]{\kaishu\scriptsize 右手螺旋}(2);
+		\draw[->,red,thick] (1)--node[above,rotate=60]{\kaishu\scriptsize 增反减同}(3);
+	\end{scope}
+\end{tikzpicture}
+
+\noindent{\fangsong 感应电流方向判断步骤:}
+\begin{enumerate}
+	\item 确定\(\Phi_{\text{原}}\)方向、增减
+	\item 用增反减同确定\(B_{\text{感}}\)方向
+	\item 利用\(B_{\text{感}}\)方向+右手螺旋定则确定\(I_{\text{感}}\)方向
+\end{enumerate}

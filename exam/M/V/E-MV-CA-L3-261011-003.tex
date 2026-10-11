@@ -1,0 +1,33 @@
+\icode{E-MV-CA-L3-261011-003}
+一列简谐横波沿\(x\)轴正方向传播，沿传播方向上\(P\)、\(Q\)两点的振动图象如图甲、乙所示，已知\(P\)、\(Q\)两点平衡位置的坐标分别为\(x_P =\) \,\qty{2}{m}、\(x_Q =\) \,\qty{4}{m}。问：
+\begin{enumerate}
+	\item 若该波的波长大于\qty{2}{m}，则波速是多大？
+	\item 若该波的波长小于\qty{2}{m}，则波长是多少？
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,-1.5)--(0,1.5)node[right]{\(x\)/\qty{}{cm}};
+	\draw[->,blue] (0,0)node[left]{\(O\)}--(5.5,0)node[below]{\(t\)/\qty{}{s}};
+    \draw[dashed,cyan] (0,1)node[left,blue]{\(5\)}--(4.5,1) (0,-1)node[left,blue]{\( - 5\)}--(3.5,-1);
+	\draw[domain=0:5,smooth,magenta] plot(\x,{sin(pi*\x r)});
+	\foreach \x in {.5,1,1.5,...,5}
+		\draw[blue] (\x,.1)--(\x,0);
+	\foreach \x in {1,2,...,5}
+		\node at(\x,0)[below,blue]{\(\x\)};
+	\node at(3,-1.5){图甲};
+	\begin{scope}[xshift=7.5cm]
+		\draw[->,blue] (0,-1.5)--(0,1.5)node[right]{\(x\)/\qty{}{cm}};
+		\draw[->,blue] (0,0)node[left]{\(O\)}--(5.5,0)node[below]{\(t\)/\qty{}{s}};
+        \draw[dashed,cyan] (0,1)node[left,blue]{\(5\)}--(4.25,1) (0,-1)node[left,blue]{\( - 5\)}--(3.25,-1);
+		\draw[domain=0:5,smooth,magenta] plot(\x,{sin((pi*\x+pi/4) r)});
+		\foreach \x in {.5,1,1.5,...,5}
+			\draw[blue] (\x,.1)--(\x,0);
+		\foreach \x in {1,2,...,5}
+			\node at(\x,0)[below,blue]{\(\x\)};
+		\node at(3,-1.5){图乙};
+		\node at(0,{sqrt(2)/2})[left,blue]{\(2.5 \sqrt{2}\)};
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+    （1）\(\frac{8}{7}\) \qty{}{m/s}（2）\(\lambda = \frac{16}{8n + 7}\) \qty{}{m}（\(n = 1,2,3,\cdots\)）\qquad 提示：可以将甲的振动图像向\(x\) 轴左侧反射延伸
+\end{answer}

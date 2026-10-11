@@ -1,0 +1,36 @@
+\icode{N25Y-EMI-MU-L3-261004-001}
+\nceeID[6]{2025广东}{9}
+如图是一种精确测量质量的装置原理示意图，竖直平面内，质量恒为\(M\)的称重框架由托盘和矩形线圈组成。线圈的一边始终处于垂直线圈平面的匀强磁场中，磁感应强度不变。测量分两个步骤，步骤\ding{172}：托盘内放置待测物块，其质量用\(m\)表示，线圈中通大小为\(I\)的电流，使称重框架受力平衡；步骤\ding{173}：线圈处于断开状态，取下物块，保持线圈不动，磁场以速率\(v\)匀速向下运动，测得线圈中感应电动势为\(E\)。利用上述测量结果可得出\(m\)的值，重力加速度为\(g\)。下列说法正确的有\paren[BD]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw ($(0,.6)+(-45:.6)$) arc(-45:-135:.6)--cycle;
+	\coordinate (a)at ($(0,.6)+(-90:{.3*sqrt(2)})$);
+	\draw[fill=red!50] ($(a)+(-.08,0)$) rectangle ($(a)+(.08,.16)$)node[pos=.5,above]{\(m\)};
+	\draw ($(0,.6)+(-100:.6)$)|-(0,-.1) ($(0,.6)+(-80:.6)$)|-(0,-.1);
+	\draw[blue] (-1,-.1) rectangle(1,-1.5);
+	\foreach \x in {-1.2,-.8,...,1.2}
+		\foreach \y in {-.6,-1,...,-1.8}
+			\node at(\x,\y)[teal]{\( \times \)};
+    \draw[-stealth,blue] (-1,-.1)--(-1,-.3)node[right,red]{\(I\)};
+	\node at(0,-2.2){步骤\ding{172}};
+	\begin{scope}[xshift=4cm]
+		\draw ($(0,.6)+(-45:.6)$) arc(-45:-135:.6)--cycle;
+		\draw ($(0,.6)+(-100:.6)$)|-(0,-.1) ($(0,.6)+(-80:.6)$)|-(0,-.1);
+		\draw[blue] (-1,-.1) rectangle(1,-1.5);
+		\foreach \x in {-1.2,-.8,...,1.2}
+			\foreach \y in {-.6,-1,...,-1.8}
+				\node at(\x,\y)[teal]{\( \times \)};
+		\draw[-stealth,red] (1.4,-.5)--node[right]{\(v\)}(1.4,-1.1);
+		\node at(0,-2.2){步骤\ding{173}};
+		\node at(-1,-.7)[right,red]{\(E\)};
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item 线圈电阻为\(\frac{E}{I}\)
+	\item \(I\)越大，表明\(m\)越大
+	\item \(v\)越大，则\(E\)越小
+	\item \(m = \frac{EI}{vg} - M\)
+\end{choices}
+\begin{answer}
+	BD\qquad 提示：图一受力平衡\((m + M)g = BL\cdot I\)，图二电磁感应\(E = BL\cdot v\)
+\end{answer}

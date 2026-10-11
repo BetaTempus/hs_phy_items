@@ -1,0 +1,28 @@
+\icode{N23L-MP-SI-L2-261004-003}
+\nceeID[3]{2023山东}{1}
+“梦天号”实验舱携带世界首套可相互比对的冷原子钟组发射升空，对提升我国导航定位、深空探测等技术具有重要意义。如图所示为某原子钟工作的四能级体系，原子吸收频率为\(\nu_0\)的光子从基态能级\Rmnum{1}跃迁至激发态能级\Rmnum{2}，然后自发辐射出频率为\(\nu_1\)的光子，跃迁到钟跃迁的上能级2，并在一定条件下可跃迁到钟跃迁的下能级1，实现受激辐射，发出钟激光，最后辐射出频率为\(\nu_3\)的光子回到基态。该原子钟产生的钟激光的频率\(\nu_2\)为\paren[D]
+	
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[fill=gray] (0,-0.2)rectangle(3,0);
+	\draw[fill=gray] (0,3)  rectangle(3,3.2);
+	\draw[gray,fill=gray!70] (2.8,.8) rectangle(4.8,1);
+	\draw[gray,fill=gray!70] (2.8,2) rectangle(4.8,2.2);
+	\draw[->] (1.5,0)--node[left]{\(\nu_0\)}(1.5,3);
+	\draw[->] (3,3)--node[left]{\(\nu_1\)}(3,2.2);
+	\draw[->] (3,2)--node[left]{\(\nu_2\)}(3,1);
+	\draw[->] (3,.8)--node[left]{\(\nu_3\)}(3,0);
+	\node at (-.2,-.1)[left]{\Rmnum{1}};
+	\node at (-.2,3.1)[left]{\Rmnum{2}};
+	\node at (3.8,1.5){钟激光};
+	\node at (3.8,.6){1};
+	\node at (3.8,2.4){2};
+\end{tikzpicture}
+\begin{choices}
+	\item \(\nu_0 +\nu_1 +\nu_3\)
+	\item \(\nu_0 +\nu_1 -\nu_3\)
+	\item \(\nu_0 -\nu_1 +\nu_3\)
+	\item \(\nu_0 -\nu_1 -\nu_3\)
+\end{choices}
+\begin{answer}
+	D\qquad 提示：能量守恒\(h\nu_0 = h\nu_1 + h\nu_2 + h\nu_3\)
+\end{answer}

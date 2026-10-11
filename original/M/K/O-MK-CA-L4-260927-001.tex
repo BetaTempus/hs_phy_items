@@ -1,6 +1,18 @@
 \icode[magenta]{O-MK-CA-L4-260927-001}
-小球\(A\)在距地面\(H =\) \,\qty{20}{m}的高度由静止释放，同时在小球\(A\)正下方的小球\(B\)从地面以初速度\(v_0\)竖直上抛，忽略空气阻力，\(g =\) \,\qty{10}{m/s}。
-\begin{enumerate}[(1)]
+小球\(A\)在距地面\(H =\) \,\qty{20}{m}的高度由静止释放，同时在小球\(A\)正下方的小球\(B\)从地面以初速度\(v_0\)竖直上抛，忽略空气阻力，\(g =\) \,\qty{10}{m/s^2}。
+\begin{enumerate}
     \item 若两球在\(B\)球上升过程中相遇，求\(v_0\)的取值范围；
     \item 若两球在\(B\)球下降过程中相遇，求\(v_0\)的取值范围。
 \end{enumerate}
+\begin{answer}
+    （1）\(10\le v_0 < 10 \sqrt{2}\) \qty{}{m}（2）\( v_0\ge 10 \sqrt{2}\) \qty{}{m}\qquad 提示：以\(A\)为参考系\(B\)做竖直向上的匀速直线运动，相遇时间\(t = \frac{H}{v_0}\)
+
+    \begin{tikzpicture}[>=stealth,font=\scriptsize]
+        \draw[->,blue] (0,0)node[below left]{0}--(4,0)node[below]{\(t\)/\qty{}{s}};
+        \draw[->,blue] (0,0)--(0,3.5)node[right]{\(h\)/\qty{}{m}};
+        \draw[purple] (0,3)node[blue,left]{20} parabola bend(0,3) (2,0)node[below,blue]{2};
+        \draw[orange,dashed] (0,0) parabola bend(1,.75) (2,0);
+        \draw[teal] (0,0) parabola bend({sqrt(2)},1.5) ({2*sqrt(2)},0)node[below,blue]{\(\frac{2v_0}{g}\)};
+        \draw[dashed] ({sqrt(2)},0)node[below,blue]{\(\frac{v_0}{g}\)}--++(0,1.5)--(0,1.5)node[left,blue]{\(\frac{v_0^2}{2g}\)};
+    \end{tikzpicture}
+\end{answer}

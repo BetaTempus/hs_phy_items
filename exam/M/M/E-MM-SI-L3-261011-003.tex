@@ -1,0 +1,19 @@
+\icode{E-MM-SI-L3-261011-003}
+某水流造景设施截面如图所示，水平喷水口\(P\)横截面积为$S$、喷水的流速恒定为$v$，从\(P\)喷出的水柱恰好能垂直撞到倾角为\qty{30}{\degree}的斜面\(AC\)上的\(B\)处，速度瞬间变为零，之后沿斜面流下。已知水的密度为$\rho$，重力加速度为$g$，不计空气阻力，则\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \x in {-.4,-.2,...,3.8}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.4,0)--(4,0) (0,0)node[above left]{\(A\)}--(30:4)node[above]{\(C\)};
+	\draw[magenta] (.4,3)coordinate(p) parabola bend (.4,3) (30:2.7)node[below] {\(B\)};
+	\draw[fill=red!30] ($(p)+(-.5,.06)$)node[above right]{\(P\)} rectangle($(p)+(0,-.06)$);
+\end{tikzpicture}
+\begin{choices}
+	\item 水流单位时间撞到\(B\)处的体积$Q = 2Sv$
+	\item 水流在\(B\)处的速度\(v_B = \frac{\sqrt{3}}{3}v\)
+	\item 水流对\(B\)处冲击力$F = \rho Sv^2$
+	\item 空中水的质量$m = \frac{\sqrt{3}\rho Sv^2}{g}$
+\end{choices}
+\begin{answer}
+    D\qquad 提示：\(t = \frac{\frac{\sqrt{3} v}{3}}{g}\)，\(F\Delta t = \rho Q\Delta t\cdot 2v\)
+\end{answer}

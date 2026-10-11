@@ -1,0 +1,39 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{learnpackage}
+
+\usepackage{tikz}
+\usepackage[version=4]{mhchem} % 化学公式
+\usepackage{array,tabularx}
+\usepackage{tabularray}
+\usepackage{booktabs}
+\usepackage{makecell,multirow,diagbox}
+\usepackage{pifont}
+\usepackage{xfrac} % 分数格式：斜分数\sfrac
+\usepackage{multicol} % 分栏
+\usepackage{siunitx}
+
+\usetikzlibrary{calc,patterns}
+%%=============== 新建命令 =====================
+\newcommand{\lkf}[1]{\noindent\text{\kaishu\color{cyan}（#1）}}
+\newcommand{\jintian}{\number\year 年 \number\month 月 \number\day 日} % 中文年月日
+\newcommand{\rmnum}[1]{\romannumeral #1} % 小写罗马数字
+\newcommand{\Rmnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}} % 大写罗马数字
+\newcommand{\lunl}[1]{\underline{\hbox to #1{}}}%%  可输入长度的下划线
+\newcommand{\lminiindent}[1]{\makebox[-1em]{#1\qquad}} % 缩进
+\newcommand{\mkst}{\makebox[-3pt][r]{\color{blue}\ding{78}}}
+\newcommand{\lbf}[1]{\kaishu\textbf{\color{cyan}#1}}
+\newcommand{\lsn}[1]{\noindent\textsc{\color{orange} #1.}}
+\setlength{\headheight}{14.9998pt}
+\addtolength{\topmargin}{-2.49998pt}
+%------------------Document----------------------------
+
+\begin{document}
+
+%-------------------------TitlePage------------------------
+%\begin{titlepage}
+%\end{titlepage}
+
+%-------------------------Content------------------------
+%\input{sections/thermodynamics_B.tex}
+\input{sections/kinematics/kinematics}
+\end{document}

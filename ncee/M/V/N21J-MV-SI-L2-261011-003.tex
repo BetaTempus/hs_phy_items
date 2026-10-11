@@ -1,0 +1,45 @@
+\icode{N21J-MV-SI-L2-261011-003}
+\nceeID[5]{2021天津}{4}
+一列沿\(x\)轴正方向传播的简谐横波，传播速度\(v =\) \,\qty{10}{m/s}，\(t = 0\)时位于坐标原点的质点从平衡位置沿\(y\)轴正方向运动，下列图形中哪个是\(t =\) \,\qty{0.6}{s}时的波形\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[scale=.8]
+		\draw[->,blue] (0,-1.2)--(0,1.6)node[right]{\(y\)};
+		\draw[->,blue] (-0.4,0)--(7,0)node[below]{\(x\)/\qty{}{m}};
+		\node at(3.7,-1.3)[below]{ A};
+		\node[blue] at(-.2,-.2) {\(O\)};
+		\foreach \x/\n in {1/,2/2,3/,4/4,5/,6/6}
+			\draw (\x,0.1)--(\x,0)node[below,blue]{\(\n\)};
+		\draw[domain=0:6,smooth,magenta] plot(\x,{-sin(pi*\x/2 r)});
+	\end{scope}
+	\begin{scope}[scale=.8,xshift=10cm]
+		\draw[->,blue] (0,-1.2)--(0,1.6)node[right]{\(y\)};
+		\draw[->,blue] (-0.4,0)--(7,0)node[below]{\(x\)/\qty{}{m}};
+		\node at(3.7,-1.3)[below]{ B};
+		\node[blue] at(-.2,-.2) {\(O\)};
+		\foreach \x/\n in {1/,2/2,3/,4/4,5/,6/6}
+			\draw (\x,0.1)--(\x,0)node[below,blue]{\(\n\)};
+		\draw[domain=0:6,smooth,magenta] plot(\x,{sin(pi*\x/2 r)});
+	\end{scope}
+	\begin{scope}[scale=.8,yshift=-4cm]
+		\draw[->,blue] (0,-1.2)--(0,1.6)node[right]{\(y\)};
+		\draw[->,blue] (-0.4,0)--(7,0)node[below]{\(x\)/\qty{}{m}};
+		\node at(3.7,-1.3)[below]{ C};
+		\node[blue] at(-.2,-.2) {\(O\)};
+		\foreach \x/\n in {1/,2/2,3/,4/4,5/,6/6}
+			\draw (\x,0.1)--(\x,0)node[below,blue]{\(\n\)};
+		\draw[domain=0:6,smooth,magenta] plot(\x,{cos(pi*\x/2 r)});
+	\end{scope}
+	\begin{scope}[scale=.8,xshift=10cm,yshift=-4cm]
+		\draw[->,blue] (0,-1.2)--(0,1.6)node[right]{\(y\)};
+		\draw[->,blue] (-0.4,0)--(7,0)node[below]{\(x\)/\qty{}{m}};
+		\node at(3.7,-1.3)[below]{ D};
+		\node[blue] at(-.2,-.2) {\(O\)};
+		\foreach \x/\n in {1/,2/2,3/,4/4,5/,6/6}
+			\draw (\x,0.1)--(\x,0)node[below,blue]{\(\n\)};
+		\draw[domain=0:6,smooth,magenta] plot(\x,{-cos(pi*\x/2 r)});
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+   B\qquad 提示：起振方向是\(y\) 轴正方向
+\end{answer}

@@ -1,0 +1,73 @@
+
+
+
+% 自定义颜色
+\definecolor{maincolor}{RGB}{26, 50, 95}    % 深蓝色
+\definecolor{accentcolor}{RGB}{230, 100, 50} % 橙色点缀
+\definecolor{lightgray}{RGB}{240, 240, 240}
+
+
+
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        % 1. 背景公式水印 (低调的物理公式装饰)
+        \node[opacity=0.04, rotate=15, font=\fontsize{60}{70}\selectfont\bfseries] at (current page.center) {\(F=ma\)};
+        \node[opacity=0.04, rotate=-20, font=\fontsize{60}{70}\selectfont\bfseries] at ([xshift=-4cm, yshift=3cm]current page.center) {\(E=mc^2\)};
+        \node[opacity=0.04, rotate=5, font=\fontsize{60}{70}\selectfont\bfseries] at ([xshift=4cm, yshift=-4cm]current page.center) {\(\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}\)};
+        \node[opacity=0.04, rotate=-10, font=\fontsize{60}{70}\selectfont\bfseries] at ([xshift=3cm, yshift=5cm]current page.center) {\(S = k_B \ln \Omega\)};
+
+        % 2. 顶部装饰色块
+        \fill[maincolor] (current page.north west) rectangle ([yshift=-4cm]current page.north east);
+        
+        % 3. 顶部文字
+        \node[white, font=\Large\bfseries] at ([yshift=-2cm]current page.north) {普通高中物理复习资料};
+
+        % ==================== 4. 绘制“斯夫”主题徽章 ====================
+        \begin{scope}[shift={([yshift=2.8cm]current page.center)}, scale=0.85]
+            % 外圈双圆环
+            \draw[line width=2.5pt, maincolor] (0,0) circle (2.2);
+            \draw[line width=0.8pt, accentcolor] (0,0) circle (2.0);
+            % 内圈
+            \draw[line width=1.2pt, maincolor] (0,0) circle (1.5);
+
+            % 徽章内部沙漏（象征时间）
+            \draw[maincolor, thick] (-0.6, 0.7) -- (0.6, 0.7) -- (0, 0.1) -- (0.6, -0.7) -- (-0.6, -0.7) -- (0, 0.1) -- cycle;
+            \fill[accentcolor, opacity=0.6] (0, 0.1) -- (0.4, 0.7) -- (-0.4, 0.7) -- cycle;
+            \fill[accentcolor] (0, 0.1) -- (0.2, -0.7) -- (-0.2, -0.7) -- cycle;
+
+            % 水波纹（象征川流不息）
+            \draw[line width=1.5pt, accentcolor] (-1.6, -0.2) sin (-1.1, 0.2) cos (-0.6, -0.2) sin (-0.1, 0.2) cos (0.4, -0.2) sin (0.9, 0.2) cos (1.4, -0.2);
+            \draw[line width=1.5pt, accentcolor] (-1.6, -0.5) sin (-1.1, -0.1) cos (-0.6, -0.5) sin (-0.1, -0.1) cos (0.4, -0.5) sin (0.9, -0.1) cos (1.4, -0.5);
+
+            % 徽章文字（主标题 + 环绕小字）
+            \node[maincolor, font=\fontsize{32}{38}\selectfont\bfseries] at (0, 0.4) {斯 夫};
+            \node[maincolor, font=\small\bfseries] at (0, -1.1) {格 物 致 知};
+            \node[maincolor, font=\small\bfseries] at (0, 1.2) {不 舍 昼 夜};
+
+            % 徽章边缘的小圆点（电子/星辰点缀）
+            \foreach \angle in {0, 45, 90, 135, 180, 225, 270, 315} {
+                \fill[accentcolor] (\angle:2.2) circle (0.06);
+            }
+        \end{scope}
+        % ================================================================
+
+        % 5. 主标题
+        \node[maincolor, font=\fontsize{46}{55}\selectfont\bfseries] at ([yshift=-2.2cm]current page.center) {高中物理题集};
+        
+        % 6. 副标题
+        \node[maincolor, font=\fontsize{18}{25}\selectfont] at ([yshift=-4cm]current page.center) {力学 \(\cdot\) 电磁学 \(\cdot\) 热学 \(\cdot\) 光学 \(\cdot\) 近代物理};
+        
+        % 7. 分割线
+        \draw[accentcolor, line width=1.5pt] ([yshift=-5cm, xshift=-4cm]current page.center) -- ([yshift=-5cm, xshift=4cm]current page.center);
+
+        % 8. 底部信息栏
+        \node[maincolor, font=\Large] at ([yshift=-7cm]current page.center) {\textbf{编者：} \underline{\hspace{3cm}}};
+        \node[maincolor, font=\Large] at ([yshift=-9cm]current page.center) {\textbf{适用年级：} \underline{\hspace{3cm}}};
+        \node[maincolor, font=\Large] at ([yshift=-11cm]current page.center) {\textbf{版本：} \underline{\hspace{3cm}}};
+        
+        % 9. 底部装饰条
+        \fill[maincolor] (current page.south west) rectangle ([yshift=1.5cm]current page.south east);
+        \node[white, font=\small] at ([yshift=0.75cm]current page.south) {2026 年 10 月};
+
+    \end{tikzpicture}
+\end{titlepage}

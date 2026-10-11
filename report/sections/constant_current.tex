@@ -1,0 +1,78 @@
+\lsn{1}简化电路：电路如下图所示，画出简化后的电路图
+
+\begin{tikzpicture}[font=\scriptsize]
+  \draw[blue] (-.5,0)--(9.7,0) (0,0)--(0,1.6)--(8,1.6)--(8,0) (4,0)--(4,.8)--(8,.8) (2,0)--(2,-.8)--(9.2,-.8)--(9.2,0) (6,0)--(6,-.8);
+  \foreach \x/\c in {1/R1,3/R2,5/R3,7/R4}
+    {\draw[fill=white] ($(\x,0)+(-.35,-.15)$) rectangle ($(\x,0)+(.35,.15)$);
+    \node at (\x,-.15)[below]{\c};}
+  \coordinate (k4) at(4,1.6);
+  \draw[fill=white,draw=white] ($(k4)+(-.4,-.1)$) rectangle ($(k4)+(.4,.1)$);
+  \draw[fill=white] ($(k4)+(-.4,0)$) circle(.05) ($(k4)+(.4,0)$) circle(.05) ($(k4)+(-.4,.05)$)--++(8:.9);
+  \node at (k4)[below]{\(K_4\)};
+  \coordinate (k2) at(6,.8);
+  \draw[fill=white,draw=white] ($(k2)+(-.4,-.1)$) rectangle ($(k2)+(.4,.1)$);
+  \draw[fill=white] ($(k2)+(-.4,0)$) circle(.05) ($(k2)+(.4,0)$) circle(.05) ($(k2)+(-.4,.05)$)--++(8:.9);
+  \node at (k2)[below]{\(K_2\)};
+  \coordinate (k3) at(4,-.8);
+  \draw[fill=white,draw=white] ($(k3)+(-.4,-.1)$) rectangle ($(k3)+(.4,.1)$);
+  \draw[fill=white] ($(k3)+(-.4,0)$) circle(.05) ($(k3)+(.4,0)$) circle(.05) ($(k3)+(-.4,.05)$)--++(8:.9);
+  \node at (k3)[below]{\(K_3\)};
+  \coordinate (k1) at(7.8,-.8);
+  \draw[fill=white,draw=white] ($(k1)+(-.4,-.1)$) rectangle ($(k1)+(.4,.1)$);
+  \draw[fill=white] ($(k1)+(-.4,0)$) circle(.05) ($(k1)+(.4,0)$) circle(.05) ($(k1)+(-.4,.05)$)--++(8:.9);
+  \node at (k1)[below]{\(K_1\)};
+  \coordinate (k5) at(8.6,0);
+  \draw[fill=white,draw=white] ($(k5)+(-.4,-.1)$) rectangle ($(k5)+(.4,.1)$);
+  \draw[fill=white] ($(k5)+(-.4,0)$) circle(.05) ($(k5)+(.4,0)$) circle(.05) ($(k5)+(-.4,.05)$)--++(8:.9);
+  \node at (k5)[below]{\(K_5\)};
+  \draw[fill=white] (-.5,0) circle(.05) (9.7,0) circle(.05);
+\end{tikzpicture}
+\begin{itemize}
+  \item \(K_1\)、\(K_5\)闭合，\(K_2\)、\(K_3\)、\(K_4\)断开
+  \item \(K_2\)、\(K_3\)、\(K_5\)闭合，\(K_1\)、\(K_4\)断开 
+  \item \(K_1\)、\(K_3\)、\(K_4\)闭合，\(K_2\)、\(K_5\)断开
+  \item \(K_1\)、\(K_2\)、\(K_3\)、\(K_4\)闭合，\(K_5\)断开
+\end{itemize}
+
+\newpage 
+\lsn{2}电源内阻为\(r\)，当外电路电阻为\(R_1\) 、\(R_2\)（\(R_1\ne R_2\)）时，输出功率\(P\)相等，证明\(R_1\cdot R_2 = r^2\)
+\vspace*{4cm}
+
+\lsn{3}自主构建模型，推导霍耳元件中的霍耳电压\(U_H\)的表达式
+\vspace*{5cm}
+
+\lsn{4}画出限流与分压电路图，并简述其异同
+\vspace*{5cm}
+
+\lsn{5}画出恒流半偏法测量电流表内阻的电路图，并简述其原理及测量过程，给出误差分析
+
+\newpage
+\lsn{6}电路图如下图所示，定值电阻\(R_1 =\) \,\qty{2}{\ohm}，\(R_2 =\) \,\qty{1}{\ohm}，电源\(E_1 =\) \,\qty{3}{V}，内阻\(r_1 =\) \,\qty{1}{\ohm}，\(E_2 =\) \,\qty{9}{V}，内阻\(r_2 =\) \,\qty{2}{\ohm}，给出图中各个节点的电势
+
+\begin{tikzpicture}[font=\scriptsize]
+  \draw[blue] (0,0) rectangle (3,3);
+  \foreach \y/\c in {0/R1,3/R2}
+    {\draw[fill=white] ($(1.5,\y)+(-.35,-.15)$) rectangle ($(1.5,\y)+(.35,.15)$);
+    \node at (1.5,{\y-.15})[below]{\c};}
+  \draw[fill=white,draw=white] (-.1,1.4) rectangle (.1,1.6) (2.9,1.4) rectangle (3.1,1.6);
+  \draw[blue,thick] (-.2,1.6)--++(.4,0) (2.8,1.6)--++(.4,0);
+  \draw[blue] (-.1,1.4)--++(.2,0) (2.9,1.4)--++(.2,0) (0,0)--(0,-.4) (-.3,-.4)--++(.6,0) (-.2,-.48)--++(.4,0) (-.15,-.56)--++(.3,0);
+  \node at(-.3,1.5)[left]{\(E_1\)};
+  \node at(.3,1.5)[right]{\(r_1\)};
+  \node at(3.3,1.5)[right]{\(E_2\)};
+  \node at(2.7,1.5)[left]{\(r_2\)};
+  \fill (0,0)node[left]{\(a\)} circle(.05) (3,0)node[right]{\(b\)} circle(.05) (0,3)node[left]{\(c\)} circle(.05) (3,3)node[right]{\(d\)} circle(.05);
+\end{tikzpicture}
+\vspace*{2cm}
+
+\lsn{7}构建模型，由洛伦兹力\(F_L = qvB\)导出安培力\(F_A = BIL\)的表达式
+\vspace*{5cm}
+
+\lsn{8}电流流过电阻时产生焦耳热，阐述其发热原因
+\vspace*{3cm}
+
+\lsn{9}画出恒压半偏法测量电压表内阻的电路图，并简述其原理及测量过程，给出误差分析
+
+\newpage
+
+\lsn{10}画出内、外接法测电阻的电路图，并导出相对误差\(\delta_\text{内}\)、\(\delta_\text{外}\)的表达式

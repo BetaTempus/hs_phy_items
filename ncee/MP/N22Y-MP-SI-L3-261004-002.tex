@@ -1,0 +1,20 @@
+\icode{N22Y-MP-SI-L3-261004-002}
+\nceeID[4]{2022重庆}{6}
+如图为氢原子的能级示意图。已知蓝光光子的能量范围为2.53\(\sim\)\qty{2.76}{eV}，紫光光子的能量范围为2.76 \(\sim\)\qty{3,10}{eV}。若使处于基态的氢原子被激发后，可辐射蓝光，不辐射紫光，则激发氢原子的光子能量为\paren[C]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \y/\n/\e in {0/1/-13.6,2/2/-3.4,2.8/3/-1.51,3.2/4/-0.85,3.5/5/-0.54}
+		\draw (0,\y)node[left]{\n}--(3,\y)node[right]{\e};
+	\draw[dotted] (0,4)node[left]{\(\infty\)}--(3,4)node[right]{ 0};
+	\node at(-.2,4.2)[above]{\(n\)};
+	\node at(3.5,4.2)[above]{\(E\)/\qty{}{eV}};
+\end{tikzpicture}
+\begin{choices}
+	\item \qty{10.20}{eV}
+	\item \qty{12.09}{eV}
+	\item \qty{12.75}{eV}
+	\item \qty{13.06}{eV}
+\end{choices}			
+\begin{answer}
+	C\qquad 提示：\(n = 4\)跃迁\(n = 2\)辐射出\qty{2.55}{eV}，恰是蓝光，其他辐射也不在紫光范围内
+\end{answer}

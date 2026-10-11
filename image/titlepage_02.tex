@@ -1,0 +1,87 @@
+\usetikzlibrary{decorations.text, shapes.geometric, calc, positioning}
+
+% 自定义颜色
+\definecolor{maincolor}{RGB}{26, 50, 95}      % 深蓝色
+\definecolor{accentcolor}{RGB}{230, 100, 50}  % 橙色点缀
+\definecolor{lightgray}{RGB}{240, 240, 240}
+
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        % 1. 背景公式水印
+        \node[opacity=0.04, rotate=15, font=\fontsize{60}{70}\selectfont\bfseries] at (current page.center) {\(F=ma\)};
+        \node[opacity=0.04, rotate=-20, font=\fontsize{60}{70}\selectfont\bfseries] at ([xshift=-4cm, yshift=3cm]current page.center) {\(E=mc^2\)};
+        \node[opacity=0.04, rotate=5, font=\fontsize{60}{70}\selectfont\bfseries] at ([xshift=4cm, yshift=-4cm]current page.center) {\(\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}\)};
+        \node[opacity=0.04, rotate=-10, font=\fontsize{60}{70}\selectfont\bfseries] at ([xshift=3cm, yshift=5cm]current page.center) {\(S = k_B \ln \Omega\)};
+
+        % 2. 顶部装饰色块
+        \fill[maincolor] (current page.north west) rectangle ([yshift=-4cm]current page.north east);
+        
+        % 3. 顶部文字
+        \node[white, font=\Large\bfseries] at ([yshift=-2cm]current page.north) {普通高中物理复习资料};
+
+        % ==================== 4. 绘制“斯夫”主题徽章 (环形文字版) ====================
+        \begin{scope}[shift={([yshift=2.5cm]current page.center)}, scale=0.85]
+            % 外圈双圆环
+            \draw[line width=2.5pt, maincolor] (0,0) circle (2.4);
+            \draw[line width=0.8pt, accentcolor] (0,0) circle (2.2);
+            % 内圈（限制环形文字范围）
+            \draw[line width=1.2pt, maincolor] (0,0) circle (1.6);
+
+            % 【环形文字 - 上半圈：不舍昼夜】
+            % 注意：将 font 放在 \path 的选项里，而非 decoration 内部
+            \path [font=\normalsize\bfseries, postaction={decorate, decoration={
+                text along path, 
+                text align={align=center}, 
+                text={不舍昼夜}, 
+                reverse path=false,
+                text color=maincolor
+            }}] (150:2.0) arc (150:30:2.0);
+
+            % 【环形文字 - 下半圈：格物致知】
+            \path [font=\normalsize\bfseries, postaction={decorate, decoration={
+                text along path, 
+                text align={align=center}, 
+                text={格物致知}, 
+                reverse path=true, % 反转路径使文字正立
+                text color=maincolor
+            }}] (-30:2.0) arc (-30:210:2.0);
+
+            % 徽章内部沙漏（象征时间）
+            \draw[maincolor, thick] (-0.6, 0.8) -- (0.6, 0.8) -- (0, 0.1) -- (0.6, -0.8) -- (-0.6, -0.8) -- (0, 0.1) -- cycle;
+            \fill[accentcolor, opacity=0.6] (0, 0.1) -- (0.4, 0.8) -- (-0.4, 0.8) -- cycle;
+            \fill[accentcolor] (0, 0.1) -- (0.2, -0.8) -- (-0.2, -0.8) -- cycle;
+
+            % 水波纹（象征川流不息）
+            \draw[line width=1.5pt, accentcolor] (-1.2, -0.2) sin (-0.8, 0.2) cos (-0.4, -0.2) sin (0, 0.2) cos (0.4, -0.2) sin (0.8, 0.2) cos (1.2, -0.2);
+            \draw[line width=1.5pt, accentcolor] (-1.2, -0.5) sin (-0.8, -0.1) cos (-0.4, -0.5) sin (0, -0.1) cos (0.4, -0.5) sin (0.8, -0.1) cos (1.2, -0.5);
+
+            % 徽章中心文字（斯夫）
+            \node[maincolor, font=\fontsize{36}{42}\selectfont\bfseries] at (0, 0.4) {斯 夫};
+
+            % 徽章边缘的小圆点（电子/星辰点缀）
+            \foreach \angle in {0, 45, 90, 135, 180, 225, 270, 315} {
+                \fill[accentcolor] (\angle:2.4) circle (0.06);
+            }
+        \end{scope}
+        % ================================================================
+
+        % 5. 主标题
+        \node[maincolor, font=\fontsize{46}{55}\selectfont\bfseries] at ([yshift=-2.5cm]current page.center) {高中物理题集};
+        
+        % 6. 副标题
+        \node[maincolor, font=\fontsize{18}{25}\selectfont] at ([yshift=-4.2cm]current page.center) {力学 \(\cdot\) 电磁学 \(\cdot\) 热学 \(\cdot\) 光学 \(\cdot\) 近代物理};
+        
+        % 7. 分割线
+        \draw[accentcolor, line width=1.5pt] ([yshift=-5.2cm, xshift=-4cm]current page.center) -- ([yshift=-5.2cm, xshift=4cm]current page.center);
+
+        % 8. 底部信息栏
+        \node[maincolor, font=\Large] at ([yshift=-7.2cm]current page.center) {\textbf{编者：} \underline{\hspace{3cm}}};
+        \node[maincolor, font=\Large] at ([yshift=-9.2cm]current page.center) {\textbf{适用年级：} \underline{\hspace{3cm}}};
+        \node[maincolor, font=\Large] at ([yshift=-11.2cm]current page.center) {\textbf{版本：} \underline{\hspace{3cm}}};
+        
+        % 9. 底部装饰条
+        \fill[maincolor] (current page.south west) rectangle ([yshift=1.5cm]current page.south east);
+        \node[white, font=\small] at ([yshift=0.75cm]current page.south) {2026 年 10 月};
+
+    \end{tikzpicture}
+\end{titlepage}

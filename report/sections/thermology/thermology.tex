@@ -1,0 +1,200 @@
+%-------------------------Content------------------------
+\section{分子动理论}
+\noindent 把物质的热学性质和规律看作\lud{微观粒子热运动的宏观表现}，这样的理论叫作分子动理论
+\subsection{物质是由大量分子组成的}
+
+\lsn{1}分子的量级：分子直径的数量级在\,\qty{e-10}{m}，分子的质量的数量级在\,\qty{e-26}{kg}
+
+\lsn{2}分子的两种理想模型:
+\begin{center}
+  \begin{minipage}[c]{.88\textwidth}
+    \lbf{球模型}：\(V_0 = \frac{1}{6}\pi d^{3}\)，\(V_0\) 表示分子的实际体积，适用于固体、液体
+
+    \lbf{立方体模型}：\(V_0 = d^{3}\)，\(V_0\) 表示气体分子所占据空间的体积，适用于气体
+  \end{minipage}
+\end{center}
+
+\lsn{3}阿伏伽德罗常数：\,\qty{1}{\mole}的任何物质中含有相同的微粒个数，用符号\(N_A\)表示，\(N_A =\) \,\qty{6.02e23}{\per\mole}。阿伏伽德罗常数是联系宏观和微观的桥梁
+\begin{center}
+\begin{minipage}[c]{.88\textwidth}
+
+  \lbf{摩尔质量}：\,\qty{1}{mol}的任何物质的质量，用符号\(M\)表示。该物质每个分子的质量用\(m_0\) 表示，则\(N_A\cdot m_0 = M\)
+
+  \lbf{摩尔体积}：\,\qty{1}{mol}的任何物质的体积，用符号\(V_m\) 表示。该物质每个分子{\color{red}\fangsong\CJKunderdot{所占据的空间体积}}用\(v_0\) 表示，则\(N_A\cdot v_0 = V_m\)
+\end{minipage}
+\end{center}
+
+\begin{figure}[htbp]
+  \begin{minipage}[c]{.88\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \node[box] (m0) at (0,0) {\(m_0\)};
+    \node[box 3] (M) at(5,0) {\(M\)};
+    \node[box] (m) at(10,0) {\(m_\text{总}\)};
+    \node[box] (v0) at(0,-2){\(v_0\)};
+    \node[box 3] (V) at(5,-2){\(V_m\)};
+    \node[box] (v) at(10,-2){\(v_\text{总}\)};
+    \draw[<->,red] (m0)--node[above]{\(N_A\cdot m_0 = M\)}(M);
+    \draw[<->,red] (M)--node[above]{\(n\cdot M =m_\text{总}\)}(m);
+    \draw[<->,blue] (v0)--node[below]{\(N_A\cdot v_0 = V_m\)}(V);
+    \draw[<->,blue] (V)--node[below]{\(n\cdot V_m =v_\text{总}\)}(v);
+    \draw[<->,teal] (m0)--node[right]{\(\rho = \dfrac{m_0}{v_0}\)}(v0);
+    \draw[<->,teal] (M)--node[right]{\(\rho = \dfrac{M}{V}\)}(V);
+    \draw[<->,teal] (m)--node[left]{\(\rho = \dfrac{m_\text{总}}{v_\text{总}}\)}(v);
+    \node at(0,1.2){单个分子（微观）};
+    \node at (5,1.2){\,\qty{1}{\mole}分子};
+    \node at (10,1.2){大量分子（宏观）};
+
+  \end{tikzpicture}
+  \end{minipage}
+\end{figure}
+
+\lsn{4}分子数密度：分子的个数\(N\)与它们所占空间体积\(V\)之比，通常用\tikzmark{mk0}{\(n\)}表示。
+\begin{tikzpicture}[overlay, remember picture, node distance = 15pt]
+  \node[below right = of mk0, xshift =-6.5cm,yshift=0pt](testDesc){\color{gray}\fangsong 此处\(n\)不表示物质的量};
+  \draw[arrow,thick,golden,out=0,in=-120](testDesc)to(mk0);
+  \end{tikzpicture}
+\begin{center}
+\begin{minipage}[c]{.88\textwidth}
+  \(n = \dfrac{N}{V} = \dfrac{N_A}{V_m} = \rho\dfrac{N_A}{M}\)
+\end{minipage}
+\end{center}
+\subsection{分子永不停息地做无规则热运动}
+\lsn{1}扩散现象：相互接触的\tikzmark{mk1}{物体}的\lud{\color{red}\kaishu 分子}彼此进入对方的现象。
+\begin{tikzpicture}[overlay, remember picture, node distance = 8pt]
+  \node[below right = of mk1, xshift =4cm,yshift=0pt](testDesc){\color{gray}\fangsong\small 固体液体气体都可以};
+  \draw[arrow,thick,golden,out=-180,in=-30](testDesc)to(mk1);
+  \end{tikzpicture}
+\begin{itemize}
+  \item 温度越高，扩散越快
+  \item 从浓度大向浓度小处扩散
+\end{itemize}
+
+\lsn{2}布朗运动：悬浮在液体（或气体）中的{\color{red}\kaishu \CJKunderdot{固体微粒}}永不停息的无规则运动
+\begin{center}
+\begin{minipage}[c]{.88\textwidth}
+  \lbf{产生的原因}：大量液体分子（或气体分子）无规则运动对固体颗粒撞击力的{\color{red}\fangsong\lud{不平衡}}引起的。
+
+  \lbf{布朗颗粒}：布朗颗粒用肉眼直接看不见，但在显微镜下能看见，因此用肉眼看到的颗粒所做的运动，不能叫布朗运动。布朗颗粒直径约为\,\qty{e-6}{m}，而分子直径约为\,\qty{e-10}{m}，布朗颗粒的运动是分子无规则热运动的间接反应
+\end{minipage}
+\end{center}
+\newpage
+\begin{center}
+\begin{minipage}[c]{.88\textwidth}
+  \begin{minipage}[c]{.39\textwidth}
+    \lbf{布朗运动的特点}：
+    \begin{itemize}
+      \item 永不停息、无规则运动
+      \item \CJKunderdot{颗粒越小}，运动越剧烈
+      \item 温度越高，运动越剧烈
+      \item 运动轨迹不确定
+    \end{itemize}
+  \end{minipage}
+  \begin{minipage}[c]{.59\textwidth}
+    \begin{tikzpicture}
+      \node[box 2] (b1) at(0,0) { 液体（气体）分子};
+      \node[box 2] (b2) at(-.1,-1) { 悬浮的固体微粒};
+      \node[box 2] (b3) at(1.5,-2) {微粒受力不平衡};
+      \node[box 2] (b4) at(1.5,-3) {布朗运动};
+      \node[box 2] (b5) at(3,-.5) {温度越高};
+      \node[box 2] (b6) at(4.5,-1.5) {颗粒越小};
+      \draw[arrow, out=-180, in=180] (b1) to node[left]{\tiny\kaishu\color{red} 撞击}(b2);
+      \draw[arrow ,out=-90,in=-180] (b2) to (b3);
+      \draw[arrow,out=-90,in=90] (b5) to (b3);
+      \draw[arrow,out=-180,in=0] (b6) to (b3);
+      \draw[arrow,out=-90,in=90] (b3) to node[right]{\tiny\kaishu\color{red}产生}(b4);
+    \end{tikzpicture}
+  \end{minipage} 
+  \end{minipage}
+  \end{center}
+  \lsn{3}热运动：\lud{\color{red}\kaishu 分子}永不停息的无规则运动。\lud{\color{red}\kaishu \tikzmark{mk2}{温度}}是分子热运动剧烈程度的标志
+  \begin{tikzpicture}[overlay, remember picture, node distance = 8pt]
+    \node[below right = of mk2, xshift =35pt,yshift=0pt](testDesc){\color{gray}\fangsong 温度越高热运动越剧烈};
+    \draw[arrow,thick,golden,out=-180,in=-60](testDesc)to(mk2);
+    \end{tikzpicture}
+  \begin{center}
+  \begin{minipage}[c]{.88\textwidth}
+    {\kaishu 扩散现象\lud{直接证明}分子在做无规则运动
+
+    布朗运动\lud{间接反映}份子在做无规则运动}
+  \end{minipage}
+  \end{center}
+  \lsn{4}分子运动速度分布规律：\lud{\color{red}\kaishu 中间多，两头少}
+
+  \vspace*{3ex}
+  \noindent
+  \begin{minipage}[c]{.59\textwidth}
+    {\kaishu
+      \begin{itemize}
+      \item 是\lud{大量分子}热运动的统计规律
+      \item 气体分子运动的速率按一定的规律分布，速率太大或速率太小的分子数目都很少
+      \item 温度升高，气体分子的\lud{\color{red}\fangsong 平均速率增大}，且\lud{速率大的分子数增多，速率小的分子数减少}，仍是“中间多，两头少”的分布规律
+    \end{itemize}}
+  \end{minipage}
+  \begin{minipage}[c]{.39\textwidth}
+  \begin{tikzpicture}[scale=.8]
+      \filldraw[fill=gray!20,draw=white,very thin,domain=0:2] plot (\x,{1.2*\x*\x*exp(-.19*\x*\x)})--(2,0);
+			\draw[->,thin] (0,0)--(5,0)node[below]{\(v\) (\,\qty{}{m\cdot s^{-1}})};
+			\draw[->,thin] (0,0)--(0,3.5);
+			\draw[blue,dashed,domain=0:4] plot (\x,{2.3*\x*\x*exp(-.3*\x*\x)});
+			\draw[red,domain=0:4.5] plot (\x,{1.2*\x*\x*exp(-.19*\x*\x)});
+			\node at (0,3.5)[right]{\(f(v)\)};
+      \draw[blue,dashed] (3.6,3)--(4.1,3)node[right]{\,\qty{0}{^\circ C}};
+      \draw[very thin,dashed] (2,2.25)--(2,0)node[below]{\(v_1\)};
+      \draw[red] (3.6,2.5)--(4.1,2.5)node[right]{\,\qty{100}{^\circ C}};
+      \node at (-.2,-.2){\(o\)};
+      \node at(1.5,.8){\(\tikzmark{mk3}{S}\)};
+		\end{tikzpicture}
+    \begin{tikzpicture}[overlay, remember picture, node distance = 8pt]
+      \node[above right = of mk3, xshift =5cm,yshift=-20pt](testDesc){\footnotesize\color{gray}\fangsong\parbox[t]{5em}{面积表示速率在\(0\sim v_1\) 的分子占总分子数的百分比}};
+      \draw[arrow,thick,golden,out=-180,in=0](testDesc)to(mk3);
+    \end{tikzpicture}
+  \end{minipage}
+  
+  \vspace*{5pt}
+  \begin{itemize}
+    \item {\kaishu\(f(v)\)表示速率在\(v\)附近单位速率间隔内的分子数占总分子数的\lud{百分比}}
+  \end{itemize}
+  \subsection{分子间存在着相互作用力}
+  \lsn{1}分子间存在空隙：下列现象说明表明分子间存在空隙
+
+    {\kaishu 气体容易被压缩；水和酒精混合后总体积变小； 堆积的金块和铅块相互扩散}
+
+  \lsn{2}分子间的作用力：分子间有空隙，大量分子却能聚在一起，表明分子间存在作用力
+
+  \vspace*{3ex}
+  \noindent
+  \begin{minipage}[c]{.55\textwidth}
+    \begin{itemize}
+      \item 分子间的引力和斥力\lud{\color{red}\kaishu 同时存在}，实际表现出来的分子力是分子引力和斥力的合力
+      \item 分子间的引力和斥力都随分子间的距离\(r\)的\lud{\color{red}\kaishu 增大而减小}，随分子间的距离\(r\)的减小而增大，但斥力衰减比引力衰减的快
+      \item 当\(r =r_0\)时，分子间引力和斥力\lud{\color{red}\kaishu 大小相等}，称为平衡位置，其数量级为\,\qty{e-10}{m} 
+    \end{itemize}
+  \end{minipage}
+  \begin{minipage}[c]{.44\textwidth}
+    \centering
+    \begin{tikzpicture}[scale=.9]
+        \draw[->,blue,thin] (0,-2)--(0,2.5)node[left]{\(F\)};
+				\draw[->,blue,thin] (0,0)node[left]{\(O\)}--(5,0)node[below]{\(r\)};
+				\draw[very thin] (.2,2)..controls(.8,-2.5)and(1,0)..(4.5,-.05);
+				\filldraw[orange] (.55,0)circle(.04);
+				\node at(.8,0)[above]{\(r_0\)};
+				\draw[dashed,red] (.3,2.2)..controls(1.2,.4)..(4,.15);
+				\draw[dashed,green!50!black] (.55,-1.7)..controls(1.6,-.8)..(4,-.3);
+				\node at(2,1){\text{\(F_\text{斥}\)}};
+				\node at (2,-1.3){\text{\(F_\text{引}\)}};
+        \node at (2.8,-2.5){\fangsong 分子间作用力与分子间距离的关系};
+    \end{tikzpicture}
+  \end{minipage}
+
+  \vspace*{2ex}
+  \begin{itemize}
+    \item 当\(r > 10r_0\)时，分子间的引力和斥力迅速减弱，几乎为零，可以认为\lud{分子间的作用力为零}
+    \item 分子间的相互作用力是带正电的原子核和带负电的电子间复杂的\lud{电磁相互作用}
+  \end{itemize}
+  \newpage
+  \begin{tikzpicture}
+    \begin{axis}
+    \addplot[color=red,domain=0:5]{1.2*x^2*exp(-.19*x^2)};
+    \end{axis}
+    \end{tikzpicture}

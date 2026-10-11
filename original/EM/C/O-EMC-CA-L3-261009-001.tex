@@ -1,0 +1,17 @@
+\icode{O-EMC-CA-L3-261009-001}
+电路图如下图所示，定值电阻\(R_1 =\) \,\qty{2}{\ohm}，\(R_2 =\) \,\qty{1}{\ohm}，电源\(E_1 =\) \,\qty{3}{V}，内阻\(r_1 =\) \,\qty{1}{\ohm}，\(E_2 =\) \,\qty{9}{V}，内阻\(r_2 =\) \,\qty{2}{\ohm}，给出图中各个节点的电势
+
+\begin{tikzpicture}[font=\scriptsize]
+    \draw[blue] (0,0) rectangle (3,3);
+    \foreach \y/\c in {0/R1,3/R2}
+        {\draw[fill=white] ($(1.5,\y)+(-.35,-.15)$) rectangle ($(1.5,\y)+(.35,.15)$);
+        \node at (1.5,{\y-.15})[below]{\c};}
+    \draw[fill=white,draw=white] (-.1,1.4) rectangle (.1,1.6) (2.9,1.4) rectangle (3.1,1.6);
+    \draw[blue,thick] (-.2,1.6)--++(.4,0) (2.8,1.6)--++(.4,0);
+    \draw[blue] (-.1,1.4)--++(.2,0) (2.9,1.4)--++(.2,0) (0,0)--(0,-.4) (-.3,-.4)--++(.6,0) (-.2,-.48)--++(.4,0) (-.15,-.56)--++(.3,0);
+    \node at(-.3,1.5)[left]{\(E_1\)};
+    \node at(.3,1.5)[right]{\(r_1\)};
+    \node at(3.3,1.5)[right]{\(E_2\)};
+    \node at(2.7,1.5)[left]{\(r_2\)};
+    \fill (0,0)node[left]{\(a\)} circle(.05) (3,0)node[right]{\(b\)} circle(.05) (0,3)node[left]{\(c\)} circle(.05) (3,3)node[right]{\(d\)} circle(.05);
+\end{tikzpicture}

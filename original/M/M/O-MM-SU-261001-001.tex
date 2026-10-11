@@ -1,26 +1,26 @@
 \icode{O-MM-SU-261001-001}
 \begin{figure}[htbp]
 		\centering
-		\begin{tikzpicture}
-			\draw[->,blue,thick] (0,0)--(5,0)node[below]{\footnotesize \(t\)};
-			\draw[->,blue,thick] (0,-2)--(0,3)node[right]{\footnotesize \(v\)};
-			\node[blue] at(0,0)[left]{\footnotesize \(O\)};
-			\draw[domain=0:4] plot(\x,{4*exp(-.5*\x)-2});
-			\node at(0,2)[left]{\footnotesize\(v_0\)};
+		\begin{tikzpicture}[>=stealth,font=\scriptsize]
+			\draw[->,blue] (0,0)--(5,0)node[below]{\(t\)};
+			\draw[->,blue] (0,-2)--(0,3)node[right]{\(v\)};
+			\node[blue] at(0,0)[left]{\(O\)};
+			\draw[domain=0:4,magenta] plot(\x,{4*exp(-.5*\x)-2});
+			\node at(0,2)[left]{\(v_0\)};
 		\end{tikzpicture}
-		\begin{tikzpicture}
-			\draw[->,blue,thick] (0,0)--(5,0)node[below]{\footnotesize \(t\)};
-			\draw[->,blue,thick] (0,-2)--(0,3)node[right]{\footnotesize \(x\)};
-			\node[blue] at(0,0)[left]{\footnotesize \(O\)};
-			\draw[domain=0:4] plot(\x,{12-12*exp(-.5*\x)-3*\x});
+		\begin{tikzpicture}[>=stealth,font=\scriptsize]
+			\draw[->,blue,thick] (0,0)--(5,0)node[below]{\(t\)};
+			\draw[->,blue,thick] (0,-2)--(0,3)node[right]{\(x\)};
+			\node[blue] at(0,0)[left]{\(O\)};
+			\draw[domain=0:4,magenta] plot(\x,{12-12*exp(-.5*\x)-3*\x});
 		\end{tikzpicture}
 
-		\begin{tikzpicture}[scale=.8]
-			\draw[->,blue,thick] (0,0)--(9,0)node[below]{\footnotesize \(t\)};
-			\draw[->,blue,thick] (0,-3)--(0,3)node[right]{\footnotesize \(v\)};
-			\node[blue] at(0,0)[left]{\footnotesize \(O\)};
-			\draw[dashed] (0,-2)node[left]{\footnotesize \(v_m\)}--(8,-2);
-			\draw[domain=0:8] plot(\x,{4*exp(-.5*\x)-2});
-			\node at(0,2)[left]{\footnotesize\(v_0\)};
+		\begin{tikzpicture}[>=stealth,font=\scriptsize,scale=.8]
+			\draw[->,blue,thick] (0,0)--(9,0)node[below]{\(t\)};
+			\draw[->,blue,thick] (0,-3)--(0,3)node[right]{\(v\)};
+			\node[blue] at(0,0)[left]{\(O\)};
+			\draw[dashed] (0,-2)node[left]{\(v_m\)}--(8,-2);
+			\draw[domain=0:8,magenta] plot(\x,{4*exp(-.5*\x)-2});
+			\node at(0,2)[left]{\(v_0\)};
 		\end{tikzpicture}
 	\end{figure}

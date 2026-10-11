@@ -1,0 +1,48 @@
+\icode{N13J-MP-SI-L3-261004-003}
+\nceeID[6]{2013北京}{8}
+以往我们认识的光电效应是单光子光电效应，即一个电子在极短时间内只吸收到一个光子而从金属表面逸出。强激光的出现丰富了人们对于光电效应的认识，用强激光照射金属，由于其光子密度极大，一个电子在短时间内	吸收多个光子成为可能，从而形成多光子电效应，这已被实验证实。
+	
+光电效应实验装置示意如图。用频率为\(\nu\)的普通光源照射阴极\(K\)，没有发生光电效应,换同样频率为\(\nu\)的强激光照射阴极\(K\)，则发生了光电效应；此时，若加上反向电压\(U\)，即将阴极\(K\)接电源正极，阳极\(A\)接电源负极，在\(KA\)之间就形成了使光电子减速的电场，逐渐增大\(U\)，光电流会逐渐减小；当光电流恰好减小到零时，所加反向电压\(U\)可能是下列的（其中\(W\)为逸出功，\(h\)为普朗克常量，\(e\)为电子电荷量）\paren[]
+\begin{choices}
+	\item \(U = \cfrac{h\nu}{e} - \cfrac{W}{e}\)
+	\item \(U = \cfrac{2h\nu}{e} - \cfrac{W}{e}\)
+	\item \(U = 2h\nu - W\)
+	\item \(U = \cfrac{5h\nu}{2e} - \cfrac{W}{e}\)
+\end{choices}
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[rounded corners=20] (0,0) rectangle(4,1.4);
+	\draw[rounded corners=22] (-.1,-.1) rectangle(4.1,1.5);
+	\filldraw[fill=gray] (.4,.3) rectangle(.5,1.1);
+	\filldraw[fill=gray] (3.5,.3) rectangle(3.6,1.1);
+	\filldraw[fill=white,draw=white] (1,1.35) rectangle(2.5,1.55);
+	\draw (1,1.4)--(3.12,2.46)
+    	(1,1.5)--(3.16,2.58)
+		(2.5,1.4)--(3.5,1.9)
+		(2.5,1.5)--(3.38,1.94)
+		(3.16,2.58)--(3.5,1.9)
+		(3.38,1.94)--(3.12,2.46);
+	\draw[orange,->] (4.5,2.7)--(.5,.7);
+	\draw[orange,->] (4.5,2.95)--(.5,0.95);
+	\draw[blue,thick] (.4,.7)--(-1,.7)--(-1,-2)--(1.3,-2);
+	\draw[blue,thick] (3.6,.7)--(5,.7)--(5,-2)--(2.7,-2);
+	\draw (1.3,-2.2) rectangle(2.7,-1.7);
+	\draw (2,-.8) circle(.4);
+	\filldraw[fill=white,draw=black] (5,-.05) circle(.4);
+	\foreach \x/\y in{1.5/.6,1.7/.9,2/.7,2.5/.9,2.8/.5}
+		\draw[->,blue] (\x +.1,\y)--(\x +.3,\y);
+	\foreach \x/\y in{1.5/.6,1.7/.9,2/.7,2.5/.9,2.8/.5}
+		\draw[blue](\x,\y)node{\( -\)} circle(.1);
+	\fill (-1,-.8) circle(.05);
+	\fill (5,-.8) circle(.05);
+	\draw[blue,thick] (-1,-.8)--(1.6,-.8)
+		(5,-.8)--(2.4,-.8);
+	\node at (2.05,-.8){\(V\)};
+	\node at (5,-.05){\(G\)};
+	\node at (2,-1.95){\text{电源}};
+	\node at (.5,.3)[right]{\(K\)};
+	\node at (3.5,.3)[left]{\(A\)};
+\end{tikzpicture}
+\begin{answer}
+	B\qquad 提示：
+\end{answer}
