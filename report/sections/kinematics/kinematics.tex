@@ -1,36 +1,114 @@
+\section{运动学}
 \lsn{1}运动学的五个参数：\lunl{3em}、\lunl{3em}、\lunl{3em}、\lunl{3em}、\lunl{3em}。
 
-\lsn{2}根据\(v - t\)图像可以得出五个参数的关系：
+\lsn{2}根据\(v - t\)图像得出匀变速直线运动的公式：
 
-\begin{minipage}[c]{.38\textwidth}
-  \begin{tikzpicture}
-    \draw[|<->|,thin,gray] (3.25,2.5)--node[fill=white]{\footnotesize \(\Delta v\)}(3.25,1);
+\begin{tikzpicture}[>=stealth,font=\footnotesize]
+    \draw[|<->|,thin,gray] (3.25,2.5)--node[fill=white]{ \(\Delta v\)}(3.25,1);
     \filldraw[pattern=north east lines,draw=white,pattern color=red!30] (0,1)--(3,2.5)--(3,1)--(0,1);
     \filldraw[pattern=north west lines,draw=white,pattern color=red!30] (0,0) rectangle(3,1);
-    \draw[-stealth,blue] (0,0)--(5,0)node[below]{\footnotesize \(t\)};
-    \draw[-stealth,blue] (0,0)node[below left]{\scriptsize \(O\)}--(0,4)node[right]{\footnotesize \(v\)};
-    \draw[red] (0,1)--(4,3)node[right]{\footnotesize \(a\)};
-    \draw[gray,dashed] (0,2.5)--(3,2.5)--(3,0) (0,1)--(3,1) (0,1.75)--(1.5,1.75)--(1.5,0);
-    \node[blue] at(0,1)[left]{\footnotesize \(v_0\)};
-    \node[blue] at(0,2.5)[left]{\footnotesize \(v_t\)};
-    \node[blue] at(3,0)[below]{\footnotesize \(t\)};
-    \node[blue] at(0,1.75)[left]{\footnotesize \(\overline{v}\)};
-    \node[blue] at(1.5,0)[below]{\scriptsize\(\sfrac{t}{2}\)};
-    \draw[|<->|,gray,thin] (0,-.8)--node[fill=white]{\footnotesize \(\Delta t\)}(3,-.8);
+    \draw[->,blue] (0,0)--(5,0)node[below]{ \(t\)};
+    \draw[->,blue] (0,0)node[below left]{\(O\)}--(0,4)node[right]{ \(v\)};
+    \draw[magenta] (0,1)--(4,3)node[below right,black]{ \(a\)};
+    \draw[dashed,cyan] (0,2.5)--(3,2.5)--(3,0) (0,1)--(3,1) (0,1.75)--(1.5,1.75)--(1.5,0);
+    \node[blue] at(0,1)[left]{ \(v_0\)};
+    \node[blue] at(0,2.5)[left]{ \(v_t\)};
+    \node[blue] at(3,0)[below]{ \(t\)};
+    \node[blue] at(0,1.75)[left]{ \(\overline{v}\)};
+    \node[blue] at(1.5,0)[below]{\(\sfrac{t}{2}\)};
+    \draw[|<->|,gray,thin] (0,-.8)--node[fill=white]{ \(\Delta t\)}(3,-.8);
   \end{tikzpicture}
-\end{minipage}
-\begin{minipage}[c]{.49\textwidth}{\kaishu\color{cyan}
-  \begin{itemize}
-    \item \lunl{9em}（缺少\(x\)）
-    \item \lunl{9em}（缺少\(v_t\)）
-    \item \lunl{9em}（缺少\(a\)）
-    \item \lunl{9em}（缺少\(t\)）
-    \item \lunl{9em}（缺少\(v_0\)）
-  \end{itemize}}
-\end{minipage}
 
-\lsn{3}五个参数知道三个可以求出剩余两个：
 
-\begin{minipage}[c]{.45\textwidth}
-  
-\end{minipage}
+\lsn{3}证明：匀变速直线运动中，\(\overline{v} = \frac{v_0 + v}{2} = v_{\frac{t}{2}}\)
+
+\vspace*{3cm}
+\lsn{4}运动的物体什么情况可以看成质点？什么情况不可以看成质点？
+
+\vspace*{3cm}
+\lsn{5}简述电磁打点计时器与电火花打点计时器的异同
+
+\vspace*{3cm}
+\lsn{6}推导：自设情景并导出\(\Delta x = aT^2\)
+
+\newpage
+\lsn{7}写出初速度为0的匀加速直线运动的六个比例关系
+
+\vspace*{5cm}
+\lsn{8}写出自由落体运动的定义及公式
+
+\vspace*{4cm}
+
+\lsn{9}写出竖直上抛运动的公式
+
+\vspace*{4cm}
+\lsn{10}怎样理解竖直上抛运动的对称性？
+
+\vspace*{3cm}
+\lsn{11}在表中填出各个图像中不同元素的物理含义，没有物理意义的画横线
+
+\begin{table}[htbp]
+  \begin{tabular}{l|c|c|c}
+    \hline
+    &\(x -t\)图像&\(v - t\)图像&\(a - t\)图像\\
+    \hline
+    斜率&&&\\
+    \hline
+    面积&&&\\
+    \hline
+    交点&&&\\
+    \hline
+    零点&&&\\
+    \hline
+    拐点&&&\\
+    \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+\lsn{12}定出下列图像中初速度\(v_0\)、加速度\(a\)，并给出过程
+
+\begin{tikzpicture}[>=stealth,font=\footnotesize]
+  \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)};
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(\overline{v}\)};
+  \draw[magenta] (0,.8)node[left,blue]{\(b\)}--(3,2.5)node[below,blue]{\(k\)};
+  \begin{scope}[xshift=5cm]
+    \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(\frac{1}{t}\)};
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(\frac{x}{t^2}\)};
+  \draw[magenta] (0,.8)node[left,blue]{\(b\)}--(3,2.5)node[below,blue]{\(k\)};
+  \end{scope}
+  \begin{scope}[xshift=10cm]
+    \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(x\)};
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(v^2\)};
+  \draw[magenta] (0,.8)node[left,blue]{\(b\)}--(3,2.5)node[below,blue]{\(k\)};
+  \end{scope}
+\end{tikzpicture}
+
+\vspace*{3cm}
+\lsn{13}下图中每两点间时间均为\(T\)，则
+
+\begin{tikzpicture}
+		\coordinate (o) at(0,0);
+		\draw ($(o)+(-.3,.5)$)--++(10.2,0) ($(o)+(-.3,-.5)$)--++(10.2,0)coordinate(a) ($(o)+(-.3,.5)$)--++(-.1,-.1)--++(.2,-.7)--++(-.1,-.2) (a)--++(.1,.1)--++(-.2,.7)--++(.1,.2);
+		\node at($(a)+(-.7,1.2)$){\scriptsize 单位：\,\qty{}{cm}};
+		\foreach \x/\n in {0/0,.6/1,1.6/2,3/3,4.8/4,7/5,9.6/6}{
+			\coordinate (\n) at(\x,0);
+			\fill (\n)node[above]{\scriptsize \(\n\)} circle(.03);}
+		\foreach \y/\x/\n in {-.7/.6/L_1,-1.1/1.6/L_2,-1.5/3/L_3,-1.9/4.8/L_4,-2.3/7/L_5,-2.7/9.6/L_6}
+			\draw[stealth-stealth,thin] (0,\y)--node[below]{\scriptsize \(\n\)}(\x,\y);
+		\foreach \x/\y in {0/-2.8,.6/-.8,1.6/-1.2,3/-1.6,4.8/-2.0,7/-2.4,9.6/-2.8}
+			\draw[gray] (\x,-.1)--(\x,\y);
+
+      \foreach \x/\y/\n in {0/.6/x_1,.6/1.6/x_2,1.6/3/x_3,3/4.8/x_4,4.8/7/x_5,7/9.6/x_6}
+			\draw[stealth-stealth,thin] (\x,0)--node[fill=white]{\scriptsize \(\n\)}(\y,0);
+	\end{tikzpicture}%%始.6,差.4
+
+\(v_1 =\)\lunl{3cm}\qquad \(v_4 =\)\lunl{3cm}
+
+\(v_0 =\)\lunl{3cm}\qquad \(v_6 =\)\lunl{3cm}
+
+\(a =\)\lunl{6cm}（四个数据）
+
+\(a =\)\lunl{6cm}（五个数据）
+
+\(a =\)\lunl{6cm}（六个数据）

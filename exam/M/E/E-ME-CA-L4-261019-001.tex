@@ -1,0 +1,40 @@
+\icode[magenta]{E-ME-CA-L4-261019-001}
+某固定装置的竖直截面如图所示，由倾角$\theta = $\,\qty{37}{\degree}的直轨道\(AB\)，半径$R = $\,\qty{1}{m}、圆心角为$2\theta$的圆弧\(BCD\)，半径为$R$、圆心角为$\theta$的圆弧\(DE\)组成，轨道间平滑连接。在轨道末端E点的右侧光滑水平地面\(FG\)上紧靠着质量$M = $\,\qty{0.5}{kg}的滑板\(b\)，其上表面与轨道末端\(E\)所在的水平面齐平。水平地面上距滑板右侧足够远处固定有挡板\(GH\)，滑板\(b\)与其碰撞时会立即被锁定。质量为$m = 0.5\, \text{kg}$的物块\(a\)从轨道\(AB\)上距\(B\)高度为$h =$\,\qty{0.3}{m}处以初速度$v_0$下滑，经圆弧轨道\(BCD\)滑上轨道\(DE\)。物块\(a\)与轨道\(AB\)间的动摩擦因数$\mu_1 = 0.5$，与滑板\(b\)间的动摩擦因数$\mu_2 = 0.2$。（其他轨道均光滑，物块\(a\)视为质点，不计空气阻力，$\sin$\qty{37}{\degree}=0.6，$\cos$\qty{37}{\degree}=0.8）。
+\begin{enumerate}
+	\item 若初速度$v_0 = 0$，求物块a
+	\begin{enumerate}
+		\item[\ding{172}] 第一次通过\(D\)点时速度$v_D$大小；
+		\item[\ding{173}] 在轨道\(AB\)上运动的总路程$S$。
+	\end{enumerate}
+	\item 若物块\(a\)能沿轨道冲上滑板\(b\)，则
+	\begin{enumerate}
+		\item[\ding{172}] $v_0$应满足什么条件？
+		\item[\ding{173}] 滑板\(b\)至少要多长，物块\(a\)一定不会碰到挡板\(GH\)？
+	\end{enumerate}
+\end{enumerate}
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[dashed,cyan] (0,0)coordinate(o)node[right,black]{\(O_1\)}--(-127:2)coordinate(b)node[below,black]{\(B\)} (o)--(0,-2)coordinate(c)node[below,black]{\(C\)} (o)--(-53:2)coordinate(d)node[below,black]{\(D\)};
+	\draw[thick] (b) arc(-127:-53:2) (d) arc(127:90:2)coordinate(e);
+	\draw[dashed,cyan] (d)--++(-53:2)coordinate(f)node[right,black]{\(O_2\)}--(e)node[above left,black]{\(E\)} (b)--++(-2.2,0);
+	\begin{scope}[rotate around={-37:(-1.2,-1.6)}]
+		\foreach \x in {-4,-3.8,...,-1.6}
+		\draw[gray] (\x,-1.8)--++(.2,.2);
+		\draw[thick] (-1.2,-1.6)--(-4,-1.6)node[below]{\(A\)};
+		\draw[fill=yellow!50!red] (-2.8,-1.6)coordinate(h) rectangle($(h)+(-.3,.3)$);
+		\node at($(h)+(0,.3)$)[right]{物块\(a\)};
+	\end{scope}
+	\draw[<->] (h)--node[left]{\(h\)}(h|-b);
+	\draw[fill=yellow!50!red] (e) rectangle($(e)+(1.8,-.15)$);
+	\node at($(e)+(.9,0)$)[above]{滑板\(b\)};
+	\foreach \x in {2.4,2.6,...,7}
+		\draw[gray] (\x,-1.55)--++(.2,.2);
+	\draw[thick] ($(e)+(0,-.15)$)node[below right]{\(F\)}--(7,-1.35)coordinate(g);
+	\draw[fill=gray!60] (g)node[below left]{\(G\)} rectangle($(g)+(-.2,.5)$)node[above]{\(H\)};
+	\draw (-127:.3) arc(-127:-90:.3) (0,-.2) arc(-90:-53:.2) (-53:3.7) arc(127:90:.3);
+	\foreach \angle/\r in {-110/.5,-75/.4,-50/3.5}
+		\node at(\angle:\r){\(\theta\)};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

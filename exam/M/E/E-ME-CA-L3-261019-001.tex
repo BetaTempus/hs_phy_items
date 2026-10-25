@@ -1,0 +1,21 @@
+\icode{E-ME-CA-L3-261019-001}
+如图所示，质量为\(M =\) \,\qty{4}{kg}长为\(L =\) \,\qty{3.2}{m}的长木板乙放在地面上，另一质量为\(m =\) \,\qty{4}{kg}且可视为质点的物体甲放在长木板的最右端。现在甲上施加一斜向左上方与水平方向成\(\theta =\)\qty{53}{\degree}大小为\qty{40}{N}的恒力\(F\)，使甲开始在长木板上滑动，经过一段时间甲运动到长木板的中点时将恒力撤走，已知甲与乙之间、乙与地面之间的动摩擦因数分别为\(\mu_1 = 0.5\)，\(\mu_2 = 0.2\)，重力加速度\(g\)取\qty{10}{m/s^2}，\(\sin\) \,\qty{53}{\degree}\(= 0.8\)，\(\cos\) \,\qty{53}{\degree}\(= 0.6\)。求：
+\begin{enumerate}
+	\item 施加恒力\(F\)时，甲乙之间的摩擦力\(f_1\)的大小和方向和乙与地面之间的摩擦力\(f_2\)的大小和方向；
+	\item 撤去恒力瞬间，物体甲的速度；
+	\item 整个过程长木板乙的位移。
+\end{enumerate}
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[fill=orange!40] (0,0) rectangle(4,.4)node[midway]{乙};
+	\draw[fill=blue!20] (4,.4) rectangle(3.7,.7)coordinate(a)node[midway]{\tiny 甲};
+	\draw[-stealth,red] (a)--++(127:1.2)node[left,black]{\(F\)};
+	\foreach \x in {-.6,-.4,...,4.6}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(4.6,0);
+	\draw[dashed,cyan] (a)--++(-1,0);
+	\draw[gray] ($(a)+(-.3,0)$) arc(180:127:.3);
+	\node at(3.3,.86){\(\theta\)};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

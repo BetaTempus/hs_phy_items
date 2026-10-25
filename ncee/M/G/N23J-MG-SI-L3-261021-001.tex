@@ -1,0 +1,28 @@
+\icode{N23J-MG-SI-L3-261021-001}
+\nceeID[3]{2023北京}{12}
+2022年10月9日，我国综合性太阳探测卫星“夸父一号”成功发射，实现了对太阳探测的跨越式突破。“夸父一号”卫星绕地球做匀速圆周运动，距地面高度约为\qty{720}{km}，运行一圈所用时间约为100分钟。如图所示，为了随时跟踪和观测太阳的活动，“夸父一号”在随地球绕太阳公转的过程中，需要其轨道平面始终与太阳保持固定的取向，使太阳光能照射到“夸父一号”。下列说法正确的是\paren[]
+	
+\begin{tikzpicture}[font=\scriptsize]
+	\begin{scope}[rotate=10]
+		\draw[dashed,magenta] (0,1.3) arc (90:-90:.4 and 1.3);
+		\draw (0,1.3)--++(150:.6)node[left]{轨道平面};
+	\end{scope}
+	\begin{scope}[rotate=-15]
+		\draw[dashed,cyan] ($(0,-10)+(70:10)$) arc(70:110:10) (0,2)--(0,-2);
+		\draw[fill=blue!30] (0,0) circle(1);
+		\draw (0,1.5)--++(45:.5)node[right]{极轴};
+		\draw ($(0,-10)+(75:10)$)--++(-120:.6)node[below]{地球公转轨道};
+	\end{scope}
+	\begin{scope}[rotate=10]
+		\draw[dashed,magenta] (0,1.3) arc(90:270:.4 and 1.3);
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item “夸父一号”的运行轨道平面平均每天转动的角度约为\qty{1}{\degree}
+	\item “夸父一号”绕地球做圆周运动的速度大于\qty{7.9}{km/s}
+	\item “夸父一号”绕地球做圆周运动的向心加速度大于地球表面的重力加速度
+	\item 由题干信息，根据开普勒第三定律，可求出日地间平均距离
+\end{choices}
+\begin{answer}
+	A\qquad 提示：审题时要理解“轨道平面始终与太阳保持固定的取向”的含义
+\end{answer}

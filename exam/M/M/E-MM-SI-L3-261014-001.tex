@@ -1,0 +1,22 @@
+\icode{E-MM-SI-L3-261014-001}
+如图所示，小物块 \(a\)、\(b\) 和 \(c\) 静置于光滑水平地面上。现让 \(a\) 以速度 \(v\) 向右运动，与 \(b\) 发生正碰，然后 \(b\) 与 \(c\) 也发生正碰。若 \(a\)、\(b\) 的质量分别为 \(m\) 和 \(2m\)，\(c\) 的质量可任意选择，所有碰撞可以是弹性碰撞也可以是非弹性碰撞，各种可能的碰撞后，\(c\) 的最大速度最接近\paren[]
+	
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \x in {0,1.2,2.4}{
+		\coordinate (square) at(\x,0);
+		\filldraw[fill=orange!40] (square) rectangle($(square)+(.5,.4)$);}
+	\foreach \x/\c in {.25/a,1.45/b,2.65/c}
+		\node at(\x,.2){\(\c\)};
+	\foreach \x in {-.6,-.4,...,3.4}
+	\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(3.4,0);
+\end{tikzpicture}
+\begin{choices}
+	\item \(4v\)
+	\item \(\frac{5}{3}v\)
+	\item \(\frac{4}{3}v\)
+	\item \(\frac{2}{3}v\)
+\end{choices}
+\begin{answer}
+   D\qquad 提示：动碰静后者的速度\(\frac{m_1}{m_1 + m_2}v_0\le v_2\le \frac{2m_1}{m_1 + m_2}v_0\) 
+\end{answer}

@@ -1,0 +1,18 @@
+\icode{E-MCH-CA-L3-261025-001}
+如图所示，在风洞实验室中，从\(A\)点以水平速度\(v_0\)向左抛出一个质量为\(m\)的小球，小球抛出后所受空气作用力沿水平方向，其大小为\(F\)，经过一段时间小球运动到\(A\)点正下方的\(B\)点处，重力加速度为\(g\)，在此过程中求：
+\begin{enumerate}
+	\item 小球离\(AB\)连线的最远距离及\(A\)、\(B\)两点间的距离；
+	\item 小球的最小速率\(v_{\min }\)。
+\end{enumerate}
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[->] (0,0)--(-1,0)node[above]{ \(v_0\)};
+	\draw[dashed] (0,0)--(0,-3)node[right]{ \(B\)};
+	\draw[dashed,cyan] (0,0)..controls(-1,-.5)and(-1.5,-1)..(0,-3);
+	\shade[ball color=gray] (0,0)node[right]{ \(A\)} circle(.12);
+	\foreach \y in {0,-.6,...,-3.1}
+		\draw[->,blue] (-3.5,\y)--++(2,0);
+	\node at(-1.5,-1.5)[left]{ 风};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

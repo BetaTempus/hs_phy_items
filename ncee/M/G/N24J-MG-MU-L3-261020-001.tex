@@ -1,0 +1,26 @@
+\icode{N24J-MG-MU-L3-261020-001}
+\nceeID[6]{2024河北}{8}
+（多选）
+2024年3月20日，鹊桥二号中继星成功发射升空，为嫦娥六号在月球背面的探月任务提供地月间中继通信。鹊桥二号采用周期为24小时的环月椭圆冻结轨道（如图），近月点 \(A\) 距月心约为\qty{2.0e3}{km}，远月点 \(B\) 距月心约为\qty{1.8e4}{km}，\(CD\) 为椭圆轨道的短轴，下列说法正确的是\paren[]
+	
+\begin{tikzpicture}[rotate=45,font=\scriptsize]
+    \draw[fill=gray!40] (0,0) circle(.3);
+	\draw[name path=c] (1.8,0)node[below]{\(O^{\prime}\)} ellipse(2.6 and 1);
+	\draw[dashed,cyan] (1.8,1)node[above left,black]{\(C\)}--(1.8,-1)node[below right,black]{\(D\)} (-.8,0)node[below left,black]{\(A\)}--(4.4,0)node[above right,black]{\(B\)} (135:.3)--(-45:.3);
+	\path[name path=l] (0,0)--(-20:5);
+	\path[name intersections={of=c and l,by=x}];
+	\draw[gray,dashed] (x)--++(-45:.6)node[right,black]{鹊桥二号};
+	\draw[fill=gray!40] (x) ellipse(.05 and .3);
+	\draw[fill=blue!40] (x) circle(.1);
+	\node at(-135:.13){\(O\)};
+	\node at(45:.6){月球};
+\end{tikzpicture}
+\begin{choices}
+	\item 鹊桥二号从 \(C\) 经 \(B\) 到 \(D\) 的运动时间为12小时
+	\item 鹊桥二号在 \(A\)、\(B\) 两点的加速度大小之比约为 \(81:1\)
+	\item 鹊桥二号在 \(C\)、\(D\) 两点的速度方向垂直于其与月心的连线
+	\item 鹊桥二号在地球表面附近的发射速度大于\qty{7.9}{km/s}且小于\qty{11.2}{km/s}
+\end{choices}
+\begin{answer}
+	BD\qquad 提示：容易选A，\(B\)经\(D\)到\(A\)的时间为12小时，\(C\) 经\(B\)到\(D\)的时间大于12小时
+\end{answer}

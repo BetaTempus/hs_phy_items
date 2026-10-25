@@ -1,0 +1,42 @@
+\icode{E-ME-SI-L4-261019-001}
+如图所示，一光滑木板倾斜固定，与水平面的夹角 $\theta =$ \,\qty{30}{\degree}，木板的底端固定一垂直木板的挡板，上端固定一定滑轮 $O$。劲度系数为 $k = \frac{16mg}{5d}$ 的轻弹簧下端固定在挡板上，上端与质量为 $2m$ 的物块 $Q$ 连接。跨过定滑轮 $O$ 的不可伸长的轻绳一端与物块 $Q$ 连接，另一端与套在水平固定的光滑直杆上的质量为 $m$ 的物块 $P$ 连接。初始时物块 $P$ 在水平外力 $F$ 作用下静止在直杆的 $A$ 点，且恰好与直杆没有相互作用，轻绳与水平直杆的夹角 $\alpha =$\,\qty{37}{\degree}。撤去水平外力 $F$，物块 $P$ 由静止运动到 $B$ 点时轻绳与直杆间的夹角 $\beta =$\,\qty{53}{\degree}。已知滑轮到水平直杆的垂直距离为 $d$，重力加速度大小为 $g$，弹簧轴线、物块 $Q$ 与定滑轮之间的轻绳共线且与木板平行，不计滑轮大小及摩擦，物块 $P$、$Q$ 均可视为质点。取\(\sin\) \,\qty{37}{\degree}\(= 0.6\)，\(\cos\) \,\qty{37}{\degree}\( = 0.8\)。则下列说法正确的是\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[fill=gray!70!black] (3,0) rectangle(3.1,{2.98*tan{30}});
+	\begin{scope}[rotate=30]
+		\draw[fill=orange!50] (0,0)--++(4,0)--++(0,-.1)--++({-4+.1*sqrt(3)},0)coordinate(z);
+		\draw[decoration={aspect=.6,segment length=4,amplitude=1mm,coil},decorate] (0,.2)--(1.5,.2);
+		\draw[fill=red!30] (1.5,0) rectangle(1.9,.4);
+		\draw[thick] (0,.5)--(0,0) (4.2,.1)coordinate(o) circle(.1) (4,0)--(o)--(4,-.1);
+		\fill (o) circle(0.04);
+		\draw[magenta] (1.9,.2)--($(o)+(0,.1)$);
+		\node at(1.7,.2)[rotate=30]{\(Q\)};
+	\end{scope}
+	\draw ($(z)+(.3,0)$) arc(0:30:.3);
+	\node at($(z)+(.5,.11)$){\(\theta\)};
+	\draw[dashed,cyan] ($(o)+(.1,0)$)coordinate(a)|-(a|-0,.5)coordinate(C) ($(o)+(37:.1)$)--++(-53:2.2)coordinate(B);
+	\draw[magenta] ($(o)+(53:.1)$)--++(-37:2.93)coordinate(A);
+	\draw[fill=gray!70!black] ($(C)+(-.4,0)$) rectangle($(C)+(4,-.1)$);
+	\draw[fill=blue!20] ($(A)+(-.2,.2)$)rectangle($(A)+(.2,-.2)$);
+	\draw[-stealth] ($(A)+(.2,.1)$)--++(.6,0)node[right]{\(F\)};
+	\node at(C)[below]{\(C\)};
+	\node at(B)[below]{\(B\)};
+	\node at(A){\(P\)};
+	\node at($(A)+(0,-.2)$)[below]{\(A\)};
+	\draw ($(B)+(-.3,0)$) arc(180:127:.3);
+	\draw ($(A)+(-.4,0)$) arc(180:143:.4);
+	\node at($(B)+(-.5,.15)$){\(\beta\)};
+	\node at($(A)+(-.6,.15)$){\(\alpha\)};
+	\foreach \x in {-.6,-.4,...,4}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(4,0);
+\end{tikzpicture} 
+\begin{choices}
+	\item 物块 $Q$ 下滑过程中，弹簧的弹性势能一直减小
+	\item 物块 $P$ 从 $A$ 点运动到 $B$ 点的过程中，轻绳拉力对物块 $P$ 做正功
+	\item 物块 $P$ 从 $A$ 点运动到 $B$ 点的过程中，轻绳拉力对物块 $Q$ 做的功为 $-\frac{5}{36} mgd$
+	\item 物块 $P$ 从 $A$ 点运动到 $B$ 点的过程中，物块 $Q$ 的重力势能减少量等于 $P$、$Q$ 两物块总动能的增加量
+\end{choices}
+\begin{answer}
+    
+\end{answer}

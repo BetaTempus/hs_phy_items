@@ -1,0 +1,15 @@
+\icode{E-MCC-CA-L3-261022-001}
+如图所示，竖直平面内固定一弯曲刚性细杆\(POQ\)，\(PO\)分光滑，形状为四分之一圆；\(OQ\)部粗糙，形状为抛物线，弯曲杆\(O\)点处的切线水平。小圆环穿在杆上，从\(P\)点由静止释放，到达\(Q\)点时恰好与杆之间无弹力。若以\(O\)点为坐标原点,沿水平和竖直方向建立直角坐标系\(xOy\)，则\(Q\)点的坐标为(\,\qty{5}{m},\,\qty{5}{m})。已知弯曲杆\(PO\)部分的半径\(R =\)\,\qty{1.8}{m}，小圆环的质量\(m =\)\,\qty{1}{kg}，取重力加速度\(g =\)\,\qty{10}{m/s^2}。求：
+\begin{enumerate}
+	\item 小圆环在\(PO\)部分经过\(O\)点时对杆压力的大小；
+	\item 小圆环在\(OQ\)部分运动过程中克服摩擦力做的功。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[right]{\(x\)/\qty{}{m}};
+	\draw[->,blue] (0,0)--(0,-4)node[below]{\(y\)/\qty{}{m}};
+    \draw[thick] (0,0) arc(-90:-180:1.5);
+	\draw[thick] (0,0) parabola bend(0,0)(3.3,-3.63);
+	\draw[dashed,cyan] (3,0)node[above,blue]{5}--(3,-3)--(0,-3)node[left,blue]{5} (0,0)--(0,1.5)--(-1.5,1.5)node[left,black]{\(P\)};
+	\fill (3,-3)node[right]{\(Q\)} circle(.05);
+\end{tikzpicture}

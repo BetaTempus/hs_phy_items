@@ -1,0 +1,45 @@
+\icode{E-MM-CA-L3-261012-001}
+如图甲所示，物块\(A\)静止在足够长的固定斜面上，将表面光滑、质量\(m =\)  \,\qty{1}{kg}的物块\(B\)从物块\(A\)上方某处由静止释放并开始计时，一段时间后物块\(A\)、\(B\)发生弹性正碰（碰撞时间极短），碰撞后物块\(A\)做匀减速直线运动，物块\(B\)运动的\(v - t\) 图线如图乙所示，求：
+\begin{enumerate}
+	\item 物块\(B\)释放时到物块\(A\)的距离\(L\)；
+	\item 物块\(A\)的质量\(M\)；
+	\item 每次碰撞后物块\(A\)、\(B\)间的最大距离\(d\)。
+\end{enumerate}
+
+\begin{tikzpicture}[font=\scriptsize]
+	\begin{scope}[rotate=20]
+		\draw (0,0)--(5,0);
+		\draw[fill=orange!50] (2.5,0) rectangle(2.8,.3);
+        \draw[fill=blue!30] (4,0) rectangle(4.3,.3);
+		\draw[|<->|,gray] (2.8,-.2)--node[below,rotate=20,black]{\(L\)}(4,-.2);
+		\node at(2.65,.3)[above,rotate=20]{\(A\)};
+		\node at(4.15,.3)[above,rotate=20]{\(B\)};
+	\end{scope}
+	\draw (0,0)--({5*cos(20)},0);
+	\node at({2.5*cos(20)},-.5){甲};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[left]{0}--(6.5,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,-1)--(0,2)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+    \draw[dashed,cyan] (0,-.5)node[left,blue]{\( - 1\)}--(3.5,-.5) (0,1.5)node[left,blue]{3}--(5.5,1.5)--(5.5,0)node[below,blue]{5.5};
+	\draw[magenta] (0,0)--(1.5,1.5);
+	\foreach \x in {1.5,3.5}{
+        \draw[dashed,cyan] (\x,-.5)--++(0,2);
+        \node at(\x,0)[below,blue]{\x};
+		\draw[magenta] (\x,-.5)--++(2,2);
+        }
+	\node at(2,0)[below right,blue]{2.0};
+	\node at(4,0)[below right,blue]{4.0};
+	\node at(3,-1){乙};
+\end{tikzpicture}
+\begin{answer}
+	（1）\qty{2.25}{m}（2）\qty{2}{kg}（3）\qty{1.5}{m}\qquad 提示：图乙可知碰撞后\qty{2}{s}再次碰撞，碰后\qty{2}{s}时\(A\)恰好静止，\(A\)、\(B\)的\(v -t\)图像如图所示
+
+    \begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[left]{0}--(3,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,-1)--(0,2)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+    \draw[dashed,cyan] (0,1.5)node[left,blue]{3}--(2,1.5)--(2,0)node[below,blue]{2.0} (0,.5)node[left,blue]{1}--(1,.5)--(1,0)node[below,blue]{1.0};
+	\draw[magenta] (0,-.5)node[left,blue]{\( - 1\)}--(2,1.5);
+    \draw[teal] (0,1)node[left,blue]{2}--(2,0);
+\end{tikzpicture}
+\end{answer}

@@ -1,0 +1,48 @@
+\icode[magenta]{E-MCC-MU-L4-261025-001}
+某学校的机动车出入口采用如图所示的曲杆道闸，道闸由转动杆 \(OM\) 与横杆 \(MN\) 链接而成，\(M\)、\(N\) 为横杆的两个端点。某天中午快递员将快递袋子挂在了校门口道闸的横杆 \(MN\) 上，由于门卫没有及时将快递袋取下，在道闸抬起过程中，快递袋始终与横杆 \(MN\) 保持相对静止，且杆 \(MN\) 始终水平，此过程中杆 \(OM\) 绕 \(O\) 点从水平方向匀速转动到接近竖直方向。若快递袋可视为质点，与横杆之间的动摩擦因数为 \(\mu\)，最大静摩擦力等于滑动摩擦力，转动杆 \(OM\) 长度为 \(L\)，重力加速度为 \(g\)。下列说法正确的是\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[fill=red!30] (.2,.2) rectangle(-.6,-1.5);
+	\draw (.2,-.2)--(-.6,-.2);
+	\begin{scope}
+		\coordinate (o) at(0,0);
+		\foreach \x in {0.2,.6,...,2.2}
+			\draw[fill=black] (\x,.08) rectangle($(\x,.08)+(.2,-.16)$);
+		\draw ($(o)+(0,.08)$) rectangle($(o)+(2.4,-.08)$)coordinate(a);
+	\end{scope}
+	\node at(a)[below]{\(M\)};
+	\coordinate (b) at($(a)+(0,.08)$);
+	\foreach \x in {2.6,3,...,4.6}
+		\draw[fill=black] (\x,.08) rectangle($(\x,.08)+(.2,-.16)$);
+	\draw ($(b)+(0,.08)$) rectangle($(b)+(2.4,-.08)$)coordinate(c);
+	\node at(c)[below right]{\(N\)};
+	\draw[fill=white] (b) circle(.1);
+	\draw[fill=orange!50] ($(c)+(-.3,-.1)$)coordinate(d) rectangle($(d)+(-.4,-.4)$)	($(d)+(-.08,0)$) rectangle($(d)+(-.16,.26)$) ($(d)+(-.32,0)$) rectangle($(d)+(-.24,.26)$);
+	\begin{scope}[rotate=20]
+		\coordinate (o) at(0,0);
+		\draw[dashed] ($(o)+(0,.08)$) rectangle($(o)+(2.4,-.08)$)coordinate(a);
+	\end{scope}
+	\coordinate (b) at($(a)+(0,.08)$);
+	\draw[dashed] ($(b)+(0,.08)$) rectangle($(b)+(2.4,-.08)$)coordinate(c);
+	\draw[fill=white,draw=gray] (b) circle(.1);
+	\draw[fill=orange!30,draw=gray] ($(c)+(-.3,-.1)$)coordinate(d) rectangle($(d)+(-.4,-.4)$) ($(d)+(-.08,0)$) rectangle($(d)+(-.16,.26)$) ($(d)+(-.32,0)$) rectangle($(d)+(-.24,.26)$);
+	\begin{scope}[rotate=70]
+		\coordinate (o) at(0,0);
+		\draw[dashed] ($(o)+(0,.08)$) rectangle($(o)+(2.4,-.08)$)coordinate(a);
+	\end{scope}
+	\coordinate (b) at($(a)+(0,.08)$);
+	\draw[dashed] ($(b)+(0,.08)$) rectangle($(b)+(2.4,-.08)$)coordinate(c);
+	\draw[fill=white,draw=gray] (b) circle(.1);
+	\draw[fill=orange!30,draw=gray] ($(c)+(-.3,-.1)$)coordinate(d) rectangle($(d)+(-.4,-.4)$) ($(d)+(-.08,0)$) rectangle($(d)+(-.16,.26)$) ($(d)+(-.32,0)$) rectangle($(d)+(-.24,.26)$);
+	\draw[fill=white] (o) circle(.1);
+	\node at(-.1,0)[left]{\(O\)};
+\end{tikzpicture}
+\begin{choices}
+	\item \(M\)、\(N\) 两点的加速度不同
+	\item \(N\) 点的加速度始终沿 \(ON\) 方向
+	\item \(M\)、\(N\) 两点都在做匀速圆周运动
+	\item 快递袋能够与横杆 \(MN\) 保持相对静止一起运动的最大速率 \(\sqrt{\frac{\mu}{\sqrt{1+\mu^2}} g L}\)
+\end{choices}
+\begin{answer}
+    
+\end{answer}

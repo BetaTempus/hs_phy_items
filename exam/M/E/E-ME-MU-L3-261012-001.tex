@@ -1,0 +1,34 @@
+\icode{E-ME-MU-L3-261012-001}
+如图所示，水平轨道上有一个竖直放置的四分之三圆管轨道，管内外壁均光滑，半径为 \(R\)，管的粗细忽略，其质量为 \(3m\)，在管中与竖直方向成\qty{37}{\degree}的位置有挡板，在管中有一个直径略小于管内径的质量为 \(m\) 的小球，小球可以看成质点。当用水平恒力向左推管时，小球恰好与挡板接触但无作用力，管向左运动一定距离时，与固定障碍物碰撞并粘在一起，此后小球离开管口后上升的最大高度与管最高点相同，重力加速度为 \(g\)，\(\sin\)\,\qty{37	}{\degree}=0.6，\(\cos\) \,\qty{37}{\degree}=0.8，下列说法正确的是\paren[]
+
+\begin{tikzpicture}[scale=.9,font=\scriptsize]
+	\draw (-1.5,0) arc(-180:90:1.5) (-1.7,0) arc(-180:90:1.7) (0,-.3) arc(-90:-53:.3);
+	\draw[dashed,cyan] (0,0)coordinate(o)--(-1.7,0) (o)--(0,-1.7) (o)--(-53:1.5) (o)--(0,1.7);
+	\draw[red,thick] (-53:1.5)--(-53:1.7);
+	\shade[ball color=blue!60] ($(-53:1.6)+(-143:.1)$)node[below right]{\(m\)} circle(.1);
+	\draw[-stealth] (2.7,0)node[right]{\(F\)}--(1.7,0);
+	\draw[fill=orange!30] (-4.8,-1.7) rectangle(-4.4,.7);
+	\foreach \x in {-5,-4.8,...,2.6}
+		\draw[gray] (\x,-1.9)--++(.2,.2);
+	\draw[thick] (-5,-1.7)--(2.8,-1.7);
+	\node at(.3,-.9){\qty{37}{\degree}};
+\end{tikzpicture}
+\begin{choices}
+	\item 恒力为 \(3mg\)
+	\item 管碰到障碍物前运动时间为 \(\frac{4}{5} \sqrt{\frac{10R}{g}}\)
+	\item 小球经过管最低点时对管壁的压力为 \(5mg\)
+	\item 管碰到障碍物前瞬间恒力的功率为 \(\frac{9mg}{5} \sqrt{10gR}\)
+\end{choices}
+\begin{answer}
+    AC\qquad 提示：碰撞一瞬间，小球速度由水平向左变为与圆相切
+
+    \begin{tikzpicture}[scale=.9,font=\scriptsize]
+	\draw[gray!50] (-1.5,0) arc(-180:90:1.5) (-1.7,0) arc(-180:90:1.7) (0,-.3) arc(-90:-53:.3);
+	\draw[dashed,cyan!50] (0,0)coordinate(o)--(-1.7,0) (o)--(0,-1.7) (o)--(-53:1.5) (o)--(0,1.7);
+	\draw[red!50,thick] (-53:1.5)--(-53:1.7);
+	\shade[ball color=blue!20] ($(-53:1.6)+(-143:.1)$)coordinate(a) circle(.1);
+	\draw[->,magenta] (a)--++(-2,0)node[left,black]{\(v\)};
+    \draw[->,blue] (a)--++(-143:1.6);
+    \draw[dashed,teal] ($(a)+(-2,0)$)--++(-53:1.2)node[below left,black]{\(v_{\tau}\)};
+\end{tikzpicture}
+\end{answer}

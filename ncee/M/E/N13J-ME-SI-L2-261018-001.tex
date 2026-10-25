@@ -1,0 +1,28 @@
+\icode{N13J-ME-SI-L2-261018-001}
+\nceeID[6]{2013北京}{7}
+在实验操作前应该对实验进行适当的分析。研究平抛运动的实验装置示意如图。小球每次都从斜槽的同一位置无初速度释放，并从斜槽末端水平飞出。改变水平板的高度，就改变了小球在板上落点的位置，从而可描绘出小球的运动轨迹。某同学设想小球先后三次做平抛，将水平板依次放在如图1、2、3的位置，且1与2的间距等于2与3的间距。若三次实验中，小球从抛出点到落点的水平位移依次为\(x_1\)、\(x_2\)、\(x_3\)，机械能的变化量依次为\(\Delta E_1\)、\(\Delta E_3\)、\(\Delta E_3\)，忽略空气阻力的影响，下面分析正确的是\paren[]
+	
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=-30]
+		\draw[fill=white] (0,0) rectangle(-2,.2);
+		\draw (-2,.2)--(-2,.4);
+		\shade[ball color=gray] (-1.85,.35) circle(.15);
+	\end{scope}
+	\draw (.5,1) rectangle(4,-2.5);
+	\draw[dashed,cyan] (.6,.9) rectangle(3.9,-2.4);
+	\draw[fill=orange!40] (.3,-1)rectangle(4.3,-1.2);
+	\draw[->,blue] (1,0.2)--(3,0.2)node[right]{\(x\)};
+	\draw[->,blue] (1,0.2)--(1,-2)node[right]{\(y\)};
+	\draw[fill=white] (0,0) rectangle(1,.2);
+	\draw[dashed,magenta] (1,.2) parabola bend(1,.2)(2.5,-1);
+	\foreach \y/\n in {-1.1/1,-1.5/2,-1.9/3}
+		\node at(4.3,\y) [right]{\(\n\)};
+	\node at(.3,-1.1) [left]{水平板};
+	\node at(-1.3,.3) {斜槽};
+\end{tikzpicture}
+\begin{choices}
+	\item \(x_2 - x_1 = x_3 - x_2\),\quad\(\Delta E_1 =\Delta E_2 =\Delta E_3\)
+	\item \(x_2 - x_1 > x_3 - x_2\),\quad\(\Delta E_1 =\Delta E_2 =\Delta E_3\)
+	\item \(x_2 - x_1 > x_3 - x_2\),\quad\(\Delta E_1 <\Delta E_2 <\Delta E_3\)
+	\item \(x_2 - x_1 < x_3 - x_2\),\quad\(\Delta E_1 <\Delta E_2 <\Delta E_3\)
+\end{choices}

@@ -1,0 +1,34 @@
+\icode[magenta]{N24L-ME-CA-L4-261019-002}
+\nceeID[14]{2024山东}{17}如图甲所示，质量为\(M\)的轨道静止在光滑水平面上，轨道水平部分的上表面粗糙，竖直半圆形部分的表面光滑，两部分在\(P\)点平滑连接，\(Q\)为轨道的最高点。质量为\(m\)	的小物块静置在轨道水平部分上，与水平轨道间的动摩擦因数为\(\mu\)，最大静摩擦力等于滑	动摩擦力。已知轨道半圆形部分的半径\(R =\)\,\qty{0.4}{m}，重力加速度大小\(g =\)\,\qty{10}{m/s^2}。
+\begin{enumerate}
+    \item 若轨道固定，小物块以一定的初速度沿轨道运动到\(Q\)点时，受到轨道的弹力大小等于\(3mg\)，求小物块在\(Q\)点的速度大小\(v\)；
+	\item 若轨道不固定，给轨道施加水平向左的推力\(F\)，小物块处在轨道水平部分时，轨道加速度\(a\)与\(F\)对应关系如图乙所示。
+	\begin{itemize}
+		\item[(\rmnum{1})] 求\(\mu\)和\(m\)；
+		\item[(\rmnum{2})] 初始时，小物块静置在轨道最左端，给轨道施加水平向左的推力\(F =\)\,\qty{8}{N}，当小物块到\(P\)点时撤去\(F\)，小物块从\(Q\)点离开轨道时相对地的速度大小为\,\qty{7}{m/s}。求轨道水平部分的长度\(L\)。
+	\end{itemize}
+\end{enumerate}
+
+\begin{tikzpicture}[scale=.9,font=\scriptsize]
+	\draw[fill=orange!40] (0,0)--(5,0) arc(-90:90:1.5)--(5,3)--(5,2.8) arc(90:-90:1.3)--(5,.2)--(0,.2)--(0,0);
+	\draw[fill=blue!30] (0,.2) rectangle(.2,.4);
+	\draw[dashed,cyan] (5,2.8)node[left,black]{\(Q\)}--(5,.2);
+	\node at(5,.4)[left]{\(P\)};
+	\fill (5,1.5)node[left]{\(O\)} circle(.06);
+	\draw[->,dashed,rotate around={-30:(5,1.5)},cyan] (5,1.5)--node[above,black]{\(R\)}(6.3,1.5);
+	\foreach \x in {-1,-.8,...,6.3}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[very thick] (-1,0)--(6.5,0);
+	\node at(2.5,-.8){图甲};
+\end{tikzpicture}
+\hspace*{3em}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{0}--(4,0)node[below]{\(F\)/\qty{}{N}};
+	\draw[->,blue] (0,0)--(0,4)node[right]{\(a\)/(\qty{}{m\cdot s^{-1}})};
+    \draw[dashed,cyan] (0,1)node[left,blue]{2}--(1.5,1)--(1.5,0)node[below,blue]{4} (0,3)node[left,blue]{6}--(3,3)--(3,0)node[below,blue]{8};
+	\draw[magenta] (0,0)--(1.5,1)--(3.3,3.4);
+	\node at(2,-.8){图乙};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

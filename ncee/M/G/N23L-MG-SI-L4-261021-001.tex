@@ -1,0 +1,25 @@
+\icode[magenta]{N23L-MG-SI-L4-261021-001}
+\nceeID[4]{2023辽宁}{7}
+在地球上观察，月球和太阳的角直径(直径对应的张角)近似相等，如图所示。若月球绕地球运动的周期为\(T_1\)，地球绕太阳运动的周期为\(T_2\)，地球半径是月球半径的\(k\)倍，则地球与太阳的平均密度之比约为\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[dashed] (0,0)--(5:7) (0,0)--(-5:7);
+	\draw (3,0) circle({3*tan(5)});
+	\draw (7,0) circle({7*tan(5)});
+	\draw (3,{3*tan(5)})--(3,{-3*tan(5)}) (7,{7*tan(5)})--(7,{-7*tan(5)});
+	\node at(3,{-3*tan(5)}) [below]{月球};
+	\node at(3,{3*tan(5)}) [above]{角直径};
+	\node at(7,{-7*tan(5)}) [below]{太阳};
+	\draw (1.5,0) arc(0:5:1.5);
+	\draw (1.5,0) arc(0:-5:1.5);
+	\fill (0,0)node[left]{地心} circle(.08);
+\end{tikzpicture}
+\begin{choices}
+	\item \(k^3\left(\dfrac{T_1}{T_2}\right)^2\)
+	\item \(k^3\left(\dfrac{T_2}{T_1}\right)^2\)
+	\item \(\dfrac{1}{k^3}\left(\dfrac{T_1}{T_2}\right)^2\)
+	\item \(\dfrac{1}{k^3}\left(\dfrac{T_2}{T_1}\right)^2\)
+\end{choices}	
+\begin{answer}
+	D\qquad 提示：\(\rho_{earth} = \dfrac{3\pi R_{moon}^3}{GT_1^2r_{earth}^3}\)、\(\rho_{sun} =\dfrac{3\pi R_{earth}^3}{GT_2^2r_{sun}^3}\)，理解角直径的含义
+\end{answer}

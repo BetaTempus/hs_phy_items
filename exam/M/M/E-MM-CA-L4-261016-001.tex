@@ -1,0 +1,25 @@
+\icode[magenta]{E-MM-CA-L4-261016-001}
+三个可视为质点的小球\(A\)、\(B\)、\(C\)用两根长为\(l\)的轻杆通过铰链相连，开始时两杆并拢，竖直放置在水平地面上，\(A\)、\(B\)、\(C\)的质量分别为\(m\)、\(m\)、\(2m\)。因受微小的扰动，\(A\)球下降，\(B\)、\(C\)球向两边滑动，两杆始终保持在同一竖直面内，不计一切摩擦，重力加速度为\(g\)，求：
+\begin{enumerate}
+	\item\(A\)球落地时的速度大小；
+	\item\(A\)球落地时，\(C\)球的位移大小；
+	\item 当两杆夹角为\qty{90}{\degree}时，\(C\)球的速度大小。
+\end{enumerate}
+	
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[very thick,magenta] (0,0)coordinate(B)--(70:3)coordinate(A)--++(-70:3)coordinate(C);
+	\foreach \X in {B,A,C}
+		\draw[ball color=gray] (\X) circle(.1);
+	\foreach \x in {-.6,-.4,...,2.6}
+		\draw[gray] (\x,-.3)--++(.2,.2);
+	\draw[thick] (-.6,-.1)--(2.7,-.1);
+	\node at($(A)+(-.3,0)$){\(A\)};
+	\node at($(B)+(0,-.5)$){\(B\)};
+	\node at($(C)+(0,-.5)$){\(C\)};
+	\node at(A)[right]{\(m\)};
+	\node at(B)[above left]{\(m\)};
+	\node at(C)[above right]{\(2m\)};
+\end{tikzpicture}
+\begin{answer}
+   （1）\(\sqrt{2gl}\)（2）\(\frac{3}{4}l\)（3）\(\sqrt{\frac{3}{10}(1 - \frac{\sqrt{2}}{2})gl}\) 
+\end{answer}

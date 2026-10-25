@@ -1,0 +1,21 @@
+\icode{N24E-MG-SI-L3-261020-001}
+\nceeID[4]{2024湖北}{4}
+太空碎片会对航天器带来危害。设空间站在地球附近沿逆时针方向做匀速圆周运动，如图中实线所示。为了避开碎片，空间站在 \(P\) 点向图中箭头所指径向方向极短时间喷射气体，使空间站获得一定的反冲速度，从而实现变轨。变轨后的轨道如图中虚线所示，其半长轴大于原轨道半径。则\paren[]
+
+\begin{tikzpicture}[rotate=45,font=\scriptsize]
+	\draw[name path=c1] (0,0) circle(1.5);
+	\draw[name path=c2,cyan,dashed] (1,0) ellipse(1.8 and .8);
+	\fill[blue!30] (0,0) circle(.15);
+	\path[name intersections={of=c1 and c2,by=i1,by=i2}];
+	\draw[-stealth,red] (i2)node[below,black]{\(P\)}--++(45:1);
+	\node at(0:.5){地球};
+\end{tikzpicture}
+\begin{choices}
+	\item 空间站变轨前、后在 \(P\) 点的加速度相同
+	\item 空间站变轨后的运动周期比变轨前的小
+	\item 空间站变轨后在 \(P\) 点的速度比变轨前的小
+	\item 空间站变轨前的速度比变轨后在近地点的大
+\end{choices}
+\begin{answer}
+	A\qquad 提示：万有引力+开普勒三定律
+\end{answer}

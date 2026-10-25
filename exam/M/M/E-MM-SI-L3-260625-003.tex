@@ -1,12 +1,12 @@
 \icode{E-MM-SI-L30-260625-003}
 台球是一项深受青少年喜爱的体育运动。如图所示，水平台面上的甲球球心和中袋中心连线与桌边间夹角\(\theta =\) \,\qty{60}{\degree}，运动员球杆将白球乙沿与桌面平行的方向以速度\(v_0\)出击，乙与甲碰撞后甲落入中袋。已知两球质量、半径均相等，两球碰撞为弹性碰撞，不计两球所受阻力，不考虑球的自旋影响。关于甲、乙两球的运动，下列说法正确的是\paren[]
 
-\begin{tikzpicture}
+\begin{tikzpicture}[font=\scriptsize]
     \draw[dashed] (0,0)node[above,font=\tiny]{\kaishu 中袋}--(-60:{2*sqrt(3)/3})coordinate(a)--++(1,0)coordinate(b);
     \draw[fill=white] (-2,-.2) arc(-90:0:.2) (-1.8,-2) arc(0:90:.2) (1.8,-2) arc(-180:-270:.2) (2,-.2) arc(-90:-180:.2) (.2,-2)arc(0:180:.2) (.2,0)arc(0:-180:.2)  ($(a)+(120:.2)$)node[left,font=\tiny]{\kaishu 甲} circle(.1) (b) circle(.1)node[below,font=\tiny]{\kaishu 乙};
     \draw[fill=white,dashed] (a) circle(.1);
     \draw (-2,0) rectangle(2,-2);
-    \draw[red,->] ($(b)+(-.1,0)$)--++(-.4,0)node[above,font=\scriptsize]{\(v_0\)};
+    \draw[red,->] ($(b)+(-.1,0)$)--++(-.4,0)node[above]{\(v_0\)};
 \end{tikzpicture}
 \begin{choices}
     \item 碰撞后乙球速度方向不变
@@ -15,5 +15,12 @@
     \item 碰撞后乙球速度大小为\(\frac{v_0}{2}\)
 \end{choices}
 \begin{answer}
-    B\quad 提示：
+    B\quad 提示：弹性碰撞动量守恒、能量守恒，\(\vec{p_0} = \vec{p_1} + \vec{p_2}\)，\(\frac{\vec{p_0}^2}{2m} = \frac{\vec{p_1}^2}{2m} + \frac{\vec{p_2}^2}{2m}\)，可得碰后两球速度垂直
+
+    \begin{tikzpicture}[>=stealth,font=\scriptsize]
+        \draw[->,magenta] (0,0)--(-150:2)node[below]{\(p_1\)}coordinate(a);
+        \draw[->,teal] (0,0)--(120:{2*sqrt(3)/3})node[above left,black]{\(p_2\)}coordinate(b);
+        \draw[->] (0,0)--({-4*sqrt(3)/3},0)node[left]{\(p_0\)}coordinate(o);
+        \draw[dashed,cyan] (a)--(o)--(b) (a)-|(0,0)|-(b);
+    \end{tikzpicture}
 \end{answer}

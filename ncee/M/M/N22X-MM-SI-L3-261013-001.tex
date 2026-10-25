@@ -1,0 +1,33 @@
+\icode{N22X-MM-SI-L3-261013-001}
+\nceeID[6]{2022湖南}{4}
+1932年，查德威克用未知射线轰击氢核，发现这种射线是由质量与质子大致相等的中性粒子（即中子）组成。如图，中子以速度\(v_0\)分别碰撞静止的氢核和氮核，碰撞后氢核和氮核的速度分别为\(v_1\)和\(v_2\)。设碰撞为弹性正碰，不考虑相对论效应，下列说法正确的是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}
+		\draw[dashed] (0,0)--(3,0);
+		\shade[ball color=gray!60] (0,0) circle(.15);
+		\shade[ball color=gray] (3,0) circle(.15);
+		\draw[->] (.15,0)--node[above]{\(v_0\)}(1,0);
+		\draw[->] (3.15,0)--node[above]{\(v_1\)}(4,0);
+		\node at(0,-.15)[below]{中子};
+		\node at(3,-.15)[below]{氢核};
+	\end{scope}
+	\begin{scope}[yshift=-1.5cm]
+		\draw[dashed] (0,0)--(3,0);
+		\shade[ball color=gray!60] (0,0) circle(.15);
+		\shade[ball color=gray] (3,0) circle(.15);
+		\draw[->] (.15,0)--node[above]{\(v_0\)}(1,0);
+		\draw[->] (3.15,0)--node[above]{\(v_2\)}(4,0);
+		\node at(0,-.15)[below]{中子};
+		\node at(3,-.15)[below]{氦核};
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item 碰撞后氮核的动量比氢核的小
+	\item 碰撞后氮核的动能比氢核的小
+	\item \(v_2\)大于\(v_1\)
+	\item \(v_2\)大于\(v_0\)
+\end{choices}
+\begin{answer}
+   B\qquad 提示：\(v_2 = \frac{2m_1}{m_1 + m_2}v_0\) \quad \(p_2 = m_2v_2 = \frac{2m_2}{m_1 + m_2}\cdot m_1v_0\)\quad \(E_{k2} = \frac{1}{2}m_2v_2^2 = \frac{m_1m_2}{(m_1 + m_2)^2}\cdot \frac{1}{2}m_1v_0^2 = \frac{1}{\frac{m_1}{m_2} + 2 + \frac{m_2}{m_1}}\cdot \frac{1}{2}m_1v_0^2\)
+\end{answer}

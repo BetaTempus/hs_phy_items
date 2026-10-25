@@ -23,6 +23,7 @@
 \usepackage{xfrac} % 分数格式：斜分数\sfrac
 \usepackage{multicol} % 分栏
 
+
 %-------------- 自定义宏包 ---------------------
 \usepackage{vbchoices}
 \usepackage{vbquestion}
@@ -54,22 +55,23 @@
 \makeatother
 %----------------------------------------------
 \pagestyle{fancy-note}
-
+\markboth{高中物理\(\cdot\)题集}{festina lente}
 %%=============================================
 
 \begin{document}
-\markboth{高中物理\(\cdot\)题集}{festina lente}
 
-\maketitle
+%\input{image/titlepage_01}
+
+%\maketitle
 \newpage
 
 \section*{凡例}
 \input{format}
 \section*{图例}
 \input{image/legend}
-\input{section_02}
 
 \iffalse
+
 \newpage
 \section{物理核心}
 \begin{proset}
@@ -132,6 +134,9 @@
 
 \subsubsection{\texorpdfstring{\(\overline{v}=v_{\frac{t}{2}} = \frac{v_0 + v}{2} = \frac{x}{t}\)}{}}
 \begin{proset}
+	\input{exam/M/K/E-MK-SI-L2-260929-005}
+\end{proset}
+\begin{proset}
 	\input{exam/M/K/E-MK-SI-L2-260928-001}
 \end{proset}
 \begin{proset}
@@ -140,9 +145,7 @@
 \begin{proset}
 	\input{exam/M/K/E-MK-SI-L2-260928-005}
 \end{proset}
-\begin{proset}
-	\input{exam/M/K/E-MK-SI-L2-260929-005}
-\end{proset}
+
 \begin{proset}
 	\input{ncee/M/K/N16H-MK-SI-L3-261001-001}
 \end{proset}
@@ -195,6 +198,9 @@
 	\input{exam/M/K/E-MK-SI-L3-260625-001}
 \end{proset}
 \begin{proset}
+	\input{exam/M/K/E-MK-SI-L3-261008-001}
+\end{proset}
+\begin{proset}
 	\input{exam/M/K/E-MK-CA-L4-260626-001}
 \end{proset}
 
@@ -224,7 +230,7 @@
 	\input{exam/M/K/E-MK-CA-L3-260929-002}
 \end{proset}
 \begin{proset}
-    \input{exam/M/K/E-MK-CA-L4-260625-001}
+    \input{exam/M/K/E-MK-CA-L3-260625-001}
 \end{proset}
 \begin{proset}
 	\input{original/M/K/O-MK-CA-L4-260927-001}
@@ -241,7 +247,7 @@
 	\input{ncee/M/K/N13-MK-CA-L3-260928-001}
 \end{proset}
 
-
+%\iffalse
 \newpage
 \section{相互作用}
 
@@ -309,9 +315,10 @@
 	\input{exam/M/C/E-MC-SI-L2-260624-001}
 \end{proset}
 
-
-
-\subsection{平抛运动}
+\fi
+\input{section_06}
+\newpage
+\section{平抛运动}
 \begin{proset}
 	\input{exam/M/C/E-MCH-SI-L2-260627-001}
 \end{proset}
@@ -320,21 +327,118 @@
 	\input{ncee/M/C/N-MCH-CA-L2-260627-001}
 \end{proset}
 
+
+\subsection{斜抛运动}
 \begin{proset}
 	\input{exam/M/C/E-MCH-MU-L4-260624-002}
 \end{proset}
 
-\newpage
-\section{圆周运动}
+\begin{proset}
+	\input{exam/M/C/H/E-MCH-CA-L3-261025-001}
+\end{proset}
 
 \begin{proset}
-	\input{exam/M/C/E-MCC-CA-L4-260626-001}
+	\input{exam/M/C/H/E-MCH-CA-L4-261025-001}
+\end{proset}
+
+\subsubsection{平均速度在曲线运动中的应用}
+\begin{proset}
+	\input{exam/M/C/H/E-MCH-MU-L4-261025-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/H/E-MCH-SI-L4-261025-001}
+\end{proset}
+
+
+
+
+\newpage
+\section{圆周运动}
+\subsection{基本参数的关系}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-SI-L1-261025-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-SI-L1-261025-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-SI-L1-261025-003}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-SI-L1-261025-004}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-SI-L3-261025-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-MU-L3-261025-001}
+\end{proset}
+\subsection{匀速圆周运动}
+\begin{proset}
+	\input{ncee/M/C/C/N24L-MCC-SI-L2-261025-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/C/C/N23J-MCC-SI-L2-261025-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/C/C/N25Y-MCC-MU-L3-261025-001}
+\end{proset}
+
+\subsection{圆锥摆模型}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-MU-L3-261024-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-CA-L3-261024-001}
+\end{proset}
+
+\subsubsection{摩擦力问题}
+\begin{proset}
+	\input{ncee/M/C/C/N23S-MCC-CA-L2-261025-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/C/C/N14W-MCC-SI-L3-261025-001}
+\end{proset}
+
+\subsubsection{非惯性系}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-CA-L4-260626-001}
 \end{proset}
 \subsection{竖直圆周运动}
 
+\subsubsection{绳模型}
 \begin{proset}
-	\input{exam/M/C/E-MCC-SI-L2-260625-001}
+	\input{ncee/M/C/C/N22J-MCC-SI-L2-261023-001}
 \end{proset}
+\begin{proset}
+	\input{ncee/M/C/C/N16-MCC-SI-L2-261023-002}
+\end{proset}
+\subsubsection{杆模型}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-SI-L3-261023-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-SI-L2-260625-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/C/C/N24-MCC-SI-L3-261021-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-MU-L4-261025-001}
+\end{proset}
+\subsubsection{分离问题}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-SI-L3-261022-002}
+\end{proset}
+
+\subsection{曲率圆}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-SI-L3-261022-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/C/C/E-MCC-CA-L3-261022-001}
+\end{proset}
+
 
 \newpage
 \section{万有引力}
@@ -345,9 +449,78 @@
 \begin{proset}
 	\input{ncee/M/G/N16-MG-SI-L1-260930-001}
 \end{proset}
+\subsection{开普勒三定律}
+\begin{proset}
+	\input{ncee/M/G/N25Y-MG-SI-L3-261021-005}
+\end{proset}
+\subsection{比例问题}
+\begin{proset}
+	\input{ncee/M/G/N25Y-MG-SI-L3-261021-006}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N24-MG-SI-L3-261021-007}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N24L-MG-SI-L3-261021-008}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N24X-MG-MU-L3-261021-002}
+\end{proset}
+
 \subsection{重力}
 \begin{proset}
 	\input{ncee/M/G/N26Y-MG-SI-L2-260626-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N21L-MG-SI-L3-261021-009}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N18J-MG-SI-L3-261021-010}
+\end{proset}
+\subsection{天体卫星}
+\begin{proset}
+	\input{ncee/M/G/N23S-MG-SI-L2-261021-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N21Y-MG-SI-L3-261021-004}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N23L-MG-SI-L3-261021-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N24Z-MG-SI-L3-261021-003}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N23-MG-SI-L4-261021-001}
+\end{proset}
+
+\begin{proset}
+	\input{ncee/M/G/N24J-MG-MU-L3-261020-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N23Y-MG-MU-L3-261021-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N23J-MG-SI-L3-261021-001}
+\end{proset}
+
+\subsubsection{变轨问题}
+\begin{proset}
+	\input{ncee/M/G/N24G-MG-SI-L2-261020-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N24E-MG-SI-L3-261020-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/G/E-MG-SI-L3-261020-001}
+\end{proset}
+\subsubsection{密度}
+\begin{proset}
+	\input{ncee/M/G/N23L-MG-SI-L4-261021-001}
+\end{proset}
+\subsubsection{拉格朗日点}
+\begin{proset}
+	\input{ncee/M/G/N15L-ME-SI-L2-261020-001}
 \end{proset}
 \subsection{引力势能}
 
@@ -355,20 +528,143 @@
 	\input{exam/M/G/E-MG-CA-L3-260625-001}
 \end{proset}
 
+\subsection{双星、多星问题}
+\begin{proset}
+	\input{ncee/M/G/N24H-MG-CA-L2-261019-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/G/N13L-MG-SI-L2-261019-001}
+\end{proset}
+
+\subsection{天体追及相遇}
+\begin{proset}
+	\input{ncee/M/G/N23E-MG-SI-L3-261019-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/G/E-MG-CA-L3-261019-001}
+\end{proset}
+
+
 \newpage
 \section{功能关系}
-\subsection{变力做功}
-
+\subsection{功}
+\begin{proset}
+	\input{ncee/M/E/N23-ME-SI-L1-261016-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N23J-ME-SI-L3-261016-001}
+\end{proset}
+\subsubsection{变力做功}
 \begin{proset}
 	\input{exam/M/E/E-ME-CA-L3-260625-002}
 \end{proset}
 \begin{proset}
-	\input{ncee/M/E/N17SU-ME-CA-L3-260625-001}
+	\input{ncee/M/E/N17S-ME-CA-L3-260625-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N-ME-SI-L3-260627-001}
+\end{proset}
+\subsubsection{功率}
+
+\subsection{机车启动}
+\begin{proset}
+	\input{ncee/M/E/N23Z-ME-SI-L2-261016-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N21X-ME-SI-L3-261016-002}
+\end{proset}
+\subsubsection{恒加速度启动}
+\begin{proset}
+	\input{exam/M/E/E-ME-SI-L3-261017-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/E/E-ME-MU-L2-261017-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/E/E-ME-CA-L3-261017-001}
+\end{proset}
+
+\subsection{动能定理}
+\begin{proset}
+	\input{ncee/M/E/N23Z-ME-SI-L2-161017-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N21J-ME-SI-L2-261017-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N16-ME-CA-L2-261017-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/E/E-ME-MU-L4-261019-001}
+\end{proset}
+
+\begin{proset}
+	\input{exam/M/E/E-ME-CA-L4-261019-001}
+\end{proset}
+
+\subsubsection{\texorpdfstring{\(E_k - x\)}{}}
+\begin{proset}
+	\input{exam/M/E/E-ME-SI-L3-261017-002}
+\end{proset}
+\subsection{机械能守恒}
+\begin{proset}
+	\input{ncee/M/E/N13J-ME-SI-L2-261018-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N17-ME-CA-L2-261017-001}
 \end{proset}
 
 \subsection{关联速度}
 \begin{proset}
 	\input{exam/M/E/E-ME-MU-L3-260625-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/E/E-ME-MU-L3-261012-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/E/E-ME-MU-L4-261018-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/E/E-ME-MU-L3-261019-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/E/E-ME-SI-L4-261019-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/E/E-ME-MU-L4-261019-003}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N22E-ME-CA-L4-261019-001}
+\end{proset}
+
+\subsection{弹簧模型}
+\begin{proset}
+	\input{exam/M/E/E-ME-MU-L4-261019-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N24Y-ME-SI-L3-261019-003}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N23-ME-CA-L3-261019-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N21L-ME-CA-L4-261019-002}
+\end{proset}
+\subsection{板块模型进阶}
+\begin{proset}
+	\input{exam/M/E/E-ME-SI-L3-261019-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N24J-ME-MU-L3-261019-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N23-ME-MU-L3-261019-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/E/E-ME-CA-L3-261019-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/E/N24L-ME-CA-L4-261019-002}
 \end{proset}
 
 \newpage
@@ -376,10 +672,89 @@
 \input{original/M/M/O-MM-SU-261001-001}
 
 \input{original/M/M/O-MM-SU-261001}
-\subsection{动量守恒定律}
 
 \begin{proset}
+	\input{ncee/M/M/N21X-MM-SI-L1-261011-001}
+\end{proset}
+\subsection{变力冲量}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L2-261011-001}
+\end{proset}
+\subsection{动量定理}
+
+\subsubsection{连续流体}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-261011-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-261011-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-261011-003}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-MU-L4-261011-001}
+\end{proset}
+
+
+\subsection{动量守恒定律}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-261011-004}
+\end{proset}
+\begin{proset}
 	\input{exam/M/M/E-MM-CA-L3-260625-001}
+\end{proset}
+
+\subsection{碰撞}
+\begin{proset}
+	\input{ncee/M/M/N25Y-MM-SI-L3-261011-001}
+\end{proset}
+\subsubsection{弹性碰撞}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L2-261011-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L3-261012-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-261013-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-261013-003}
+\end{proset}
+
+\subsubsection{完全非弹性碰撞}
+\begin{proset}
+	\input{ncee/M/M/N23J-MM-CA-L2-261017-003}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/M/N25Z-MM-SI-L3-261011-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-MU-L3-261013-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/M/N17J-MM-CA-L3-261012-001}
+\end{proset}
+
+\subsubsection{碰撞可能性}
+\begin{proset}
+	\input{ncee/M/M/N22X-MM-SI-L3-261013-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-261014-001}
+\end{proset}
+
+\subsection{非对心碰撞}
+
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-260625-003}
+\end{proset}
+
+\subsection{连续碰撞}
+
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L3-260625-005}
 \end{proset}
 
 \subsection{类碰撞模型}
@@ -393,42 +768,106 @@
 \begin{proset}
 	\input{ncee/M/M/N-MM-CA-L3-260625-001}
 \end{proset}
-\begin{proset}
-	\input{ncee/M/M/N-MM-SI-L3-260627-001}
-\end{proset}
-\subsection{非对心碰撞}
 
 \begin{proset}
-	\input{exam/M/M/E-MM-SI-L3-260625-003}
+	\input{exam/M/M/E-MM-CA-L4-261014-003}
 \end{proset}
 
-\subsection{连续碰撞}
-
-\begin{proset}
-	\input{exam/M/M/E-MM-CA-L3-260625-005}
-\end{proset}
-
-\subsection{相对速度}
-
-\begin{proset}
-	\input{exam/M/M/E-MM-MU-L4-260625-004}
-\end{proset}
 
 \subsection{人船模型}
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L3-261014-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-MU-L3-261014-001}
+\end{proset}
 
 \begin{proset}
-	\input{ncee/M/M/N22II-MM-CA-L4-260625-001}
+	\input{exam/M/M/E-MM-CA-L3-261014-002}
 \end{proset}
+
+\subsubsection{质心系}
+
 \begin{proset}
 	\input{ncee/M/M/N25S-MM-CA-L4-260625-002}
 \end{proset}
+\begin{proset}
+	\input{ncee/M/M/N22II-MM-CA-L4-260625-001}
+\end{proset}
+
+\subsection{相对速度}
+\begin{proset}
+	\input{ncee/M/M/N16-MM-MU-L3-261014-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-MU-L4-260625-004}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L4-261016-001}
+\end{proset}
+
+\subsection{轨迹方程}
+\begin{proset}
+	\input{exam/M/M/E-MM-MU-L4-261014-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L4-261014-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/M/N23X-MM-CA-L4-261014-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L4-261014-002}
+\end{proset}
+
+\subsection{光压}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L2-261014-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L3-261014-003}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L3-261014-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-SI-L4-261014-002}
+\end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-MU-L4-261014-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/M/N23Z-MM-MU-L3-261014-001}
+\end{proset}
+
+\subsection{板块模型进阶}
+\begin{proset}
+	\input{original/M/M/O-MM-SU-261010}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/M/N24-MM-CA-L3-261010-001}
+\end{proset}
+
+\iffalse
 
 \newpage
 \section{机械振动}
+
+
+\subsection{受迫振动、共振}
+\begin{proset}
+	\input{ncee/M/V/N25Y-MV-SI-L1-261011-001}
+\end{proset}
+
+\subsection{单摆}
+\begin{proset}
+	\input{ncee/M/V/N14H-MV-SI-L2-261011-001}
+\end{proset}
 \begin{proset}
 	\input{exam/M/V/E-MV-CA-L1-260625-001}
 \end{proset}
 
+\subsection{弹簧振子}
 \begin{proset}
 	\input{exam/M/V/E-MV-SI-L3-260625-001}
 \end{proset}
@@ -437,6 +876,27 @@
 \end{proset}
 
 \section{机械波}
+\subsection{振动图像}
+\begin{proset}
+	\input{ncee/M/V/N24-MV-MU-L2-261011-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/V/N23E-MV-SI-L3-261011-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/V/N22J-MV-FI-L2-261011-001}
+\end{proset}
+\subsection{波形图}
+\begin{proset}
+	\input{ncee/M/V/N23J-MV-SI-L2-261011-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/M/V/N21J-MV-SI-L2-261011-003}
+\end{proset}
+\begin{proset}
+	\input{exam/M/V/E-MV-MU-L2-261011-001}
+\end{proset}
+
 \begin{proset}
 	\input{exam/M/V/E-MV-SI-L1-260627-001}
 \end{proset}
@@ -450,11 +910,42 @@
 	\input{exam/M/V/E-MV-SI-L2-260625-001}
 \end{proset}
 
-\subsection{干涉}
+\subsection{波的周期性问题}
 \begin{proset}
-	\input{exam/M/V/E-MV-SI-L3-260625-004}
+	\input{exam/M/V/E-MV-MU-L2-261011-002}
 \end{proset}
 
+\subsection{时间多解性}
+\begin{proset}
+	\input{exam/M/V/E-MV-CA-L3-261011-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/V/E-MV-MU-L3-261011-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/V/E-MV-CA-L3-261011-003}
+\end{proset}
+\begin{proset}
+	\input{exam/M/V/E-MV-MU-L3-261011-002}
+\end{proset}
+
+\subsection{距离多解性}
+\begin{proset}
+	\input{exam/M/V/E-MV-SI-L2-261011-001}
+\end{proset}
+\begin{proset}
+	\input{exam/M/V/E-MV-CA-L3-261011-002}
+\end{proset}
+
+\begin{proset}
+	\input{ncee/M/V/N16-MV-CA-L3-261011-001}
+\end{proset}
+\subsection{干涉}
+\begin{proset}
+	\input{exam/M/V/E-MV-MU-L3-260625-004}
+\end{proset}
+
+%\iffalse
 \newpage
 \section{电场}
 \subsection{物理史}
@@ -482,6 +973,15 @@
 \section{恒定电流}
 \input{original/EM/C/O-EMC-SU-261001}
 
+\subsection{电路简化}
+\begin{proset}
+	\input{original/EM/C/O-EMC-CA-L4-261009-001}
+\end{proset}
+
+\subsection{基尔霍夫定律}
+\begin{proset}
+	\input{original/EM/C/O-EMC-CA-L3-261009-001}
+\end{proset}
 
 \newpage
 \section{磁场}
@@ -494,7 +994,9 @@
 \end{proset}
 
 \subsection{带电粒子在电磁场中运动}
-
+\begin{proset}
+	\input{exam/EM/M/E-EMM-CA-L3-261004-001}
+\end{proset}
 \begin{proset}
 	\input{exam/EM/M/E-EMM-CA-L4-260625-001}
 \end{proset}
@@ -506,10 +1008,51 @@
 
 \newpage
 \section{电磁感应}
+\input{original/EM/I/O-EMI-SU-261004}
 
+\subsection{物理史}
+\begin{proset}
+	\input{ncee/EM/I/N14-EMI-SI-L1-261004-001}
+\end{proset}
+
+\subsection{楞次定律}
+\begin{proset}
+	\input{ncee/EM/I/N16Q-EMI-SI-L3-261004-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/I/N20-EMI-SI-L3-261004-002}
+\end{proset}
+
+\subsection{法拉第电磁感应定律}
+\begin{proset}
+	\input{ncee/EM/I/N23S-EMI-SI-L2-261004-001}
+\end{proset}
+
+\begin{proset}
+	\input{exam/EM/I/E-EMI-CA-L3-261004-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/I/N15L-EMI-MU-L2-261004-001}
+\end{proset}
+
+\subsection{线圈}
+\begin{proset}
+	\input{ncee/EM/I/N25Y-EMI-MU-L3-261004-001}
+\end{proset}
+
+\subsection{导体棒}
 \begin{proset}
 	\input{exam/EM/I/E-EMI-CA-L4-260625-001}
 \end{proset}
+
+\subsubsection{双棒}
+\begin{proset}
+	\input{ncee/EM/I/N25L-EMI-MU-L3-261004-002}
+\end{proset}
+\begin{proset}
+	\input{exam/EM/I/E-EMI-CA-L3-261004-002}
+\end{proset}
+
 
 \newpage
 \section{交变电流}
@@ -517,6 +1060,9 @@
 
 \begin{proset}
 	\input{exam/EM/A/E-EMA-SI-L2-260625-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/A/N25Y-EMA-SI-L3-261004-001}
 \end{proset}
 
 \subsection{理想变压器}
@@ -528,41 +1074,6 @@
 \begin{proset}
 	\input{exam/EM/A/E-EMA-MU-L3-260625-002}
 \end{proset}
-
-
-\newpage
-\section{热学}
-
-\subsection{分子动理论}
-\begin{proset}
-	\input{exam/T/E-T-SI-L1-260627-001}
-\end{proset}
-\begin{proset}
-	\input{exam/T/E-T-SI-L1-260625-002}
-\end{proset}
-\begin{proset}
-	\input{exam/T/E-T-CA-L2-260625-002}
-\end{proset}
-
-\subsection{热力学三定律}
-\begin{proset}
-	\input{exam/T/E-T-SI-L1-260625-001}
-\end{proset}
-
-\subsection{变质量题型}
-\begin{proset}
-	\input{exam/T/E-T-CA-L3-260625-001}
-\end{proset}
-\begin{proset}
-	\input{exam/T/E-T-CA-L2-260625-001}
-\end{proset}
-
-
-\subsection{图像}
-\begin{proset}
-	\input{exam/T/E-T-MU-L2-260625-001}
-\end{proset}
-
 
 \newpage
 \section{几何光学}
@@ -625,7 +1136,51 @@
 \begin{proset}
 	\input{exam/O/E-O-CA-L3-260624-001}
 \end{proset}
-\fi
+
+
+\newpage
+\section{热学}
+
+\subsection{分子动理论}
+\begin{proset}
+	\input{original/T/O-T-FI-L3-261011-001}
+\end{proset}
+\begin{proset}
+	\input{exam/T/E-T-SI-L1-260627-001}
+\end{proset}
+\begin{proset}
+	\input{exam/T/E-T-SI-L1-260625-002}
+\end{proset}
+\begin{proset}
+	\input{exam/T/E-T-CA-L2-260625-002}
+\end{proset}
+
+\subsection{理想气体状态方程}
+\begin{proset}
+	\input{ncee/T/N24L-T-CA-L3-261011-001}
+\end{proset}
+
+\begin{proset}
+	\input{exam/T/E-T-CA-L3-261011-001}
+\end{proset}
+
+\subsection{变质量题型}
+\begin{proset}
+	\input{exam/T/E-T-CA-L3-260625-001}
+\end{proset}
+\begin{proset}
+	\input{exam/T/E-T-CA-L2-260625-001}
+\end{proset}
+\subsection{热力学三定律}
+\begin{proset}
+	\input{exam/T/E-T-SI-L1-260625-001}
+\end{proset}
+
+\subsection{图像}
+\begin{proset}
+	\input{exam/T/E-T-MU-L2-260625-001}
+\end{proset}
+
 
 \newpage
 \section{现代物理}
@@ -639,32 +1194,112 @@
 \begin{proset}
 	\input{ncee/MP/N24X-MP-SI-L1-261003-001}
 \end{proset}
+\begin{proset}
+	\input{ncee/MP/N14J-MP-MU-L2-261004-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N21Z-MP-SI-L1-261004-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N22X-MP-SI-L1-261004-002}
+\end{proset}
 
 \subsection{光电效应}
 \begin{proset}
+	\input{ncee/MP/N24J-MP-MU-L2-261004-003}
+\end{proset}
+\begin{proset}
 	\input{ncee/MP/N25Y-MP-SI-L2-261003-001}
 \end{proset}
+\begin{proset}
+	\input{ncee/MP/N21Q-MP-SI-L2-261004-008}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N15J-MP-MU-L2-261004-005}
+\end{proset}
 
+\subsubsection{光电管}
+\begin{proset}
+	\input{ncee/MP/N13J-MP-SI-L3-261004-003}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N14Y-MP-MU-L2-261004-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N15-MP-FI-L2-261004-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N21S-MP-CA-L4-261004-001}
+\end{proset}
 
 \subsection{德布罗意波}
-
+\begin{proset}
+	\input{ncee/MP/N15-MP-MU-L2-261004-004}
+\end{proset}
 \begin{proset}
 	\input{exam/MP/E-MP-SI-L3-260625-001}
 \end{proset}
+\begin{proset}
+	\input{exam/MP/E-MP-SI-L3-261004-001}
+\end{proset}
+
+\subsection{光子}
+\begin{proset}
+	\input{ncee/MP/N24-MP-SI-L2-261004-009}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N23-MP-SI-L2-261004-010}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N17J-MP-SI-L2-261004-007}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N23Q-MP-MU-L2-261004-004}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N22-MP-SI-L3-261004-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N23S-MP-CA-L3-261004-001}
+\end{proset}
 
 \subsection{能级}
+\subsubsection{跃迁}
+\begin{proset}
+	\input{ncee/MP/N20S-MP-FI-L2-261004-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N16J-MP-SI-L2-261004-004}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N24S-MP-SI-L2-261004-006}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N23L-MP-SI-L2-261004-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N23L-MP-SI-L2-261004-003}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N24W-MP-SI-L2-261004-005}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N22Y-MP-SI-L3-261004-002}
+\end{proset}
+\subsubsection{光谱}
+\begin{proset}
+	\input{exam/MP/E-MP-CA-L2-260625-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/MP/N23J-MP-SI-L2-261004-001}
+\end{proset}
 \begin{proset}
 	\input{ncee/MP/N24Z-MP-SI-L3-261003-001}
 \end{proset}
 \begin{proset}
 	\input{exam/MP/E-MP-SI-L2-260627-001}
 \end{proset}
-\begin{proset}
-	\input{exam/MP/E-MP-CA-L2-260625-001}
-\end{proset}
 
-
-\iffalse
 \newpage
 \section{原子物理}
 \input{original/A/O-A-SU-260929-001}

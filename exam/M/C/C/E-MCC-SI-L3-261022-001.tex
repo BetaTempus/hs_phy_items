@@ -1,0 +1,34 @@
+\icode{E-MCC-SI-L3-261022-001}
+一般曲线运动可以分成很多小段，每小段都成圆周运动的一部分，即把整条曲线用一系列不同半径的小圆弧来代替。如图(\(a\))所示，曲线上的\(A\)点的曲率圆定义为：通过\(A\)点和曲线上紧邻\(A\)点两侧的两点作一圆，在极限情况下，这个圆就叫做\(A\)点的曲率圆，其半径\(\rho\)叫做\(A\)点的曲率半径。 现将一物体沿与水平面成\(\alpha\)角的方向已速度\(v_0\)抛出，如图(\(b\))所示。则在其轨迹最高点\(P\)处的曲率半径是\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\begin{scope}[xshift=7cm]
+		\draw (0,0) parabola bend(2,1.5)(4,0);
+		\node at(2,1.5) [above]{\(P\)};
+		\draw[dashed,cyan] (2,.9) circle(.6);
+		\draw[-stealth,red] (0,0)--(60:1.2);
+		\draw (.3,0) arc(0:60:.3);
+		\node at(.5,.25){\(\alpha\)};
+		\foreach \x in {-.5,-.3,...,4.3}
+			\draw[gray] (\x,-.2)--++(.2,.2);
+		\draw[thick] (-.5,0)--(4.5,0);
+		\node at(2,-1){图\(b\)};
+	\end{scope}
+	\begin{scope}
+		\draw (0,1.5) parabola bend(1,2.5)(2,1.5) (2,1.5) parabola bend(3.5,0)(5,1.5);
+		\draw[dashed,cyan] (1,2.15) circle(.35) (3.5,.6) circle(.6);
+		\fill (3.5,.6) circle(.05);
+		\fill (3.5,0)node[below]{\(A\)} circle(0.05);
+		\draw[dashed] (3.5,.6)--node[above]{\(\rho\)}(4.1,.6);
+		\node at(2.5,-1){图\((a)\)};
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item \(\dfrac{v_0^2}{g}\)
+	\item \(\dfrac{v_0^2\sin^2\alpha}{g}\)
+	\item \(\dfrac{v_0^2\cos^2\alpha}{g}\)
+	\item \(\dfrac{v_0^2\cos^2\alpha}{g\sin\alpha}\)
+\end{choices}
+\begin{answer}
+	C\qquad 提示：最高点重力提供向心力
+\end{answer}

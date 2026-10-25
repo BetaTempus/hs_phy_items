@@ -1,0 +1,18 @@
+\icode{N16-ME-CA-L2-261017-002}
+\nceeID[12]{2016全国\Rmnum{3}}{24}
+如图，在竖直平面内有由\(\frac{1}{4}\)圆弧\(AB\)和\(\frac{1}{2}\)圆弧\(BC\)组成的光滑固定轨道，两者在最低点\(B\)平滑连接。\(AB\)弧的半径为\(R\)，\(BC\)弧的半径为\(\frac{R}{2}\)。一小球在\(A\)点正上方与\(A\)相距\(\frac{R}{4}\)处由静止开始自由下落，经\(A\)点沿圆弧轨道运动。
+\begin{enumerate}
+	\item 求小球在\(B\)、\(A\)两点的动能之比；
+	\item 通过计算判断小球能否沿轨道运动到\(C\)点。
+\end{enumerate}	
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[thick] (0,0) arc(-90:0:3.2)node[right]{\(A\)};
+    \draw[dashed,cyan] (0,3.2)--(0,0) (3.2,4)--(3.2,3.2);
+	\draw[thick] (0,3.2)node[above]{\(C\)} arc(90:270:1.6)node[below]{B};
+	\shade[ball color=gray] (3.2,4) circle(.08);
+	\foreach \x/\y in {3.2/3.2,0/3.2,0/1.6,0/0}
+		\fill (\x,\y) circle(.04);
+\end{tikzpicture}
+\begin{answer}
+	（1）\(E_{kB}:E_{kA} = 5:1\)；（2）恰好可以到\(C\)点\qquad 提示：\(v_c = \sqrt{g\cdot \frac{R}{2}}\)
+\end{answer}

@@ -1,0 +1,17 @@
+\icode{E-ME-CA-L3-261017-001}
+有一辆汽车在平直的公路上由静止开始启动。在启动过程中，汽车牵引力的功率随时间的变化情况如图所示。已知汽车所受阻力恒为重力的五分之一，\qty{5}{s}末汽车速度为\qty{5}{m/s}，而在\qty{15}{s}时汽车已经达	到了最大速度，重力加速度\(g\)取\qty{10}{m/s^2}。求：
+\begin{enumerate}
+	\item 该汽车的质量\(m\)；
+	\item 该汽车的最大速度\(v_m\)；
+	\item 在前\,\qty{5}{s}内汽车克服阻力做的功；
+	\item 在\(5\sim15\)\,\qty{}{s}内，汽车的位移。
+\end{enumerate}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,0)--(0,3)node[right]{\(P\)/\qty{}{kW}};
+    \draw[dashed,cyan] (0,2)node[left,blue]{\(15\)}--(1.2,2)--(1.2,0)node[below,blue]{\(5\)} (3.1,2)--(3.1,0)node[below,blue]{\(15\)};
+	\draw[magenta] (0,0)--(1.2,2)--(2,2)--(3.5,2);
+\end{tikzpicture}
+\begin{answer}
+    （1）\(m =\) \qty{1000}{kg}（2）\(v_m =\) \qty{7.5}{m/s}（3）\qty{25}{kJ}（4）\qty{67}{m}\qquad 提示：\(5\sim15\)\,\qty{}{s}内牵引力是变力，但功率是恒定，故做功可以用\(W = Pt\)求出
+\end{answer}
