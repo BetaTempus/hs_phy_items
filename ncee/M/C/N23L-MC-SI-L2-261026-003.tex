@@ -1,0 +1,57 @@
+\icode{N23L-MC-SI-L2-261026-003}
+\nceeID[4]{2023辽宁}{1}
+某同学在练习投篮，篮球在空中的运动轨迹如图中虚线所示，篮球所受合力\(F\)的示意图可能正确的是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}
+		\draw[name path=curve,dashed] (3,2) parabola bend(3,2) (0,0);
+		\path[name path=beeline] (1.6,0)--++(0,2);
+		\path[name intersections={of=curve and beeline,by=p}];
+		\draw[brown] (p) circle(.25);
+		\draw[brown] ($(p)+(0,-.25)$) arc(270:90:.075 and .25) ($(p)+(-.25,0)$) arc(-180:0:.25 and .075);
+		\draw[brown] ($(p)+(135:.25)$)..controls($(p)+(-.125,-.125)$)and($(p)+(.125,.25)$)..($(p)+(45:.25)$);
+		\draw[brown] ($(p)+(-135:.25)$)..controls($(p)+(-.125,.06)$)and($(p)+(.125,-.25)$)..($(p)+(-45:.25)$);
+		\draw[dashed,cyan] (p)--++(0,-1);
+		\draw[->,magenta] (p)--++(-110:.9)node[below]{ \(F\)};
+		\node at(1.5,-.3){\normalsize A};
+	\end{scope}
+	\begin{scope}[xshift=3.5cm]
+		\draw[name path=curve,dashed] (3,2) parabola bend(3,2) (0,0);
+		\path[name path=beeline] (1.6,0)--++(0,2);
+		\path[name intersections={of=curve and beeline,by=p}];
+		\draw[brown] (p) circle(.25);
+		\draw[brown] ($(p)+(0,-.25)$) arc(270:90:.075 and .25) ($(p)+(-.25,0)$) arc(-180:0:.25 and .075);
+		\draw[brown] ($(p)+(135:.25)$)..controls($(p)+(-.125,-.125)$)and($(p)+(.125,.25)$)..($(p)+(45:.25)$);
+		\draw[brown] ($(p)+(-135:.25)$)..controls($(p)+(-.125,.06)$)and($(p)+(.125,-.25)$)..($(p)+(-45:.25)$);
+		\draw[dashed,cyan] (p)--++(0,-1);
+		\draw[->,magenta] (p)--++(90:.9)node[right]{ \(F\)};
+		\node at(1.5,-.3){\normalsize B};
+	\end{scope}
+	\begin{scope}[xshift=7cm]
+		\draw[name path=curve,dashed] (3,2) parabola bend(3,2) (0,0);
+		\path[name path=beeline] (1.6,0)--++(0,2);
+		\path[name intersections={of=curve and beeline,by=p}];
+		\draw[brown] (p) circle(.25);
+		\draw[brown] ($(p)+(0,-.25)$) arc(270:90:.075 and .25) ($(p)+(-.25,0)$) arc(-180:0:.25 and .075);
+		\draw[brown] ($(p)+(135:.25)$)..controls($(p)+(-.125,-.125)$)and($(p)+(.125,.25)$)..($(p)+(45:.25)$);
+		\draw[brown] ($(p)+(-135:.25)$)..controls($(p)+(-.125,.06)$)and($(p)+(.125,-.25)$)..($(p)+(-45:.25)$);
+		\draw[dashed,cyan] (p)--++(0,-1);
+		\draw[->,magenta] (p)--++(120:.9)node[left]{ \(F\)};
+		\node at(1.5,-.3){\normalsize C};
+	\end{scope}
+	\begin{scope}[xshift=10.5cm]
+		\draw[name path=curve,dashed] (3,2) parabola bend(3,2) (0,0);
+		\path[name path=beeline] (1.6,0)--++(0,2);
+		\path[name intersections={of=curve and beeline,by=p}];
+		\draw[brown] (p) circle(.25);
+		\draw[brown] ($(p)+(0,-.25)$) arc(270:90:.075 and .25) ($(p)+(-.25,0)$) arc(-180:0:.25 and .075);
+		\draw[brown] ($(p)+(135:.25)$)..controls($(p)+(-.125,-.125)$)and($(p)+(.125,.25)$)..($(p)+(45:.25)$);
+		\draw[brown] ($(p)+(-135:.25)$)..controls($(p)+(-.125,.06)$)and($(p)+(.125,-.25)$)..($(p)+(-45:.25)$);
+		\draw[dashed,cyan] (p)--++(0,-1);
+		\draw[->,magenta] (p)--++(-155:.9)node[left]{ \(F\)};
+		\node at(1.5,-.3){\normalsize D};
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+	A\qquad 提示：篮球在空气中受空气阻力
+\end{answer}

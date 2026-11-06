@@ -1,0 +1,25 @@
+\icode{E-MI-SI-L3-261104-003}
+物体\(A\)用轻质细绳与圆环\(B\)连接，圆环固定在竖直杆\(MN\)上。现用一水平力\(F\)作用在绳上的\(O\)点，将\(O\)点缓慢向左移动，使细绳与竖直方向的夹角\(\theta\)逐渐增大。关于此过程，下列说法中正确的是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[magenta] (0,0)--(-120:2)coordinate(O)--++(-90:1.2)coordinate(A);
+	\draw[->] (O)node[right]{\(O\)}--++(-1,0)node[left]{\(F\)};
+	\draw[fill=orange!60] ($(A)+(-.2,0)$) rectangle($(A)+(.2,-.4)$)node[midway]{\(A\)};
+	\draw[dashed,magenta] (0,0)--(-145:2)coordinate(O)--++(-90:1.2)coordinate(a);
+	\draw[->,dashed] (O)--++(-1,0);
+	\draw[dashed,fill=orange!20] ($(a)+(-.2,0)$) rectangle($(a)+(.2,-.4)$);
+	\draw[fill=orange!50] (0,1) rectangle(.1,-3);	
+	\draw[fill=white] (-0.05,-.05) rectangle(.15,.05);
+	\draw (0,-.3) arc(-90:-120:.3);
+	\node at(-.2,-.7){\(\theta\)};
+	\node at(.1,0)[right]{\(B\)};
+\end{tikzpicture}
+\begin{choices}
+	\item\(B\)物体受到竖直杆的弹力逐渐增大
+	\item 水平力\(F\)逐渐减小
+	\item\(B\)物体受到的摩擦力逐渐减小
+	\item 绳\(OA\)的弹力逐渐减小
+\end{choices}
+\begin{answer}
+	A\qquad 提示：先对节点\(O\)受力分析，再对整体受力分析
+\end{answer}

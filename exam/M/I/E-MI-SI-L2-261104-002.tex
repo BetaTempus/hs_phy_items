@@ -1,0 +1,22 @@
+\icode{E-MI-SI-L2-261104-002}
+如图所示，\(M\)、\(N\)为装在水平面上的两块间距可以调节的光滑竖直挡板，两板间叠放着\(A\)、\(B\)两个光滑圆柱体，现将	两板间距调小些，这时与原来相比，下述结论中正确的是\paren[]
+
+\begin{tikzpicture}[scale=.8,font=\scriptsize]
+	\coordinate (A) at($(1,1)+(53:2)$);
+	\coordinate (C) at($(A|-0,0)+(1,0)$);
+	\draw[fill=orange!60] (0,0) rectangle(-.3,3.6)node[left,black]{\(M\)} (C) rectangle($(C)+(.3,3.6)$)node[right,black]{\(N\)};
+	\draw (1,1) circle(1) (A) circle(1);
+	\fill (1,1)node[right]{\(B\)} circle(.05) (A)node[right]{\(A\)} circle(.05);
+	\foreach \x in {-.8,-.6,...,3.8}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.8,0)--(4,0);
+\end{tikzpicture}
+\begin{choices}
+	\item\(N\)板对圆柱体\(A\)的弹力变小
+	\item 圆柱体\(A\)对圆柱体\(B\)的弹力变大
+	\item 水平面对圆柱体\(B\)的弹力变大
+	\item 水平面对圆柱体\(B\)的弹力变小
+\end{choices}
+\begin{answer}
+	A\qquad 提示：受力分析，并构建力的矢量三角形
+\end{answer}

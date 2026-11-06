@@ -1,0 +1,14 @@
+\icode{E-MCH-CA-L3-261026-001}
+如图所示，挡板 \(OM\) 与竖直方向所夹的锐角为 \(\theta\)，一小球（视为质点）从 \(O\) 点正下方的 \(A\) 点以速度 \(v_0\) 水平抛出，小球运动过程中恰好不和挡板碰撞（小球轨迹所在平面与挡板垂直）。重力加速度大小为 \(g\)，求 \(O\)、\(A\) 间的距离。
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[thick] (0,0)node[left]{ \(O\)}--++(-37:4)node[right]{ \(M\)};
+	\draw[dashed,cyan] (0,0)--(0,-2.4);
+	\draw[->,red] (0,-.9)--++(.8,0)node[below,black]{ \(v_0\)};
+	\shade[ball color=gray] (0,-.9)node[left]{ \(A\)} circle(.08);
+	\draw (0,-.3) arc(-90:-37:.3);
+	\node at(.2,-.5){ \(\theta\)};
+\end{tikzpicture}
+\begin{answer}
+	\(\frac{v_0^2}{2g\tan\theta}\)\qquad 提示：小球轨迹恰与档板相切
+\end{answer}

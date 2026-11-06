@@ -1,0 +1,26 @@
+\icode{E-MC-SI-L2-261026-002}
+红蜡块能在玻璃管的水中匀速上升，若红蜡块在\(A\)点匀速上升的同时，使玻璃管水平向右做匀加速直线运动，则红蜡块实际运动的轨迹是图中的\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[pattern=horizontal lines,pattern color=gray] (-.1,3)--(-.1,-.1) arc(-180:0:.1)--(.1,3) arc(0:180:.1);
+	\draw[fill=red] ($(0,0)+(-.05,-.05)$) rectangle ($(0,0)+(.05,.05)$);
+	\draw[dashed] (0,0)--(3.2,2.4) (0,0) parabola bend(0,0)(3.2,2.4);
+	\draw[dashed,rotate=-90] (0,0) parabola bend(0,0)(-2.4,3.2);
+	\begin{scope}[xshift=3.2cm]
+		\draw[pattern=horizontal lines,pattern color=gray] (-.1,3)--(-.1,-.1) arc(-180:0:.1)--(.1,3) arc(0:180:.1);
+		\draw[fill=red] ($(0,2.4)+(-.05,-.05)$) rectangle ($(0,2.4)+(.05,.05)$);
+	\end{scope}
+	\node at(1.4,1.8){ 1};
+	\node at(1,1){ 2};
+	\node at(1.5,.7){ 3};
+\end{tikzpicture}
+\begin{choices}
+	\item 曲线1
+	\item 曲线2
+	\item 曲线3
+	\item 无法确定
+\end{choices}
+
+\begin{answer}
+	A\qquad 提示：
+\end{answer}

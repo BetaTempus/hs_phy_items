@@ -18,9 +18,9 @@
     \draw[->,blue] (0,0)node[below left]{\(0\)}--(3.8,0)node[below]{\(x\)/\qty{}{m}};
     \draw[->,blue] (0,0)--(0,3.6)node[right]{\(F\)/\qty{}{N}};
     \foreach \x/\num in{.8/2,1.6/4,2.4/6,3.2/8}
-        \draw (\x,0)node[below,blue]{\num}--++(0,.1);
+        \draw (\x,0)node[below,blue]{\num}--++(0,.05);
     \foreach \y/\num in{.8/1,1.6/2,2.4/3,3.2/4}
-        \draw (0,\y)node[left,blue]{\num}--++(.1,0);
+        \draw (0,\y)node[left,blue]{\num}--++(.05,0);
     \draw[dashed,cyan] (.8,2.4)--(.8,0) (0,.8)--(2.4,.8) (2.4,.8)--(2.4,0);
     \draw[magenta] (0,2.4)--(.8,2.4)--(2.4,.8);
     \node at(1.9,-.6){图乙};

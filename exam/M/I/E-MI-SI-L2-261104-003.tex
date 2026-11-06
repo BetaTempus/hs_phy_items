@@ -1,0 +1,23 @@
+\icode{E-MI-SI-L2-261104-003}
+如图所示，截面是直角三角形的木块 \(A\) 放在水平地面上，在木块 \(A\) 和竖直墙壁之间放置一截面为四分之一圆的光滑物体 \(B\)，整个装置处于静止状态，此时地面对木块 \(A\) 的摩擦力为 \(f_1\)。当木块 \(A\) 位于图中虚线位置时，物体 \(B\)  未与地面接触，整个装置仍处于静止状态，此时地面对木块 \(A\) 的摩擦力为 \(f_2\)。关于 \(f_1\) 与 \(f_2\) 的大小关系，下列说法正确的是\paren[]
+	
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \x in {0,.2,...,2.8}{
+		\draw[gray] (\x,0)--++(.2,-.2);
+		\draw[gray] (0,\x)--++(-0.2,.2);}
+	\draw[thick] (0,3)--(0,0)--(3,0);
+	\draw[fill=blue!30] (0,{sqrt(2)})coordinate(o)--($(o)+(0,-1)$) arc(-90:0:1)--(o);
+	\draw[fill=orange!60] (0,0)--(45:3)|-(0,0);
+	\draw[dashed] (.3,0)--++(45:3)coordinate(a)|-(a|-0,0);
+	\node at(.4,1){ \(B\)};
+	\node at(1.3,.5){ \(A\)};
+\end{tikzpicture}
+\begin{choices}
+	\item \(f_1\) 小于 \(f_2\)
+	\item \(f_1\) 等于 \(f_2\)
+	\item \(f_1\) 大于 \(f_2\)
+	\item 无法确定 \(f_1\) 与 \(f_2\) 的大小关系
+\end{choices}
+\begin{answer}
+    B\qquad 提示：对\(B\)受力分析，可知\(B\)受到的三个力方向均不变，故大小也不变
+\end{answer}

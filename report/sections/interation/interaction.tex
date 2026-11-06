@@ -1,0 +1,41 @@
+\lsn{1}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+    \begin{scope}
+        \draw[->] (0,0)--(0,-1.5)node[below]{\(G\)};
+        \draw[dashed,cyan] (37:2)node[right]{\(F_1\)}--(0,0)--(127:2)node[left]{\(F_2\)};
+        \draw[gray] (127:.2)--++(37:.2)--++(-53:.2);
+        \draw[magenta] (127:.4) arc(127:90:.4);
+        \draw[dashed,gray] (0,0)--(0,1.8);
+        \node at(-.2,.6){\(\theta\)};
+        \fill (0,0) circle(.04);
+    \end{scope}
+    \begin{scope}[xshift=7cm]
+        \draw[->] (0,0)--(0,-1.5)node[below]{\(G\)};
+        \draw[dashed,cyan] (2,0)node[right]{\(F_1\)}--(0,0)--(127:2)node[left]{\(F_2\)};
+        \draw[gray] (0,-.2)--(.2,-.2)--(.2,0);
+        \draw[magenta] (127:.4) arc(127:90:.4);
+        \draw[dashed,gray] (0,0)--(0,1.8);
+        \node at(-.2,.6){\(\theta\)};
+        \fill (0,0) circle(.03);
+    \end{scope}
+    \begin{scope}[yshift=-5cm]
+        \draw[->] (0,0)--(0,-1.5)node[below]{\(G\)};
+        \draw[dashed,cyan] (30:2)node[right]{\(F_1\)}--(0,0)--(150:2)node[left]{\(F_2\)};
+        \draw[magenta] (150:.3) arc(150:90:.3) (30:.2)arc(30:90:.2);
+        \draw[dashed,gray] (0,0)--(0,1.8);
+        \node at(-.25,.5){\(\theta\)};
+        \node at(.15,.4){\(\theta\)};
+        \fill (0,0) circle(.03);
+    \end{scope}
+    \begin{scope}[xshift=7cm,yshift=-5cm]
+        \draw[->] (0,0)--(0,-1.5)node[left]{\(G\)};
+        \draw[dashed,cyan] (135:2)node[left]{\(F_1\)}--(0,0)--(-30:2)node[below]{\(F_2\)};
+        \draw[magenta] (135:.3) arc(135:90:.3) (.3,0)arc(0:-30:.3);
+        \draw[->,gray] (-2,0)--(2,0)node[right]{\(x\)};
+        \draw[->,gray] (0,-2)--(0,2)node[above]{\(y\)};
+        \node at(-.2,.5){\(\theta\)};
+        \node at(.55,-.15){\(\alpha\)};
+        \fill (0,0) circle(.03);
+    \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+\icode{E-MI-MU-L3-261104-001}
+（多选）
+如图所示，甲、乙为长度、半径、材料均相同的质量分布均匀的圆柱体和半圆柱体（图中为横截面），甲表面光滑、乙表面粗糙，圆柱体甲的质量为 \(m\)，两物体靠在一起放置在粗糙固定的水平桌面上，现过圆柱体甲的圆心施加一个始终沿水平方向的作用力 \(F\)，将圆柱体甲缓慢地拉至圆柱体乙的顶端，乙始终处于静止状态。不计空气阻力，重力加速度为 \(g\)。在甲离开桌面缓慢移动的过程中，下列说法正确的是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[scale=.8,xshift=.5cm]
+		\draw (0,0) arc(180:0:1) ({1+sqrt(3)},1) circle(1);	
+		\draw[->] ({sqrt(3)},1)--++(-1.5,0)node[left]{ \(F\)};
+		\draw[dashed,cyan] ({sqrt(3)},1)--++(1,0)node[right,black]{甲};
+		\node at(1,.4){乙};
+		\end{scope}
+	\draw[fill=orange!60] (-.3,0) rectangle(4,-.15) (.2,-.15) rectangle(.4,-1) (3.5,-.15) rectangle(3.3,-1);
+	\foreach \x in {-.6,-.4,...,4.6}
+		\draw[gray] (\x,-1.2)--++(.2,.2);
+	\draw[thick] (-.6,-1)--(4.6,-1);
+\end{tikzpicture}
+\begin{choices}
+	\item 桌面所受乙的压力由开始时的 \(\dfrac{1}{2}mg\) 逐渐增大到 \(\dfrac{3}{2}mg\)
+	\item 甲、乙间的弹力由开始时的最大值 \(2mg\) 逐渐减小到 \(mg\)
+	\item 拉力 \(F\) 由开始时的最大值 \(\sqrt{3}mg\) 逐渐减小到 \(mg\)
+	\item 桌面对乙的摩擦力由开始时的最大值 \(\sqrt{3}mg\) 逐渐减小到零
+\end{choices}
+\begin{answer}
+    BD\qquad 提示：甲离开桌面时，先对甲乙整体受力分析；再对甲受力分析
+\end{answer}

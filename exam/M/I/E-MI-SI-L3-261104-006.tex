@@ -1,0 +1,48 @@
+\icode{E-MI-SI-L3-261104-006}
+如图甲所示，\(A\)、\(B\)两小球通过两根轻绳连接并悬挂于\(O\)	点，已知两轻绳\(OA\)和\(OB\)的长度之比为\(\sqrt{3}:1\)，\(A\)、\(B\)两小球质量分别为\(2m\)和\(m\)，现对\(A\)、\(B\)两小球分别施加水平向右的力\(F_1\)和水平向左的力\(F_2\)，两球恰好处于图乙的位置静止，此时\(B\)球恰好在悬点\(O\)的正下方，轻绳\(OA\)与竖直方向成\qty{30}{\degree}角，则\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}
+		\foreach \x in {-.6,-.4,...,.4}
+			\draw[gray] (\x,.2)--++(.2,-.2);
+		\draw[thick] (-.6,0)--(.6,0);
+		\node at(-.2,-.2){\(O\)};
+		\coordinate (A) at(-90:{sqrt(3)});
+		\coordinate (B) at(-90:{1+sqrt(3)});
+		\draw[magenta] (0,0)--(B);
+		\draw[->] (A)--++(1,0)node[right]{\(F_1\)};
+		\draw[->] (B)--++(-.5,0)node[left]{\(F_2\)};
+		\shade[ball color=gray] (A) circle(.1);
+		\shade[ball color=gray] (B) circle(.1);
+		\node at(A)[left]{\(A\)};
+		\node at(B)[right]{\(B\)};
+		\node at(0,-3)[below]{ 甲};
+	\end{scope}
+	\begin{scope}[xshift=3cm]
+		\foreach \x in {-.6,-.4,...,.4}
+			\draw[gray] (\x,.2)--++(.2,-.2);
+		\draw[thick] (-.6,0)--(.6,0);
+		\node at(-.2,-.2){\(O\)};
+		\coordinate (A) at(-60:{sqrt(3)});
+		\draw[dashed,cyan] (0,0)--(0,-2.5);
+		\draw (-60:.3) arc(-60:-90:.3);
+		\draw[magenta] (0,0)--(A)--++(-150:1);
+		\draw[->] (A)--++(1,0)node[right]{\(F_1\)};
+		\draw[->] (-90:2)--++(-.5,0)node[left]{\(F_2\)};
+		\shade[ball color=gray] (A) circle(.1);
+		\shade[ball color=gray] (-90:2) circle(.1);
+		\node at(.15,-.5){\(\theta\)};
+		\node at(0,-2)[below]{\(B\)};
+		\node at(A)[below]{\(A\)};
+		\node at(0,-3)[below]{ 乙};
+	\end{scope}	
+\end{tikzpicture}
+\begin{choices}
+	\item\(F_1 = F_2\)
+	\item\(F_1 = \sqrt{3}F_2\)
+	\item\(F_1 = 2F_2\)
+	\item\(F_1 = 3F_2\)
+\end{choices}	
+\begin{answer}
+    C\qquad 提示：
+\end{answer}

@@ -1,0 +1,38 @@
+\icode{E-MI-MU-L4-261030-001}
+（多选）
+粗糙的半圆柱体固定在水平地面上，截面如图所示。质量为\(m\)的小物块在拉力\(F\)的作用下，从半圆柱体的底端缓慢向上滑动。已知拉力\(F\)的方向始终与小物块的运动方向相同（与圆弧相切），小物块与半圆柱体表面的动摩擦因数为\(\frac{\sqrt{3}}{3}\)，重力加速度大小为\(g\)。若小物块和圆心的连线与水平方向的夹角为\(\theta\)从0增大到\qty{90}{\degree}的过程中\paren[]
+
+
+\begin{choices}
+	\item 拉力\(F\)一直增大
+	\item 拉力\(F\)先增大后减小
+	\item\(\theta =\)\,\qty{30}{\degree}时，拉力\(F\)最大
+	\item 拉力\(F\)最大为\(mg\)
+\end{choices}
+\begin{answer}
+    BC\qquad 提示：将支持力\(N\)与滑动摩擦力\(f\)合成全反力，\(F_{\text{全反力}}\) 与外力\(F\)的夹角为\qty{120}{\degree}不变，如下图所示
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\foreach \x in {-2.4,-2.2,...,2.2}
+		\draw[gray!50] (\x,-.2)--++(.2,.2);
+	\draw[thick,gray] (-2.4,0)--(2.4,0);
+	\draw[gray] (-2,0) arc(180:0:2) (-.3,0) arc(180:150:.3);
+	\draw[dashed,cyan!50] (0,0)--(150:2);
+    \draw[rotate=150,fill=orange!30] (2,-.1) rectangle(2.2,.1);
+	\draw[->,magenta] (150:2.1)coordinate(o)--++(60:1)node[above]{\(F\)};
+    \draw[->] (o)--++(0,-1.5)node[below]{\(mg\)};
+    \draw[->,teal] (o)--++(-120:.8)node[below]{\(f\)};
+    \draw[->,orange] (o)--++(150:{.8*sqrt(3)})node[above]{\(N\)};
+    \draw[->,green] (o)--++(-1.6,0)node[left]{\(F_{\text{全反力}}\)};
+    \draw[dashed,cyan] ($(o)+(150:{.8*sqrt(3)})$)--($(o)+(-1.6,0)$)--($(o)+(-120:.8)$);
+	\node at(-.6,.15){\(\theta\)};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+    \draw (0,0) circle(1.2);
+    \draw[->] (60:1.2)--node[right]{\(mg\)}(-60:1.2);
+    \draw[->,green] (-60:1.2)--node[below]{\(F_{\text{全反力}}\)}(-120:1.2);
+    \draw[->,magenta] (-120:1.2)--node[left]{\(F\)}(60:1.2);
+    \draw[dashed,green] (-60:1.2)--(-90:1.2);
+    \draw[dashed,magenta] (-90:1.2)--(60:1.2);
+\end{tikzpicture}
+\end{answer}

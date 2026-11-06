@@ -1,0 +1,41 @@
+\icode[magenta]{E-MI-SI-L4-261028-001}
+如图，三根不可伸长的轻质细绳\(OA\)、\(OB\)、\(OC\)交于点\(O\)，\(OB\)绳水平，有一灯笼静止悬挂于\(OC\)绳下端。现保持\(O\)点位置不变，对灯笼施加一个始终垂直于\(OC\)绳的拉力\(F\)，使灯笼沿顺时针缓慢移动直至\(OC\)绳水平，绳中拉力分别记为\(T_{OA}\)、\(T_{OB}\)、\(T_{OC}\)，则在此过程中\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[magenta] (0,0)coordinate(O)node[below right,black]{\(O\)}--(1.2,0)coordinate(B)node[below left,black]{\(B\)} (O)--(-2,1.2)coordinate(A)node[below,black]{\(A\)} (O)--(0,-1.5)coordinate(C)node[above right,black]{\(C\)};
+	\draw[->] ($(C)+(0,-.2)$)coordinate(D)--++(-.7,0)node[left]{\(F\)};
+	\draw[fill=white] (D) ellipse(.26 and .2) (D) ellipse(.08 and .2) (D) ellipse(.18 and .2);
+	\begin{scope}[rotate=-45]
+		\draw[dashed,magenta] (0,0)--(0,-1.5);
+		\draw[->,dashed] (0,-1.7)--++(-.7,0)node[left,rotate=-45]{\(F\)};
+		\draw[fill=white,draw=gray] (0,-1.7) ellipse(.26 and .2) (0,-1.7) ellipse(.08 and .2) (0,-1.7) ellipse(.18 and .2);	
+	\end{scope}
+	\foreach \x in {-2.6,-2.4,...,1.2}
+		\draw[gray] (\x,1.4)--++(.2,-.2);
+	\foreach \y in {1.2,1,...,-1}
+		\draw[gray] (1.2,\y)--++(.2,-.2);
+	\draw[thick] (-2.6,1.2)--(1.2,1.2)--(1.2,-1.2);
+\end{tikzpicture}
+\begin{choices}
+	\item\(F\)一直减小
+	\item\(T_{OC}\)一直增大
+	\item\(T_{OA}\)先减小后增大
+	\item\(T_{OB}\)先增大后减小
+\end{choices}
+\begin{answer}
+    D\qquad 提示：如图所示，将\(O\)点的受力分析和灯笼的受力分析结合在一起，可得\(T_{OA}\)一直减小到0，\(T_{OB}\)先增大后减小到0，\(T_{OC}\)一直减小到0，\(F\)一直增大到灯笼的重力\(G\)
+
+	\begin{tikzpicture}[>=stealth,font=\scriptsize]
+		\draw[dashed,gray] (150:4)--(0,2)--({2*sqrt(3)},0);
+		\draw[->] (0,0)--(0,-2)node[below]{\(T_{OC}\)};
+		\draw[gray] (0,1) circle(1);
+		\draw[->,magenta] (0,0)--(150:4)node[left]{\(T_{OA}\)};
+		\draw[->,cyan] (0,0)--({2*sqrt(3)},0)node[right]{\(T_{OB}\)};
+		\draw[->,dashed] (0,0)--(0,2);
+		\draw[->,teal] (0,-2)--(-1,-1);
+		\draw[->,gray] (-1,-1)--(0,0);
+		\draw[->,dashed] (0,0)--(1,1);
+		\draw[dashed,gray] ({1+sqrt(3)},0)--(1,1)--({-sqrt(3)},1);
+		\draw[->,dashed,teal] (1,1)--(0,2);
+	\end{tikzpicture}
+\end{answer}

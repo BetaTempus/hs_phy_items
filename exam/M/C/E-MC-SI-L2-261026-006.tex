@@ -1,0 +1,22 @@
+\icode{E-MC-SI-L2-261026-006}
+如图所示，歼-15沿曲线\(MN\)向上爬升，速度逐渐增大，图中画出表示歼-15在\(P\)点受到合力的四种方向，其中可能的是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[name path=c,dashed,cyan] (0,0)..controls(2,.3)and(2.8,1.7)..(3,2);
+	\path[name path=l] (2,0)--(2,2);
+	\path[name intersections={of=c and l,by=o}];
+	\fill (o)node[below right]{ \(P\)} circle(.04);
+	\draw[->,thin] (o)--++(160:.9)node[left]{ \ding{172}};
+	\draw[->,thin] (o)--++(70:1)node[above]{ \ding{173}};
+	\draw[->,thin] (o)--++(30:1.3)node[right]{ \ding{174}};
+	\draw[->,thin] (o)--++(-85:1.2)node[below]{ \ding{175}};
+\end{tikzpicture}
+\begin{choices}
+	\item \ding{172}
+	\item \ding{173}
+	\item \ding{174}
+	\item \ding{175}
+\end{choices}
+\begin{answer}
+	B\qquad 提示：注意战机速度增大
+\end{answer}

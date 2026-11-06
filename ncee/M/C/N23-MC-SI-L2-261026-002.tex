@@ -1,0 +1,53 @@
+\icode{N23-MC-SI-L2-261026-002}
+\nceeID[6]{2023全国乙}{6}
+	小车在水平地面上沿轨道从左向右运动，动能一直增加。如果用带箭头的线段表示小车在轨道上相应位置处所受合力，下列四幅图可能正确的是\paren[]
+
+\begin{tikzpicture}[>=stealth]
+	\begin{scope} 
+		\draw[name path=lo] (0,0)..controls(1,1)and(1.9,-1)..(2.8,0);
+		\path[name path=la] (.5,0)--++(0,1);
+		\path[name path=lb] (2,0)--++(0,-1);
+		\path [ name intersections = {of = lo and la, by = i1}];
+		\path [ name intersections = {of = lo and lb, by = i2}];
+		\fill (i1) circle(.04) (i2) circle(.04);
+		\draw[->,magenta] (i1)--++(40:.6);
+		\draw[->,magenta] (i2)--++(65:.6);
+		\node at(1,-.5){ A.};
+	\end{scope}
+	\begin{scope}[xshift=3.5cm]
+		\draw[name path=lo] (0,0)..controls(1,1)and(1.9,-1)..(2.8,0);
+		\path[name path=la] (.5,0)--++(0,1);
+		\path[name path=lb] (2,0)--++(0,-1);
+		\path [ name intersections = {of = lo and la, by = i1}];
+		\path [ name intersections = {of = lo and lb, by = i2}];
+		\fill (i1) circle(.04) (i2) circle(.04);
+		\draw[->,magenta] (i1)--++(20:.6);
+		\draw[->,magenta] (i2)--++(-10:.6);
+		\node at(1,-.5){ B.};
+	\end{scope}
+	\begin{scope}[xshift=7cm]
+		\draw[name path=lo] (0,0)..controls(1,1)and(1.9,-1)..(2.8,0);
+		\path[name path=la] (.5,0)--++(0,1);
+		\path[name path=lb] (2,0)--++(0,-1);
+		\path [ name intersections = {of = lo and la, by = i1}];
+		\path [ name intersections = {of = lo and lb, by = i2}];
+		\fill (i1) circle(.04) (i2) circle(.04);
+		\draw[->,magenta] (i1)--++(-110:.6);
+		\draw[->,magenta] (i2)--++(85:.6);
+		\node at(1,-.5){ C.};
+	\end{scope}
+	\begin{scope}[xshift=10.5cm]
+		\draw[name path=lo] (0,0)..controls(1,1)and(1.9,-1)..(2.8,0);
+		\path[name path=la] (.5,0)--++(0,1);
+		\path[name path=lb] (2,0)--++(0,-1);
+		\path [ name intersections = {of = lo and la, by = i1}];
+		\path [ name intersections = {of = lo and lb, by = i2}];
+		\fill (i1) circle(.04) (i2) circle(.04);
+		\draw[->,magenta] (i1)--++(-30:.6);
+		\draw[->,magenta] (i2)--++(30:.6);
+		\node at(1,-.5){ D.};
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+	D\qquad 提示：注意切向力，法向力
+\end{answer}

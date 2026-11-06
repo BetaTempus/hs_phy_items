@@ -1,0 +1,23 @@
+\icode{N17J-MI-SI-L2-261028-001}
+\nceeID[6]{2017天津}{8}
+如图所示，轻质不可伸长的晾衣绳两端分别固定在竖直杆\(M\)、\(N\)上的\(a\)、\(b\)两点，悬挂衣服的衣架钩是光滑的，挂于绳上处于静止状态。如果只人为改变一个条件，当衣架静止时，下列说法正确的是\paren[]
+
+\begin{tikzpicture}[scale=.9,font=\scriptsize]
+	\draw[magenta] (0,0)--(-25:1.5)coordinate(A)--++(25:3)coordinate(B) ($(A)+(0,-.1)$) arc(-90:210:.05) ($(A)+(0,-.1)$)--++(0,-.6)coordinate(D);
+	\draw[fill=orange,draw=blue] (D)--++(-160:.2)--++(-70:.1)--++(-90:.3)--++(0:{.4*cos(20)-.2*sin(20)})--++(90:.3)--++(70:.1)--(D);
+	\coordinate (C) at(B|-0,-2.5);
+	\draw[fill=orange!50] (0,-2.5) rectangle(-.1,1.5)node[right,black]{\(M\)} (C) rectangle($(C)+(.1,4)$)node[left,black]{\(N\)};
+	\fill (0,0)node[left]{\(a\)} circle(.05) (B)node[right]{\(b\)} circle(.05) ($(B)+(0,.4)$)node[right]{\(b^{\prime}\)} circle(.05);
+	\foreach \x in {-.6,-.4,...,4.4}
+		\draw[gray] (\x,-2.7)--++(.2,.2);
+	\draw[thick] (-.6,-2.5)--(4.6,-2.5);
+\end{tikzpicture}
+\begin{choices}
+	\item 绳的右端上移到\(b^{\prime}\)，绳子拉力不变
+	\item 将杆\(N\)向右移一些，绳子拉力变大
+	\item 绳的两端高度差越小，绳子拉力越小
+	\item 若换挂质量更大的衣服，则衣服架悬挂点右移
+\end{choices}
+\begin{answer}
+	A\qquad 提示：\(T = \frac{mg}{\cos\alpha}\)，当\(N\)向右移动时，\(\alpha\)增大，故\(T\)增大
+\end{answer}

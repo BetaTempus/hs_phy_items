@@ -1,0 +1,29 @@
+\icode{N19-MI-MU-L3-261102-001}
+\nceeID[6]{2019新课标\Rmnum{1}}{19}
+（多选）
+如图，一粗糙斜面固定在地面上，斜面顶端装有一光滑定滑轮。一细绳跨过滑轮，其一端悬	挂物块\(N\)，另一端与斜面上的物块\(M\)相连，系统处于静止状态,现用水平向左的拉力缓慢拉动\(N\)，直至悬挂\(N\)的细绳与竖直方向成\qty{45}{\degree}。已知\(M\)始终保持静止，则在此过程中\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=-37]
+		\draw (0,0)--(-4,0)--++(-53:2.4);
+		\draw[magenta] (-2,.2)--(-4.5,.2)--(-4.5,.1)coordinate(O)--++(-143:.1)coordinate(A);
+		\draw[fill=white] (O) circle(.1);
+		\draw[fill=orange!60] (-1.6,0) rectangle(-2,.4)node[midway,rotate=-37]{\(M\)};
+	\end{scope}
+	\fill (O) circle(.05);
+	\draw[magenta] (A)--++(-90:1.6)coordinate(B);
+	\draw[fill=blue!30] ($(B)+(-.2,0)$) rectangle($(B)+(.2,-.4)$)node[midway]{\(N\)};
+	\draw[->] ($(B)+(-.3,-.2)$)--++(-.6,0);
+	\foreach \x in {-3.8,-3.6,...,.4}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (143:4)--(O) (-3.8,0)--(.6,0);
+\end{tikzpicture}
+\begin{choices}
+	\item 水平拉力的大小可能保持不变
+	\item\(M\)所受细绳的拉力大小一定一直增加
+	\item\(M\)所受斜面的摩擦力大小一定一直增加
+	\item\(M\)所受斜面的摩擦力大小可能先减小后增加
+\end{choices}
+\begin{answer}
+	BD\qquad 提示：初始时，\(M\)的摩擦力可能沿斜面向上，也可能沿斜面向下，也可能没有
+\end{answer}

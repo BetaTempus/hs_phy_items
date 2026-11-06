@@ -1,0 +1,21 @@
+\icode{E-MI-FI-L3-261030-001}
+如图所示，质量均为\(m\)的小球\(A\)、\(B\)用劲度系数为\(k_1\)的轻弹簧相连，\(B\)球用长为\(L\)的轻质细绳悬于\(O\)点，\(A\)球固定在\(O\)点正下方\(L\)处，当小球\(B\)平衡时，绳子所受的拉力为\(T_1\)，弹簧的弹力为\(F_1\)。现把\(A\)、\(B\)间的弹簧换成原长相同但劲度系数为\(k_2\)（\(k_2 > k_1\)）的另一轻弹簧，在其他条件不变的情况下仍使系统平衡，此时绳子所受的拉力为\(T_2\)，弹簧的弹力为\(F_2\)。则\(F_1\)\lunl{4em}\(F_2\)、\(T_1\)\lunl{4em}\(T_2\)(均选填“\(>\)”“\(=\)”或“\(<\)”)。
+	
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[magenta] (0,0)--(-40:3)--++(-155:.2)coordinate(A) (0,-3)--++(25:.3)coordinate(B);
+	\draw[thick,decoration={aspect=.6,segment length=3,amplitude=.8mm,coil},decorate] (B)--++(25:{6*sin(25)-.5});
+	\draw[dashed,cyan] (0,0)--(0,-3);
+	\draw[fill=orange!60] (0,-3.1)--(-.1,-3.3)--(.1,-3.3)--(0,-3.1);
+	\foreach \r in {-40,-90}
+		\shade[ball color=gray] (\r:3) circle(.15);
+	\foreach \x in {-1,-.8,...,.8}{
+		\draw[gray] (\x,-3.5)--++(.2,.2);
+		\draw[gray] (\x,.2)--++(.2,-.2);}
+	\draw[thick] (-1,0)--(1,0) (-1,-3.3)--(1,-3.3);
+	\node at(-.2,-.2){\(O\)};
+	\node at(-.15,-3)[left]{\(A\)};
+	\node at ($(A)+(.2,0)$)[right]{\(B\)};
+\end{tikzpicture}
+\begin{answer}
+	\( <\) \( =\)\qquad 提示：对\(B\)受力分析，构建力的矢量三角形，找相似
+\end{answer}

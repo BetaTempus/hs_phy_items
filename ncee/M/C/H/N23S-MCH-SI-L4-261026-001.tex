@@ -1,0 +1,36 @@
+\icode[magenta]{N23S-MCH-SI-L4-261026-001}
+\nceeID[4]{2023江苏}{10}
+达·芬奇的手稿中描述了这样一个实验：一个罐子在空中沿水平直线向右做匀加速运动，沿途连续漏出沙子。若不计空气阻力，则下列图中能反映空中沙子排列的几何图形是\paren[]
+	
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[font=\scriptsize]
+		\begin{scope}[scale=.8]
+			\draw (-2,2) rectangle(2,-3);
+			\node at(0,1.5) { 运动方向\(\longrightarrow\)};
+			\draw[magenta] (0,1)--(0,-2.5);
+			\node at(0,-3) [below]{\normalsize A};
+		\end{scope}
+		\begin{scope}[scale=.8,xshift=5cm]
+			\draw (-2,2) rectangle(2,-3);
+			\node at(0,1.5) { 运动方向\(\longrightarrow\)};
+			\draw[magenta] (-1.5,1) parabola bend(-1.5,1) (1.5,-2.5);
+			\node at(0,-3) [below]{\normalsize B};
+		\end{scope}
+		\begin{scope}[scale=.8,xshift=10cm]
+			\draw (-2,2) rectangle(2,-3);
+			\node at(0,1.5) { 运动方向\(\longrightarrow\)};
+			\draw[magenta] (1.5,1) parabola bend(1.5,1) (-1.5,-2.5);
+			\node at(0,-3) [below]{\normalsize C};
+		\end{scope}
+		\begin{scope}[scale=.8,xshift=15cm]
+			\draw (-2,2) rectangle(2,-3);
+			\node at(0,1.5) { 运动方向\(\longrightarrow\)};
+			\draw[magenta] (1.5,1)--(-1.5,-2.5);
+			\node at(0,-3) [below]{\normalsize D};
+		\end{scope}
+	\end{tikzpicture}
+\end{figure}
+\begin{answer}
+	C\qquad 提示：以罐子为参考系，它是一个非惯性系
+\end{answer}

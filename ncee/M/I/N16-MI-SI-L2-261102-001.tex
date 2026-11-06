@@ -1,0 +1,22 @@
+\icode{N16-MI-SI-L2-261102-001}
+\nceeID[unkown]{2016全国\Rmnum{2}}{unkown}
+质量为\(m\)的物体用轻绳\(AB\)悬挂于天花板上。用水平向左的力\(F\)缓慢拉动绳的中点\(O\)，如图所示。用\(T\)表示绳\(OA\)段拉力的大小，在\(O\)点向左移动的过程中\paren[]
+	
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[magenta] (0,0)--++(-120:1.5)coordinate(A)--++(0,-1.2)coordinate(B);
+	\draw[->] (A)--++(-.8,0)node[left]{\(F\)};
+	\draw[fill=orange!50] ($(B)+(-.2,0)$) rectangle($(B)+(.2,-.4)$)node[midway]{\(B\)};
+	\fill (A)node[right]{\(O\)} circle(.05) (0,0)node[below]{\(A\)} circle(.05);
+	\foreach \x in {-.6,-.4,...,.6}
+		\draw[gray] (\x,.2)--++(.2,-.2);
+	\draw[thick] (-.6,0)--(.6,0);
+\end{tikzpicture}
+\begin{choices}
+	\item\(F\)逐渐变大，\(T\)逐渐变大
+	\item\(F\)逐渐变大，\(T\)逐渐变小
+	\item\(F\)逐渐变小，\(T\)逐渐变大
+	\item\(F\)逐渐变小，\(T\)逐渐变小
+\end{choices}
+\begin{answer}
+	A\qquad 提示：对节点受力分析，并构建力的矢量三角形
+\end{answer}

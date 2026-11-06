@@ -1,0 +1,63 @@
+\icode[magenta]{E-MI-MU-L4-261027-001}
+（多选）
+如图所示，轻杆的\(A\)端用光滑铰链固定在竖直墙面上，另一端点\(O\)固定一个小球\(a\)，并用轻绳\(OB\)拴住小球（\(B\)点在\(A\)点正上方）。在小球\(a\)的右侧同一水平线上放一小球\(b\)，且小球\(a\)、\(b\)之间存在大小与距离的平方成反比的引力。现将小球\(b\)从无穷远处沿水平方向缓慢朝小球\(a\)移动，小球\(a\)始终保持静止状态。对于此过程，下列说法正确的是\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[very thick] (0,0)--(40:2)coordinate(O);
+	\draw[thin,magenta] (O)--(0,3);
+	\draw[fill=white] (0,.12) arc(90:-90:.12)--(0,.12);
+	\fill (0.02,0) circle(.04);
+	\draw[dashed](O)node[below]{\(a\)}--++(3,0)coordinate(C)node[below]{\(b\)};
+	\shade[ball color=gray] (O) circle(.1);
+	\shade[ball color=gray] (C) circle(.1);
+	\foreach \y in {-.6,-.4,...,3.4}
+		\draw[gray] (-.2,\y)--++(.2,.2);
+	\draw[thick] (0,-.6)--(0,3.5);
+	\node at(.2,-.3){\(A\)};
+	\node at(.2,3.1){\(O\)};
+	\node at($(O)+(0,.3)$){\(B\)};
+\end{tikzpicture}
+\begin{choices}
+	\item 细绳\(OB\)的拉力先变小后变大
+	\item 轻杆对小球\(a\)的弹力方向一直沿轻杆向上
+	\item 轻杆对小球\(a\)的弹力可能先变小后变大
+	\item 细绳和轻杆对小球\(a\)的合力一直变大
+\end{choices}
+\begin{answer}
+	CD\qquad 提示：注意到\(a\)球受到重力\(G\)、绳的张力\(T\)、杆的弹力\(N\)、\(b\)球对它的引力\(F\)，这四力方向均不变，可以构成首尾相连的四边形，如下图所示
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[very thick,gray!50] (0,0)--(40:2)coordinate(O);
+	\draw[thin,magenta!50] (O)--(0,3);
+	\draw[fill=white] (0,.12) arc(90:-90:.12)--(0,.12);
+	\fill[gray] (0.02,0) circle(.04);
+	\draw[dashed,gray!50](O)--++(3,0)coordinate(C);
+	\shade[ball color=gray!50] (O) circle(.1);
+	\shade[ball color=gray!50] (C) circle(.1);
+	\foreach \y in {-.6,-.4,...,3.4}
+		\draw[gray!50] (-.2,\y)--++(.2,.2);
+	\draw[thick,gray] (0,-.6)--(0,3.5);
+	\draw[->] (O)--++(0,-2)coordinate(G);
+	\draw[->,magenta] (G)--++($.9*($(0,3)-(40:2)$)$)coordinate(T);
+	\draw[->,teal] (T)--++(.82,0)coordinate(F);
+	\draw[->,orange] (F)--(40:2);
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[very thick,gray!50] (0,0)--(40:2)coordinate(O);
+	\draw[thin,magenta!50] (O)--(0,3);
+	\draw[fill=white] (0,.12) arc(90:-90:.12)--(0,.12);
+	\fill[gray] (0.02,0) circle(.04);
+	\draw[dashed,gray!50](O)--++(3,0)coordinate(C);
+	\shade[ball color=gray!50] (O) circle(.1);
+	\shade[ball color=gray!50] (C) circle(.1);
+	\foreach \y in {-.6,-.4,...,3.4}
+		\draw[gray!50] (-.2,\y)--++(.2,.2);
+	\draw[thick,gray] (0,-.6)--(0,3.5);
+	\draw[->] (O)--++(0,-2)coordinate(G);
+	\draw[->,magenta] (G)--++($1.5*($(0,3)-(40:2)$)$)coordinate(T);
+	\draw[->,teal] (T)--++(3.01,0)coordinate(F);
+	\draw[->,orange] (F)--(40:2);
+\end{tikzpicture}
+
+将重力\(G\)、引力\(F\)沿杆、沿绳分解，也可以得到结果
+\end{answer}

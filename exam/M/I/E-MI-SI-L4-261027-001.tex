@@ -1,0 +1,78 @@
+\icode[magenta]{E-MI-SI-L4-261027-001}
+如图所示，质量相同的小球\(A\)、\(B\)，\(A\)用长度为\(L\)的两根轻质细线分别系在天花板上的\(C\)点和\(B\)球上，\(B\)球穿在光滑的竖直杆上，光滑杆垂直固定在天花板上的\(D\)点，\(CD\)间的距离为\(L\)。现用一竖直向上的力\(F\)使\(B\)球缓慢向上运动到\(D\)点，\(A\)、\(B\)、\(C\)、\(D\)在同一竖直面内，则\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \x in {-.4,-.2,...,2.2}
+		\draw[gray] (\x,.2)--++(.2,-.2);
+	\draw[thick] (-.4,0)--(2.4,0);
+	\draw[magenta] (0,0)--(-68.09:2)coordinate(A)--++(-51.18:2)coordinate(B);
+	\draw[dashed,cyan] (0,0)--(0,-1.5) (A)--++(0,-1.5);
+	\draw (0,-.3) arc(-90:-68.09:.3) ($(A)+(0,-.3)$) arc(-90:-51.18:.3);
+	\draw[very thick] (2,-4)--(2,0);
+	\shade[ball color=gray] (A) circle(.1);
+	\shade[ball color=gray] (B) circle(.1);
+	\node at(-.2,-.2){\(C\)};
+	\node at(1.8,-.2){\(D\)};
+	\node at($(A)-(.3,.2)$){\(A\)};
+	\node at($(B)-(.3,.2)$){\(B\)};
+\end{tikzpicture}
+\begin{choices}
+	\item\(AC\)间绳的张力单调减小
+	\item\(AB\)间绳的张力先增大再减小
+	\item 杆对\(B\)球的支持力单调增加
+	\item\(F\)单调减小
+\end{choices}
+\begin{answer}
+    A\qquad 提示：在\(B\)上升的过程中，\(\alpha\)先减小到0又增大；\(\beta\)先增大至\qty{90}{\degree}又接着增大。对\(AB\)整体受力分析可知：\(N = T_{AC}\cdot\sin\alpha\)；对\(B\)受力分析可知\(F = mg - T_{AB}\cdot\cos\beta\)
+
+	\begin{tikzpicture}[font=\scriptsize]
+	\foreach \x in {-.4,-.2,...,2.2}
+		\draw[gray] (\x,.2)--++(.2,-.2);
+	\draw[thick] (-.4,0)--(2.4,0);
+	\draw[magenta] (0,0)--(-68.09:2)coordinate(A)--++(-51.18:2)coordinate(B);
+	\draw[dashed,cyan] (0,0)--(0,-1.5) (A)--++(0,-1.5);
+	\draw (0,-.3) arc(-90:-68.09:.3) ($(A)+(0,-.3)$) arc(-90:-51.18:.3);
+	\draw[very thick] (2,-4)--(2,0);
+	\shade[ball color=gray] (A) circle(.1);
+	\shade[ball color=gray] (B) circle(.1);
+	\node at(.15,-.7){\(\alpha\)};
+	\node at ($(A)+(.15,-.6)$){\(\beta\)};
+	\node at(-.2,-.2){\(C\)};
+	\node at(1.8,-.2){\(D\)};
+	\node at($(A)-(.3,.2)$){\(A\)};
+	\node at($(B)-(.3,.2)$){\(B\)};
+	\end{tikzpicture}
+	\begin{tikzpicture}[>=stealth,font=\scriptsize]
+		\draw[->] (0,0)--(0,-1.5)node[right]{\(2mg\)};
+		\draw[->,magenta] (0,0)--(120:1.5)node[left,black]{\(T_{AC}\)};
+		\draw[->,orange] (0,0)--(.8,0)node[right,black]{\(N\)};
+		\draw[->,teal] (0,0)--(0,1)node[right,black]{\(F\)};
+		\draw (0,.3) arc(90:120:.3);
+		\node at(-.15,.6){\(\alpha\)};
+		\node at(0,-2){对\(AB\)整体受力分析};
+	\end{tikzpicture}
+	\begin{tikzpicture}[>=stealth,font=\scriptsize]
+		\draw[->] (0,0)--(0,-1.5)node[left]{\(2mg\)};
+		\draw[->,teal] (0,-1.5)--++(-50:1.8)coordinate(a);\draw[->,magenta] (a)--(0,0);
+		\draw[->,cyan]  (0,-1.5)--++(-30:.5)coordinate(b);
+		\draw[->,orange] (b)--(0,0);
+		\node at(.4,-3.5){对\(A\) 应用矢量三角};
+	\end{tikzpicture}
+	\begin{tikzpicture}[>=stealth,font=\scriptsize]
+		\draw[->] (0,0)--(0,-1.5)node[left]{\(2mg\)};
+		\draw[->,teal] (0,-1.5)--++(20:.4)coordinate(a);
+		\draw[->,magenta] (a)--(0,0);
+		\draw[->,cyan] (0,-1.5)--++(40:.8)coordinate(b);
+		\draw[->,orange] (b)--(0,0);
+		\node at(.2,-2.5){对\(A\)用矢量三角形};
+	\end{tikzpicture}
+	\begin{tikzpicture}[>=stealth,font=\scriptsize]
+		\draw[->] (0,0)--(0,-1.5)node[right]{\(mg\)};
+		\draw[->,magenta] (0,0)--(150:1.2)node[left,black]{\(T_{AB}\)};
+		\draw[->,orange] (0,0)--(.8,0)node[right,black]{\(N\)};
+		\draw[->,teal] (0,0)--(0,1)node[right,black]{\(F\)};
+		\draw (0,.3) arc(90:150:.3);
+		\node at(-.36,.6){\(\beta\)};
+		\node at(0,-2){对\(B\)整体受力分析};
+	\end{tikzpicture}
+\end{answer}

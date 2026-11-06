@@ -1,0 +1,24 @@
+\icode{E-MI-SI-L3-261104-005}
+如图所示，三个质量相等的小球由轻绳悬持起来，其中轻绳\(CD\)水平，求\(\theta_1\)、\(\theta_2\)与\(\theta_3\)的关系。
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[magenta] (0,0)--(-60:1)coordinate(A)--++(-40.89:1)coordinate(B)--++(-30:1)coordinate(C)--++(0:1)coordinate(D)node[below left,black]{\(D\)};
+	\draw[magenta] (A)--++(-90:1)coordinate(E) (B)--++(-90:1)coordinate(F) (C)--++(-90:1)coordinate(G);
+	\draw (0,-.3) arc(-90:-60:.3) ($(A)+(0,-.2)$) arc(-90:-40.89:.2) ($(B)+(0,-.2)$) arc(-90:-30:.2) ($(C)+(.15,0)$)--++(-90:.15)--++(180:.15);
+	\draw[dashed,cyan] (0,0)node[below left]{\(O\)}--(0,-1.5);
+	\foreach \X in{A,B,C}
+		\fill (\X)node[above right]{\(\X\)} circle(.05);
+	\foreach \x in {E,F,G}
+		\shade[ball color=gray] (\x) circle(.1);
+	\foreach \x in {-.6,-.4,...,.4}
+		\draw[gray] (\x,.2)--++(.2,-.2);
+	\foreach \y in {-2.8,-2.6,...,-1.6}
+		\draw[gray] ({1.5+sin(49.11)+sin(60)},\y)--++(.2,.2);
+	\draw[thick] (-.6,0)--(.6,0) ({1.5+sin(49.11)+sin(60)},-2.8)--({1.5+sin(49.11)+sin(60)},-1.4);
+	\node at(.2,-.6){\(\theta_1\)};
+	\node at(.75,-1.3){\(\theta_2\)};
+	\node at(1.5,-1.9){\(\theta_3\)};
+\end{tikzpicture}
+\begin{answer}
+    \(\tan\theta_1:\tan\theta_2:\tan\theta_3 = 2:3:6\)
+\end{answer}

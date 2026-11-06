@@ -1,0 +1,93 @@
+\section{运动学C\quad\tiny 11.2-11.8}
+\lsn{1}根据\(v - t\)图像得出匀变速直线运动的公式（至少7个）：
+
+\begin{tikzpicture}[>=stealth,font=\footnotesize]
+    \draw[|<->|,thin,gray] (3.25,2.5)--node[fill=white]{ \(\Delta v\)}(3.25,1);
+    \filldraw[pattern=north east lines,draw=white,pattern color=red!30] (0,1)--(3,2.5)--(3,1)--(0,1);
+    \filldraw[pattern=north west lines,draw=white,pattern color=red!30] (0,0) rectangle(3,1);
+    \draw[->,blue] (0,0)--(5,0)node[below]{ \(t\)};
+    \draw[->,blue] (0,0)node[below left]{\(O\)}--(0,4)node[right]{ \(v\)};
+    \draw[magenta] (0,1)--(4,3)node[below right,black]{ \(a\)};
+    \draw[dashed,cyan] (0,2.5)--(3,2.5)--(3,0) (0,1)--(3,1) (0,1.75)--(1.5,1.75)--(1.5,0);
+    \node[blue] at(0,1)[left]{ \(v_0\)};
+    \node[blue] at(0,2.5)[left]{ \(v_t\)};
+    \node[blue] at(3,0)[below]{ \(t\)};
+    \node[blue] at(0,1.75)[left]{ \(\overline{v}\)};
+    \node[blue] at(1.5,0)[below]{\(\sfrac{t}{2}\)};
+    \draw[|<->|,gray,thin] (0,-.8)--node[fill=white]{ \(\Delta t\)}(3,-.8);
+  \end{tikzpicture}
+\vspace*{2cm}
+
+
+
+\lsn{2}表示出下列图像中运动的初速度\(v_0\)与加速度\(a\)，并给出过程
+
+\begin{tikzpicture}[>=stealth,font=\footnotesize]
+  \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)};
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(\overline{v}\)};
+  \draw[magenta] (0,.8)node[left,blue]{\(b\)}--(3,2.5)node[below,blue]{\(k\)};
+  \begin{scope}[xshift=5cm]
+    \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(\frac{1}{t}\)};
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(\frac{x}{t^2}\)};
+  \draw[magenta] (0,.8)node[left,blue]{\(b\)}--(3,2.5)node[below,blue]{\(k\)};
+  \end{scope}
+  \begin{scope}[xshift=10cm]
+    \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(x\)};
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(v^2\)};
+  \draw[magenta] (0,.8)node[left,blue]{\(b\)}--(3,2.5)node[below,blue]{\(k\)};
+  \end{scope}
+\end{tikzpicture}
+
+\vspace*{3cm}
+\lsn{3}\(A\)、\(B\)两辆车（可视为质点）在一条直线上同向运动，\(A\)在\(B\)的正前方\(x_0\)处，它们的\(v - t\)图像如图所示，分析下列情况\(A\)、\(B\)是否相遇，相遇几次
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+  \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)};
+  \filldraw[pattern=north east lines,draw=white,pattern color=red!30] (0,.5)--(1.5,1.5)--(0,2);
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(v\)};
+  \draw[magenta] (0,.5)--(3,2.5)node[right]{\(A\)};
+  \draw[teal] (0,2)--(3,1)node[right]{\(B\)};
+  \node at(.45,1.3){\(\Delta x\)};
+\end{tikzpicture}
+\begin{itemize}
+  \item \(x_0 > \Delta x\)：
+  \item \(x_0 = \Delta x\)：
+  \item \(x_0 < \Delta x\)：
+\end{itemize}
+
+\lsn{4}某同学在实验中得到如下图所示的纸带，其中两点间有4个点未画出，打点计时器频率为\qty{50}{Hz}，计算并填空（保留两位有效数字）
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\coordinate (o) at(0,0);
+	\draw ($(o)+(-.3,.5)$)--++(10.2,0) ($(o)+(-.3,-.5)$)--++(10.2,0)coordinate(a) ($(o)+(-.3,.5)$)--++(-.1,-.1)--++(.2,-.7)--++(-.1,-.2) (a)--++(.1,.1)--++(-.2,.7)--++(.1,.2);
+	\node at($(a)+(-.7,-.2)$){单位\qty{}{cm}};
+	
+	\foreach \x/\y/\n in {0/.6/2.19,.6/1.6/2.76,1.6/3/3.35,3/4.8/3.93,4.8/7/4.58,7/9.6/5.20}
+	  \draw[<->,thin] (\x,.1)--node[fill=white]{\tiny\(\n\)}(\y,.1);
+  \foreach \x/\n in {0/0,.6/1,1.6/2,3/3,4.8/4,7/5,9.6/6}{
+		\coordinate (\n) at(\x,0);
+		\draw[gray] (\x,.05)--++(0,.15);
+		\fill (\n)node[below]{\(\n\)} circle(.03);}
+\end{tikzpicture}%%始.6,差.4
+
+
+\vspace*{.5cm}
+\(v_2 =\)\lunl{3cm}\qquad \(v_5 =\)\lunl{3cm}
+
+\vspace*{.5cm}
+\(a =\)\lunl{3cm}\qquad \(v_6 =\)\lunl{3cm}
+
+\lsn{5}\input{../exam/M/K/E-MK-SI-L2-260929-003.tex}
+
+\lsn{6}\input{../ncee/M/K/N16H-MK-SI-L3-261001-001.tex}
+
+\lsn{7}\input{../exam/M/K/E-MK-SI-L2-260929-002.tex}
+
+\lsn{8}\input{../exam/M/K/E-MK-MU-L2-260627-001.tex}
+
+\lsn{9}\input{../exam/M/K/E-MK-SI-L2-260929-001.tex}
+
+\lsn{10}\input{../exam/M/K/E-MK-CA-L3-260929-003.tex}
+\vspace*{3cm}
+
+\lsn{11}\input{../ncee/M/K/N13-MK-CA-L3-260928-002.tex}

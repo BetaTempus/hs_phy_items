@@ -1,0 +1,34 @@
+\icode{E-MC-SI-L3-261026-002}
+一质量为\(m\)的物体在水平面上运动，它的两个正交分速度\(v_x\)、\(v_y\)随时间变化的图线分别如图甲、乙所示，由图可知\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{ \(O\)}--(3.5,0)node[below]{ \(t\)/\qty{}{s}};
+	\draw[->,blue] (0,0)--(0,2.5)node[right]{ \(v_x\)/(\qty{}{m\cdot s^{-1}})};
+	\foreach \x/\n in {.5/1,1/2,1.5/3,2/4,2.5/5,3/6}
+		\draw[blue] (\x,.1)--(\x,0)node[below]{ \(\n\)};
+	\foreach \y/\n in {.5/1,1/2,1.5/3,2/4}
+		\draw[blue] (.1,\y)--(0,\y)node[left]{ \(\n\)};
+	\draw[dashed,cyan] (0,2)--(2,2)--(2,0);
+	\draw[magenta] (0,0)--(2,2)--(3,0);
+	\node at(1.75,-.7){ 图甲};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{ \(O\)}--(3.5,0)node[below]{ \(t\)/\qty{}{s}};
+	\draw[->,blue] (0,0)--(0,2.5)node[right]{ \(v_y\)/(\qty{}{m\cdot s^{-1}})};
+	\foreach \x/\n in {.5/1,1/2,1.5/3,2/4,2.5/5,3/6}
+		\draw[blue] (\x,.05)--(\x,0)node[below]{ \(\n\)};
+	\foreach \y/\n in {.5/1,1/2,1.5/3,2/4}
+		\draw[blue] (.05,\y)--(0,\y)node[left]{ \(\n\)};
+	\draw[dashed,cyan] (2,1)--(2,0);
+	\draw[magenta] (0,1)--(2,1)--(3,0);
+	\node at(1.75,-.7){ 图乙};
+\end{tikzpicture}
+\begin{choices}
+	\item 从开始至\qty{6}{s}末一直做直线运动
+	\item 从开始至\qty{6}{s}末一直做曲线运动
+	\item \qty{4}{s}末物体的速度大小为\(2\sqrt{5}\) \qty{}{m/s}
+	\item 最初\qty{4}{s}的位移为\qty{16}{m}
+\end{choices}
+\begin{answer}
+	C\qquad 提示：容易误选B，\(4\sim\)\qty{6}{s}是匀减速直线运动
+\end{answer}

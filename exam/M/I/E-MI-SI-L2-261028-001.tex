@@ -1,0 +1,36 @@
+\icode{E-MI-SI-L2-261028-001}
+架在\(A\)、\(B\)两根电线杆之间的一定质量的均匀电线在夏、冬两季由于热胀冷缩的效应，电线呈现如图所示的两种形状。则电线对线杆的拉力\paren[]
+
+\begin{tikzpicture}[scale=.8,font=\scriptsize]
+	\begin{scope}
+		\coordinate (A) at(-2,{.2*cosh(2)});
+		\draw[domain=-2:2,smooth,magenta] plot(\x,{.24*cosh(\x)});
+		\coordinate (B) at($(A)+(0,.3)$);
+		\coordinate (C) at($(A)+(-.1,-2)$);
+		\draw[fill=orange!50] (B)node[above]{\(A\)} rectangle(C) ($(B)+(4,0)$)node[above]{\(B\)} rectangle($(C)+(4.2,0)$);
+		\foreach \x in {-2.4,-2.2,...,2.2}
+			\draw[gray] (\x,{.2*cosh(2)-2.2})--++(.2,.2);
+		\draw[thick] (-2.4,{.2*cosh(2)-2})--(2.4,{.2*cosh(2)-2});
+		\node at(0,-.5){ 夏季};
+	\end{scope}
+	\begin{scope}[xshift=5cm]
+		\coordinate (A) at(-2,{.2*cosh(2)});
+		\draw[domain=-2:2,smooth,magenta] plot(\x,{.1*cosh(\x)+.14*cosh(2)});
+		\coordinate (B) at($(A)+(0,.3)$);
+		\coordinate (C) at($(A)+(-.1,-2)$);
+		\draw[fill=orange!50] (B)node[above]{\(A\)} rectangle(C) ($(B)+(4,0)$)node[above]{\(B\)} rectangle($(C)+(4.2,0)$);
+		\foreach \x in {-2.4,-2.2,...,2.2}
+			\draw[gray] (\x,{.2*cosh(2)-2.2})--++(.2,.2);
+		\draw[thick] (-2.4,{.2*cosh(2)-2})--(2.4,{.2*cosh(2)-2});
+		\node at(0,-.5){ 冬季};
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item 夏季时拉的力大
+	\item 冬季时的拉力大
+	\item 夏季时和冬季时的拉力一样大
+	\item 无法确定
+\end{choices}
+\begin{answer}
+	B\qquad 提示：夏季绳与杆的夹角更大，拉力\(T = \frac{mg}{2\cos\alpha}\)更小
+\end{answer}

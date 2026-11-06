@@ -1,7 +1,7 @@
 \icode[magenta]{E-MI-SI-L4-260624-001}
 如图所示，均匀\(T\)型物块\(A\)质量为\(m\)，夹在两个相同的水平垫板中，\(A\)与垫板间的动摩擦因数为\(\mu\)，垫板\(B\)、\(C\)以相同的水平速率\(v_1\)对称且匀速地向两侧退开，作用在\(A\)中央位置上的水平拉力\(F\)使\(A\)以速率\(v_2\)匀速前移，则下列说法正确的是\paren[A]
 
-\begin{tikzpicture}[font=\scriptsize,>=latex]
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
     \draw (.15,-.8)--++(60:1);
     \draw[fill=white] (-.7,.3)coordinate(a)--(.7,.3)coordinate(b)--(.7,0)coordinate(c)--(.15,0)--(.15,-.8)--(-.15,-.8)--(-.15,0)--(-.7,0)--cycle;
     \draw[fill=orange!40] (-1.4,0)coordinate(d) rectangle(-.3,-.2) (1.4,0)coordinate(e)  rectangle(.3,-.2);
@@ -24,7 +24,7 @@
 \end{choices}
 \begin{answer}
     A\qquad 提示：\(A\)对\(B\)、\(C\)的正压力\(N = \frac{1}{2}mg\)大小不变，滑动摩擦力\(f =\mu N\)大小不变，方向与\(A\)相对\(B\)（或\(C\)）的速度\(u = v_2 - v_1\)方向相反，运动速度的俯视图如下：
-    \begin{figure}[htbp]
+    
         \begin{tikzpicture}[font=\scriptsize,>=latex]
         \draw[->,blue] (0,0)--(0,-1)node[right]{\(v_2\)};
         \draw[->,blue] (0,0)--(-1,0)node[left]{\(v_1\)};
@@ -39,7 +39,6 @@
         \draw (0,.3)arc(90:120:.3);
         \node[above] at(-.13,.3){\(\alpha\)};
         \end{tikzpicture}
-    \end{figure}
     摩擦力的合力\(f_{\text{合}} = 2f\cos\alpha = mg\cos\alpha
     \)
 \end{answer}

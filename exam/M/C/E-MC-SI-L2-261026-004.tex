@@ -1,0 +1,23 @@
+\icode{E-MC-SI-L2-261026-004}
+竖直放置的两端封闭的玻璃管中注满清水，内有一个红蜡块能在水中以\qty{0.1}{m/s}的速度匀速上浮。现当红蜡块从玻璃管的下端匀速上浮的同时，使玻璃管水平匀速向右运动，测得红蜡块实际运动方向与水平方向成\qty{30}{\degree}角，如图所示。若玻璃管的长度为\qty{1.0}{m}，则可知玻璃管水平方向的移动速度和水平运动的距离约为\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[pattern=horizontal lines,pattern color=gray] (-.1,1.832)--(-.1,-.1) arc(-180:0:.1)--(.1,1.832) arc(0:180:.1);
+	\draw[fill=red] ($(0,0)+(-.05,-.05)$) rectangle ($(0,0)+(.05,.05)$);
+	\draw[dashed] (0,0)--(3,0) (0,0)--(30:{2*sqrt(3)});
+	\draw[gray] (.4,0) arc(0:30:.4);
+	\node[gray] at(.7,.15){\qty{30}{\degree}};
+	\begin{scope}[xshift=3cm]
+		\draw[pattern=horizontal lines,pattern color=gray] (-.1,1.832)--(-.1,-.1) arc(-180:0:.1)--(.1,1.832) arc(0:180:.1);
+		\draw[fill=red] ($(0,1.732)+(-.05,-.05)$) rectangle ($(0,1.732)+(.05,.05)$);
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item \qty{0.1}{m/s}\quad\qty{1.7}{m}
+	\item \qty{0.17}{m/s}\quad\qty{1.0}{m}
+	\item \qty{0.17}{m/s}\quad\qty{1.7}{m}
+	\item \qty{0.1}{m}\quad \qty{1.0}{m}
+\end{choices}
+\begin{answer}
+	C\qquad 提示：水平运动时间与竖直方向运动时间相等
+\end{answer}

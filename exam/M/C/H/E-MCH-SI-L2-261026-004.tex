@@ -1,0 +1,21 @@
+\icode{E-MCH-SI-L2-261026-004}
+在同一竖直方向、不同高处分别水平抛出两个小球 \(A\)、\(B\)，两球在 \(P\) 点相碰，如图所示。设 \(A\)、\(B\) 两球的初速度分别为 \(v_A\)、\(v_B\)，运动到 \(P\) 点的时间分别为 \(t_A\)、\(t_B\)，在 \(P\) 点的速度与竖直方向的夹角分别为 \(\theta_A\)、\(\theta_B\)，则\paren[]
+
+\begin{tikzpicture}[scale=.8,font=\scriptsize]
+	\draw[name path=a,magenta] (0,1)coordinate(A) parabola bend(0,1) (3.5,-2);
+	\draw[name path=b,teal] (0,0)coordinate(B) parabola bend(0,0) (4,-2);
+	\path [name intersections={of= a and b,by =P}];
+	\fill (P)node[below left]{ \(P\)} circle(.04);
+	\foreach \x/\xtext in {A,B}{
+		\draw[-stealth] (\x)--++(1,0)node[right]{ \(v_\xtext\)};
+		\shade[ball color=blue!30] (\x)node[left]{ \(\xtext\)} circle(.1);}
+\end{tikzpicture}
+\begin{choices}
+	\item \(v_A = v_B\) \quad \(t_A = t_B\)
+	\item \(v_A > v_B\) \quad \(t_A > t_B\)
+	\item \(t_A > t_B\) \quad \(\theta_A < \theta_B\)
+	\item \(v_A > v_B\) \quad \(\theta_A < \theta_B\)
+\end{choices}
+\begin{answer}
+    
+\end{answer}

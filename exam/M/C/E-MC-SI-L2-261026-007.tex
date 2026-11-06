@@ -1,0 +1,42 @@
+\icode{E-MC-SI-L2-261026-007}
+质点做曲线运动从\(A\)到\(B\)速率逐渐增加，如图，有四位同学用示意图表示\(A\)到\(B\)的轨迹及速度方向和加速度的方向，其中正确的是\paren[]
+	
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[name path=c,dashed,cyan] (0,0)node[left,black]{ \(A\)}..controls(2,-.3)and(2.8,-1.7)..(3,-2.4)node[right,black]{ \(B\)};
+	\path[name path=l] (2,0)--(2,-2);
+	\path[name intersections={of=c and l,by=o}];
+	\fill (o) circle(.04);
+	\draw[->,magenta] (o)--++(-36:1.5)node[right]{ \(v\)};
+	\draw[->,blue] (o)--++(170:1)node[left]{ \(a\)};
+	\node at(1,-2.6){\normalsize A.};
+    \begin{scope}[xshift=3.5cm]
+    \draw[name path=c,dashed,cyan] (0,0)node[left,black]{ \(A\)}..controls(2,-.3)and(2.8,-1.7)..(3,-2.4)node[right,black]{ \(B\)};
+	\path[name path=l] (2,0)--(2,-2);
+	\path[name intersections={of=c and l,by=o}];
+	\fill (o) circle(.04);
+	\draw[->,magenta] (o)--++(-36:1.5)node[right]{ \(v\)};
+	\draw[->,blue] (o)--++(-36:1)node[above]{ \(a\)};
+	\node at(1,-2.6){\normalsize B.};
+    \end{scope}
+    \begin{scope}[xshift=7cm]
+    \draw[name path=c,dashed,cyan] (0,0)node[left,black]{ \(A\)}..controls(2,-.3)and(2.8,-1.7)..(3,-2.4)node[right,black]{ \(B\)};
+	\path[name path=l] (2,0)--(2,-2);
+	\path[name intersections={of=c and l,by=o}];
+	\fill (o) circle(.04);
+	\draw[->,magenta] (o)--++(-36:1.5)node[right]{ \(v\)};
+	\draw[->,blue] (o)--++(-10:1)node[right]{ \(a\)};
+	\node at(1,-2.6){\normalsize C.};
+    \end{scope}
+    \begin{scope}[xshift=10.5cm]
+    \draw[name path=c,dashed,cyan] (0,0)node[left,black]{ \(A\)}..controls(2,-.3)and(2.8,-1.7)..(3,-2.4)node[right,black]{ \(B\)};
+	\path[name path=l] (2,0)--(2,-2);
+	\path[name intersections={of=c and l,by=o}];
+	\fill (o) circle(.04);
+	\draw[->,magenta] (o)--++(-36:1.5)node[right]{ \(v\)};
+	\draw[->,blue] (o)--++(-85:1)node[below]{ \(a\)};
+	\node at(1,-2.6){\normalsize D.};
+    \end{scope}
+\end{tikzpicture}
+\begin{answer}
+	D
+\end{answer}

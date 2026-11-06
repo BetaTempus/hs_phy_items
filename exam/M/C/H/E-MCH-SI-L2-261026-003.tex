@@ -1,0 +1,21 @@
+\icode{E-MCH-SI-L2-261026-003}
+在同一水平直线上的两位置分别沿同水平方向抛出两小球\(A\)和\(B\)，两球相遇于空中的\(P\)点，它们的运动轨迹如图所示。不计空气阻力，下列说法中正确的是\paren[]
+
+\begin{tikzpicture}[scale=.8,font=\scriptsize]
+	\draw[dashed,cyan] (-.5,0)--(3,0);
+	\draw[name path=a,purple] (0,0)coordinate(A) parabola bend(0,0) (4,-2);
+	\draw[name path=b,teal] (1.5,0)coordinate(B) parabola bend(1.5,0) (3.6,-2);
+	\path [name intersections={of= a and b,by =P}];
+	\fill (P)node[below left]{ \(P\)} circle(.04);
+	\foreach \x/\xtext in {A,B}
+		\shade[ball color=blue!30] (\x)node[above]{ \(\xtext\)} circle(.1);
+\end{tikzpicture}
+\begin{choices}
+	\item 在\(P\) 点，\(A\)球的速度大小大于\(B\)球的速度大小
+	\item 在\(P\) 点，\(A\)球的速度大小小于\(B\)球的速度大小
+	\item 抛出时，先抛出\(A\)球再抛出\(B\)球
+	\item 抛出时，先抛出\(B\)球再抛出\(A\)球
+\end{choices}
+\begin{answer}
+	A\qquad 提示：
+\end{answer}

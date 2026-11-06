@@ -1,0 +1,121 @@
+\section{运动学\quad\tiny 11.2-11.8}
+\lsn{1}根据\(v - t\)图像得出匀变速直线运动的公式（至少7个）：
+
+\begin{tikzpicture}[>=stealth,font=\footnotesize]
+    \draw[|<->|,thin,gray] (3.25,2.5)--node[fill=white]{ \(\Delta v\)}(3.25,1);
+    \filldraw[pattern=north east lines,draw=white,pattern color=red!30] (0,1)--(3,2.5)--(3,1)--(0,1);
+    \filldraw[pattern=north west lines,draw=white,pattern color=red!30] (0,0) rectangle(3,1);
+    \draw[->,blue] (0,0)--(5,0)node[below]{ \(t\)};
+    \draw[->,blue] (0,0)node[below left]{\(O\)}--(0,4)node[right]{ \(v\)};
+    \draw[magenta] (0,1)--(4,3)node[below right,black]{ \(a\)};
+    \draw[dashed,cyan] (0,2.5)--(3,2.5)--(3,0) (0,1)--(3,1) (0,1.75)--(1.5,1.75)--(1.5,0);
+    \node[blue] at(0,1)[left]{ \(v_0\)};
+    \node[blue] at(0,2.5)[left]{ \(v_t\)};
+    \node[blue] at(3,0)[below]{ \(t\)};
+    \node[blue] at(0,1.75)[left]{ \(\overline{v}\)};
+    \node[blue] at(1.5,0)[below]{\(\sfrac{t}{2}\)};
+    \draw[|<->|,gray,thin] (0,-.8)--node[fill=white]{ \(\Delta t\)}(3,-.8);
+  \end{tikzpicture}
+\vspace*{2cm}
+
+\lsn{2}写出初速度为0的匀加速直线运动的六个比例关系
+
+
+
+\vspace*{5cm}
+\lsn{3}在表中填出各个图像中不同元素的物理含义，没有物理意义的画横线
+
+\begin{table}[htbp]
+  \begin{tabular}{l|c|c|c}
+    \hline
+    &\(x -t\)图像&\(v - t\)图像&\(a - t\)图像\\
+    \hline
+    斜率&&&\\
+    \hline
+    面积&\tikz \draw (0,.2)--(2,-.2);&&\\
+    \hline
+    交点&&&\tikz \draw (0,.2)--(2,-.2);\\
+    \hline
+    零点&&&\tikz \draw (0,.2)--(2,-.2);\\
+    \hline
+    拐点&&&\tikz \draw (0,.2)--(2,-.2);\\
+    \hline
+  \end{tabular}
+\end{table}
+
+\lsn{4}使用逐差法计算加速度的优点是什么？并推导三个逐差法的公式
+
+\newpage
+\lsn{5}表示出下列图像中运动的初速度\(v_0\)与加速度\(a\)，并给出过程
+
+\begin{tikzpicture}[>=stealth,font=\footnotesize]
+  \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)};
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(\overline{v}\)};
+  \draw[magenta] (0,.8)node[left,blue]{\(b\)}--(3,2.5)node[below,blue]{\(k\)};
+  \begin{scope}[xshift=5cm]
+    \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(\frac{1}{t}\)};
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(\frac{x}{t^2}\)};
+  \draw[magenta] (0,.8)node[left,blue]{\(b\)}--(3,2.5)node[below,blue]{\(k\)};
+  \end{scope}
+  \begin{scope}[xshift=10cm]
+    \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(x\)};
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(v^2\)};
+  \draw[magenta] (0,.8)node[left,blue]{\(b\)}--(3,2.5)node[below,blue]{\(k\)};
+  \end{scope}
+\end{tikzpicture}
+
+\vspace*{3cm}
+\lsn{6}\(A\)、\(B\)两辆车（可视为质点）在一条直线上同向运动，\(A\)在\(B\)的正前方\(x_0\)处，它们的\(v - t\)图像如图所示，分析下列情况\(A\)、\(B\)是否相遇，相遇几次
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+  \draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)};
+  \filldraw[pattern=north east lines,draw=white,pattern color=red!30] (0,.5)--(1.5,1.5)--(0,2);
+  \draw[->,blue] (0,0)--(0,3)node[right]{\(v\)};
+  \draw[magenta] (0,.5)--(3,2.5)node[right]{\(A\)};
+  \draw[teal] (0,2)--(3,1)node[right]{\(B\)};
+  \node at(.45,1.3){\(\Delta x\)};
+\end{tikzpicture}
+\begin{itemize}
+  \item \(x_0 > \Delta x\)：
+  \item \(x_0 = \Delta x\)：
+  \item \(x_0 < \Delta x\)：
+\end{itemize}
+
+\lsn{7}某同学在实验中得到如下图所示的纸带，其中两点间有4个点未画出，计算并填空（保留三位有效数字）
+
+\begin{tikzpicture}
+		\coordinate (o) at(0,0);
+		
+		\foreach \x/\n in {0/0,.6/1,1.6/2,3/3,4.8/4,7/5,9.6/6}{
+			\coordinate (\n) at(\x,0);
+			\fill (\n)node[above]{\scriptsize \(\n\)} circle(.03);}
+		\foreach \y/\x/\n in {-.7/.6/5.00,-1.1/1.6/11.96,-1.5/3/20.96,-1.9/4.8/31.83,-2.3/7/44.70,-2.7/9.6/76.39}
+			\draw[stealth-stealth,thin] (0,\y)--node[fill=white]{\scriptsize \(\n\)}(\x,\y);
+		\foreach \x/\y in {0/-2.8,.6/-.8,1.6/-1.2,3/-1.6,4.8/-2.0,7/-2.4,9.6/-2.8}
+			\draw[gray] (\x,-.1)--(\x,\y);
+    \draw ($(o)+(-.3,.5)$)--++(10.2,0) ($(o)+(-.3,-.5)$)--++(10.2,0)coordinate(a) ($(o)+(-.3,.5)$)--++(-.1,-.1)--++(.2,-.7)--++(-.1,-.2) (a)--++(.1,.1)--++(-.2,.7)--++(.1,.2);
+    \node at($(a)+(-.7,1.2)$){\scriptsize 单位：\,\qty{}{cm}};
+	\end{tikzpicture}%%始.6,差.4
+
+\vspace*{.5cm}
+\(v_1 =\)\lunl{3cm}\qquad \(v_4 =\)\lunl{3cm}
+
+\vspace*{.5cm}
+\(a =\)\lunl{3cm}\qquad \(v_0 =\)\lunl{3cm}
+
+\newpage
+\lsn{8}\input{../ncee/M/K/N18Z-MK-SI-L2-260625-001}
+
+\lsn{9}\input{../ncee/M/K/N18Q-MK-SI-L2-260929-002}
+
+\lsn{10}\input{../ncee/M/K/N15L-MK-SI-L3-260929-001}
+
+\lsn{11}\input{../ncee/M/K/N23L-MK-SI-L3-261001-002}
+
+\lsn{12}\input{../exam/M/K/E-MK-MU-L2-260928-001}
+
+\lsn{13}\input{../exam/M/K/E-MK-SI-L2-260928-001}
+
+\lsn{14}\input{../exam/M/K/E-MK-SI-L2-260928-003}
+
+\lsn{15}\input{../exam/M/K/E-MK-CA-L3-260929-001}
