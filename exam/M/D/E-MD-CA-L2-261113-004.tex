@@ -1,0 +1,27 @@
+\icode{E-MD-CA-L2-261113-004}
+如图所示，水平传送带以速度 \(v_1=\) \,\qty{2}{m/s}顺时针转动，小物块以速度 \(v_2 =\) \,\qty{4}{m/s}从最右端滑上传送带。已知小物块与传送带间的动摩擦因数为 \(\mu = 0.2\)，传送带长度为 \(L =\) \,\qty{10}{m}，\(g\) 取\qty{10}{m/s^2}。求：
+\begin{enumerate}
+	\item 小物块在传送带上滑行的最远距离。
+	\item 小物块从\(A\)处出发再回到\(A\)处时的速度大小以及所用的时间。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=0]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(4,0);
+		\coordinate (square) at(3.7,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!60] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\fill (o) circle(.07) (length) circle(.07);
+		\draw[->] (.4,.15)--node[below]{\(v_1\)}(1,.15);
+		\draw[->] ($(square)+(.4,.5)$)--node[above]{\(v_2\)}($(square)+(-.2,.5)$);
+	\end{scope}
+	\foreach \x in {4.2,4.4,...,5}
+		\draw[gray] (\x,0.3)--++(.2,-.2);
+	\draw (4.1,0.3)--(5,0.3);
+	\node at(4,.3)[above right]{\(A\)};
+\end{tikzpicture}
+\begin{answer}
+	（1）\qty{4}{m}（2）\qty{4.5}{s}
+\end{answer}

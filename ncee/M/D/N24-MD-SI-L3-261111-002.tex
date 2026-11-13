@@ -1,0 +1,52 @@
+\icode{N24-MD-SI-L3-261111-002}
+\nceeID[6]{2024全国甲}{2}
+如图，一轻绳跨过光滑定滑轮，绳的一端系物块 \(P\)，\(P\) 置于水平桌面上，与桌面间存在摩擦；绳的另一端悬挂钩码。改钩码总质量 \(m\)，并测量 \(P\) 的加速度大小 \(a\)，得到 \(a-m\) 图像。重力加速度大小为 \(g\)。在下列 \(a-m\) 图像中，可能正确的是\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\coordinate (o) at(0,0);
+	\draw[fill=orange!50] ($(o)+(-3.5,0)$)--(o)--++(0,-.2)--++(-3.5,0) ($(o)+(-.3,-.2)$)coordinate(a) rectangle($(a)+(-.3,-1.5)$);
+	\draw[fill=orange!30] ($(o)+(-3.5,-.2)$)--($(a)+(-.3,0)$)--++(0,-.15)--($(o)+(-3.5,-.35)$);
+	\draw[fill=blue!30] (-2.6,0)coordinate(b) rectangle($(b)+(-.4,.4)$);
+	\draw[thick] ($(o)+(.2,.1)$)coordinate(pulley) circle(.1) (o)--(pulley);
+	\fill (pulley) circle(.05);
+	\coordinate (pail) at($(pulley)+(.1,-1)$);
+	\draw[magenta] ($(b)+(0,.2)$)--($(pulley)+(0,.1)$) ($(pulley)+(.1,0)$)--($(pail)+(0,.11)$);
+	\draw (pail)--++(0,.05) arc(-90:180:.03) ($(pail)+(0,-.1)$)--++(0,-.05) arc(90:360:.03);
+	\draw[fill=gray!50] ($(pail)+(-.1,0)$) rectangle($(pail)+(.1,-.1)$);
+	\draw[gray] ($(pail)+(0,-.05)$)--++(.5,0)node[right]{钩码};
+	\node at($(b)+(-.2,.4)$)[above]{\(P\)};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=.9,>=stealth,font=\scriptsize]
+	\begin{scope}
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(3,0)node[below]{\(m\)};
+		\draw[->,blue] (0,0)--(0,2.5)node[right]{\(a\)};
+		\draw[dashed,cyan] (0,2)node[left,blue]{\(g\)}--(2.8,2);
+		\draw[magenta] (0,0)--(2.4,1.6);
+		\node at(1.5,-.6){\normalsize A};
+	\end{scope}
+	\begin{scope}[xshift=4cm]
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(3,0)node[below]{\(m\)};
+		\draw[->,blue] (0,0)--(0,2.5)node[right]{\(a\)};
+		\draw[dashed,cyan] (0,2)node[left,blue]{\(g\)}--(2.8,2);
+		\draw[domain=0:2.5,magenta,smooth] plot(\x,{2*(\x-1)/(\x+2)+1});
+		\node at(1.5,-.6){\normalsize B};
+	\end{scope}
+	\begin{scope}[xshift=8cm]
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(3,0)node[below]{\(m\)};
+		\draw[->,blue] (0,0)--(0,2.5)node[right]{\(a\)};
+		\draw[dashed,cyan] (0,2)node[left,blue]{\(g\)}--(2.8,2);
+		\draw[magenta] (.3,0)--(2.7,1.6);
+		\node at(1.5,-.6){\normalsize C};
+	\end{scope}
+	\begin{scope}[xshift=12cm]
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(3,0)node[below]{\(m\)};
+		\draw[->,blue] (0,0)--(0,2.5)node[right]{\(a\)};
+		\draw[dashed,cyan] (0,2)node[left,blue]{\(g\)}--(2.8,2);
+		\draw[domain=0:2.5,magenta,smooth,xshift=.3cm] plot(\x,{2*(\x-1)/(\x+2)+1});
+		\node at(1.5,-.6){\normalsize D};
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

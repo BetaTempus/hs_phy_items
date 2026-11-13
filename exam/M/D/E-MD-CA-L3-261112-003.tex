@@ -1,0 +1,31 @@
+\icode{E-MD-CA-L3-261112-003}
+如图甲所示，足够长的木板静止在水平面上，木板的质量 \(M =\) \,\qty{0.4}{kg}，长木板与水平面间的动摩擦因数 \(\mu_1 = 0.1\)，质量 \(m =\) \,\qty{0.4}{kg} 的小滑块以 \(v_0 =\) \,\qty{1.8}{m/s}的速度从右端滑上长木板，小滑块刚滑上长木板的\qty{0.2}{s}内的速度图象如图乙所示，小滑块可看成质点，重力加速度 \(g\) 取\qty{10}{m/s^2}。
+\begin{enumerate}
+	\item 求小滑块与长木板间的动摩擦因数 \(\mu_2\) 和小滑块刚滑上长木板时长木板的加速度大小 \(a_1\)；
+	\item 求小滑块从滑上长木板到与长木板速度相等过程中相对长木板滑行的距离 \(L\)；
+	\item 求小滑块从滑上长木板到最后停下来的过程中运动的总距离 \(s\)。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[fill=teal!60] (0,0) rectangle(4,.5)node[midway]{\(M\)};
+	\draw[fill=red!30] (3.6,.5) rectangle(4,.9)node[midway]{\(m\)};
+	\foreach \x in {-.6,-.4,...,5}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(5,0);
+	\draw[->] (3.6,.7)--++(-.8,0)node[left]{\(v_0\)};
+	\node at(2.5,-.8){甲};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,0)--(0,3)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+	\draw[dashed,cyan] (1,1)--(1,0);
+	\draw[magenta] (0,1.8)--(1,1);
+	\foreach \x/\xtext in {1/0.2}
+		\draw[blue] (\x,.1)--(\x,0)node[below]{\(\xtext\)};
+	\foreach \y/\ytext in {1/1.0,1.8/1.8}
+		\draw[blue] (.1,\y)--(0,\y)node[left]{\(\ytext\)};
+	\node at(1.5,-.8){乙};
+\end{tikzpicture}
+\begin{answer}
+	（1）0.4\quad\qty{2}{m/s^2}（2）\qty{0.27}{m}（3）\qty{0.54}{m}
+\end{answer}

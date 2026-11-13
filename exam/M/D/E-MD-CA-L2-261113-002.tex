@@ -1,0 +1,23 @@
+\icode{E-MD-CA-L2-261113-002}
+如图所示，水平传送带 \(AB\) 长为\qty{16}{m}，传送带以\qty{6}{m/s}的速度匀速运动，现在水平传送带 \(A\) 处无初速度放一质量为 \(m\) 的小物体（可视为质点），传送带与物体之间的动摩擦因数为 \(0.2\) （\(g =\) \,\qty{10}{m/s^2}）。求：
+\begin{enumerate}
+	\item 小物体从 \(A\) 运动到 \(B\) 所用的时间为多少（保留两位小数）；
+	\item 若要使小物体从 \(A\) 运动到 \(B\) 所用的时间最短，则传送带的速度至少应为多少。
+\end{enumerate}
+
+\begin{tikzpicture}[font=\scriptsize]
+	\begin{scope}[rotate=0]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(4,0);
+		\coordinate (square) at(0,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\node at($(o)+(0,.3)$)[below]{\(A\)};
+		\node at($(length)+(0,.3)$)[below]{\(B\)};
+		\draw[-stealth] (1.5,.15)--(2.5,.15);
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+    （1）\qty{4.17}{s}（2）\qty{8}{m/s}
+\end{answer}

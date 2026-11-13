@@ -1,0 +1,24 @@
+\icode{E-MD-SI-L2-261113-002}
+如图所示，某工厂用水平传送带传送零件，若传送带的长度 \(s =\) \,\qty{6}{m}，传送带与零件间的动摩擦因数为 \(\mu = 0.2\)，传送带匀速运动的速度 \(v_0 =\) \,\qty{4}{m/s}。某时刻在传送带最左端 \(P\) 处轻放一质量为 \(m\) 的零件，并使之传送到最右边的 \(Q\) 处。则零件到达传送带最右边 \(Q\) 处的速度大小 \(v\) 及传送所需时间 \(t\) 分别为\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=0]
+    	\coordinate (o) at(0,0);
+		\coordinate (length) at(3,0);
+		\coordinate (square) at(0,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!60] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\fill (o) circle(.07) (length) circle(.07);
+		\draw[->] (1.2,.15)--node[below]{\(v_0\)}(2,.15);
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item \qty{4}{m/s}
+	\item \(2\sqrt{6}\)\qty{}{m/s}
+	\item \qty{2}{s}
+	\item \qty{2.5}{s}
+\end{choices}
+\begin{answer}
+    A\qquad 提示：
+\end{answer}

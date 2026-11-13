@@ -1,23 +1,23 @@
 \icode{E-MD-MU-L3-260627-002}
 如图（\(a\)），一长木板静止于光滑水平桌面上，\(t = 0\)时，小物块以速度\(v_0\)滑到长木板上，图（\(b\)）为物块与木板运动的\(v - t\)图象，图中\(t_1\)、\(v_0\)、\(v_1\)已知。重力加速度大小为\(g\)。由此可求得\paren[]
 
-\begin{tikzpicture}[>=latex,font=\scriptsize]
-    \draw[fill=blue!30] (0,0) rectangle(3,.4);
-    \draw[fill=orange!50] (0,.4) rectangle(.4,.8);
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+    \draw[fill=teal!60] (0,0) rectangle(3,.4);
+    \draw[fill=orange!60] (0,.4) rectangle(.4,.8);
     \draw[->] (.4,.6)--(1,.6)node[right]{\(v_0\)};
-    \node at (1.2,-.5) {图（\(a\)）};
+    \node at (1.2,-.8) {图（\(a\)）};
     \foreach \x in {-.5,-.3,...,3.5}
         \draw[gray] (\x,-.2)--++(.2,.2);
     \draw(-.5,0)--(3.7,0);   
 \end{tikzpicture}
 \hspace*{3em}
-\begin{tikzpicture}[>=latex,font=\scriptsize]
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
     \draw[->,blue] (0,0)--(0,2.5)node[left]{\(v\)};
     \draw[->,blue] (0,0)--(3.5,0)node[right]{\(t\)};
-    \draw[purple] (0,0)--(1.5,.8)--(3,.8) (0,2)node[left,blue]{\(v_0\)}--(1.5,.8);
+    \draw[magenta] (0,0)--(1.5,.8)--(3,.8) (0,2)node[left,blue]{\(v_0\)}--(1.5,.8);
     \draw[dashed,cyan] (0,.8)node[left,blue]{\(v_1\)}--(1.5,.8)--(1.5,0)node[below,blue]{\(t_1\)};
     \node at(-.2,-.2) {\(O\)};
-    \node at (2,-.5) {图（\(b\)）};
+    \node at (2,-.8) {图（\(b\)）};
 \end{tikzpicture}
 \begin{choices}
     \item 木板的长度

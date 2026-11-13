@@ -4,7 +4,7 @@
 \begin{tikzpicture}[>=stealth,scale=.9,font=\scriptsize]
     \draw[->,blue] (0,0)--(0,3.3)node[left]{\(v\)};
     \draw[->,blue] (0,0)--(4.5,0)node[below]{\(t\)};
-    \path[draw,name path=l1,purple] (0,2.5)node[left,blue]{\(P\)}--(2.5,0)node[below,blue]{\(M\)};
+    \path[draw,name path=l1,magenta] (0,2.5)node[left,blue]{\(P\)}--(2.5,0)node[below,blue]{\(M\)};
     \path[draw,name path=l2,teal] (0,1.5)node[left,blue]{\(Q\)}--(3.6,0)node[below,blue]{\(N\)};
     \path [name intersections={of=l1 and l2}];
     \node at(intersection-1)[above]{\(R\)};

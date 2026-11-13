@@ -1,0 +1,35 @@
+\icode{E-MI-SI-L3-261110-002}
+表演的安全网如图甲所示，网绳的结构为正方形格子，\(O\)、\(a\)、\(b\)、\(c\)、\(d\)等为网绳的结点，安全网水平张紧后，质量为\(m\)的运动员从高处落下，恰好落在\(O\)点上。该处下凹至最低点时，网绳\(dOe\)、\(bOg\)夹角均为\qty{106}{\degree}，如图乙所示，此时\(O\)点受到向下的冲击力大小为\(6F\)，\(\cos\)\qty{37}{\degree}\(= 0.8\)，则这时\(O\)点周围每根网绳承受的张力大小为\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \y in {-.05,.95,1.95}{
+		\draw (-.5,\y) rectangle(2.5,{\y+.1});
+		\draw (\y,-.5) rectangle({\y+.1},2.5);}
+	\foreach \x in {0,1,2}
+		\foreach \y in {0,1,2}
+			\fill (\x,\y) circle(.05);
+	\foreach \x/\c in {-.3/f,.7/g,1.7/h}
+		\node at(\x,-.3){\(\c\)};
+	\foreach \x/\c in {-.3/d,.7/O,1.7/e}
+		\node at(\x,.7){\(\c\)};
+	\foreach \x/\c in {-.3/a,.7/b,1.7/c}
+		\node at(\x,1.7){\(\c\)};
+	\node at (1,-.9){ 图甲};
+\end{tikzpicture}
+	\hspace{3em}
+\begin{tikzpicture}
+	\draw (0,0)node[below]{\(O\)}--(37:2)node[right]{\(e\)} (0,0)--(143:2)node[left]{\(d\)};
+	\draw[dashed] (37:.3) arc(37:143:.3);
+	\draw (0,0)--(0,.7) (-.2,.4)--(0,.6)--(.2,.4);
+	\draw (0,.8) circle(.1);
+	\node at(0,-.9){ 图乙};
+\end{tikzpicture}
+\begin{choices}
+	\item\(F\)
+	\item\(1.5F\)
+	\item\(2.5F\)
+	\item\(3.75F\)
+\end{choices}
+\begin{answer}
+	C\qquad 提示：
+\end{answer}

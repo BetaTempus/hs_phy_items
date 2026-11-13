@@ -1,0 +1,28 @@
+\icode{N-MD-CA-L3-261111-001}
+如图，相距 \(L =\) \,\qty{11.5}{m} 的两平台位于同一水平面内，二者之间用传送带相接。传送带向右匀速运动，其速度的大小 \(v\) 可以由驱动系统根据需要设定。质量 \(m =\) \,\qty{10}{kg}的载物箱（可视为质点），以初速度 \(v_0 =\) \,\qty{5.0}{m/s}自左侧平台滑上传送带。载物箱与传送带间的动摩擦因数 \(\mu = 0.10\)，重力加速度取 \(g =\) \,\qty{10}{m/s^2}。	
+\begin{enumerate}
+	\item 若 \(v =\) \,\qty{4.0}{m/s}，求载物箱通过传送带所需的时间；
+	\item 求载物箱到达右侧平台时所能达到的最大速度和最小速度；
+	\item 若 \(v =\) \,\qty{6.0}{m/s}，载物箱滑上传送带 \(\Delta t = \frac{13}{12}\) \,\qty{}{s}后，传送带速度突然变为零。求载物箱从左侧平台向右侧平台运动的过程中，传送带对它的冲量。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\foreach \x in {-1.6,-1.4,...,-.2}
+		\draw[gray] (\x,0)--++(.2,.2);
+	\foreach \x in {3.6,3.8,...,5}
+		\draw[gray] (\x,0)--++(.2,.2);
+	\draw[thick] (-1.6,.2)--(-.2,.2) (3.6,.2)--(5.2,.2);
+	\draw[->,red] (-.9,.7)--node[above]{\(v_0\)}(-.4,.7);
+	\draw[fill=orange!50] (-.8,.2) rectangle(-.5,.5);
+	\draw[thick] (0,0)coordinate(a)--++(-127:.2)--++(-37:2)--++(53:.4)coordinate(b)--++(-53:.4)--++(37:2)--++(127:.2)coordinate(c) (0,.2)--(0,.2-|c)coordinate(d);
+	\draw[gray] (0,.2)--(0,1.2) (d)--++(0,1);
+	\draw[<->,gray] (0,1)--node[above]{\(L\)}(0,1-|d);
+	\draw[->,red] ($(b|-0,0)+(-.3,0)$)--node[below]{\(v\)}($(b|-0,0)+(.3,0)$);
+	\foreach \c/\r in {a/.2,b/.4,c/.2}{
+		\draw[fill=white] (\c) circle(\r);
+		\fill (\c) circle(.05);}
+	\draw[gray] (-.9,.1)--++(-60:1)node[below]{左侧平台} (4,.1)--++(-60:1)node[right]{右侧平台} (2.8,.1)--++(-70:1.5)node[right]{传送带};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

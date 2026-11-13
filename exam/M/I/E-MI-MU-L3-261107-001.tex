@@ -1,0 +1,32 @@
+\icode{E-MI-MU-L3-261107-001}
+（多选）
+长木板上表面的一端放有一个木块，木块与木板接触面上装有摩擦力传感器，如图甲所示，木板由水平位置缓慢向上转动（即木板与地面的夹角 \( \alpha \) 变大），另一端不动，摩擦力传感器记录了木块受到的摩擦力 \( F_f \)，随角度 \( \alpha \) 的变化图像如图乙所示。下列判断正确的是\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[dashed,cyan] (0,0)node[below left,blue]{ \(O\)} rectangle(4,.2);
+	\begin{scope}[rotate=37]
+		\draw[fill=orange!50] (0,0) rectangle(4,.2);
+		\draw[fill=red!30] (3.5,.2) rectangle(4,.5);
+	\end{scope}
+	\draw ({.8/3+.3},.2) arc(0:37:.3);
+	\node at(.7,.35){ \(\theta\)};
+	\node at(2,-.8){ 图甲};
+\end{tikzpicture}
+\begin{tikzpicture}[xscale=2,>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left,black]{ \(O\)}--(2,0)node[below]{ \(\alpha\)};
+	\draw[->,blue] (0,0)--(0,3)node[right]{ \(F_f\)};
+    \draw[domain=0:{pi/4},smooth,magenta] plot(\x,{3*sin(\x r)});
+	\draw[domain={pi/4}:{pi/2},smooth,magenta] plot(\x,{1.5*sqrt(2)*cos(\x r)});
+	\node at({pi/2},0)[below,blue]{\(\theta_2\)};
+	\draw[dashed,cyan] (0,{3*sin{45}})node[left,blue]{\(F_{f_2}\)}--({pi/4},{3*sin(45)})--({pi/4},0)node[below,blue]{\(\theta_1\)} (0,1.5)node[left,blue]{\(F_{f_1}\)}--++({pi/4},0);
+	\node at(1,-.8){ 图乙};
+\end{tikzpicture}
+\begin{choices}
+	\item 木块与木板间的动摩擦因数 \( \mu = \frac{F_{f_1}}{m g \cos \theta_1} \)
+	\item 木块与木板间的动摩擦因数 \( \mu = \frac{F_{f_2}}{m g \cos \theta_1} \)
+	\item 木板与地面的夹角为 \( \theta_2 \) 时，木块做自由落体运动
+	\item 木板由 \( \theta_1 \) 转到 \( \theta_2 \) 的过程中，木块的速度变化越来越快
+\end{choices}
+\begin{answer}
+	AD\qquad 提示：审题不仔细容易选C。
+\end{answer}

@@ -1,0 +1,43 @@
+\icode{E-MD-CA-L3-261113-002}
+甲、乙两传送带倾斜放置，与水平方向夹角均为\qty{37}{\degree}，传送带乙长为\qty{4}{m}，传送带甲比乙长\qty{0.45}{m}，两传送带均以\qty{3}{m/s}的速度逆时针匀速转动，可视为质点的物块\(A\)从传送带甲的顶端由静止释放，可视为质点的物块\(B\)由传送带乙的顶端以\qty{3}{m/s}的初速度沿传送带下滑，两物块质量均为\qty{2}{kg}，与传送带间的动摩擦因数均为0.5，取\(\sin\)\qty{37}{\degree}\(= 0.6\)，\(\cos\)\qty{37}{\degree}\(= 0.8\)，重力加速度 \(g =\) \,\qty{10}{m/s^2}。求：
+\begin{enumerate}
+	\item 物块\(A\)由传送带顶端滑到底端经历的时间：
+	\item 物块\(A\)、\(B\)传送带上的划痕长度之比。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(4.45,0);
+		\coordinate (square) at(4.15,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$)node[above]{\(A\)};
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\fill (o) circle(.07) (length) circle(.07);
+		\draw[->] (2.8,.15)--(1.8,.15);
+		\draw[->] (4.15,.45)--++(-.6,0);
+	\end{scope}
+	\draw[dashed,cyan] (0,-.3)--(2,-.3);
+	\draw[gray] ({.3*tan(18.5)+.4},-.3) arc(0:37:.4);
+	\node at(.6,-.12){\(\theta\)};
+	\node at(1.7,-.7){甲};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(4,0);
+		\coordinate (square) at(3.7,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$)node[above]{\(B\)};
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\fill (o) circle(.07) (length) circle(.07);
+		\draw[->] (2.5,.15)--(1.5,.15);
+	\end{scope}
+	\draw[dashed,cyan] (0,-.3)--(2,-.3);
+	\draw[gray] ({.3*tan(18.5)+.4},-.3) arc(0:37:.4);
+	\node at(.6,-.12){\(\theta\)};
+	\node at(1.6,-.7){乙};
+\end{tikzpicture}
+\begin{answer}
+    （1）\qty{1.3}{s}（2）\(1:1\)
+\end{answer}

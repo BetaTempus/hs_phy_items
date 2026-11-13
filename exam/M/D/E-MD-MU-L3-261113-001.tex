@@ -1,0 +1,30 @@
+\icode{E-MD-MU-L3-261113-001}
+（多选）
+如图所示，一质量为 \(m\) 的物块（可看作质点）轻放在一倾斜传送带上，并给它一个大小为沿传送带向上的初速度。物块与传送带之间的动摩擦因数为 \(\mu\)（最大静摩擦力近似等于滑动摩擦力），传送带沿顺时针方向匀速转动，其速度大小为 \(v_0\)，传送带与水平地面的夹角为 \(\theta\)，物块与传送带顶端的距离为 \(L\)。已知 \(v_1 > v_0\)，\(\mu < \tan \theta\)，且 \(L\) 足够长，重力加速度为 \(g\)，则下列说法正确的是\paren[]
+	
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(3.5,0);
+		\coordinate (square) at(0,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\fill (o) circle(.07) (length) circle(.07);
+		\draw[->,red] ($(length)+(45:.4)$) arc(45:-45:.4)node[above right]{\(v_0\)};
+		\draw[->] (-.1,.7)--node[above,rotate=37]{\(v_1\)}(.4,.7);
+		\draw[<->|] (.3,.45)--node[above,rotate=37]{\(L\)}(3.5,.45);
+	\end{scope}
+	\draw[dashed,cyan] (0,-.3)--(2,-.3);
+	\draw[gray] ({.3*tan(18.5)+.4},-.3) arc(0:37:.4);
+	\node at(.6,-.12){\(\theta\)};
+\end{tikzpicture}
+\begin{choices}
+	\item 物块所受到的摩擦力始终沿传送带向下
+	\item 物块向上运动的时间为 \(t = \dfrac{v_1 - v_0}{g\sin\theta + \mu g\cos\theta} + \dfrac{v_0}{g\sin\theta - \mu g\cos\theta}\)
+	\item 当物块运动到与传送带共速的过程中，物块的位移大小 \(x = \dfrac{v_1^2 - v_0^2}{2(g\sin\theta + \mu g\cos\theta)}\)
+	\item 物块最终与传送带一起向上做匀速运动
+\end{choices}
+\begin{answer}
+    BC\qquad 提示：
+\end{answer}

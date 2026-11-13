@@ -1,0 +1,30 @@
+\icode{E-MD-CA-L3-261112-004}
+如图甲所示，一长木板静止在水平地面上，\(t = 0\) 时刻一小物块以一定的速度从左端滑上长木板，之后小物块运动的 \(v -t\) 图像如图乙所示。已知小物块与长木板的质量均为 \(m =\) \,\qty{1}{kg}，前 \,\qty{2}{s}内小物块在长木板上滑动，之后两者相对静止，取重力加速度大小 \(g =\) \,\qty{10}{m/s^2}，求：
+\begin{enumerate}
+	\item 小物块与长木板间因摩擦产生的热量 \(Q\)；
+	\item 小物块与长木板间的静摩擦力大小 \(f\)。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[fill=teal!60] (0,0) rectangle(4,.5);
+	\draw[fill=red!30] (0,.5) rectangle(.4,.9);
+	\foreach \x in {-.6,-.4,...,5}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(5,0);
+	\draw[->] (.4,.7)--++(.8,0)node[right]{\(v_0\)};
+	\node at(2.5,-.8){甲};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,0)--(0,4.5)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+	\draw[dashed,cyan] (0,0.8)--(2,0.8)--(2,0);
+	\draw[magenta] (0,4)--(2,0.8)--({10/3},0);
+	\foreach \x in {1,2,3}
+		\draw[blue] (\x,.1)--(\x,0)node[below]{\(\x\)};
+	\foreach \y/\ytext in {.8/2,4/10}
+		\draw[blue] (.1,\y)--(0,\y)node[left]{\(\ytext\)};
+	\node at(1.5,-.8){乙};
+\end{tikzpicture}
+\begin{answer}
+	（1）\qty{40}{J}（2）\qty{1.5}{N}
+\end{answer}

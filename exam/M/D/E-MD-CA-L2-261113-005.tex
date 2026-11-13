@@ -1,0 +1,23 @@
+\icode{E-MD-CA-L2-261113-005}
+某飞机场利用如下图所示的传送带将地面上的货物运送到飞机上，传送带与地面的夹角 \(\theta =\) \,\qty{30}{\degree}，传送带两端 \(A\)、\(B\) 之间的长度 \(L =\) \,\qty{10}{m}，传送带以 \(v =\) \,\qty{5}{m/s}的恒定速度向上运动。在传送带底端 \(A\) 处轻轻放上一质量 \(m =\) \,\qty{5}{kg}的货物，货物与传送带间的动摩擦因数 \(\mu = \frac{\sqrt{3}}{2}\)。求货物从 \(A\) 端运送到 \(B\) 端所需的时间。（取 \(g =\) \,\qty{10}{m/s^2}）
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=30]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(4,0);
+		\coordinate (square) at(0,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!60] (square) rectangle($(square)+(.5,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\fill (o) circle(.07) (length) circle(.07);
+		\draw[->] (1.2,.15)--node[below,rotate=37]{\(v\)}(2,.15);
+		\node at(0,.3)[above left]{\(A\)};
+		\node at(4,.3)[above right]{\(B\)};
+	\end{scope}
+	\draw[dashed,cyan] (0,-.3)--(2,-.3);
+	\draw[gray] ({.3*tan(15)+.4},-.3) arc(0:30:.4);
+	\node at(.7,-.13){\(\theta\)};
+\end{tikzpicture}
+\begin{answer}
+    \qty{3}{s}\qquad 提示：
+\end{answer}

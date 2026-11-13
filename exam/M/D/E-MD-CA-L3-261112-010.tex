@@ -1,0 +1,30 @@
+\icode{E-MD-CA-L3-261112-010}
+如图甲所示，质量 \(m =\) \,\qty{1}{kg}的小物块 \(A\)（可视为质点）放在长 \(L =\) \,\qty{4.5}{m}的木板 \(B\) 的右端。开始时 \(A\)、\(B\) 两叠加体静止于水平地面上。现用一水平向右的力 \(F\) 作用在木板 \(B\) 上，通过传感器测出 \(A\)、\(B\) 两物体的加速度与外力 \(F\) 的变化关系如图乙所示。已知 \(A\)、\(B\) 两物体与地面之间的动摩擦因数相等，且最大静摩擦力等于滑动摩擦力，重力加速度 \(g\) 取\qty{10}{m/s^2}。求：
+\begin{enumerate}
+	\item \(A\)、\(B\) 间的动摩擦因数 \(\mu_1\)；
+	\item 乙图中 \(F_0\) 的值；
+	\item 若开始时对 \(B\) 施加水平向右的恒力 \(F =\) \,\qty{29}{N}，同时给 \(A\) 水平向左的初速度 \(v_0 =\) \,\qty{4}{m/s}，则在 \(t =\) \,\qty{3}{s}时 \(A\) 与 \(B\) 的左端相距多远。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[fill=teal!60] (0,0) rectangle(4,.5)node[midway]{\(B\)};
+	\draw[fill=red!30] (3.6,.5) rectangle(4,.9)node[midway]{\(A\)};
+	\draw[->] (4,.25)--++(.8,0)node[right]{\(F\)};
+	\foreach \x in {-.6,-.4,...,5}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(5,0);
+	\node at(3,-1.2){甲};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,-1)--(0,3)node[right]{\(a\)/(\qty{}{m\cdot s^{-2}})};
+	\draw[->,blue] (0,0)node[left]{\(0\)}--(5,0)node[below]{\(F\)/\qty{}{N}};
+	\draw[dashed,cyan] (0,1.5)--(2.5,1.5)--(2.5,0) (1.2,0)--(2.5,1.5);
+	\draw[magenta] (.5,0)--(2.5,1.5)--(4.5,1.5) (2.5,1.5)--++($.5*($(2.5,1.5)-(1.2,0)$)$);
+	\node[blue] at(0,1.5)[left]{\(4\)};
+	\foreach \x/\xtext in {.5/F_0,1.2/9,2.5/25}
+		\node[blue] at(\x,0)[below]{\(\xtext\)};
+	\node at(2.5,-1.2){乙};
+\end{tikzpicture}
+\begin{answer}
+	（1）0.4（2）\qty{5}{N}（3）\qty{22.5}{m}
+\end{answer}

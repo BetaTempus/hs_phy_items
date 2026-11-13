@@ -1,0 +1,19 @@
+\icode[magenta]{E-MD-CA-L4-261113-001}
+如图所示，质量为\(m\)的物体（可视为质点）在水平传送带中央随传送带以速度\(v_0\)匀速运动，在传送带上方固定光滑挡板\(AB\)，\(AB\)与传送带左边界的夹角为\qty{53}{\degree}，物体碰到挡板时，垂直于挡板方向的速度减小为零，平行于挡板方向的速度不变，最终滑上工作台，已知传送带的宽度为\(L\)，物体与传送带之间	的动摩擦因数为\(\mu\)，重力加速度为\(g\)。取\(\sin\)\qty{53}{\degree}\(= 0.8\)，\(\cos\)\qty{53}{\degree}\(= 0.6\)。求物体
+\begin{enumerate}
+	\item 与挡板碰撞结束瞬间速度的大小\(v\)；
+	\item 沿挡板运动过程中对挡板的压力\(F\)；
+	\item 沿挡板运动过程中与传送带间因摩擦产生的热量\(Q\)。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw (0,-.5) rectangle(2,4) (2,-.5) rectangle(4,1.2);
+	\draw[rotate around={-37:(1,1.1)},fill=orange!60] (-1,1)node[left]{\(A\)} rectangle(3,1.2)node[right]{\(B\)};
+	\draw[fill=teal!60] (.8,3) rectangle(1.2,3.4);
+	\draw[->,thick] (1,.5)--(1,-.1)node[below]{\(v_0\)};
+	\node at(3,.4){工作台};
+	\node at(2,-.8){俯视图};
+\end{tikzpicture}
+\begin{answer}
+    （1）\(0.6v_0\)（2）\(\mu mg\)（3）\(\frac{5}{6}\mu mgL\)
+\end{answer}

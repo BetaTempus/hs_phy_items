@@ -1,0 +1,38 @@
+\icode{E-MD-MU-L2-261113-001}
+（多选）
+如图所示，绷紧的水平传送带始终以恒定速率 \(v_1\) 运行。初速度大小为 \(v_2\) 的小物块从与传送带等高的光滑水平地面上的 \(A\) 处滑上传送带。若从小物块滑上传送带开始计时，小物块在传送带上运动的 \(v-t\) 图象（以地面为参考系）如图乙所示。已知 \(v_2 > v_1\)，则\paren[]
+	
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=0]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(4,0);
+		\coordinate (square) at(3.7,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\fill (o) circle(.07) (length) circle(.07);
+		\draw[->] (.4,.15)--node[below]{\(v_1\)}(1,.15);
+		\draw[->] ($(square)+(.4,.5)$)--node[above]{\(v_2\)}($(square)+(-.2,.5)$);
+	\end{scope}
+	\foreach \x in {4.2,4.4,...,5}
+		\draw[gray] (\x,0.3)--++(.2,-.2);
+	\draw (4.1,0.3)--(5.2,0.3);
+	\node at(4,.3)[above right]{\(A\)};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[left]{\(0\)}--(5,0)node[below]{\(t\)};
+	\draw[->,blue] (0,-1.5)--(0,2.5)node[right]{\(v\)};
+	\draw[magenta] (0,2)--(3,-1)--(4,-1);
+	\draw[dashed,cyan] (0,-1)node[left,blue]{\(- v_1\)}--(3,-1)--(3,0)node[below right,blue]{\(t_2\)} (4,0)node[below right,blue]{\(t_3\)}--(4,-1);
+	\node at(2,0)[below,blue]{\(t_1\)};
+	\node at(0,2)[left,blue]{\(v_2\)};
+\end{tikzpicture}
+\begin{choices}
+	\item \(t_2\) 时刻，小物块离 \(A\) 处的距离达到最大
+	\item \(t_2\) 时刻，小物块相对传送带滑动的距离达到最大
+	\item \(0 \sim t_2\) 时间内，小物块受到的摩擦力方向先向右后向左
+	\item \(0 \sim t_3\) 时间内，小物块始终受到大小不变的摩擦力作用
+\end{choices}
+\begin{answer}
+    ACD\qquad 提示：
+\end{answer}

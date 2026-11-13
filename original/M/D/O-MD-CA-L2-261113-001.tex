@@ -1,0 +1,34 @@
+\icode{O-MD-CA-L2-261113-001}
+如图所示，一{\kaishu\color{purple}足够长}的水平传送带以恒定的速度\(v_0\)向右传动。将一质量为\(m\)物体轻轻放在传送带左端，以 \(f\)、\(a\)、\(v\)、\(x\) 表示物体所受摩擦力的大小、加速度大小、速度大小和位移大小，传送带与零件间的动摩擦因数为 \(\mu\)。作出\(f - t\)、\(a - t\)、\(v - t\)、\(x - t\)图像。
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=0]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(3,0);
+		\coordinate (square) at(0,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\fill (o) circle(.07) (length) circle(.07);
+		\draw[-stealth] (1.2,.15)--node[below]{\(v_0\)}(2,.15);
+	\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)};
+		\draw[->,blue] (0,0)--(0,3)node[right]{\(f\)};
+	\end{scope}
+	\begin{scope}[xshift=6cm]
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)};
+		\draw[->,blue] (0,0)--(0,3)node[right]{\(a\)};
+	\end{scope}
+	\begin{scope}[yshift=-4cm]
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)};
+		\draw[->,blue] (0,0)--(0,3)node[right]{\(v\)};
+	\end{scope}
+	\begin{scope}[xshift=6cm,yshift=-4cm]
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)};
+		\draw[->,blue] (0,0)--(0,3)node[right]{\(x\)};
+	\end{scope}
+\end{tikzpicture}

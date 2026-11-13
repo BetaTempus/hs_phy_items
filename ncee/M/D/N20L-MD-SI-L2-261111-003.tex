@@ -1,0 +1,23 @@
+\icode{N20L-MD-SI-L2-261111-003}
+\nceeID[unkown]{2020山东}{unkown}
+一质量为 \(m\) 的乘客乘坐竖直电梯下楼，其位移 \(s\) 与时间 \(t\) 的关系图像如图所示。乘客所受支持力的大小用 \(F_N\) 表示，速度大小用 \(v\) 表示。重力加速度大小为 \(g\)。以下判断正确的是\paren[]
+	
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{\(O\)}--(5,0)node[below]{\(t\)};
+	\draw[->,blue] (0,0)--(0,4)node[right]{\(s\)};
+	\draw[magenta] (0,0) parabola bend(0,0)(1,.5);
+	\draw[magenta] (1,.5)--(3,2.5);
+	\draw[magenta] (3,2.5) parabola bend(4,3)(4,3);
+	\draw[dashed,cyan] (0,.5)--(1,.5)--(1,0) (0,2.5)--(3,2.5)--(3,0) (0,3)--(4,3)--(4,0);
+	\foreach \x/\c in {1/t_1,3/t_2,4/t_3}
+		\node[blue] at(\x,0)[below]{\(\c\)};
+\end{tikzpicture}
+\begin{choices}
+	\item \(0 \sim t_1\) 时间内，\(v\) 增大，\(F_N > mg\)
+	\item \(t_1 \sim t_2\) 时间内，\(v\) 减小，\(F_N < mg\)
+	\item \(t_2 \sim t_3\) 时间内，\(v\) 增大，\(F_N < mg\)
+	\item \(t_2 \sim t_3\) 时间内，\(v\) 减小，\(F_N > mg\)
+\end{choices}
+\begin{answer}
+    D\qquad 提示：
+\end{answer}

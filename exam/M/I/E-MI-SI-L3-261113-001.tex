@@ -1,0 +1,19 @@
+\icode{E-MI-SI-L3-261113-001}
+如图所示，\tikz\draw (0,0)--(60:.36)--(.18,0);\;形硬钢丝竖直固定放置，$OM$ 沿竖直方向，$\angle MON =$ \,\qty{30}{\degree}，一个光滑的轻环套在 $ON$ 上，一根足够长的轻绳穿过轻环，一端固定在 $A$ 点，另一端悬挂质量为 $m$ 的物体。当系统处于稳定状态时，$ON$ 受到轻环的弹力大小为\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[thick] (0,0)node[left]{\(N\)}--++(60:3)coordinate(O)node[right]{\(O\)}-|(O|-0,0)node[right]{\(M\)};
+	\draw[magenta] (60:1.5)coordinate(a)--++(30:{sqrt(3)/2})node[right]{\(A\)} (a)--++(0,-.8)coordinate(b);
+	\draw[fill=orange] ($(b)+(-.1,0)$) rectangle ($(b)+(.1,-.2)$);
+	\draw[rotate=60] (1.5,0) ellipse(.03 and .06);
+	\draw ($(O)+(0,-.3)$) arc(-90:-120:.3);
+\end{tikzpicture}
+\begin{choices}
+	\item $\frac{1}{2}mg$
+	\item $\frac{\sqrt{3}}{2}mg$
+	\item $mg$
+	\item $\sqrt{3}mg$
+\end{choices}
+\begin{answer}
+	C\qquad 提示：
+\end{answer}

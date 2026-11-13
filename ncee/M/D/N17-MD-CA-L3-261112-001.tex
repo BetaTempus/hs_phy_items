@@ -1,0 +1,32 @@
+\icode{N17-MD-CA-L3-261112-001}
+\nceeID[unkown]{2017全国卷\Rmnum{3}}{unkown}
+如图所示，在水平地面上有一长木板和一个可视为质点的小物块，它们分别以初速度 \(v_1 =\) \,\qty{2}{m/s}和 \(v_2 =\) \,\qty{4}{m/s}相向运动，结果物块恰没有从木板上滑落，二者运动的 \(v -t\) 图像如图所示。试求：
+\begin{enumerate}
+	\item 长木板上、下表面的动摩擦因数；
+	\item 长木板与小物块的质量比和板的长度。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[fill=teal!60] (0,0) rectangle(4,.5);
+	\draw[fill=red!30] (0,.5) rectangle(.4,.9);
+	\foreach \x in {-.6,-.4,...,5}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(5,0);
+	\draw[->] (.4,.7)--++(.5,0)node[right]{\(v_1\)};
+	\draw[->] (0,.25)--++(-1,0)node[left]{\(v_2\)};
+	\node at(2.5,-2){甲};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[left]{\(0\)}--(3.4,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,-2.5)--(0,1.5)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+	\draw[dashed,cyan] (0,-.5)--(1.5,-.5)--(1.5,0);
+	\draw[magenta] (0,1)--(1.5,-.5)--(2.5,0) (1.5,-.5)--(0,-2);
+	\foreach \x/\xtext in {.5/0.5,1/1.0,1.5/1.5,2/2.0,2.5/2.5}
+		\draw[blue] (\x,.07)--(\x,0)node[below]{\(\xtext\)};
+	\foreach \y/\ytext in {-2/-4,-1.5/-3,-1/-2,-.5/-1,.5/1,1/2}
+		\draw[blue] (.07,\y)--(0,\y)node[left]{\(\ytext\)};
+	\node at(1.5,-2.2){乙};
+\end{tikzpicture}
+\begin{answer}
+	（1）0.2\quad0.1（2）\(3:1\)\quad\qty{4.5}{m}
+\end{answer}

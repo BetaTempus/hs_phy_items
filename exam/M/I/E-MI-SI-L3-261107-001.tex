@@ -1,0 +1,20 @@
+\icode{E-MI-SI-L3-261107-001}
+某博物馆发起了一项“单手拿金砖”的挑战。如图所示，静置在桌面上的金砖的纵截面是上窄下宽的梯形，挑战者用单手捏住金砖\(a\)、\(b\)两侧面，竖直拿起金砖并保持25秒以上即挑战成功。已知金砖质量为\qty{25}{kg}，截面底角为\qty{71}{\degree}，手与金砖间的动摩擦因数为0.4，最大静摩擦力等于滑动摩擦力，重力加速度取\qty{10}{m/s^2}，\(\sin\)\,\qty{71}{\degree}\(= 0.95\)，\(\cos\)\,\qty{71}{\degree}\(= 0.33\)，若要缓慢竖直拿起金砖，挑战者对\(a\)侧面的压力至少约为\paren[]
+
+\begin{tikzpicture}[scale=.9,font=\scriptsize]
+	\draw (0,0)--node[left]{\(a\)}(71:3)--++(2,0)coordinate(A);
+	\coordinate (B)at($(A)+(-71:3)$);
+	\draw (A)--node[right]{\(b\)}(B)--(0,0);
+	\draw (.3,0) arc(0:71:.3) ($(B)+(-.3,0)$) arc(180:109:.3);
+	\node at(.6,.2) {\qty{71}{\degree}};
+	\node at(3.4,.2) {\qty{71}{\degree}};
+\end{tikzpicture}
+\begin{choices}
+	\item \qty{2500}{N}
+	\item \qty{2000}{N}
+	\item \qty{1500}{N}
+	\item \qty{300}{N}
+\end{choices}
+\begin{answer}
+    
+\end{answer}

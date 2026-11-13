@@ -1,0 +1,24 @@
+\icode{E-MD-CA-L2-261113-003}
+如图所示，水平传送带以 \(v =\) \,\qty{2}{m/s}的速度匀速转动，传送带两端的长度 \(L =\) \,\qty{8}{m}。现在传送带左端 \(A\) 无初速度竖直释放某一物块，\(t_1 =\) \,\qty{2}{s}时物块的速度与传送带的速度相同， \(g =\) \,\qty{10}{m/s^2}，试求：
+\begin{enumerate}
+  \item 物块与传送带间的动摩擦因数 \(\mu\)；
+  \item 物块由传送带左端 \(A\) 运动到右端 \(B\) 的时间 \(t\)；
+  \item 若传送带匀速转动的速度可调，则传送带至少以多大速度 \(v_{\min}\) 运行，物块从 \(A\) 端到 \(B\) 端运动时间才最短。
+\end{enumerate}
+
+\begin{tikzpicture}[font=\scriptsize]
+	\begin{scope}[rotate=0]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(4,0);
+		\coordinate (square) at(0,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\node at($(o)+(0,.3)$)[below]{\(A\)};
+		\node at($(length)+(0,.3)$)[below]{\(B\)};
+		\draw[-stealth] (1.5,.15)--(2.5,.15);
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+    （1）0.1（2）\qty{3}{s}（3）\qty{4}{m/s}
+\end{answer}

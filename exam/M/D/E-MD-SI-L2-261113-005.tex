@@ -1,0 +1,48 @@
+\icode{E-MD-SI-L2-261113-005}
+如图所示，足够长的传送带与水平面夹角为 \(\theta\)，以速度 \(v_0\) 逆时针匀速转动，在传送带的上端轻轻放置一个质量为 \(m\) 的小木块，小木块与传送带间的动摩擦因数 \(\mu < \tan\theta\)，则图中能客观地反映小木块的速度随时间变化关系的是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(3,0);
+		\coordinate (square) at(2.7,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\fill (o) circle(.07) (length) circle(.07);
+		\draw[->] (2,.15)--node[below,rotate=37]{\(v_0\)}(1.2,.15);
+	\end{scope}
+	\draw[dashed,cyan] (0,-.3)--(2,-.3);
+	\draw[gray] ({.3*tan(18.5)+.4},-.3) arc(0:37:.4);
+	\node at(.6,-.12){\(\theta\)};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=.9,>=stealth,font=\scriptsize]
+	\begin{scope}
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(3,0)node[below]{\(t\)};
+		\draw[->,blue] (0,0)--(0,3)node[right]{\(v\)};
+		\draw[domain=0:2.5,magenta] plot(\x,{2*(\x-1)/(\x+2)+1});
+		\node at(1.5,-.5){\normalsize\(A\)};
+	\end{scope}
+	\begin{scope}[xshift=4cm]
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(3,0)node[below]{\(t\)};
+		\draw[->,blue] (0,0)--(0,3)node[right]{\(v\)};
+		\draw[magenta] (0,0)--(2.5,2.5);
+		\node at(1.5,-.5){\normalsize\(B\)};
+	\end{scope}
+	\begin{scope}[xshift=8cm]
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(3,0)node[below]{\(t\)};
+		\draw[->,blue] (0,0)--(0,3)node[right]{\(v\)};
+		\draw[magenta] (0,0)--(1.2,1.5)--(2.5,1.5);
+		\node at(1.5,-.5){\normalsize\(C\)};
+	\end{scope}
+	\begin{scope}[xshift=12cm]
+		\draw[->,blue] (0,0)node[below left]{\(O\)}--(3,0)node[below]{\(t\)};
+		\draw[->,blue] (0,0)--(0,3)node[right]{\(v\)};
+		\draw[magenta] (0,0)--++(50:1.2)--++(30:1.2);
+		\node at(1.5,-.5){\normalsize\(D\)};
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+    D\qquad 提示：
+\end{answer}

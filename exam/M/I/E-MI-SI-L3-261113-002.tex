@@ -1,0 +1,25 @@
+\icode{E-MI-SI-L3-261113-002}
+如图所示，\(B\) 是一个立方体物体，中间有一个光滑球形孔，小球 \(C\) 位于球形孔内，整个装置放在足够长的木板 \(A\) 上。已知立方体 \(B\) 与长木板 \(A\) 之间的动摩擦因数为 $\mu = \frac{\sqrt{2}}{2}$，最大静摩擦力等于滑动摩擦力。现将木板的倾角 $\theta$ 由\qty{0}{\degree}缓慢增大到\qty{60}{\degree}，在此过程中，下列说法正确的是\paren[]
+	
+\begin{tikzpicture}[font=\scriptsize]
+	\begin{scope}[rotate=30]
+		\draw (0,0)--(4,0);
+		\draw[fill=teal!60] (1.4,0) rectangle(2.6,1.2);
+        \draw[fill=white] (2,.6)coordinate(o) circle(.5);
+		\node at(2.6,.6)[rotate=30,right]{\(B\)};
+	\end{scope}
+	\shade[ball color=gray] ($(o)+(0,-.4)$)node[above right]{\(C\)} circle(.1);
+	\draw (0,0)--({2*sqrt(3)},0);
+	\draw (0.3,0) arc(0:30:.3);
+	\node at(.6,.12){\(\theta\)};
+	\node at(30:4)[below]{\(A\)};
+\end{tikzpicture}
+\begin{choices}
+	\item 木板 \(A\) 受到的压力逐渐增大
+	\item 立方体 \(B\) 受到木板 \(A\) 的摩擦力逐渐变大
+	\item 小球 \(C\) 对立方体 \(B\) 的压力逐渐变大
+	\item 小球 \(C\) 对立方体 \(B\) 的压力大小先不变后减小
+\end{choices}
+\begin{answer}
+	D\qquad 提示：
+\end{answer}

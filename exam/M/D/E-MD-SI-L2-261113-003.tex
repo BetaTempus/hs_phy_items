@@ -1,0 +1,25 @@
+\icode{E-MD-SI-L2-261113-003}
+如图所示水平传送带 \(A\)、\(B\) 两端点相距 \(x =\) \,\qty{4}{m}，以 \(v_0 =\) \,\qty{2}{m/s}的速度（始终保持不变）顺时针运转。今将一小煤块（可视为质点）无初速度地轻放至 \(A\) 点处，已知小煤块与传送带间的动摩擦因数为\(0.4\)，\(g\) 取\qty{10}{m/s^2}。由于小煤块与传送带之间有相对滑动，会在传送带上留下划痕。则小煤块从 \(A\) 运动到 \(B\) 的过程中\paren[]
+	
+\begin{tikzpicture}[font=\scriptsize]
+	\begin{scope}[rotate=0]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(3,0);
+		\coordinate (square) at(0,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\node at($(o)+(0,.3)$)[below]{\(A\)};
+		\node at($(length)+(0,.3)$)[below]{\(B\)};
+		\draw[-stealth] (1.2,.15)--node[below]{\(v_0\)}(2,.15);
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item 所用的时间是\(\sqrt{2}\)\qty{}{s}
+	\item 所用的时间是\qty{0.5}{s}
+	\item 划痕长度是\qty{4}{m}
+	\item 划痕长度是\qty{0.5}{m}
+\end{choices}
+\begin{answer}
+    D\qquad 提示：
+\end{answer}

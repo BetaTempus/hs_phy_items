@@ -48,13 +48,13 @@
 				\draw[thin] (-.04,\y)--++(-.08,0) (.04,\y)--++(.08,0);
 		\end{scope}%%(0,0)(0,2.5)
 
-		\begin{scope}[xshift=1cm]
-			\coordinate (o)at(0,0);
-			\draw (o) rectangle($(o)+(1,1)$)coordinate(b) (b)--++(45:{.5*sqrt(2)})coordinate(c)--++(-1,0)coordinate(d)--++(-135:{.5*sqrt(2)}) (c)--++(0,-1)--++(-135:{.5*sqrt(2)});
-			\draw[dashed] (o)--++(45:{.5*sqrt(2)})--++(1,0) (d)--++(0,-1);
+\begin{scope}[xshift=1cm]
+	\coordinate (o)at(0,0);
+	\draw (o) rectangle($(o)+(1,1)$)coordinate(b) (b)--++(45:{.5*sqrt(2)})coordinate(c)--++(-1,0)coordinate(d)--++(-135:{.5*sqrt(2)}) (c)--++(0,-1)--++(-135:{.5*sqrt(2)});
+	\draw[dashed] (o)--++(45:{.5*sqrt(2)})--++(1,0) (d)--++(0,-1);
 \end{scope}
 \begin{scope}[xshift=3cm]
-	\def\LenGth{.4};
+	\def\LenGth{.4}
 	\coordinate (o)at(0,0);
 	\draw[dashed,cyan] (o)--++(45:{.5*\LenGth*sqrt(2)})coordinate(e)--++(\LenGth,0) (e)--++(\LenGth,0);
 	\draw[fill=orange!40] (o) rectangle($(o)+(\LenGth,\LenGth)$)coordinate(b);
@@ -67,17 +67,17 @@
 \begin{proset}
 	纸带
 
-	\begin{tikzpicture}
-		\coordinate (o) at(0,0);
-		\draw ($(o)+(-.3,.5)$)--++(10.2,0) ($(o)+(-.3,-.5)$)--++(10.2,0)coordinate(a) ($(o)+(-.3,.5)$)--++(-.1,-.1)--++(.2,-.7)--++(-.1,-.2) (a)--++(.1,.1)--++(-.2,.7)--++(.1,.2);
-		\node at($(a)+(-.7,-.2)$){\scriptsize 单位：\,\qty{}{cm}};
-		\foreach \x/\n in {0/0,.6/1,1.6/2,3/3,4.8/4,7/5,9.6/6}{
-			\coordinate (\n) at(\x,0);
-			\draw[gray] (\x,.05)--++(0,.15);
-			\fill (\n)node[below]{\scriptsize \(\n\)} circle(.03);}
-		\foreach \x/\y/\n in {0/.6/0,.6/1.6/0,1.6/3/0,3/4.8/0,4.8/7/0,7/9.6/0}
-			\draw[stealth-stealth,thin] (\x,.1)--node[above]{\scriptsize \(\n\)}(\y,.1);
-	\end{tikzpicture}%%始.6,差.4
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\coordinate (o) at(0,0);
+	\draw ($(o)+(-.3,.5)$)--++(10.2,0) ($(o)+(-.3,-.5)$)--++(10.2,0)coordinate(a) ($(o)+(-.3,.5)$)--++(-.1,-.1)--++(.2,-.7)--++(-.1,-.2) (a)--++(.1,.1)--++(-.2,.7)--++(.1,.2);
+	\node at($(a)+(-.7,-.2)$){单位：\,\qty{}{cm}};
+	\foreach \x/\n in {0/0,.6/1,1.6/2,3/3,4.8/4,7/5,9.6/6}{
+		\coordinate (\n) at(\x,0);
+		\draw[gray] (\x,.05)--++(0,.15);
+		\fill (\n)node[below]{\(\n\)} circle(.03);}
+	\foreach \x/\y/\n in {0/.6/0,.6/1.6/0,1.6/3/0,3/4.8/0,4.8/7/0,7/9.6/0}
+	\draw[<->,thin] (\x,.1)--node[above]{\(\n\)}(\y,.1);
+\end{tikzpicture}%%始.6,差.4
 
 	\begin{tikzpicture}
 		\coordinate (o) at(0,0);
@@ -335,7 +335,6 @@
 		\draw (\x,.5)..controls({\x+.1},.9)and({\x+.2},-.4)..({\x+.3},0);
 	\end{tikzpicture}
 \end{proset}
-
 \begin{proset}
 
 	\begin{tikzpicture}

@@ -1,0 +1,22 @@
+\icode{N25Y-MD-SI-L2-261111-002}
+\nceeID[4]{2025河南}{1}
+野外高空作业时，使用无人机给工人运送零件。如图，某次运送过程中的一段时间内，无人机向左水平飞行，零件用轻绳悬挂于无人机下方，并相对于无人机静止，轻绳与竖直方向成一定角度。忽略零件所受空气阻力，则在该段时间内\paren[]
+	
+\begin{tikzpicture}[font=\scriptsize]
+	\draw (-.4,-.2)--(-.4,.4)--(-.3,.5)--(.3,.5)--(.4,.4)--(.4,-.2)--cycle;
+	\draw[thick] (-.4,0)--++(-.4,0) (-.9,.4)--(-.9,.55) (-1.1,.55)--(-.7,.55) (.4,0)--++(.4,0) (.9,.4)--(.9,.55) (1.1,.55)--(.7,.55);
+	\draw (-.8,-.1) rectangle (-1,.4) (.8,-.1) rectangle (1,.4);
+	\draw[dashed,cyan] (0,-.2)--++(0,-.5);
+	\draw[magenta] (0,-.2)--++(-60:1.5)coordinate(a);
+	\draw[fill=orange!50] ($(a)+(-.15,0)$) rectangle ($(a)+(.15,-.2)$);
+	\node at ($(a)+(-.15,-.1)$)[left,gray]{\tiny 零件};
+\end{tikzpicture}
+\begin{choices}
+	\item 无人机做匀速运动
+    \item 零件所受合外力为零
+    \item 零件的惯性逐渐变大
+    \item 零件的重力势能保持不变
+\end{choices}
+\begin{answer}
+	D\qquad 提示：审题可知无人机向左{\color{red}水平}飞行，零件所受{\color{red}合力水平向左}，故水平向左加速运动。
+\end{answer}

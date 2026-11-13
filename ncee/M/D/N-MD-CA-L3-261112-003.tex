@@ -1,0 +1,33 @@
+\icode{N-MD-CA-L3-261112-003}
+ 一长木板置于粗糙水平地面上，木板左端放置一小物块；在木板右方有一墙壁，木板右端与墙壁的距离为\qty{4.5}{m}，如图（\(a\)）所示。 \(t=0\) 时刻开始，小物块与木板一起以共同速度向右运动，直至\qty{1}{s}时木板与墙壁碰撞（碰撞时间极短）。碰撞前后木板速度大小不变，方向相反；运动过程中小物块始终未离开木板。已知碰撞后\qty{1}{s}时间内小物块的 \(v-t\) 图线如图（\(b\)）所示。木板的质量是小物块质量的 \(15\) 倍，重力加速度大小 \(g\) 取\qty{10}{m/s^2}。求
+\begin{enumerate}
+	\item 木板与地面间的动摩擦因数 \(\mu_1\) 及小物块与木板间的动摩擦因数 \(\mu_2\);
+	\item 木板的最小长度;
+	\item 木板右端离墙壁的最终距离。
+\end{enumerate}
+
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \x in {0,.2,...,4.8}
+		\draw[gray] (\x,0)--++(.2,-.2);
+	\foreach \y in {0,.2,...,1}
+		\draw[gray] (5,\y)--++(.2,-.2);
+	\draw[thick] (0,0)--(5,0)--(5,1);
+	\draw[fill=teal!60] (.5,0) rectangle(3,.2);
+	\draw[fill=red!30] (.5,.2) rectangle(.7,.4);
+	\node at(2.5,-.7){图（\(a\)）};
+\end{tikzpicture}
+\hspace{2em}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{\(O\)}--(3,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,0)--(0,3)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+	\draw[magenta] (1,2.4)--(2,0);
+	\draw[dashed,cyan] (0,2.4)--(1,2.4)--(1,0);
+	\foreach \x in {1,2}
+		\draw[blue] (\x,.1)--(\x,0)node[below]{\(\x\)};
+	\foreach \y/\n in {1.2/2,2.4/4}
+		\draw[blue] (.1,\y)--(0,\y)node[left]{\(\n\)};
+	\node at(1.5,-.7){图（\(b\)）};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

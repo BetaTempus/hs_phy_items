@@ -1,0 +1,23 @@
+\icode{E-MD-CA-L2-261113-001}
+如图所示，一平直的传送带以 \(v =\) \,\qty{2}{m/s} 的速度匀速运行，\(A\)、\(B\) 两点相距 \(L =\) \,\qty{10}{m}。已知工件与传送带间的动摩擦因数 \(\mu\) 为\(0.2\)，在 \(A\) 处把工件无初速度地放到传送带上，工件可视为质点，\(g\) 取\,\qty{10}{m/s^2}。求：
+\begin{enumerate}
+	\item 工件经过多长时间会被传送到 \(B\) 处；
+	\item 工件从 \(A\) 处传送到 \(B\) 处相对传送带滑动的长度。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=0]
+		\coordinate (o) at(0,0);
+		\coordinate (length) at(3,0);
+		\coordinate (square) at(0,.3);
+		\draw[gray] (0,0) circle(.3) (length) circle(.3);
+		\draw[fill=orange!50] (square) rectangle($(square)+(.3,.3)$);
+		\draw ($(o)+(0,.3)$)--($(length)+(0,.3)$) arc(90:-90:.3)--($(length)+(0,-.3)$)--($(o)+(0,-.3)$) arc(270:90:.3);
+		\node at($(o)+(0,.3)$)[below]{\(A\)};
+		\node at($(length)+(0,.3)$)[below]{\(B\)};
+		\draw[->] (1.2,.15)--node[below]{\(v\)}(2,.15);
+	\end{scope}
+\end{tikzpicture}
+\begin{answer}
+    （1）\qty{5.5}{s}（2）\qty{1}{m}
+\end{answer}

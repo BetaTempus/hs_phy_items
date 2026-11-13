@@ -1,0 +1,38 @@
+\icode{N13L-MI-SI-L3-261109-001}
+\nceeID[5]{2013山东}{15}
+如图所示，用完全相同的弹簧\(A\)、\(B\)、\(C\) 将两个相同的小球连接并悬挂，小球处于静止状态，弹簧\(A\)与竖直方向的夹角为\qty{30}{\degree}，弹簧\(C\)水平，则弹簧\(A\)、\(C\)的伸长量之比为\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[thick] (0,0)--(-60:.2)coordinate(a1) (-60:1.3)coordinate(a2)--(-60:1.5)coordinate(b)--++(-40.9:.2)coordinate(c1) ($(b)+(-40.9:1.3)$)coordinate(c2)--++(-40.9:.2)coordinate(d) (d)--++(.2,0)coordinate(e1) ($(d)+(1.3,0)$)coordinate(e2)--++(.2,0)coordinate(f);
+	\draw[gray,dashed] (0,0)--++(-90:1.5);
+	\foreach \x/\y in {a1/a2,c1/c2,e1/e2}
+		\draw[thick,decoration={aspect=.6,segment length=3,amplitude=.8mm,coil},decorate] (\x)--(\y);
+	\foreach \c in {b,d}
+		\shade[ball color=blue!30] (\c) circle(.15);
+	\foreach \x in {-.6,-.4,...,.6}
+		\draw[gray] (\x,0)--++(.2,.2);
+	\foreach \y in {-3,-2.8,...,-1.8}
+		\draw[gray] ({1.5*(1+cos(60)+cos(40.9))},\y)--++(.2,.2);
+	\draw[thick] (-.6,0)--(.6,0) ({1.5*(1+cos(60)+cos(40.9))},-3)--++(0,1.3);
+	\node at(.7,-.5){ \(A\)};
+	\node at(1.6,-1.5){ \(B\)};
+	\node at ($(d)+(.75,.4)$){ \(C\)};
+	\node at(.25,-1.1){\tiny\qty{30}{\degree}};
+\end{tikzpicture}
+\begin{choices}
+	\item \(\sqrt{3}:4\)
+	\item \(4:\sqrt{3}\)
+	\item \(1:2\)
+	\item \(2:1\)
+\end{choices}
+\begin{answer}
+	D\qquad 提示：整体法对两球受力分析。
+
+	\begin{tikzpicture}[>=stealth,font=\scriptsize]
+		\draw[->] (0,0)coordinate(o)--++(-90:1.5)node[right]{ \(2mg\)};
+		\draw[->,blue] (o)--++({sqrt(3)/2},0)coordinate(c)node[right]{ \(T_C\)};
+		\draw[->,red] (o)--++(120:{sqrt(3)})coordinate(a)node[left]{ \(T_A\)};
+		\draw[dashed,cyan] (a)--++({sqrt(3)/2},0)--(c);
+		\draw[->,dashed] (o)--++(0,1.5);
+	\end{tikzpicture}
+\end{answer}

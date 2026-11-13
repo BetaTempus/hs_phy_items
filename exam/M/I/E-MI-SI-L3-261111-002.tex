@@ -1,0 +1,34 @@
+\icode{E-MI-SI-L3-261111-002}
+如图\(a\)所示，倾角为\(\theta\)的光滑斜面上，轻弹簧平行斜面放置且下端固定，一质量为\(m\)的小滑块从斜面上\(O\)点由静止滑下。以\(O\)点为原点，作出滑块从\(O\)点下滑至最低点过程中的加速度大小\(a\)随位移\(x\)变化的关系如图\(b\)所示。弹簧形变始终未超过弹性限度，重力加速度大小为\(g\)。下列说法正确的是\paren[]	
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\draw[thick] (0,0)--(4,0);
+		\draw[fill=teal] (0,0) rectangle(.1,.6);
+        \draw[fill=orange!60] (3,0) rectangle(3.3,.3);
+		\fill (3.15,0)node[below]{\(O\)} circle(.05);
+		\draw[thick,decoration={aspect=.5,segment length=4,amplitude=1.5mm,coil},decorate] (.1,.15)--(1.5,.15);
+	\end{scope}
+	\draw[->] (0,0)--(-143:.5)node[left]{\(x\)};
+	\draw[thick] (0,0)--(3.4,0);
+	\draw (.4,0) arc(0:37:.4);
+	\node at(.6,.2){\(\theta\)};
+	\node at(1.6,-.7){ 图\(a\)};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)--(3,0)node[right]{\(x\)};
+	\draw[->,blue] (0,0)--(0,2.5)node[right]{\(a\)};
+	\node[blue] at(-.2,-.2){\(O\)};
+	\draw[magenta] (0,1)node[left,blue]{\(g\sin\theta\)}--(1,1)--(1.5,0)node[below,blue]{\(x_2\)}--(2.5,2);
+	\draw[dashed,cyan] (1,1)--(1,0)node[below,blue]{\(x_1\)} (2.5,0)node[below,blue]{\(x_3\)}--(2.5,2)--(0,2);
+	\node at(1.5,-.7){ 图\(b\)};
+\end{tikzpicture}
+\begin{choices}
+	\item 弹簧的劲度系数为\(\dfrac{mg\sin\theta}{x_2}\)
+	\item 下滑过程中，在\(x = x_2\)处，滑块的机械能最大
+	\item 在\(x_1\sim x_2\)和\(x_2\sim x_3\)两段过程中，滑块机械能的变化大小不相同
+	\item 在\(x_2\sim x_3\)这段过程中，\(a - x\)图线斜率的绝对值等于\(\dfrac{g\sin\theta}{x_2 - x_1}\)
+\end{choices}
+\begin{answer}
+    B\qquad 提示：
+\end{answer}
