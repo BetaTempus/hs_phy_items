@@ -1,0 +1,20 @@
+\icode{O-MD-CA-L2-261115-006}
+如图所示，质量为\(m_1\) 的木块 \(a\) 和质量为\(m_2\) 的木块\(b\)通过不可伸长的轻绳连接，置于粗糙的斜面上，\(a\)、\(b\)与斜面的摩擦因数均为\(\mu\)，斜面与地面的夹角为\(\theta\)。当在\(b\) 上施加一沿斜面向上的恒力\(F\)，使\(a\)、\(b\)一起沿斜面向上加速运动。求\(a\)、\(b\) 间轻绳上的作用力大小。
+
+\begin{tikzpicture}[font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\draw (0,0)--(4,0)--++(-127:2.4);
+		\draw[fill=teal!60] (1,0)coordinate(a) rectangle($(a)+(.3,.3)$)node[midway,rotate=37]{\(a\)};
+		\draw[fill=orange!60] (2.8,0)coordinate(b) rectangle($(b)+(-.3,.3)$)node[midway,rotate=37]{\(b\)};
+		\draw[magenta] ($(a)+(.3,.15)$)--($(b)+(-.3,.15)$);
+		\draw[-stealth] ($(b)+(0,.15)$)--++(.6,0)node[above]{\(F\)};
+	\end{scope}
+	\draw (.3,0) arc(0:37:.3);
+	\node at(.5,.16){\(\theta\)};
+	\foreach \x in {-.6,-.4,...,3.8}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(3.8,0);
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

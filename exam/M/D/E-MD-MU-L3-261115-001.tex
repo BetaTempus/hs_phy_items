@@ -1,0 +1,35 @@
+\icode{E-MD-MU-L3-261115-001}
+（多选）
+如图（\(a\)），质量\(m =\)\,\qty{2}{kg}的物体沿倾角\(\theta =\)\,\qty{37}{\degree}的固定粗糙斜面由静止开始向下运动，风对物体的作用力沿水平方向向右，其大小与风速\(v\)成正比，比例系数用\(k\)表示，物体加速度\(a\)与风速\(v\)的关系如图（\(b\)）所示，\(g\)取\qty{10}{m/s^2}，\(\sin\)\qty{37}{\degree}=0.6，\(\cos\)\qty{37}{\degree}=0.8，下列说法正确的是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\draw (0,0)--++(4,0)--++(-127:2.4);
+		\draw[fill=orange!60] (2.4,0) rectangle(2,.4);
+	\end{scope}
+	\foreach \x in {-.6,-.4,...,3.6}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(3.8,0);
+	\foreach \y in {.4,.8,...,2.4}
+		\draw[->,blue] (-.4,\y)--(.4,\y);
+	\draw (.3,0) arc(0:37:.3);
+	\node at(.7,.2){\(\theta\)};
+	\node at(.4,1.2)[right]{\(v\)};
+	\node at(1.6,-.7){图（\(a\)）};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)--(3.5,0)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+	\draw[->,blue] (0,0)--(0,2.5)node[right]{\(a\)/(\qty{}{m\cdot s^{-2}})};
+	\node[blue] at(-.15,-.15){\(O\)};
+	\draw[magenta] (0,1.8)node[left,blue]{5}--(2.8,0)node[below,blue]{5};
+	\node at(1.75,-.7){图（\(b\)）};
+\end{tikzpicture}
+\begin{choices}
+	\item 当风速\(v =\)\qty{5}{m/s}时，物体沿斜面下滑的速度最大
+	\item 物体沿斜面做匀变速运动
+	\item 物体与斜面间的动摩擦因数为0.25
+	\item 比例系数\(k\)为\(\frac{16}{7}\)\qty{}{kg/s}
+\end{choices}
+\begin{answer}
+    AD\qquad 提示：
+\end{answer}

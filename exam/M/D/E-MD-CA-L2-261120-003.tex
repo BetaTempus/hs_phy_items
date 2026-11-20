@@ -1,0 +1,19 @@
+\icode{E-MD-CA-L2-261120-003}
+如图所示，在倾角为 \(\alpha\) 的固定光滑斜面上，有一用绳子拴着的长木板，木板上站着一只老鼠。已知木板的质量是老鼠质量的两倍，当绳子突然断开时，老鼠立即沿着板向上跑，以保持其相对斜面的位置不变。此木板沿斜面下滑的加速度为多少？
+
+\begin{tikzpicture}[font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\draw[thick] (0,0)--(4,0)--(4,.5);
+		\draw[fill=teal!60] (.8,0) rectangle(2.8,.2);
+		\draw[magenta] (2.8,.1)--(4,.1);
+		\draw[fill=orange!60] (1.6,.3)node[above]{老鼠} circle(.1);
+	\end{scope}
+	\draw[gray] (.3,0) arc(0:37:.3);
+	\foreach \x in {-.6,-.4,...,3.8}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(3.8,0);
+	\node at(.5,.15){\(\alpha\)};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

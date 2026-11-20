@@ -1,0 +1,30 @@
+\icode{E-MD-MU-L2-261115-005}
+（多选）
+如图所示，2024个完全相同的小球通过完全相同的轻质弹簧（在弹性限度内）相连，在水平拉力\(F\)的作用下，一起沿水平面向右运动，设1和2之间弹簧的弹力为\(F_{1 -2}\)，2和3之间弹簧的弹力为\(F_{2 -3}\)，……，2023和2024之间弹簧的弹力为\(F_{2023 - 2024}\)，则下列说法正确的是\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[decoration={aspect=.8,segment length=3,amplitude=.8mm,coil},decorate] (0,0)coordinate(a)--(1,0)coordinate(b);
+	\draw[decoration={aspect=.8,segment length=3,amplitude=.8mm,coil},decorate] ($(b)+(.3,0)$)--($(b)+(1.3,0)$)coordinate(c);
+	\draw[dashed,cyan] ($(c)+(.3,0)$)--($(c)+(1.3,0)$)coordinate(d);
+	\draw[decoration={aspect=.8,segment length=3,amplitude=.8mm,coil},decorate] ($(d)$)--($(d)+(1,0)$)coordinate(e);
+	\shade[ball color=red!30] ($(a)+(-.15,0)$) circle(.15);
+	\shade[ball color=red!30] ($(b)+(.15,0)$) circle(.15);
+	\shade[ball color=red!30] ($(c)+(.15,0)$) circle(.15);
+	\shade[ball color=red!30] ($(d)+(-.15,0)$) circle(.15);
+	\shade[ball color=red!30] ($(e)+(.15,0)$) circle(.15);
+	\foreach \x/\c in {a/1,b/2,c/3,d/2023,e/2024}
+		\node at($(\x)+(0,.15)$)[above]{\(\c\)};
+	\draw[-stealth] ($(e)+(.3,0)$)--++(.6,0)node[right]{\(F\)};
+	\foreach \x in {-.6,-.4,...,6}
+		\draw[gray] (\x,-.35)--++(.2,.2);
+	\draw[thick] (-.6,-.15)--(6,-.15);
+\end{tikzpicture}
+\begin{choices}
+	\item 若水平面光滑，从左到右每根弹簧长度之比为\(1:2:3:\cdots:2023\)
+	\item 若水平面粗糙，撤去\(F\)的瞬间，第2000号小球的加速度不变
+	\item 若水平面光滑，\(F_{1 - 2}:F_{2 - 3}:\cdots:F_{2023 - 2024} = 1:2:\cdots:2023\)
+	\item 若水平面粗糙，\(F_{1 - 2}:F_{2 - 3}:\cdots:F_{2023 - 2024} = 1:2:\cdots:2023\)
+\end{choices}
+\begin{answer}
+	BCD\qquad 提示：
+\end{answer}

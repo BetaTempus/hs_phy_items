@@ -1,0 +1,17 @@
+\icode{E-MD-CA-L2-261115-003}
+如图所示，水平轨道上有一个竖直放置的四分之三圆管轨道，管内外壁均光滑，半径为 \(R\)，管的粗细忽略，其质量为 \(3m\)，在管中与竖直方向成\qty{37}{\degree}的位置有挡板，在管中有一个直径略小于管内径的质量为 \(m\) 的小球，小球可以看成质点。当用水平恒力向左推管时，小球恰好与挡板接触但无作用力，重力加速度为 \(g\)，\(\sin\)\qty{37}{\degree}=0.6，\(\cos\)\qty{37}{\degree}=0.8，求水平恒力\(F\)。
+	
+\begin{tikzpicture}[scale=.8,>=stealth,font=\scriptsize]
+	\draw (-2,0) arc(-180:90:2) (-2.2,0) arc(-180:90:2.2) (0,-.3) arc(-90:-53:.3);
+	\draw[dashed,cyan] (0,0)coordinate(o)--(-2,0) (o)--(0,-2) (o)--(-53:2) (o)--(0,2);
+	\draw[red,thick] (-53:2)--(-53:2.2);
+	\shade[ball color=blue!60] ($(-53:2.1)+(-143:.1)$)node[below right]{\(m\)} circle(.1);
+	\draw[->] (3,0)node[right]{\(F\)}--(2.2,0);
+	\foreach \x in {-2.6,-2.4,...,2.6}
+		\draw[gray] (\x,-2.4)--++(.2,.2);
+	\draw[thick] (-2.6,-2.2)--(2.8,-2.2);
+	\node at(.3,-.9){\qty{37}{\degree}};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

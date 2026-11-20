@@ -1,0 +1,16 @@
+\icode{O-MD-CA-L2-261115-007}
+如图所示，物块\(A\)和物块\(B\)的质量分别为\(m_1\)、\(m_2\)（\(m_1 < m_2\)），通过不可伸长的轻绳跨过滑轮连接，初始时施加外力使\(A\)、\(B\)静止，现突然撤去外力，忽略一切摩擦，求轻绳上的张力和\(A\)、\(B\)的加速度。
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw (0,0) circle(.4) (0,0) circle(.15);
+	\fill (0,0) circle(.05);
+	\draw[magenta] (-.4,0)--++(0,-2.5)coordinate(a) (.4,0)--++(0,-1)coordinate(b);
+	\foreach \n/\color/\c\ in {a/teal/A,b/orange/B}
+    	\draw[fill=\color!60] ($(\n)+(-.2,0)$) rectangle($(\n)+(.2,-.4)$)node[midway]{\(\c\)};
+	\foreach \x in {-1,-.8,...,.8}
+		\draw[gray] (\x,.6)--++(.2,.2);
+	\draw[thick] (-1,.6)--(1,.6) (0,.6)--(0,0);
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

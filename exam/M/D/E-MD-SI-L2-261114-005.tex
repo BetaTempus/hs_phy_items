@@ -1,0 +1,46 @@
+\icode{E-MD-SI-L2-261114-005}
+安全带是汽车行驶过程中生命安全的保障带。如图甲所示，安全带缠绕在卷轴上，摆锤和棘爪始终保持垂直。如图乙所示，当摆锤倾斜到一定角度时，摆锤带动棘爪卡住卷轴。当摆锤呈现图乙所示状态时，汽车的运动情况可能是\paren[]
+
+\begin{tikzpicture}[scale=.8,font=\scriptsize]
+	\draw[very thick,fill=red!30] (.7,0) rectangle(.8,2);
+	\draw[fill=gray!10] (0,0) circle(1);
+	\draw[fill=gray!50] (0,0) circle(.7);
+	\foreach \angle in {-90,-54,...,270}
+		\draw[fill=gray!30] (\angle:1)--({\angle+36}:1.3)--({\angle+36}:1) arc({\angle+36}:\angle:1);
+	\draw (0,-1.6) rectangle(-.7,-1.8) (.3,-1.6) rectangle(1,-1.8);
+	\draw[fill=black] (-.3,-1.6) rectangle(.26,-1.5);
+	\draw[magenta] (.26,-1.5)--(.26,-2.5)coordinate(a);
+	\draw[fill=teal!50] ($(a)+(-.15,0)$) rectangle($(a)+(.15,-.4)$);
+	\draw[gray] (.7,1.7)--(0,1.7)node[left]{安全带};
+	\draw[gray] (210:.7)--(210:1.3)--++(-.7,0)node[left]{卷轴};
+	\draw[gray] (-126:1.3)--++(-1.04,0)node[left]{棘爪};
+	\draw[gray] ($(a)+(-.15,-.2)$)--++(-1,0)node[left]{摆锤};
+	\node at(0,-3.2){图甲};
+\end{tikzpicture}
+\hspace{4em}
+\begin{tikzpicture}[scale=.8,>=stealth,font=\scriptsize]
+	\draw[very thick,fill=red!30] (.7,0) rectangle(.8,2);
+	\begin{scope}[rotate=19]
+		\draw[fill=gray!10] (0,0) circle(1);
+		\draw[fill=gray!50] (0,0) circle(.7);
+		\foreach \angle in {-156,-120,...,204}
+			\draw[fill=gray!30] (\angle:1)--({\angle+36}:1.3)--({\angle+36}:1) arc({\angle+36}:\angle:1);
+	\end{scope}
+	\draw (0,-1.6) rectangle(-.7,-1.8) (.3,-1.6) rectangle(1,-1.8);
+	\begin{scope}[rotate around={-30:(.26,-1.6)}]
+		\draw[fill=black] (-.3,-1.6) rectangle(.26,-1.5);
+		\draw[magenta] (.26,-1.6)--(.26,-2.5)coordinate(a);
+		\draw[fill=teal!50] ($(a)+(-.15,0)$) rectangle($(a)+(.15,-.4)$);
+	\end{scope}
+	\draw[->] (1.2,2.4)--node[above]{汽车运动方向}(-1.2,2.4);
+	\node at(0,-3.2){图乙};
+\end{tikzpicture}
+\begin{choices}
+	\item 向前减速运动
+	\item 向前匀速运动
+	\item 向前加速运动
+	\item 向后减速运动
+\end{choices}
+\begin{answer}
+    A\qquad 提示：
+\end{answer}

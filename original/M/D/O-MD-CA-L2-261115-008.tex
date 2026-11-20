@@ -1,0 +1,16 @@
+\icode{O-MD-CA-L2-261115-008}
+如图所示，物块\(A\)和物块\(B\)的质量分别为\(m_1\)、\(m_2\)，通过不可伸长的轻绳跨过滑轮连接，物块\(A\) 置于在光滑的水平面上。开始施加外力使\(A\)、\(B\)静止，现突然撤去外力，忽略一切摩擦，求轻绳上的张力和\(A\)、\(B\)的加速度。
+
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \x in {-3,-2.8,...,-.2}{
+		\draw[gray] (\x,-.2)--++(.2,.2);
+		\draw[gray] (-.2,\x)--++(.2,.2);}
+	\draw[thick] (-3,0)--(0,0)--(0,-3) (.2,.2)coordinate(o) circle(.1) (0,0)--(o);
+	\fill (o) circle(.05);
+	\draw[magenta] ($(o)+(0,.1)$)--++(-2,0)coordinate(a) ($(o)+(.1,0)$)--++(0,-2)coordinate(b);
+	\draw[fill=teal!60] ($(a)+(0,-.3)$) rectangle($(a)+(-.6,.3)$)node[midway]{\(A\)};
+	\draw[fill=orange!60] ($(b)+(-.2,0)$) rectangle($(b)+(.2,-.4)$)node[midway]{\(B\)};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

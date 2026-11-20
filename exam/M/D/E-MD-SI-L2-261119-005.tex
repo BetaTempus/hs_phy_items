@@ -1,0 +1,25 @@
+\icode{E-MD-SI-L2-261119-005}
+如图所示，物体 \(A\)、\(B\)、\(C\) 放在光滑水平面上用细线 \(a\)、\(b\) 连接，力 \(F\) 作用在 \(A\) 上，使三物体一起在水平面上运动，若在 \(B\) 上放一小物体 \(D\)，\(D\) 随 \(B\) 一起运动，且力 \(F\) 保持不变，那么加上物体 \(D\) 后两绳中拉力的变化是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,magenta] (3,.25)--(-.6,.25)node[left]{\(F\)};
+	\foreach \x/\c in {.2/a,1.6/b,3/c}
+		\coordinate (\c) at(\x,.25);
+	\foreach \x/\str/\c in {a/A/orange,b/B/teal,c/C/cyan}
+		\draw[fill=\c!60] ($(\x)+(-.2,-.25)$) rectangle($(\x)+(.2,.25)$)node[midway]{\(\str\)};
+	\node at(.9,.25)[above]{\(a\)};
+	\node at(2.3,.25)[above]{\(b\)};
+	\draw[fill=black] (1.45,.5) rectangle(1.75,.65);
+	\foreach \x in {-.6,-.4,...,3.8}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(3.8,0);
+\end{tikzpicture}
+\begin{choices}
+	\item \(T_a\) 不变
+	\item \(T_b\) 增大
+	\item \(T_a\) 变小
+	\item \(T_b\) 变小
+\end{choices}
+\begin{answer}
+	D\qquad 提示：
+\end{answer}

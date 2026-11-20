@@ -7,7 +7,8 @@
     \draw (0,0) circle(.25) (0,0) circle(.1) (.6,1.5) circle(.25) (.6,1.5) circle(.1);
     \draw[magenta] (-.3,2)--(-.3,0) (.3,0)--(.3,1.5) (.9,1.5)--(.9,-1)coordinate(q) (0,0)--(0,-1)coordinate(p);
     \fill (0,0) circle(.05) (.6,1.5) circle(.05);
-    \draw[fill=orange!40] ($(p)+(-.15,0)$) rectangle ($(p)+(.15,-.3)$)node[midway]{\(P\)} ($(q)+(-.15,0)$) rectangle ($(q)+(.15,-.3)$)node[midway]{\(Q\)};
+    \draw[fill=orange!60] ($(p)+(-.15,0)$) rectangle ($(p)+(.15,-.3)$)node[midway]{\(P\)};
+    \draw[fill=teal!60] ($(q)+(-.15,0)$) rectangle ($(q)+(.15,-.3)$)node[midway]{\(Q\)};
     \foreach \x in{-.8,-.6,...,1.2}
         \draw[gray] (\x,2.2)--++(.2,-.2);
     \draw[thick] (-.8,2)--(1.4,2) (.6,1.5)--(.6,2);

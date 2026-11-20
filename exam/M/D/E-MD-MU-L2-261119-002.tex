@@ -1,0 +1,27 @@
+\icode{E-MD-MU-L2-261119-002}
+（多选）
+如图所示，倾角为 \(\theta\) 的斜面上有质量分别为 \(m_A\)、\(m_B\) 的 \(A\)、\(B\) 两物块，它们之间用轻线连接，\(A\) 受到始终平行于斜面向上的拉力 \(F\) 的作用，使它们沿斜面匀加速上升，\(A\)、\(B\) 与斜面的动摩擦因数均为 \(\mu\)，为了减小轻线上的张力，可行的办法是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\draw[thick] (0,0)--(4,0)--++(-127:2.4);
+		\draw[fill=orange!60] (1,0)coordinate(a) rectangle($(a)+(.4,.4)$)node[midway,rotate=37]{\(B\)};
+		\draw[fill=teal!60] (2.8,0)coordinate(b) rectangle($(b)+(-.4,.4)$)node[midway,rotate=37]{\(A\)};
+		\draw[magenta] ($(a)+(.4,.2)$)--($(b)+(-.4,0.2)$);
+		\draw[->] ($(b)+(0,.2)$)--++(.8,0)node[above]{\(F\)};
+	\end{scope}
+	\draw (.3,0) arc(0:37:.3);
+	\node at(.5,.16){\(\theta\)};
+	\foreach \x in {-.6,-.4,...,3.8}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(3.8,0);
+\end{tikzpicture}
+\begin{choices}
+	\item 减小拉力
+	\item 只增大\(A\)的质量
+	\item 只减小倾角 \(\theta\)
+	\item 只减小动摩擦因数 \(\mu\)
+\end{choices}
+\begin{answer}
+	AB\qquad 提示：
+\end{answer}

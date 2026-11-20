@@ -1,0 +1,15 @@
+\icode{E-MD-CA-L2-261114-005}
+如图所示，质量为 $m$ 的物体放在斜面体上，在斜面体以加速度 $a$ 水平向右做匀加速直线运动的过程中，物体始终与斜面体保持相对静止，求斜面体对物体的摩擦力 $F_f$ 和支持力 $F_N$ 分别为（重力加速度为 $g$）。
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw (0,0)--(30:4)--++(0,-2) (.3,0) arc(0:30:.3);
+	\draw[fill=orange!60,rotate=30] (2.5,0) rectangle(2.8,.3);
+	\draw[->] (3.8,1)--(4.6,1)node[right]{\(a\)};
+	\node at(.5,.15){\(\theta\)};
+	\foreach \x in {-.6,-.4,...,4}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(4.2,0);
+\end{tikzpicture}
+\begin{answer}
+    \(f = mg\sin\theta + ma\cos\theta\)\quad \(N = mg\cos\theta - ma\sin\theta\)
+\end{answer}

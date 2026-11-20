@@ -1,0 +1,52 @@
+\icode{O-CO-MD-261120}
+如图，一轻绳跨过光滑定滑轮，绳的一端系物块\(P\)，\(P\) ，质量为\(M\)，置于光滑的水平桌面上；绳的另一端悬挂钩码，重力加速度大小为 \(g\)。改变钩码总质量 \(m\)，并测量 \(P\) 的加速度大小 \(a\)。
+
+\begin{tikzpicture}[font=\scriptsize]
+	\coordinate (o) at(0,0);
+	\draw[fill=orange!50] ($(o)+(-3.5,0)$)--(o)--++(0,-.2)--++(-3.5,0) ($(o)+(-.3,-.2)$)coordinate(a) rectangle($(a)+(-.3,-1.5)$);
+	\draw[fill=orange!30] ($(o)+(-3.5,-.2)$)--($(a)+(-.3,0)$)--++(0,-.15)--($(o)+(-3.5,-.35)$);
+	\draw[fill=blue!30] (-2.6,0)coordinate(b) rectangle($(b)+(-.4,.4)$);
+	\draw[thick] ($(o)+(.2,.1)$)coordinate(pulley) circle(.1) (o)--(pulley);
+	\fill (pulley) circle(.05);
+	\coordinate (pail) at($(pulley)+(.1,-1)$);
+	\draw[magenta] ($(b)+(0,.2)$)--($(pulley)+(0,.1)$) ($(pulley)+(.1,0)$)--($(pail)+(0,.11)$);
+	\draw (pail)--++(0,.05) arc(-90:180:.03) ($(pail)+(0,-.1)$)--++(0,-.05) arc(90:360:.03);
+	\draw[fill=gray!50] ($(pail)+(-.1,0)$) rectangle($(pail)+(.1,-.1)$);
+	\draw[gray] ($(pail)+(0,-.05)$)--++(.5,0)node[right]{钩码};
+	\node at($(b)+(-.2,.4)$)[above]{\(P\)};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{\(O\)}--(6,0)node[below]{\(mg\)/\qty{}{N}};
+	\draw[->,blue] (0,0)--(0,5)node[right]{\(a\)/(\qty{}{m\cdot s^{-1}})};
+	\draw[domain=0:4,smooth,magenta] plot(\x,{10*(1-10/(\x+10))})node[right]{\(10\cdot (1 - \frac{10}{mg + 10})\)};
+	\draw[domain=0:4,smooth,dashed,magenta] plot(\x,{\x})node[right]{\(mg\)};
+	\draw[domain=0:5,smooth,teal] plot(\x,{10*(1-50/(\x+50))})node[below right]{\(10\cdot (1 - \frac{50}{mg + 50})\)};
+	\draw[domain=0:5,smooth,dashed,teal] plot(\x,{\x/5})node[above right]{\(\frac{1}{5}\cdot mg\)};
+	\foreach \x in {1,2,...,5}
+		\draw[blue] (\x,.1)--(\x,0)node[below]{\(\x\)};
+	\foreach \y in {1,2,...,4}
+		\draw[blue] (.1,\y)--(0,\y)node[left]{\(\y\)};
+\end{tikzpicture}
+
+\begin{multicols}{2}
+{\fangsong 若认为轻绳上的拉力等于钩码重力，\(F = mg = Ma\)，\(a = \frac{1}{M}\cdot F = \frac{1}{M}\cdot mg\)。
+
+而实际上\(F\neq mg\)，对\(P\)和钩码受力分析可知：
+\begin{align*}
+	F &= Ma\\
+	mg - F&= ma\\
+\end{align*}
+则可得：
+\begin{align*}
+	F&= \frac{M}{m + M}\cdot mg\\
+	a&= \frac{mg}{m + M} = \frac{1}{M}\cdot \frac{M}{m + M}\cdot mg
+\end{align*}
+而\(a - mg\)图像的真实关系是
+\begin{align*}
+	a &= \frac{mg}{m + M} = g\cdot \frac{mg + Mg - Mg}{mg + Mg}\\
+	 &= g\cdot(1 - \frac{Mg}{mg +Mg})
+\end{align*}
+若\(M =\) \,\qty{1}{kg}，则\(a = \frac{1}{M}\cdot mg =  mg\)，图中虚线所示；\(a^{\prime} = g\cdot(1 - \frac{Mg}{mg + Mg}) = 10\cdot (1 - \frac{10}{mg + 10})\)，图中实线所示。
+
+若\(M =\) \,\qty{5}{kg}，则\(a = \frac{1}{M}\cdot mg = \frac{1}{5}\cdot mg\)，图中虚线所示；\(a^{\prime} = g\cdot(1 - \frac{Mg}{mg + Mg}) = 10\cdot (1 - \frac{50}{mg + 50})\)，图中实线所示。}
+\end{multicols}

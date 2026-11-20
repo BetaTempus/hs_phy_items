@@ -1,0 +1,60 @@
+\icode{E-MD-SI-L2-261115-008}
+如图，用相同材料做成的质量分别为 \(m_1\)、\(m_2\) 的两个物体中间用一轻弹簧连接。在下列四种情况下，相同的拉力 \(F\) 均作用在 \(m_1\) 上，使 \(m_1\)、\(m_2\) 作加速运动：\ding{172}拉力水平，\(m_1\)、\(m_2\) 在光滑的水平面上加速运动。\ding{173}拉力水平，\(m_1\)、\(m_2\) 在粗糙的水平面上加速运动。\ding{174}拉力平行于倾角为 \(\theta\) 的斜面，\(m_1\)、\(m_2\) 沿光滑的斜面向上加速运动。\ding{175}拉力平行于倾角为 \(\theta\) 的斜面，\(m_1\)、\(m_2\) 沿粗糙的斜面向上加速运动。以 \(\Delta L_1\)、\(\Delta L_2\)、\(\Delta L_3\)、\(\Delta L_4\) 依次表示弹簧在四种情况下的伸长量，则有\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}
+		\draw[decoration={aspect=.8,segment length=4.5,amplitude=.9mm,coil},decorate] (.7,.2)coordinate(a)--(2.6,.2)coordinate(b);
+		\draw[fill=teal!60] ($(a)+(0,-.2)$) rectangle($(a)+(-.4,.2)$)node[midway]{\(m_2\)};
+		\draw[fill=orange!60] ($(b)+(0,-.2)$) rectangle($(b)+(.4,.2)$)node[midway]{\(m_1\)};
+		\draw[->] ($(b)+(.4,0)$)--++(.6,0)node[right]{\(F\)};
+		\foreach \x in {-.6,-.4,...,4}
+			\draw[gray] (\x,-.2)--++(.2,.2);
+		\draw[thick] (-.6,0)--(4,0);
+		\node at(-.2,.2){\ding{172}};
+	\end{scope}
+	\begin{scope}[xshift=6cm]
+		\draw[decoration={aspect=.8,segment length=4.5,amplitude=.9mm,coil},decorate] (.7,.2)coordinate(a)--(2.6,.2)coordinate(b);
+		\draw[fill=teal!60] ($(a)+(0,-.2)$) rectangle($(a)+(-.4,.2)$)node[midway]{\(m_2\)};
+		\draw[fill=orange!60] ($(b)+(0,-.2)$) rectangle($(b)+(.4,.2)$)node[midway]{\(m_1\)};
+		\draw[->] ($(b)+(.4,0)$)--++(.6,0)node[right]{\(F\)};
+		\foreach \x in {-.6,-.4,...,4}
+			\draw[gray] (\x,-.2)--++(.2,.2);
+		\draw[thick] (-.6,0)--(4,0);
+		\node at(-.2,.2){\ding{173}};
+	\end{scope}
+	\begin{scope}[yshift=-3cm]
+		\begin{scope}[rotate=37]
+		\draw[thick] (0,0)--(4,0)--++(-127:2.4);
+		\draw[decoration={aspect=.8,segment length=4.5,amplitude=.9mm,coil},decorate] (.7,.2)coordinate(a)--(2.6,.2)coordinate(b);
+		\draw[fill=teal!60] ($(a)+(0,-.2)$) rectangle($(a)+(-.4,.2)$)node[midway,rotate=37]{\(m_2\)};
+		\draw[fill=orange!60] ($(b)+(0,-.2)$) rectangle($(b)+(.4,.2)$)node[midway,rotate=37]{\(m_1\)};
+		\draw[->] ($(b)+(.4,0)$)--++(.6,0)node[above]{\(F\)};
+	\end{scope}
+	\foreach \x in {-.6,-.4,...,4}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(4,0);
+	\node at(-.2,.2){\ding{174}};
+	\end{scope}
+	\begin{scope}[xshift=6cm,yshift=-3cm]
+		\begin{scope}[rotate=37]
+		\draw[thick] (0,0)--(4,0)--++(-127:2.4);
+		\draw[decoration={aspect=.8,segment length=4.5,amplitude=.9mm,coil},decorate] (.7,.2)coordinate(a)--(2.6,.2)coordinate(b);
+		\draw[fill=teal!60] ($(a)+(0,-.2)$) rectangle($(a)+(-.4,.2)$)node[midway,rotate=37]{\(m_2\)};
+		\draw[fill=orange!60] ($(b)+(0,-.2)$) rectangle($(b)+(.4,.2)$)node[midway,rotate=37]{\(m_1\)};
+		\draw[-stealth] ($(b)+(.4,0)$)--++(.6,0)node[above]{\(F\)};
+	\end{scope}
+	\foreach \x in {-.6,-.4,...,4}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(4,0);
+	\node at(-.2,.2){\ding{175}};
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item \(\Delta L_2 > \Delta L_1\)
+	\item \(\Delta L_4 > \Delta L_3\)
+	\item \(\Delta L_1 > \Delta L_3\)
+	\item \(\Delta L_2 = \Delta L_4\)
+\end{choices}
+\begin{answer}
+	D\qquad 提示：
+\end{answer}

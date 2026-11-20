@@ -1,0 +1,23 @@
+\icode{E-MD-SI-L2-261115-002}
+如图所示，用细绳连接的质量相等的甲、乙两物块悬挂在轻质弹簧下面静止不动，将细绳剪断瞬间\paren[]
+	
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \x in {-.6,-.4,...,.6}
+		\draw[gray] (\x,0)--++(.2,.2);
+	\draw[thick] (-.6,0)--(.6,0);
+	\draw[decoration={aspect=.8,segment length=4,amplitude=.8mm,coil},decorate] (0,0)--(0,-1.5);
+	\shade[ball color=blue!50] (0,-1.65) circle(.15);
+	\draw[magenta] (0,-1.8)--(0,-2.3);
+	\shade[ball color=blue!50] (0,-2.45) circle(.15);
+	\node at(-.4,-1.65){甲};
+	\node at(-.4,-2.45){乙};
+\end{tikzpicture}
+\begin{choices}
+	\item 甲的加速度方向向上
+	\item 乙的加速度方向向上
+	\item 乙的加速度大小为0
+	\item 甲的加速度大小为 \(2g\)
+\end{choices}
+\begin{answer}
+    A\qquad 提示：
+\end{answer}

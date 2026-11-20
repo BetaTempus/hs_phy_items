@@ -1,0 +1,26 @@
+\icode{O-MD-CA-L2-261115-009}
+如图所示，物块\(A\)和物块\(B\)的质量分别为\(m_1\)、\(m_2\)，通过不可伸长的轻绳跨过滑轮连接，物块\(A\) 置于在光滑的水平面上，物块\(B\)置于光滑的斜面上，斜面与地面的夹角为\(\theta\)。初始时施加外力使\(A\)、\(B\)静止，现突然撤去外力，忽略一切摩擦，求轻绳上的张力和\(A\)、\(B\)的加速度。
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[thick] (71.5:{.1/sin(71.5)})coordinate(o) circle(.1) (o)--(0,0);
+	\foreach \x in {-3,-2.8,...,-.2}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-3,0)--(0,0);
+	\fill (o) circle(.05);
+	\draw[magenta] ($(o)+(0,.1)$)--++(-2,0)coordinate(a);
+	\draw[fill=teal!60] ($(a)+(0,-.2)$) rectangle($(a)+(-.4,.2)$)node[midway]{\(A\)};
+	\begin{scope}[rotate=-37]
+		\foreach \x in {0,.2,...,2.4}
+			\draw[gray] (\x,-.2)--++(.2,.2);
+		\draw[thick] (0,0)--(3,0);
+		\draw[fill=orange!60] (2,0)coordinate(b) rectangle($(b)+(.4,.4)$)node[midway,rotate=-37]{\(B\)};
+		\coordinate (c) at($(b)+(0,.2)$);
+	\end{scope}
+	\draw[magenta] ($(o)+(53:.1)$)--(c);
+	\draw (-37:2.7) arc(143:180:.3);
+	\draw[dashed,cyan] (-37:3)--++(-1.5,0);
+	\node at(-42:2.5){\(\theta\)};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}

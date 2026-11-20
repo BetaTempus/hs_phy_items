@@ -1,0 +1,21 @@
+\icode{E-MD-CA-L2-261114-004}
+电梯与地面的夹角为\qty{37}{\degree}，质量为 $m =$\,\qty{50}{kg} 的人站在电梯上。当电梯以加速度 $a = $\,\qty{2}{m/s^2} 匀加速向上运动，人相对与电梯静止，\(g\)取\qty{10}{m/s^2}，\(\sin\)\qty{37}{\degree}=0.6，\(\cos\)\qty{37}{\degree}=0.8，试求：
+\begin{enumerate}
+	\item 人对电梯的压力的大小？
+	\item 人与电梯表面间的静摩擦力的大小？
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw (0,0)--(37:4) (.3,0) arc(0:37:.3);
+	\foreach \r in {0,.8,1.6,...,4}
+		\draw (37:\r)--++(0,.48)--++(.64,0);
+	\draw (.96,1.6) circle(.1) (.96,1.5)--(.96,.96) (.96,1.38)coordinate(o)--++(-45:.2) (o)--++(-135:.2);
+	\draw[-stealth] (1.5,.8)--++(37:1)node[right]{\(a\)};
+	\foreach \x in {-.6,-.4,...,3.6}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(3.6,0);
+	\node at(.3,.2)[right]{\qty{37}{\degree}};
+\end{tikzpicture}
+\begin{answer}
+    （1）\qty{560}{N}（2）\qty{80}{N}
+\end{answer}

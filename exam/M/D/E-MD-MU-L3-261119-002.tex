@@ -1,0 +1,26 @@
+\icode{E-MD-MU-L3-261119-002}
+（多选）
+如图所示，两个物体中间用一个不计质量的轻杆相连。\(A\)、\(B\)两物体质量分别为 \(m_1\)、\(m_2\)，它们和斜面间的滑动摩擦系数分别为 \(\mu_1\)、\(\mu_2\)。当它们在斜面上加速下滑时，关于杆的受力情况，以下说法正确的是\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}[rotate=37]
+		\draw[thick] (0,0)--(4,0)--++(-127:2.4);
+		\draw[fill=teal!60] (.8,0)coordinate(a) rectangle($(a)+(.4,.4)$)node[midway,rotate=37]{\(A\)};
+		\draw[fill=orange!60] (3,0)coordinate(b) rectangle($(b)+(-.4,.4)$)node[midway,rotate=37]{\(B\)};
+		\draw[fill=gray!50] ($(a)+(.4,.15)$) rectangle($(b)+(-.4,.25)$);
+	\end{scope}
+	\draw (.3,0) arc(0:37:.3);
+	\node at(.5,.16){\(\theta\)};
+	\foreach \x in {-.6,-.4,...,3.8}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-.6,0)--(3.8,0);
+\end{tikzpicture}
+\begin{choices}
+	\item 若\(\mu_1 > \mu_2\)，则杆一定受到压力
+	\item 若\(\mu_1 = \mu_2\)，\(m_1 < m_2\)，则杆受到压力
+	\item 若\(\mu_1 = \mu_2\)，\(m_1 < m_2\)，则杆受到拉力
+	\item 只要\(\mu_1 = \mu_2\)，则杆的两端既不受拉力也没有压力
+\end{choices}
+\begin{answer}
+	AD\qquad 提示：
+\end{answer}

@@ -1,0 +1,29 @@
+\icode{E-MD-SI-L2-261115-007}
+\(a\)、\(b\)两物体的质量分别为 \(m_1\)、\(m_2\)，由轻质弹簧相连。当用恒力 \(F\) 竖直向上拉着 \(b\)，使 \(a\)、\(b\) 一起向上做匀加速直线运动时，弹簧伸长量为 \(x_1\)；当用大小仍为 \(F\) 的恒力沿水平方向拉着 \(b\)，使 \(a\)、\(b\) 一起沿光滑水平桌面做匀加速直线运动时，弹簧伸长量为 \(x_2\)，如图所示。则\paren[]
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\begin{scope}
+		\draw[decoration={aspect=.8,segment length=4,amplitude=.8mm,coil},decorate] (0,.15)coordinate(a)--(1.5,.15)coordinate(b);
+		\draw[fill=teal!60] ($(a)+(0,-.15)$) rectangle($(a)+(-.3,.15)$)node[midway]{\(a\)};
+		\draw[fill=orange!60] ($(b)+(0,-.15)$) rectangle($(b)+(.3,.15)$)node[midway]{\(b\)};
+		\draw[->] ($(b)+(.3,0)$)--++(.6,0)node[right]{\(F\)};
+		\foreach \x in {-.6,-.4,...,2.6}
+			\draw[gray] (\x,-.2)--++(.2,.2);
+		\draw[thick] (-.6,0)--(2.6,0);
+	\end{scope}
+	\begin{scope}[rotate=90,xshift=-.6cm,yshift=1.5cm]
+		\draw[decoration={aspect=.8,segment length=4,amplitude=.8mm,coil},decorate] (0,.15)coordinate(a)--(1.5,.15)coordinate(b);
+		\draw[fill=teal!60] ($(a)+(0,-.15)$) rectangle($(a)+(-.3,.15)$)node[midway]{\(a\)};
+		\draw[fill=orange!60] ($(b)+(0,-.15)$) rectangle($(b)+(.3,.15)$)node[midway]{\(b\)};
+		\draw[->] ($(b)+(.3,0)$)--++(.6,0)node[above]{\(F\)};
+	\end{scope}
+\end{tikzpicture}
+\begin{choices}
+	\item \(x_1 = x_2\)
+	\item \(x_1 < x_2\)
+	\item \(x_1 > x_2\)
+	\item 无法确定
+\end{choices}
+\begin{answer}
+	A\qquad 提示：
+\end{answer}

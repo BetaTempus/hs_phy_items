@@ -1,0 +1,28 @@
+\icode{E-MD-CA-L2-261115-001}
+如图（\(a\)）所示，质量 $m = $\,\qty{2}{kg} 的物块放在水平地面上，在水平外力 $F$ 的作用下由静止开始运动，\qty{4}{s}末撤去外力 $F$，该物块运动的 $v-t$ 图象如图（\(b\)）所示。$g$ 取\,\qty{10}{m/s^2}，求：
+\begin{enumerate}
+	\item 物块与水平地面间的动摩擦因数；
+	\item 外力 $F$ 的大小。
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[below left]{\(O\)}--(4,0)node[below]{\(t\)/\qty{}{s}};
+	\draw[->,blue] (0,0)--(0,2.5)node[right]{\(v\)/(\qty{}{m\cdot s^{-1}})};
+	\foreach \x/\n in {.5/1,1/2,1.5/3,2/4,2.5/5,3/6}
+		\draw[blue] (\x,.08)--(\x,0)node[below]{\(\n\)};
+	\foreach \y/\n in {.5/2,1/5,1.5/6,2/8}
+		\draw[blue] (0,\y)node[left]{\(\n\)}--(.08,\y);
+	\draw[magenta] (0,0)--(2,2)--(3,0);
+	\draw[dashed,cyan] (0,2)--(2,2)--(2,0);
+	\node at(2,-.8){图（\(b\)）};
+
+	\foreach \x in {-4,-3.8,...,-1.2}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-4,0)--(-1,0);
+	\draw[fill=orange!60] (-3.4,0) rectangle(-3,.4);
+	\draw[-stealth] (-3,.2)--(-2,.2)node[right]{\(F\)};
+	\node at(-2.5,-.8){图（\(a\)）};
+\end{tikzpicture}
+\begin{answer}
+    （1）0.4（2）\qty{12}{N}
+\end{answer}

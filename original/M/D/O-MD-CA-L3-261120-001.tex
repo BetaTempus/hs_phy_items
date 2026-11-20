@@ -1,0 +1,24 @@
+\icode{O-MD-CA-L3-261120-001}
+如图所示，质量均为\(m\)的\(A\)、\(B\)两滑块与桌面的摩擦因数均为\(\mu\)，劲度系数为\(k\)的弹簧与\(A\)连接，滑块\(B\)通过跨过光滑定滑轮的细绳与质量为\(M\)的滑块\(C\)拴接。初始时弹簧处于压缩状态，且\(A\)、\(B\)恰好静止，\(C\)在外力的作用下，使\(B\)、\(C\)间绳子伸直但无拉力。物块\(B\)、滑轮间的细绳与桌面平行，重力加速度为\(g\)。求：
+\begin{enumerate}
+	\item \(A\)、\(B\)恰好分离时，轻绳的拉力\(T\)；
+	\item \(A\)、\(B\)恰好分离时，弹簧的形变量\(x\)。
+\end{enumerate}
+
+\begin{tikzpicture}
+	\coordinate (o) at(0,0);
+	\draw[fill=orange!50] ($(o)+(-5,0)$)--(o)--++(0,-.2)--++(-5,0) ($(o)+(-.3,-.2)$)coordinate(a) rectangle($(a)+(-.3,-1.5)$);
+	\draw[fill=orange!30] ($(o)+(-5,-.2)$)--($(a)+(-.3,0)$)--++(0,-.15)--($(o)+(-5,-.35)$);
+	\draw[fill=teal!60] (-2.6,0)coordinate(b) rectangle($(b)+(-.4,.4)$)node[midway]{\tiny\(A\)};
+	\draw[fill=orange!60] (-2.6,0) rectangle(-2.2,.4)node[midway]{\tiny\(B\)};
+	\draw[thick] (-4.8,0)--++(0,.5);
+	\draw[thick,decoration={aspect=.6,segment length=4,amplitude=1.2mm,coil},decorate] (-4.8,.2)--(-3,.2);
+	\draw[thick] ($(o)+(.2,.1)$)coordinate(pulley) circle(.1) (o)--(pulley);
+	\fill (pulley) circle(.05);
+	\coordinate (pail) at($(pulley)+(.1,-1)$);
+	\draw[fill=red!30] ($(pail)+(-.15,0)$) rectangle($(pail)+(.15,-.3)$)node[midway]{\tiny\(C\)};
+	\draw[magenta] (-2.2,.2)--($(pulley)+(0,.1)$) ($(pulley)+(.1,0)$)--(pail);
+\end{tikzpicture}
+\begin{answer}
+	
+\end{answer}

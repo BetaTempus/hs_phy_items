@@ -1,0 +1,21 @@
+\icode{E-MD-SI-L2-261115-009}
+如图所示，质量分别为 \(2m\) 和 \(3m\) 的两个小球置于光滑水平面上，且固定在劲度系数为 \(k\) 的轻质弹簧的两端。现在质量为 \(2m\) 的小球上沿弹簧轴线方向施加大小为 \(F\) 的水平拉力，使两球一起做匀加速直线运动，则此时弹簧的伸长量为\paren[]
+
+\begin{tikzpicture}[font=\scriptsize]
+	\draw[decoration={aspect=.8,segment length=4,amplitude=.8mm,coil},decorate] (0,0)coordinate(a)--(2,0)coordinate(b);
+	\shade[ball color=blue!30] ($(a)+(-.15,0)$) circle(.15);
+	\shade[ball color=red!30] ($(b)+(.15,0)$) circle(.15);
+	\draw[-stealth] ($(b)+(.3,0)$)--++(.6,0)node[right]{\(F\)};
+	\foreach \x in {-.6,-.4,...,3.2}
+		\draw[gray] (\x,-.35)--++(.2,.2);
+	\draw[thick] (-.6,-.15)--(3.2,-.15);
+\end{tikzpicture}
+\begin{choices}
+	\item \(\dfrac{F}{5k}\)
+	\item \(\dfrac{2F}{5k}\)
+	\item \(\dfrac{3F}{5k}\)
+	\item \(\dfrac{F}{k}\)
+\end{choices}
+\begin{answer}
+	C\qquad 提示：
+\end{answer}

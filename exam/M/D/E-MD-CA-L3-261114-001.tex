@@ -1,0 +1,36 @@
+\icode{E-MD-CA-L3-261114-001}
+某物理兴趣小组开展赛车轨道设计大赛，设计了如图（\(a\)）所示的轨道模型，将一质量为 \( m = \) \,\qty{1}{kg}的小车（可看成质点）放置在轨道上，始终受到平行于斜面、大小为\qty{8}{N}的力 \( F \) 的作用。轨道\(OA\)可绕轴 \(O\) 在竖直平面内转动，同学们发现改变轨道倾角，小车会产生不同的加速度 \( a \)，已知小车与轨道间的动摩擦因数为 \( \mu = 0.2 \)，假定小车与轨道间的最大静摩擦力等于滑动摩擦力。求：（\( g \) 取\qty{10}{m/s^2}，\(\sin\)\qty{37}{\degree}\( = 0.6 \)，\(\cos\)\qty{37}{\degree}\( = 0.8 \)）
+\begin{enumerate}
+	\item 改变轨道倾角，发现小车加速度 \( a \) 与斜面倾角的关系如图（\(b\)）图线所示，求图线与纵坐标交点 \( a_0 \) 的大小；
+	\item 当倾角为\qty{37}{\degree}时，小车在力 \( F \) 的作用下由 \(O\) 点从静止开始运动，\qty{2}{s}后撤去 \( F \)，求斜面足够长时，小车沿斜面向上运动的最大距离；
+	\item 轨道 \(A\) 点有一锁定装置，若小车运动到 \(A\) 点时，触发锁定装置，小车停在 \(A\) 点，\(OA =\) \,\qty{2}{m}。保持 \( F = \) \,\qty{8}{N}不变，小车位于轨道底部，给小车一初速度 \( v_0 = \) \,\qty{1}{m/s}，求轨道倾角 \( 0 \sim\)\qty{90}{\degree} 范围内，小车在轨道上运动全过程所受到的摩擦力所做的功。（临界角度列函数关系式即可）
+\end{enumerate}
+
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[dashed,cyan] (0,0)node[below left,black]{\(O\)} rectangle(4,.2);
+	\begin{scope}[rotate=37]
+		\draw[fill=orange!50] (0,0) rectangle(4,.2);
+		\draw[fill=teal!60] (1.2,.2) rectangle(.7,.5);
+		\draw[->] (1.2,.35)--++(1,0)node[above]{\(F\)};
+		\node at(3,.3)[above]{\(A\)};
+	\end{scope}
+	\draw ({.8/3+.3},.2) arc(0:37:.3);
+	\node at(.7,.35){\(\theta\)};
+	\node at(2,-1){图\(a\)};
+\end{tikzpicture}
+\begin{tikzpicture}[>=stealth,font=\scriptsize]
+	\draw[->,blue] (0,0)node[left]{\(O\)}--(4.5,0)node[below]{\(\theta\)};
+	\draw[->,blue] (0,-1)--(0,4)node[right]{\(a\)/(\qty{}{m\cdot s^{-2}})};
+	\begin{scope}[xscale=2.5]
+		\draw[domain=0:0.704437,smooth,magenta] plot(\x,{(8-10*sin(\x r)-2*cos(\x r))/2});
+		\draw[domain=1.09923:1.5708,smooth,magenta] plot(\x,{-(10*sin(\x r)-2*cos(\x r)-8)/2});
+		\draw[dashed,cyan] (1.5708,{-5*sin(1.5708 r)+cos(1.5708 r)+4})coordinate(a)|-(a|-0,0);
+		\node at(0.71,0)[below,blue]{\(\theta_1\)};
+		\node at(1.1,0)[below left,blue]{\(\theta_2\)};
+		\node at(0,3)[left,blue]{\(a_0\)};
+	\end{scope}
+	\node at(2.2,-.9){图\(b\)};
+\end{tikzpicture}
+\begin{answer}
+    
+\end{answer}
