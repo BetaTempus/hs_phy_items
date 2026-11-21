@@ -65,14 +65,14 @@
 %\maketitle
 \newpage
 
-\iffalse
+%\iffalse
 \section*{凡例}
 \input{format}
 \section*{图例}
 \input{image/legend}
-\fi
+%\fi
 
-%\iffalse
+\iffalse
 
 \newpage
 \section{物理核心}
@@ -942,7 +942,6 @@
 %\fi
 %\iffalse
 
-\input{section_05}
 \newpage
 \section{传送带}
 \subsection{水平传送带}
@@ -1146,8 +1145,13 @@
 \begin{proset}
 	\input{ncee/M/D/N24-MD-CA-L3-261112-004}
 \end{proset}
+\begin{proset}
+	\input{exam/M/D/E-MD-CA-L4-261121-001}
+\end{proset}
+
 
 %\iffalse
+%\fi
 
 \newpage
 \section{曲线运动}
@@ -1498,6 +1502,8 @@
 	\input{exam/M/G/E-MG-CA-L3-261019-001}
 \end{proset}
 
+%\iffalse
+%\fi
 
 \newpage
 \section{功能关系}
@@ -1710,6 +1716,9 @@
 \begin{proset}
 	\input{exam/M/M/E-MM-CA-L3-260625-005}
 \end{proset}
+\begin{proset}
+	\input{exam/M/M/E-MM-CA-L4-261121-001}
+\end{proset}
 
 \subsection{类碰撞模型}
 
@@ -1903,34 +1912,108 @@
 	\input{exam/M/V/E-MV-MU-L3-260625-004}
 \end{proset}
 
-
+\fi
 %\iffalse
+\input{section_01.tex}
+
 \newpage
 \section{电场}
 \subsection{物理史}
 \begin{proset}
 	\input{original/EM/E/O-EME-FI-L1-260930-001}
 \end{proset}
-\subsection{电场强度方向}
 
+\subsection{起电方式}
+\begin{proset}
+	\input{exam/EM/E/E-EME-SI-L2-261121-001}
+\end{proset}
+
+\subsection{库仑定律}
+\begin{proset}
+	\input{exam/EM/E/E-EME-SI-L2-261121-002}
+\end{proset}
+\begin{proset}
+	\input{exam/EM/E/E-EME-SI-L2-261121-003}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/E/N18-EME-SI-L2-261121-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/E/N23X-EME-SI-L2-261121-002}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/E/N21E-EME-MU-L3-261121-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/E/N21Q-EME-SI-L3-261121-001}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/E/N23Q-EME-SI-L4-261121-001}
+\end{proset}
+\begin{proset}
+	\input{exam/EM/E/E-EME-SI-L3-261121-001}
+\end{proset}
+
+\subsection{电场强度}
+\begin{proset}
+	\input{ncee/EM/E/N19-EME-SI-L2-261121-003}
+\end{proset}
+
+\subsubsection{场强大小与方向}
+\begin{proset}
+	\input{exam/EM/E/E-EME-SI-L2-261121-004}
+\end{proset}
+
+
+\begin{proset}
+	\input{exam/EM/E/E-EME-SI-L3-260625-001}
+\end{proset}
+
+
+\subsection{电势与电势能}
+\begin{proset}
+	\input{ncee/EM/E/N17Q-EME-SI-L2-261121-003}
+\end{proset}
+\begin{proset}
+	\input{ncee/EM/E/N16-EME-SI-L2-261121-004}
+\end{proset}
+\begin{proset}
+	\input{exam/EM/E/E-EME-MU-L4-260625-002}
+\end{proset}
+
+\subsection{点电荷模型}
+\begin{proset}
+	\input{exam/EM/E/E-EME-SI-L3-261121-002}
+\end{proset}
 \begin{proset}
 	\input{ncee/EM/E/N26Y-EME-SI-L2-260626-001}
 \end{proset}
+
+\subsection{对称性}
 \begin{proset}
-	\input{exam/EM/E/E-EME-SI-L3-260625-001}
+	\input{exam/EM/E/E-EME-SI-L2-261121-005}
 \end{proset}
 \begin{proset}
 	\input{ncee/EM/E/N25E-EME-MU-L4-260625-002}
 \end{proset}
 
-\subsection{电势能}
 
+\subsection{带电粒子在电场中运动}
 \begin{proset}
-	\input{exam/EM/E/E-EME-MU-L4-260625-002}
+	\input{exam/EM/E/E-EME-SI-L3-261121-003}
+\end{proset}
+\begin{proset}
+	\input{exam/EM/E/E-EME-MU-L3-261121-001}
 \end{proset}
 
+
+\newpage
 \section{恒定电流}
 \input{original/EM/C/O-EMC-SU-261001}
+\subsection{电流}
+\begin{proset}
+	
+\end{proset}
 
 \subsection{电路简化}
 \begin{proset}
@@ -2033,6 +2116,8 @@
 \begin{proset}
 	\input{exam/EM/A/E-EMA-MU-L3-260625-002}
 \end{proset}
+
+\iffalse
 
 \newpage
 \section{几何光学}
@@ -2430,6 +2515,6 @@
 	\input{exam/EX/O/E-EXT-FI-L1-260625-001}
 \end{proset}
 
-%\fi
+\fi
 
 \end{document}

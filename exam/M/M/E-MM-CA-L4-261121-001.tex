@@ -1,0 +1,15 @@
+\icode{E-MM-CA-L4-261121-001}
+如图所示，质量为\(M =\) \,\qty{1}{kg}的木箱\(A\)静止在粗糙的水平地面上，在\(A\)的右侧每隔\(d =\)\,\qty{1}{m}处放置一系列质量均为\(M\)的木块，编号依次为1、2、3、4、5、\(\cdots\)。木箱与木块与地面的摩擦因数均为\(\mu = 0.01\)，最大静摩擦力等于滑动摩擦力。现给\(A\)施加一个水平向右的初速度\(v_0 = 2 \sqrt{2}\) \,\qty{}{m/s}，物块之间的碰撞均为完全非弹性碰撞，重力加速度\(g =\) \,\qty{10}{m/s^2}。求木箱停止时的位移。
+
+\begin{tikzpicture}[font=\scriptsize]
+	\foreach \x/\n in{.95/1,1.95/2,2.95/3,3.95/4,4.95/5}
+		{\draw[fill=teal!60] (\x,0) rectangle ($(\x,0)+(.1,.4)$);
+		\node at ($(\x,0)+(.05,.4)$)[above]{\(\n\)};}
+	\foreach \x in{-1,-.8,...,5.4}
+		\draw[gray] (\x,-.2)--++(.2,.2);
+	\draw[thick] (-1,0)--(5.8,0);
+	\draw[fill=orange!60] (0,0) rectangle (-.4,.4)node[midway]{\(A\)};
+\end{tikzpicture}
+\begin{answer}
+	\qty{4.4}{m}\quad 提示：\(v_k^2 = \frac{v_0^2}{(k + 1)^2} - \frac{2}{(k + 1)^2} (1^2 + 2^2 + 3^2 +\cdots + k^2)\cdot\mu gd\)
+\end{answer}
